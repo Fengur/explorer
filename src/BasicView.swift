@@ -107,16 +107,14 @@ class BasicView:CustomView {
         
         StyleManager.addStyle(css2)*/
         
-        let section = Section(500,500,nil,"radioBulletContainer")
-        container.addSubview(section)
         
-        let card:Card = container.addSubView(Card(NaN, NaN, "TextButton: ", container, "textButtonCard"))
+        let card:Card = container.addSubView(Card(NaN, NaN, "RadioBullet: ", container, "textButtonCard"))
         
-        let radioBullet1 = RadioBullet(14,14,true,section)
-        section.addSubview(radioBullet1)
+        let radioBullet1 = RadioBullet(14,14,true,card)
+        card.addSubview(radioBullet1)
         
-        let radioBullet2 = RadioBullet(14,14,true,section)
-        section.addSubview(radioBullet2)
+        let radioBullet2 = RadioBullet(14,14,true,card)
+        card.addSubview(radioBullet2)
         radioBullet2.setSelected(false)//<---work around for now
         
         let selectGroup = (SelectGroup([radioBullet1,radioBullet2],radioBullet1))/**/
