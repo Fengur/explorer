@@ -41,18 +41,10 @@ class BasicView:CustomView {
      */
     func createRadioBullet(){
         let card:Card = container.addSubView(Card(NaN, NaN, "RadioBullet: ", container, "radioBulletCard"))
-        
-        let section = Section(NaN,NaN,card,"radioBulletContainer")
-        card.addSubview(section)
-        
-        let radioBullet1 = RadioBullet(NaN,NaN,true,section)
-        section.addSubview(radioBullet1)
-        
-        let radioBullet2 = RadioBullet(NaN,NaN,true,section)
-        section.addSubview(radioBullet2)
-        radioBullet2.setSelected(false)//<---work around for now
-        
-        let selectGroup = (SelectGroup([radioBullet1,radioBullet2],radioBullet1))/**/
+        let section = card.addSubView(Section(NaN,NaN,card,"radioBulletContainer"))
+        let radioBullet1 = section.addSubView(RadioBullet(NaN,NaN,true,section))
+        let radioBullet2 = section.addSubView(RadioBullet(NaN,NaN,false,section))
+        let selectGroup = (SelectGroup([radioBullet1,radioBullet2],radioBullet1))
         selectGroup
     }
 }
