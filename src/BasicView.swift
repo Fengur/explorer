@@ -12,6 +12,7 @@ class BasicView:CustomView {
         container = addSubView(Container(1000,800,self,"main"))
         createButton()
         createTextButton()
+        radioBulletTest()
     }
     /**
      * Button
@@ -107,7 +108,9 @@ class BasicView:CustomView {
         StyleManager.addStyle(css2)*/
         
         let section = Section(500,500,nil,"radioBulletContainer")
-        addSubview(section)
+        container.addSubview(section)
+        
+        let card:Card = container.addSubView(Card(NaN, NaN, "TextButton: ", container, "textButtonCard"))
         
         let radioBullet1 = RadioBullet(14,14,true,section)
         section.addSubview(radioBullet1)
@@ -121,19 +124,3 @@ class BasicView:CustomView {
         
     }
 }
-class Card:Element{
-    var text:String;
-    init(_ width: CGFloat, _ height: CGFloat, _ text:String = "", _ parent: IElement?, _ id: String?) {
-        self.text = text
-        super.init(width, height, parent, id)
-    }
-    override func resolveSkin() {
-        super.resolveSkin()
-        addSubView(Element(NaN, NaN, self, "ruler"))
-        addSubView(Text(NaN, NaN, text, self, "cardText"));
-    }
-    
-    required init?(coder: NSCoder) {fatalError("init(coder:) has not been implemented")}
-}
-
-
