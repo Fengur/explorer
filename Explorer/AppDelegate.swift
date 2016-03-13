@@ -1,5 +1,7 @@
 import Cocoa
-
+/**
+ * This is the main class for the application
+ */
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     weak var window: NSWindow!/*<--this is here only so that the compiler wont throw an error*/
