@@ -17,7 +17,7 @@ class BasicView:CustomView {
      * Button
      */
     func createButton(){
-        let card:Card = container.addSubView(Card(NaN, NaN, "Buttons: ", container, "buttonCard"))
+        let card:Card = container.addSubView(Card(/*NaN*/200, 120 /*NaN*/, "Buttons: ", container, "buttonCard"))
         let button = card.addSubView(Button(96,24,card))
         func onbuttonDown(event:Event){
             if(event.type == ButtonEvent.upInside){
@@ -56,8 +56,8 @@ class Card:Element{
         //continue here: replace NaN values temporarally to find the bug. comment them out, then see if the button float correctly again
         
         
-        addSubView(Element(NaN, NaN, self, "ruler"))
-        addSubView(Text(NaN, NaN, text, self, "cardText"));
+        //addSubView(Element(NaN, NaN, self, "ruler"))
+        //addSubView(Text(NaN, NaN, text, self, "cardText"));
     }
     
     required init?(coder: NSCoder) {fatalError("init(coder:) has not been implemented")}
