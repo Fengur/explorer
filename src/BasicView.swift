@@ -1,7 +1,7 @@
 import Foundation
 
 class BasicView:CustomView {
-    //var container:Container!
+    var container:Container!
     override func resolveSkin() {
         StyleManager.addStylesByURL("~/Desktop/css/explorer/explorer.css")
         super.resolveSkin()
@@ -16,7 +16,7 @@ class BasicView:CustomView {
      * Button
      */
     func createButton(){
-        let card:Card = self.addSubView(Card(CGFloat.NaN/**/, CGFloat.NaN/*120*/, "Buttons: ", self, "buttonCard"))
+        let card:Card = container.addSubView(Card(CGFloat.NaN/**/, CGFloat.NaN/*120*/, "Buttons: ", container, "buttonCard"))
         let button = card.addSubView(Button(96,24,card))
         func onbuttonDown(event:Event){
             if(event.type == ButtonEvent.upInside){
