@@ -8,7 +8,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var win:NSWindow?/*<--The window must be a class variable, local variables doesnt work*/
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         StyleManager.addStyle("Window{fill:#EFEFF4;corner-radius:4px;}Button{fill:blue;}")//<--you should target a bg element not the window it self, since now everything inherits these values
-        win = Win(1000,800)
+        win = Win(300,300)
         
         
         //Continue here:
