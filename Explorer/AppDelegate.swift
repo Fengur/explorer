@@ -12,7 +12,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         
         //Continue here:
-        win = FlippedView(NSRect(0,0,300,300))
+        
+        //create 2 styles 
+        
+        //use resolveStyle
         
         
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
