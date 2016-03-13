@@ -12,7 +12,7 @@ class BasicView:CustomView {
         container = addSubView(Container(1000,800,self,"main"))
         createButton()
         createTextButton()
-        radioBulletTest()
+        createRadioBullet()
     }
     /**
      * Button
@@ -37,18 +37,18 @@ class BasicView:CustomView {
         card.addSubView(TextButton("Button",NaN,NaN,card))
     }
     /**
-     * Testing radioBullet
+     * RadioBullet
      */
-    func radioBulletTest(){        
+    func createRadioBullet(){
         let card:Card = container.addSubView(Card(NaN, NaN, "RadioBullet: ", container, "radioBulletCard"))
         
         let section = Section(NaN,NaN,card,"radioBulletContainer")
         card.addSubview(section)
         
-        let radioBullet1 = RadioBullet(14,14,true,section)
+        let radioBullet1 = RadioBullet(NaN,NaN,true,section)
         section.addSubview(radioBullet1)
         
-        let radioBullet2 = RadioBullet(14,14,true,section)
+        let radioBullet2 = RadioBullet(NaN,NaN,true,section)
         section.addSubview(radioBullet2)
         radioBullet2.setSelected(false)//<---work around for now
         
