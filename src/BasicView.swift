@@ -14,9 +14,6 @@ class BasicView:CustomView {
         let button = self.addSubView(Button(96,24,self))
         button
     }
-    override func createTitleBar() {
-        //
-    }
     /**
      * Button
      */
