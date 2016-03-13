@@ -108,7 +108,7 @@ class BasicView:CustomView {
         StyleManager.addStyle(css2)*/
         
         
-        let card:Card = container.addSubView(Card(NaN, NaN, "RadioBullet: ", container, "textButtonCard"))
+        let card:Card = container.addSubView(Card(NaN, NaN, "RadioBullet: ", container, "radioBulletCard"))
         
         let radioBullet1 = RadioBullet(14,14,true,card)
         card.addSubview(radioBullet1)
