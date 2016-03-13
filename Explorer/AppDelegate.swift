@@ -2,13 +2,15 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-    @IBOutlet weak var window: NSWindow!
+    weak var window: NSWindow!/*<--this is here only so that the compiler wont throw an error*/
+    var win:NSWindow?/*<--The window must be a class variable, local variables doesnt work*/
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        Swift.print("Hello world 2")
+        StyleManager.addStyle("Window Element#background{fill:#EFEFF4;corner-radius:4px;}")//<--you should target a bg element not the window it self, since now everything inherits these values
+        win = Win(300,300)
+        NSApp.windows[0].close()/*close the initial non-optional default window*/
     }
-
     func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
+        print("Good-bye")
     }
 }
 
