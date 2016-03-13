@@ -48,5 +48,5 @@ class BasicView:CustomView {
         selectGroup
     }
     
-    
+    //continue with checkboxButtons
 }
