@@ -33,14 +33,7 @@ class BasicView:CustomView {
      */
     func createTextButton(){
         let card:Card = container.addSubView(Card(NaN, NaN, "TextButton: ", container, "textButtonCard"))
-        //var textButton:TextButton = textButtonSection.addChild(new TextButton(96,24,false,false,"Button",textButtonSection)) as TextButton;
-    
-        
-        let textButton:TextButton = TextButton("Button",NaN,NaN,card)
-        
-        card.addSubview(textButton)
-        
-    
+        card.addSubView(TextButton("Button",NaN,NaN,card))
     }
 }
 class Card:Element{
