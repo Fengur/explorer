@@ -32,7 +32,7 @@ class BasicView:CustomView {
      * TextButton
      */
     func createTextButton(){
-        let card:Card = container.addSubView(Card(NaN, NaN, "TextButton: ", container, "textButtonCard"))
+        let card:Card = container.addSubView(Card(96, 24, "TextButton: ", container, "textButtonCard"))
         //var textButton:TextButton = textButtonSection.addChild(new TextButton(96,24,false,false,"Button",textButtonSection)) as TextButton;
     
         
@@ -51,8 +51,13 @@ class Card:Element{
     }
     override func resolveSkin() {
         super.resolveSkin()
-        addSubView(Element(CGFloat.NaN, CGFloat.NaN, self, "ruler"))
-        addSubView(Text(CGFloat.NaN, CGFloat.NaN, text, self, "cardText"));
+        
+        
+        //continue here: replace NaN values temporarally to find the bug. comment them out, then see if the button float correctly again
+        
+        
+        addSubView(Element(NaN, NaN, self, "ruler"))
+        addSubView(Text(NaN, NaN, text, self, "cardText"));
     }
     
     required init?(coder: NSCoder) {fatalError("init(coder:) has not been implemented")}
