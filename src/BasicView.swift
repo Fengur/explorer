@@ -16,7 +16,7 @@ class BasicView:CustomView {
      * Button
      */
     func createButton(){
-        let card:Card = container.addSubView(Card(CGFloat.NaN/**/, CGFloat.NaN/*120*/, "Buttons: ", container, "buttonCard"))
+        let card:Card = container.addSubView(Card(NaN/**/, NaN/*120*/, "Buttons: ", container, "buttonCard"))
         let button = card.addSubView(Button(96,24,card))
         func onbuttonDown(event:Event){
             if(event.type == ButtonEvent.upInside){
@@ -31,7 +31,7 @@ class BasicView:CustomView {
      * TextButton
      */
     func createTextButton(){
-        let card:Card = container.addSubView(Card(CGFloat.NaN, CGFloat.NaN, "TextButton: ", container, "textButtonCard"))
+        let card:Card = container.addSubView(Card(NaN, NaN, "TextButton: ", container, "textButtonCard"))
         //var textButton:TextButton = textButtonSection.addChild(new TextButton(96,24,false,false,"Button",textButtonSection)) as TextButton;
     }
 }
