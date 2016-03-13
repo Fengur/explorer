@@ -61,7 +61,7 @@ class BasicView:CustomView {
         css +=     "fill:radial-gradient(50% 50% 100% 100% 90 0.2, white 1 0,white 0 0.5);"
         css += "}"
         /*section*/
-        css += "Section#radioBulletContainer{"
+        css += "Card#radioBulletCard{"
         css += "corner-radius:4px;"
         css += "fill:#dddddd;"//bg color for win: #E8E8E8
         css += "float:left;"
@@ -73,7 +73,7 @@ class BasicView:CustomView {
         css += "drop-shadow:<InsetShadow>;"
         css += "}"
         /*idle*/
-        css += "Section#radioBulletContainer RadioBullet{"
+        css += "Card#radioBulletCard RadioBullet{"
         css += "float:left;"
         css += "clear:none;"
         css += "drop-shadow:none;"
@@ -93,7 +93,7 @@ class BasicView:CustomView {
         css += "fill-alpha:1,0,0,0,0;"
         css += "}"
         /*selected*/
-        css += "Section#radioBulletContainer RadioBullet:selected{"
+        css += "Card#radioBulletCard RadioBullet:selected{"
         css += "fill:<RadioBulletBase:selected>,<RadioBulletBottomShine>,<RadioBulletTopShine>,<RadioBulletBulletShine>,#021931;"
         css += "fill-alpha:1,0,0,0,1;"
         css += "}"
