@@ -54,6 +54,5 @@ class BasicView:CustomView {
         
         let selectGroup = (SelectGroup([radioBullet1,radioBullet2],radioBullet1))/**/
         selectGroup
-        
     }
 }
