@@ -36,12 +36,8 @@ class BasicView:CustomView {
         //var textButton:TextButton = textButtonSection.addChild(new TextButton(96,24,false,false,"Button",textButtonSection)) as TextButton;
     
         
+        let textButton:TextButton = TextButton("Button",NaN,NaN,card)
         
-        //btn = TextButton("",200,200)
-        let textButton:TextButton = TextButton("Button",96,24,card)
-        
-        
-        //textButton.setPosition(CGPoint(20,20))
         card.addSubview(textButton)
         
     
