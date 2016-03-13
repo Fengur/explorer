@@ -8,7 +8,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var win:NSWindow?/*<--The window must be a class variable, local variables doesnt work*/
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         StyleManager.addStyle("Window Element#background{fill:#EFEFF4;corner-radius:4px;}")//<--you should target a bg element not the window it self, since now everything inherits these values
-        win = Win(300,300)
+        win = Win(1000,800)
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
     }
     func applicationWillTerminate(aNotification: NSNotification) {
