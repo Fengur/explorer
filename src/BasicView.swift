@@ -70,7 +70,7 @@ class BasicView:CustomView {
      */
     func createLeverSpinner(){
         let card:Card = container.addSubView(Card(NaN, NaN, "LeverSpinner: ", container, "leverSpinnerCard"))
-        let leverSpinner:LeverSpinner = card.addSubView(LeverSpinner(140, 40,"Value: ", 0, 1, Int.min.cgFloat, Int.max.cgFloat, 0, 100, 200, card))
+        let leverSpinner:LeverSpinner = card.addSubView(LeverSpinner(NaN, NaN,"Value: ", 0, 1, Int.min.cgFloat, Int.max.cgFloat, 0, 100, 200, card))
         leverSpinner
     }
 }
