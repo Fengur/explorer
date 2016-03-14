@@ -74,40 +74,12 @@ class BasicView:CustomView {
         let leverSpinner:LeverSpinner = card.addSubView(LeverSpinner(NaN, NaN,"Value: ", 0, 1, Int.min.cgFloat, Int.max.cgFloat, 0, 100, 200, card))
         leverSpinner
     }
-    
-    
-    
-    
     func createTabBar(){
-        
-        //TODO: maybe implement height with the Text element
-        //TODO: make parenting work with element
-        
-        //let styleCollection:IStyleCollection = CSSParser.styleCollection(css)
-        
-        //let styleProperty = styleCollection.getStyle("SelectButton")?.getStyleProperty("corner-radius")
-        //Swift.print("styleProperty.value: " + String(styleProperty!.value))
-        //StyleManager.addStyle(styleCollection.styles)
-        
         let card:Card = container.addSubView(Card(NaN, NaN, "Tab bar: ", container, "tabBarCard"))
-        
-        
-
-        
-        let btn1 = SelectTextButton(64,24,"first",false,card,"first")
-        btn1.setPosition(CGPoint(10,20))
-        card.addSubview(btn1)
-        
-        let btn2 = SelectTextButton(64,24,"second",true,card,"second")
-        btn2.setPosition(CGPoint(74,20))
-        card.addSubview(btn2)
-        
-        let btn3 = SelectTextButton(64,24,"third",false,card,"third")
-        btn3.setPosition(CGPoint(138,20))
-        card.addSubview(btn3)
-        
+        let btn1 = card.addSubView(SelectTextButton(NaN,NaN,"first",false,card,"first"))
+        let btn2 = card.addSubView(SelectTextButton(NaN,NaN,"second",true,card,"second"))
+        let btn3 = card.addSubView(SelectTextButton(NaN,NaN,"third",false,card,"third"))
         let selectGroup = SelectGroup([btn1,btn2,btn3],btn2);
         selectGroup
     }
-    
 }
