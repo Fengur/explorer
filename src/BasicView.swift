@@ -96,16 +96,13 @@ class BasicView:CustomView {
         let selectGroup = SelectGroup([iconButton1,iconButton2,iconButton3,iconButton4],iconButton3);
         selectGroup
     }
-    
-    
-    var stepperContainer:Section?
     /**
      * TODO: maybe change the inside to the top not the bottom
      * TODO: add hover and down states in the css
      */
     func createLeverStepper(){
         let card:Card = container.addSubView(Card(NaN, NaN, "LeverStepper: ", container, "leverStepperCard"))
-        let stepper:LeverStepper = card.addSubView(LeverStepper(100,24,0,1,Int.min.cgFloat,Int.max.cgFloat,0,100,200,card))
+        let stepper:LeverStepper = card.addSubView(LeverStepper(NaN,NaN,0,1,Int.min.cgFloat,Int.max.cgFloat,0,100,200,card))
         stepper
     }
     
