@@ -99,17 +99,20 @@ class BasicView:CustomView {
         //let styleProperty = styleCollection.getStyle("SelectButton")?.getStyleProperty("corner-radius")
         //Swift.print("styleProperty.value: " + String(styleProperty!.value))
         StyleManager.addStyle(styleCollection.styles)
+        
+        let card:Card = container.addSubView(Card(NaN, NaN, "Tab bar: ", container, "tabBarCard"))
+        
         let btn1 = SelectTextButton(64,24,"first",false,nil,"first")
         btn1.setPosition(CGPoint(10,20))
-        self.addSubview(btn1)
+        card.addSubview(btn1)
         
         let btn2 = SelectTextButton(64,24,"second",true,nil,"second")
         btn2.setPosition(CGPoint(74,20))
-        self.addSubview(btn2)
+        card.addSubview(btn2)
         
         let btn3 = SelectTextButton(64,24,"third",false,nil,"third")
         btn3.setPosition(CGPoint(138,20))
-        self.addSubview(btn3)
+        card.addSubview(btn3)
         
         let selectGroup = SelectGroup([btn1,btn2,btn3],btn2);
         selectGroup
