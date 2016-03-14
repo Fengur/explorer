@@ -167,9 +167,10 @@ class BasicView:CustomView {
         
         StyleManager.addStyle(css)
         
-        let section = container.addSubView(Section(200,200,container,"textContainer"))
         
-        let textInput:TextInput = section.addSubView(TextInput(200, 28, "Description: ", "blue", section))
+        let card:Card = container.addSubView(Card(NaN, NaN, "LeverStepper: ", container, "textInputCard"))
+        
+        let textInput:TextInput = card.addSubView(TextInput(200, 28, "Description: ", "blue", card))
         textInput
     }
     
