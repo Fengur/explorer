@@ -10,10 +10,13 @@ class BasicView:CustomView {
         //StyleManager.addStyle(css)
         Swift.print("hello world")
         container = addSubView(Container(1000,800,self,"main"))
+        /*
         createButton()
         createTextButton()
         createRadioBullet()
         createCheckBoxButton()
+        */
+        createLeverSpinner()
     }
     /**
      * Button
@@ -165,10 +168,10 @@ class BasicView:CustomView {
         css += "Section#container{fill:green;fill-alpha:0;float:left;clear:left;padding-top:20px;padding-left:8px;}"
         StyleManager.addStyle(css)
         
-        let container = addSubView(Section(200,200,self,"container"))
+        let section = container.addSubView(Section(200,200,container,"container"))
         
         
-        let leverSpinner:LeverSpinner = container.addSubView(LeverSpinner(140, 40,"Value: ", 0, 1, CGFloat(Int.min), CGFloat(Int.max), 0, 100, 200, container))
+        let leverSpinner:LeverSpinner = section.addSubView(LeverSpinner(140, 40,"Value: ", 0, 1, CGFloat(Int.min), CGFloat(Int.max), 0, 100, 200, section))
         leverSpinner
         
         
