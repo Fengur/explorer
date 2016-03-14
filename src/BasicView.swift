@@ -11,12 +11,13 @@ class BasicView:CustomView {
         Swift.print("hello world")
         container = addSubView(Container(1000,800,self,"main"))
         
-        createButton()
+        /*createButton()
         createTextButton()
         createRadioBullet()
         createCheckBoxButton()
-
-        createLeverSpinner()
+        createLeverSpinner()*/
+        
+        createTabBar()
     }
     /**
      * Button
