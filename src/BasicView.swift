@@ -92,7 +92,7 @@ class BasicView:CustomView {
         let card:Card = container.addSubView(Card(NaN, NaN, "Tab bar: ", container, "tabBarCard"))
         
         
-        //Continue here: add # and use NaN
+
         
         let btn1 = SelectTextButton(64,24,"first",false,card,"first")
         btn1.setPosition(CGPoint(10,20))
