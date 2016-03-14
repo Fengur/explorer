@@ -123,6 +123,11 @@ class BasicView:CustomView {
         let text:Text = card.addSubView(Text(100,24,"This is text: ",card))
         text
     }
+    func createTextArea() {
+        let card:Card = stage.addChild(Card(NaN, NaN, "Text area: ", container, "textAreaCard"))
+        //var text:String = FileParser.string(new File(File.applicationDirectory.url+"assets/txt/textarea.txt"));
+        var textArea:TextArea = card.addChild(new TextArea(180,72,"This is text:",textAreaSection)) as TextArea;
+    }
     
     //create text
     //create text area
