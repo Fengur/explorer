@@ -11,13 +11,15 @@ class BasicView:CustomView {
         Swift.print("hello world")
         container = addSubView(Container(1000,800,self,"main"))
         
-        /**/createButton()
+        /*
+        createButton()
         createTextButton()
         createRadioBullet()
         createCheckBoxButton()
         createLeverSpinner()
-        
         createTabBar()
+        */
+        createIconButtons()
     }
     /**
      * Button
@@ -86,6 +88,118 @@ class BasicView:CustomView {
     //Continue here: icon buttons
     
     
-    
+    /**
+     * iconButtonSection
+     */
+    func createIconButtons(){
+        var css:String = "SelectButton{"
+        css += "line:grey7,none;"
+        css += "line-offset-type:outside;"
+        css += "line-alpha:1;"
+        css += "line-thickness:1px;"
+        css += "margin-top:0px,1px;"
+        css += "margin-left:0px,1px;"
+        css += "width:24px,24px;"
+        css += "height:24px,24px;"
+        css += "drop-shadow:drop-shadow(0px 0 #FF0000 0.0 0 0 0 0 true);"
+        css += "}"
+        
+        css += "SelectButton#first{"
+        css += "fill:linear-gradient(top,#FFFEFE,#E8E8E8),~/Desktop/svg/icons/view/icons.svg grey5;"
+        css += "corner-radius:4px 0px 4px 0px;"
+        css += "}"
+        
+        css += "SelectButton#first:selected{"
+        css += "fill:linear-gradient(top,grey9,grey8),~/Desktop/svg/icons/view/icons.svg white;"
+        css += "}"
+        
+        css += "SelectButton#second{"
+        css += "fill:linear-gradient(top,#FFFEFE,#E8E8E8),~/Desktop/svg/icons/view/list.svg grey5;"
+        css += "corner-radius:0px;"
+        css += "line-offset-type-right:inside;"
+        css += "line-offset-type-left:inside;"
+        css += "margin-left:0px,0px;"/*bug fix, sort it out later*/
+        css += "}"
+        
+        css += "SelectButton#second:over{"/*bug fix, sort it out later*/
+        css += "line-offset-type-right:inside;"
+        css += "line-offset-type-left:inside;"
+        css += "}"
+        
+        css += "SelectButton#second:selected{"
+        css += "fill:linear-gradient(top,grey9,grey8),~/Desktop/svg/icons/view/list.svg white;"
+        css += "margin-left:0px,0px;"/*bug fix, sort it out later*/
+        css += "}"
+        
+        css += "SelectButton#third{"
+        css += "fill:linear-gradient(top,#FFFEFE,#E8E8E8),~/Desktop/svg/icons/view/columns.svg grey5;"
+        css += "corner-radius:0px;"
+        css += "line-offset-type-right:inside;"
+        css += "}"
+        
+        css += "SelectButton#third:selected{"
+        css += "fill:linear-gradient(top,grey9,grey8),~/Desktop/svg/icons/view/columns.svg white;"
+        css += "}"
+        
+        css += "SelectButton#fourth{"
+        css += "fill:linear-gradient(top,#FFFEFE,#E8E8E8),~/Desktop/svg/icons/view/coverflow.svg grey5;"
+        css += "corner-radius:0px 4px 0px 4px;"
+        css += "}"
+        
+        css += "SelectButton#fourth:selected{"
+        css += "fill:linear-gradient(top,grey9,grey8),~/Desktop/svg/icons/view/coverflow.svg white;"
+        css += "}"
+        /**/
+        css += "SelectButton:selected{"
+        css += "drop-shadow:drop-shadow(0px 0 #000000 0.4 4 4 1 2 true);"
+        css += "}"
+        
+        
+        /**/
+        
+        let styleCollection:IStyleCollection = CSSParser.styleCollection(css)
+        
+        //let styleProperty = styleCollection.getStyle("SelectButton")?.getStyleProperty("corner-radius")
+        //Swift.print("styleProperty.value: " + String(styleProperty!.value))
+        StyleManager.addStyle(styleCollection.styles)
+        /**/
+        let iconButton1 = SelectButton(24,24,false,nil,"first")
+        
+        
+        //iconButton1.setSkinState("selected")
+        
+        //Try to replicate in the hover state test, or strip this example down, remove line etc
+        
+        //let tempStyle = StyleResolver.style(iconButton1)
+        //Swift.print("-----start----")
+        //StyleParser.describe(tempStyle)/**/
+        //Swift.print("-----end----")
+        
+        
+        iconButton1.setPosition(CGPoint(10,20))
+        self.addSubview(iconButton1)
+        
+        let iconButton2 = SelectButton(24,24,false,nil,"second")
+        addSubView(iconButton2)
+        iconButton2.setPosition(CGPoint(10+24+2,20))
+        
+        let iconButton3 = SelectButton(24,24,false,nil,"third")
+        addSubView(iconButton3)
+        iconButton3.setPosition(CGPoint(10+24+2+24,20))
+        
+        let iconButton4 = SelectButton(24,24,false,nil,"fourth")
+        addSubView(iconButton4)
+        iconButton4.setPosition(CGPoint(10+24+2+24+24+1,20))/**/
+         /**/
+        
+        
+        
+        
+        
+        
+        let selectGroup = SelectGroup([iconButton1,iconButton2,iconButton3,iconButton4/**/],iconButton2);
+        selectGroup
+    }
+
     
 }
