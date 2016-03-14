@@ -73,4 +73,9 @@ class BasicView:CustomView {
         let leverSpinner:LeverSpinner = card.addSubView(LeverSpinner(NaN, NaN,"Value: ", 0, 1, Int.min.cgFloat, Int.max.cgFloat, 0, 100, 200, card))
         leverSpinner
     }
+    
+    
+    //Continue here: create the tabbar card
+    
+    
 }
