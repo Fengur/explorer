@@ -5,10 +5,6 @@ class BasicView:CustomView {
     override func resolveSkin() {
         StyleManager.addStylesByURL("~/Desktop/css/explorer/explorer.css")
         super.resolveSkin()
-        var css:String = ""
-        css += ""
-        //StyleManager.addStyle(css)
-        Swift.print("hello world")
         container = addSubView(Container(1000,800,self,"main"))
         
         /*
