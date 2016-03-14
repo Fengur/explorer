@@ -11,7 +11,7 @@ class BasicView:CustomView {
         Swift.print("hello world")
         container = addSubView(Container(1000,800,self,"main"))
         
-        /*
+        /**/
         
         createButton()
         createTextButton()
@@ -22,7 +22,7 @@ class BasicView:CustomView {
         createIconButtons()
         createLeverStepper()
 
-        */
+
         
         createTextInput()
     }
@@ -105,7 +105,7 @@ class BasicView:CustomView {
     }
     func createTextInput(){
         let card:Card = container.addSubView(Card(NaN, NaN, "TextInput: ", container, "textInputCard"))
-        let textInput:TextInput = card.addSubView(TextInput(200, 28, "Description: ", "blue", card))
+        let textInput:TextInput = card.addSubView(TextInput(NaN, NaN, "Description: ", "blue", card))
         textInput
     }
     
