@@ -136,10 +136,10 @@ class BasicView:CustomView {
         css += "}"
         StyleManager.addStyle(css)
         
-        let container = Section(200,50,self,"textContainer")
-        addSubview(container)
+        let section = Section(200,50,container,"textContainer")
+        container.addSubview(section)
         
-        let text:Text = container.addSubView(Text(100,24,"This is text: ",container))
+        let text:Text = section.addSubView(Text(100,24,"This is text: ",section))
         text
     }
 
