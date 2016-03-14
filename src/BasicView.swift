@@ -69,14 +69,9 @@ class BasicView:CustomView {
      * TODO: create the LeverSpinner component with text
      */
     func createLeverSpinner(){
-        
-        
         let section = container.addSubView(Section(200,200,container,"container"))
-        
         
         let leverSpinner:LeverSpinner = section.addSubView(LeverSpinner(140, 40,"Value: ", 0, 1, CGFloat(Int.min), CGFloat(Int.max), 0, 100, 200, section))
         leverSpinner
-        
-        
     }
 }
