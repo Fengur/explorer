@@ -82,4 +82,10 @@ class BasicView:CustomView {
         let selectGroup = SelectGroup([btn1,btn2,btn3],btn2)//SelectParser.selectables(card)
         selectGroup
     }
+    
+    //Continue here: icon buttons
+    
+    
+    
+    
 }
