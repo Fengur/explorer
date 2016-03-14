@@ -11,14 +11,13 @@ class BasicView:CustomView {
         Swift.print("hello world")
         container = addSubView(Container(1000,800,self,"main"))
         
-        /*
+        /* */
         createButton()
         createTextButton()
         createRadioBullet()
         createCheckBoxButton()
         createLeverSpinner()
         createTabBar()
-        */
         createIconButtons()
     }
     /**
@@ -86,10 +85,10 @@ class BasicView:CustomView {
     }
     func createIconButtons(){
         let card:Card = container.addSubView(Card(NaN, NaN, "Icon button: ", container, "iconButtonCard"))
-        let iconButton1 = card.addSubView(SelectButton(24,24,false,card,"first"))
-        let iconButton2 = card.addSubView(SelectButton(24,24,false,card,"second"))
-        let iconButton3 = card.addSubView(SelectButton(24,24,true,card,"third"))
-        let iconButton4 = card.addSubView(SelectButton(24,24,false,card,"fourth"))
+        let iconButton1 = card.addSubView(SelectButton(NaN,NaN,false,card,"first"))
+        let iconButton2 = card.addSubView(SelectButton(NaN,NaN,false,card,"second"))
+        let iconButton3 = card.addSubView(SelectButton(NaN,NaN,true,card,"third"))
+        let iconButton4 = card.addSubView(SelectButton(NaN,NaN,false,card,"fourth"))
         let selectGroup = SelectGroup([iconButton1,iconButton2,iconButton3,iconButton4],iconButton3);
         selectGroup
     }
