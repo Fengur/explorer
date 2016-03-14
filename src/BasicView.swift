@@ -92,7 +92,7 @@ class BasicView:CustomView {
      * iconButtonSection
      */
     func createIconButtons(){
-                
+        
         let card:Card = container.addSubView(Card(NaN, NaN, "Icon button: ", container, "iconButtonCard"))
         
         
