@@ -97,7 +97,7 @@ class BasicView:CustomView {
         selectGroup
     }
     
-    var stepper:LeverStepper?
+    
     var stepperContainer:Section?
     /**
      * TODO: maybe change the inside to the top not the bottom
@@ -105,11 +105,8 @@ class BasicView:CustomView {
      */
     func createLeverStepper(){
         let card:Card = container.addSubView(Card(NaN, NaN, "LeverStepper: ", container, "leverStepperCard"))
-        
-        
-        stepperContainer = card.addSubView(Section(200,200,card,"container"))
-        stepper = stepperContainer!.addSubView(LeverStepper(100,24,0,1,CGFloat(Int.min),CGFloat(Int.max),0,100,200,stepperContainer))
-        
+        let stepper:LeverStepper = card.addSubView(LeverStepper(100,24,0,1,Int.min.cgFloat,Int.max.cgFloat,0,100,200,card))
+        stepper
     }
     
     //Create the leverstepper
