@@ -52,12 +52,10 @@ class BasicView:CustomView {
     //continue with checkboxButtons
     
     /**
-    *
-    */
+     *
+     */
     func createCheckBoxButton(){
-        var css:String = ""
         
-        StyleManager.addStyle(css)
         
         let section = container.addSubView(Section(200, 200, container, "checkBoxButtonContainer")) /*this instance represents the inset shadow bagground and also holds the buttons*/
         let checkBoxButton1 = section.addSubView(CheckBoxButton(120, 32,"Option 1",true,section))
@@ -71,5 +69,4 @@ class BasicView:CustomView {
         }
         checkGroup.event = onEvent/*adds the event handler to the event exit point in the checkGroup*/
     }
-
 }
