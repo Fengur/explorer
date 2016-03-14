@@ -92,4 +92,19 @@ class BasicView:CustomView {
         let selectGroup = SelectGroup([iconButton1,iconButton2,iconButton3,iconButton4],iconButton3);
         selectGroup
     }
+    
+    //Create the leverstepper
+    //create single-line text
+    //create text
+    //create text area
+    //create text input
+    //create the search-box
+    
+    //vertical slider
+    //horizontal slider
+    
+    //slider textArea
+    
+    
+    
 }
