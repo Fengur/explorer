@@ -12,7 +12,7 @@ class BasicView:CustomView {
         container = addSubView(Container(1000,800,self,"main"))
         
         /*
-        
+        */
         createButton()
         createTextButton()
         createRadioBullet()
@@ -23,7 +23,7 @@ class BasicView:CustomView {
         createLeverStepper()
         createTextInput()
         createSingleLineTextArea()
-        */
+
         createText()
     }
     /**
@@ -117,29 +117,8 @@ class BasicView:CustomView {
      *
      */
     func createText(){
-        var css:String = ""
-        css += "Section#textContainer{fill:white;float:left;clear:left;}"
-        css += "Text{"
-        css +=     "float:left;"
-        css +=     "clear:left;"
-        css +=     "font:Lucida Grande;"
-        css +=     "size:12px;"
-        css +=     "align:left;"
-        css +=     "autoSize:none;"
-        css +=     "color:grey6;"
-        css +=     "type:input;"
-        css +=     "selectable:true;"
-        css +=     "wordWrap:true;"
-        css +=     "margin-top:4px;"
-        css +=     "backgroundColor:orange;"
-        css +=     "background:false;"
-        css += "}"
-        StyleManager.addStyle(css)
-        
-        let section = Section(200,50,container,"textContainer")
-        container.addSubview(section)
-        
-        let text:Text = section.addSubView(Text(100,24,"This is text: ",section))
+        let card:Card = container.addSubView(Card(NaN, NaN, "Text: ", container, "textCard"))
+        let text:Text = card.addSubView(Text(100,24,"This is text: ",card))
         text
     }
 
