@@ -52,7 +52,8 @@ class BasicView:CustomView {
      * CheckboxButtons
      */
     func createCheckBoxButton(){
-        let section = container.addSubView(Section(NaN, NaN, container, "checkBoxButtonContainer")) /*this instance represents the inset shadow bagground and also holds the buttons*/
+        let card:Card = container.addSubView(Card(NaN, NaN, "CheckBoxButton: ", container, "radioBulletCard"))
+        let section = card.addSubView(Section(NaN, NaN, card, "checkBoxButtonContainer")) /*this instance represents the inset shadow bagground and also holds the buttons*/
         let checkBoxButton1 = section.addSubView(CheckBoxButton(NaN, NaN,"Option 1",true,section))
         let checkBoxButton2 = section.addSubView(CheckBoxButton(NaN, NaN,"Option 2",false,section))
         let checkGroup = CheckGroup([checkBoxButton1,checkBoxButton2],checkBoxButton1)/*Add the CheckBoxButtons to the checkGroup instance*/
