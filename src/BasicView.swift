@@ -83,22 +83,11 @@ class BasicView:CustomView {
         //TODO: maybe implement height with the Text element
         //TODO: make parenting work with element
         
-        var css:String = "SelectTextButton{fill:linear-gradient(top,#FFFEFE,#E8E8E8);line:grey7;line-offset-type:outside;line-thickness:1px;drop-shadow:none;}"//
-        css += "SelectTextButton#first{corner-radius:4px 0px 4px 0px;}"
-        css += "SelectTextButton#second{corner-radius:0px 0px 0px 0px;line-offset-type-right,line-offset-type-left:inside;}"//
-        css += "SelectTextButton#third{corner-radius:0px 4px 0px 4px;}"//
-        css += "SelectTextButton Text{font:Lucida Grande;selectable:false;size:12px;color:gray;align:center;backgroundColor:orange;background:false;margin-top:5px;}"//
-        css += "Text:down{color:black;}"
-        css += "SelectTextButton:selected Text{color:white;}"
-        css += "SelectTextButton:selected{fill:linear-gradient(top,grey9,grey8);drop-shadow:drop-shadow(0px 0 #000000 0.4 4 4 1 2 true);}"
-        
-        
-        
-        let styleCollection:IStyleCollection = CSSParser.styleCollection(css)
+        //let styleCollection:IStyleCollection = CSSParser.styleCollection(css)
         
         //let styleProperty = styleCollection.getStyle("SelectButton")?.getStyleProperty("corner-radius")
         //Swift.print("styleProperty.value: " + String(styleProperty!.value))
-        StyleManager.addStyle(styleCollection.styles)
+        //StyleManager.addStyle(styleCollection.styles)
         
         let card:Card = container.addSubView(Card(NaN, NaN, "Tab bar: ", container, "tabBarCard"))
         
