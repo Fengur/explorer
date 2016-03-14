@@ -11,7 +11,7 @@ class BasicView:CustomView {
         Swift.print("hello world")
         container = addSubView(Container(1000,800,self,"main"))
         
-        /**/
+        /*
         
         createButton()
         createTextButton()
@@ -22,9 +22,9 @@ class BasicView:CustomView {
         createIconButtons()
         createLeverStepper()
         createTextInput()
-        
-
         createSingleLineTextArea()
+        */
+        createText()
     }
     /**
      * Button
@@ -113,7 +113,36 @@ class BasicView:CustomView {
         let textArea:TextArea = card.addSubView(TextArea(NaN, NaN, "This is a single line text area", card))
         textArea
     }
-    
+    /**
+     *
+     */
+    func createText(){
+        var css:String = ""
+        css += "Section#textContainer{fill:white;float:left;clear:left;}"
+        css += "Text{"
+        css +=     "float:left;"
+        css +=     "clear:left;"
+        css +=     "font:Lucida Grande;"
+        css +=     "size:12px;"
+        css +=     "align:left;"
+        css +=     "autoSize:none;"
+        css +=     "color:grey6;"
+        css +=     "type:input;"
+        css +=     "selectable:true;"
+        css +=     "wordWrap:true;"
+        css +=     "margin-top:4px;"
+        css +=     "backgroundColor:orange;"
+        css +=     "background:false;"
+        css += "}"
+        StyleManager.addStyle(css)
+        
+        let container = Section(200,50,self,"textContainer")
+        addSubview(container)
+        
+        let text:Text = container.addSubView(Text(100,24,"This is text: ",container))
+        text
+    }
+
     
     //create text
     //create text area
