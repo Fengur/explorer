@@ -104,44 +104,8 @@ class BasicView:CustomView {
      * TODO: add hover and down states in the css
      */
     func createLeverStepper(){
-        let card:Card = container.addSubView(Card(NaN, NaN, "LeverStepper ", container, "iconButtonCard"))
-        var css:String = ""
-        css += "ButtonBase{"
-        css +=     "fill:linear-gradient(top,#FFFEFE,#E8E8E8);"
-        css += "}"
-        css += "Stepper{"
-        css +=    "float:left;"
-        css +=    "clear:left;"
-        css +=    "padding:0px;"
-        css += "}"
-        css += "Stepper Button{"
-        css +=    "float:left;"
-        css +=    "width:10px,10px;"
-        css +=    "height:10px,10px;"
-        css +=    "margin-left:0px,1px;"
-        css +=    "fill-alpha:1;"
-        css +=    "line:grey7;"
-        css +=    "line-offset-type:outside;"
-        css +=    "line-alpha:1;"
-        css +=    "line-thickness:1px;"
-        //css +=    "drop-shadow:<SubtleShadow>,none;"
-        css += "}"
-        css += "Stepper Button#plus{"
-        css +=     "fill:<ButtonBase>,~/Desktop/svg/icons/arrow_up_closed.svg grey8;"//assets/svg/icons/arrow_up_closed.svg
-        css +=     "corner-radius:4px 4px 0px 0px;"
-        css +=     "margin-top:0px,1px;"
-        css += "}"
-        css += "Stepper Button#minus{"
-        css +=     "clear:left;"
-        css +=     "height:10px,10px;"
-        css +=     "fill:<ButtonBase>,~/Desktop/svg/icons/arrow_down_closed.svg grey8;"
-        css +=     "line-offset-type-top:inside;"
-        //css +=     "margin-top:0px;"
-        css +=     "corner-radius:0px 0px 4px 4px;"
-        css += "}"
+        let card:Card = container.addSubView(Card(NaN, NaN, "LeverStepper: ", container, "leverStepperCard"))
         
-        css += "Section#container{fill:green;fill-alpha:0;float:left;clear:left;padding-top:6px;padding-left:28px;}"
-        StyleManager.addStyle(css)
         
         stepperContainer = card.addSubView(Section(200,200,card,"container"))
         stepper = stepperContainer!.addSubView(LeverStepper(100,24,0,1,CGFloat(Int.min),CGFloat(Int.max),0,100,200,stepperContainer))
