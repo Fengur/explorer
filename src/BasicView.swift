@@ -13,6 +13,8 @@ class BasicView:CustomView {
         
         /*
         
+        */
+        
         createButton()
         createTextButton()
         createRadioBullet()
@@ -20,8 +22,6 @@ class BasicView:CustomView {
         createLeverSpinner()
         createTabBar()
         createIconButtons()
-        
-        */
         createLeverStepper()
     }
     /**
@@ -96,17 +96,13 @@ class BasicView:CustomView {
         let selectGroup = SelectGroup([iconButton1,iconButton2,iconButton3,iconButton4],iconButton3);
         selectGroup
     }
-    /**
-     * TODO: maybe change the inside to the top not the bottom
-     * TODO: add hover and down states in the css
-     */
     func createLeverStepper(){
         let card:Card = container.addSubView(Card(NaN, NaN, "LeverStepper: ", container, "leverStepperCard"))
         let stepper:LeverStepper = card.addSubView(LeverStepper(NaN,NaN,0,1,Int.min.cgFloat,Int.max.cgFloat,0,100,200,card))
         stepper
     }
     
-    //Create the leverstepper
+    //Create the
     //create single-line text
     //create text
     //create text area
