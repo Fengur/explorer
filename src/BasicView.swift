@@ -103,73 +103,8 @@ class BasicView:CustomView {
         let stepper:LeverStepper = card.addSubView(LeverStepper(NaN,NaN,0,1,Int.min.cgFloat,Int.max.cgFloat,0,100,200,card))
         stepper
     }
-    
-    /**
-     * TODO: Create examples etc
-     */
     func createTextInput(){
-        var css:String = ""
-        
-        css += "InsetShadow{"
-        css +=      "drop-shadow:drop-shadow(0px 0 #000000 0.4 4 4 1 2 true);"
-        css += "}"
-        
-        css += "Text{"
-        css +=     "float:left;"
-        css +=     "clear:left;"
-        css +=     "font:Lucida Grande;"
-        css +=     "size:12px;"
-        css +=     "align:left;"
-        //css +=     "wordWrap:true;"
-        //css +=     "autoSize:none;"
-        css +=     "color:grey6;"
-        //css +=     "margin-top:4px;"
-        css +=     "backgroundColor:orange;"
-        css +=     "background:false;"
-        css += "}"
-        
-        css += "TextInput{"
-        css +=     "padding:0px;"
-        css +=     "float:left;"
-        css +=     "clear:left;"
-        css += "}"
-        css += "TextInput Text{"
-        css +=     "float:left;"
-        css +=     "clear:none;"
-        css +=     "width:78px;"
-        css +=     "height:22px;"
-        css +=     "margin-top:4px;"
-        css +=     "color:grey4;"
-        css += "}"/**/
-        css += "TextInput TextArea{"
-        css +=     "clear:none;"
-        css +=     "width:60px;"
-        css +=     "height:24px;"
-        css +=     "padding:0px;"
-        css +=     "fill:white;"
-        css +=     "line:grey9;"
-        css +=     "line-alpha:1;"
-        css +=     "line-thickness:1px;"
-        css +=     "line-offset-type:outside;"
-        css +=     "drop-shadow:<InsetShadow>;"
-        css += "}"/**/
-        css += "TextInput TextArea Text{"
-        css +=     "margin-left:4px;"
-        css +=     "padding-right:-20px;"
-        css +=     "type:input;"
-        css +=     "selectable:true;"
-        css += "}"
-        
-        
-        css += "Section#textContainer{fill:green;fill-alpha:0;float:left;clear:left;padding-top:20px;padding-left:20px;corner-radius:0px;}"
-        
-        /*Text*//*generics*//*TextInput*/
-        
-        StyleManager.addStyle(css)
-        
-        
         let card:Card = container.addSubView(Card(NaN, NaN, "LeverStepper: ", container, "textInputCard"))
-        
         let textInput:TextInput = card.addSubView(TextInput(200, 28, "Description: ", "blue", card))
         textInput
     }
