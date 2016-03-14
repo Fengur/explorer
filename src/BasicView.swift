@@ -48,16 +48,13 @@ class BasicView:CustomView {
         let selectGroup = (SelectGroup([radioBullet1,radioBullet2],radioBullet1))
         selectGroup
     }
-    
-    
-    
     /**
      * CheckboxButtons
      */
     func createCheckBoxButton(){
-        let section = container.addSubView(Section(200, 200, container, "checkBoxButtonContainer")) /*this instance represents the inset shadow bagground and also holds the buttons*/
-        let checkBoxButton1 = section.addSubView(CheckBoxButton(120, 32,"Option 1",true,section))
-        let checkBoxButton2 = section.addSubView(CheckBoxButton(120, 32,"Option 2",false,section))
+        let section = container.addSubView(Section(NaN, NaN, container, "checkBoxButtonContainer")) /*this instance represents the inset shadow bagground and also holds the buttons*/
+        let checkBoxButton1 = section.addSubView(CheckBoxButton(NaN, NaN,"Option 1",true,section))
+        let checkBoxButton2 = section.addSubView(CheckBoxButton(NaN, NaN,"Option 2",false,section))
         let checkGroup = CheckGroup([checkBoxButton1,checkBoxButton2],checkBoxButton1)/*Add the CheckBoxButtons to the checkGroup instance*/
         func onEvent(event:Event){/*this is the event handler*/
             if(event.type == CheckGroupEvent.change){Swift.print("CustomView.onCheck() checked" + "\((event as! CheckGroupEvent).checked)")}
