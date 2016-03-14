@@ -100,20 +100,20 @@ class BasicView:CustomView {
         let iconButton1 = SelectButton(24,24,false,card,"first")
 
         
-        iconButton1.setPosition(CGPoint(10,20))
+        
         card.addSubview(iconButton1)
         
         let iconButton2 = SelectButton(24,24,false,card,"second")
         card.addSubView(iconButton2)
-        iconButton2.setPosition(CGPoint(10+24+2,20))
+        
         
         let iconButton3 = SelectButton(24,24,false,card,"third")
         card.addSubView(iconButton3)
-        iconButton3.setPosition(CGPoint(10+24+2+24,20))
+        
         
         let iconButton4 = SelectButton(24,24,false,card,"fourth")
         card.addSubView(iconButton4)
-        iconButton4.setPosition(CGPoint(10+24+2+24+24+1,20))/**/
+        
         
         let selectGroup = SelectGroup([iconButton1,iconButton2,iconButton3,iconButton4/**/],iconButton2);
         selectGroup
