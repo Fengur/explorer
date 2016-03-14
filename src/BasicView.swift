@@ -162,6 +162,11 @@ class BasicView:CustomView {
         //let styleProperty = styleCollection.getStyle("SelectButton")?.getStyleProperty("corner-radius")
         //Swift.print("styleProperty.value: " + String(styleProperty!.value))
         StyleManager.addStyle(styleCollection.styles)
+        
+        
+        let card:Card = container.addSubView(Card(NaN, NaN, "Tab bar: ", container, "iconButtonCard"))
+        
+        
         /**/
         let iconButton1 = SelectButton(24,24,false,nil,"first")
         
