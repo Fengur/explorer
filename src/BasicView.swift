@@ -108,13 +108,8 @@ class BasicView:CustomView {
         let textInput:TextInput = card.addSubView(TextInput(NaN, NaN, "Description: ", "blue", card))
         textInput
     }
-    
-    /**
-     *
-     */
     func createSingleLineTextArea(){
-        
-        
+        let card:Card = container.addSubView(Card(NaN, NaN, "TextInput: ", container, "singleLineTextAreaCard"))
         let section = Section(200,200,container,"textContainer")
         container.addSubview(section)
         
