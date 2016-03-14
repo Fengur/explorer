@@ -117,7 +117,7 @@ class BasicView:CustomView {
     func createTextArea() {
         let card:Card = container.addSubView(Card(NaN, NaN, "Text area: ", container, "textAreaCard"))
         let text:String = FileParser.content("~/Desktop/assets/txt/textarea.txt".tildePath)!
-        let textArea:TextArea = card.addSubView(TextArea(180,102,text,card))
+        let textArea:TextArea = card.addSubView(TextArea(180,66,text,card))
         textArea
     }
     
