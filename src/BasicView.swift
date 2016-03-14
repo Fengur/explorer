@@ -84,40 +84,13 @@ class BasicView:CustomView {
         let selectGroup = SelectGroup([btn1,btn2,btn3],btn2)//SelectParser.selectables(card)
         selectGroup
     }
-    
-    //Continue here: icon buttons
-    
-    
-    /**
-     * iconButtonSection
-     */
     func createIconButtons(){
-        
         let card:Card = container.addSubView(Card(NaN, NaN, "Icon button: ", container, "iconButtonCard"))
-        
-        
-        /**/
-        let iconButton1 = SelectButton(24,24,false,card,"first")
-
-        
-        
-        card.addSubview(iconButton1)
-        
-        let iconButton2 = SelectButton(24,24,false,card,"second")
-        card.addSubView(iconButton2)
-        
-        
-        let iconButton3 = SelectButton(24,24,false,card,"third")
-        card.addSubView(iconButton3)
-        
-        
-        let iconButton4 = SelectButton(24,24,false,card,"fourth")
-        card.addSubView(iconButton4)
-        
-        
-        let selectGroup = SelectGroup([iconButton1,iconButton2,iconButton3,iconButton4/**/],iconButton2);
+        let iconButton1 = card.addSubView(SelectButton(24,24,false,card,"first"))
+        let iconButton2 = card.addSubView(SelectButton(24,24,false,card,"second"))
+        let iconButton3 = card.addSubView(SelectButton(24,24,true,card,"third"))
+        let iconButton4 = card.addSubView(SelectButton(24,24,false,card,"fourth"))
+        let selectGroup = SelectGroup([iconButton1,iconButton2,iconButton3,iconButton4],iconButton3);
         selectGroup
     }
-
-    
 }
