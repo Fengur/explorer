@@ -7,7 +7,7 @@ class BasicView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         
-        /*
+        /**/
         createButton()
         createTextButton()
         createRadioBullet()
@@ -19,7 +19,6 @@ class BasicView:CustomView {
         createTextInput()
         createSingleLineTextArea()
         createText()
-        */
         createTextArea()
     }
     /**
@@ -117,7 +116,7 @@ class BasicView:CustomView {
     func createTextArea() {
         let card:Card = container.addSubView(Card(NaN, NaN, "Text area: ", container, "textAreaCard"))
         let text:String = FileParser.content("~/Desktop/assets/txt/textarea.txt".tildePath)!
-        let textArea:TextArea = card.addSubView(TextArea(180,66,text,card))
+        let textArea:TextArea = card.addSubView(TextArea(180,68,text,card))
         textArea
     }
     
