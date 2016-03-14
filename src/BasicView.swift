@@ -12,7 +12,6 @@ class BasicView:CustomView {
         container = addSubView(Container(1000,800,self,"main"))
         
         /*
-        */
         createButton()
         createTextButton()
         createRadioBullet()
@@ -23,8 +22,9 @@ class BasicView:CustomView {
         createLeverStepper()
         createTextInput()
         createSingleLineTextArea()
-
         createText()
+        */
+        createTextArea()
     }
     /**
      * Button
@@ -118,15 +118,11 @@ class BasicView:CustomView {
         let text:Text = card.addSubView(Text(100,24,"This is text: ",card))
         text
     }
-    func createText(){
-        let card:Card = container.addSubView(Card(NaN, NaN, "Text: ", container, "textCard"))
-        let text:Text = card.addSubView(Text(100,24,"This is text: ",card))
-        text
-    }
     func createTextArea() {
-        let card:Card = stage.addChild(Card(NaN, NaN, "Text area: ", container, "textAreaCard"))
+        let card:Card = container.addSubView(Card(NaN, NaN, "Text area: ", container, "textAreaCard"))
         //var text:String = FileParser.string(new File(File.applicationDirectory.url+"assets/txt/textarea.txt"));
-        var textArea:TextArea = card.addChild(new TextArea(180,72,"This is text:",textAreaSection)) as TextArea;
+        let textArea:TextArea = card.addSubView(TextArea(180,72,"This is text:",card))
+        textArea
     }
     
     //create text
