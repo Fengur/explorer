@@ -76,7 +76,7 @@ class BasicView:CustomView {
     }
     func createTabBar(){
         let card:Card = container.addSubView(Card(NaN, NaN, "Tab bar: ", container, "tabBarCard"))
-        let btn1 = card.addSubView(SelectTextButton(60,20,"first",false,card,"first"))
+        let btn1 = card.addSubView(SelectTextButton(NaN,20,"first",false,card,"first"))
         let btn2 = card.addSubView(SelectTextButton(60,20,"second",true,card,"second"))
         let btn3 = card.addSubView(SelectTextButton(60,20,"third",false,card,"third"))
         let selectGroup = SelectGroup([btn1,btn2,btn3],btn2)//SelectParser.selectables(card)
