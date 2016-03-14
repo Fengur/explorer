@@ -102,7 +102,7 @@ class BasicView:CustomView {
         stepper
     }
     
-    //Create the
+    
     //create single-line text
     //create text
     //create text area
