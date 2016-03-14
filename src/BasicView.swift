@@ -11,7 +11,7 @@ class BasicView:CustomView {
         Swift.print("hello world")
         container = addSubView(Container(1000,800,self,"main"))
         
-        /*
+        /**/
         
         createButton()
         createTextButton()
@@ -23,7 +23,7 @@ class BasicView:CustomView {
         createLeverStepper()
         createTextInput()
         
-        */
+
         createSingleLineTextArea()
     }
     /**
@@ -110,7 +110,7 @@ class BasicView:CustomView {
     }
     func createSingleLineTextArea(){
         let card:Card = container.addSubView(Card(NaN, NaN, "TextInput: ", container, "singleLineTextAreaCard"))
-        let textArea:TextArea = card.addSubView(TextArea(180, 24, "This is a single line text area", card))
+        let textArea:TextArea = card.addSubView(TextArea(NaN, NaN, "This is a single line text area", card))
         textArea
     }
     //create text
