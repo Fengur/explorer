@@ -24,7 +24,7 @@ class BasicView:CustomView {
 
 
         
-        //createTextInput()
+        createTextInput()
     }
     /**
      * Button
