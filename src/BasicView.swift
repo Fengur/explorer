@@ -69,7 +69,7 @@ class BasicView:CustomView {
      * TODO: create the LeverSpinner component with text
      */
     func createLeverSpinner(){
-        let card:Card = container.addSubView(Card(NaN, NaN, "CheckBoxButton: ", container, "leverSpinnerCard"))
+        let card:Card = container.addSubView(Card(NaN, NaN, "LeverSpinner: ", container, "leverSpinnerCard"))
         let section = card.addSubView(Section(200,200,card,"container"))
         
         let leverSpinner:LeverSpinner = section.addSubView(LeverSpinner(140, 40,"Value: ", 0, 1, CGFloat(Int.min), CGFloat(Int.max), 0, 100, 200, section))
