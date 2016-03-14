@@ -113,6 +113,8 @@ class BasicView:CustomView {
         let textArea:TextArea = card.addSubView(TextArea(NaN, NaN, "This is a single line text area", card))
         textArea
     }
+    
+    
     //create text
     //create text area
     //create the search-box
