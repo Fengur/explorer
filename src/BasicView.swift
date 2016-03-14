@@ -167,9 +167,9 @@ class BasicView:CustomView {
         
         StyleManager.addStyle(css)
         
-        let container = addSubView(Section(200,200,self,"textContainer"))
+        let section = container.addSubView(Section(200,200,container,"textContainer"))
         
-        let textInput:TextInput = container.addSubView(TextInput(200, 28, "Description: ", "blue", container))
+        let textInput:TextInput = section.addSubView(TextInput(200, 28, "Description: ", "blue", section))
         textInput
     }
     
