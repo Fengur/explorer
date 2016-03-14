@@ -104,7 +104,10 @@ class BasicView:CustomView {
     //horizontal slider
     
     //slider textArea
+    //list
+    //slider list
     
+    //comboBox
     
     
 }
