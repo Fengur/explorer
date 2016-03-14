@@ -164,36 +164,26 @@ class BasicView:CustomView {
         StyleManager.addStyle(styleCollection.styles)
         
         
-        let card:Card = container.addSubView(Card(NaN, NaN, "Tab bar: ", container, "iconButtonCard"))
+        let card:Card = container.addSubView(Card(NaN, NaN, "Icon button: ", container, "iconButtonCard"))
         
         
         /**/
-        let iconButton1 = SelectButton(24,24,false,nil,"first")
-        
-        
-        //iconButton1.setSkinState("selected")
-        
-        //Try to replicate in the hover state test, or strip this example down, remove line etc
-        
-        //let tempStyle = StyleResolver.style(iconButton1)
-        //Swift.print("-----start----")
-        //StyleParser.describe(tempStyle)/**/
-        //Swift.print("-----end----")
-        
+        let iconButton1 = SelectButton(24,24,false,card,"first")
+
         
         iconButton1.setPosition(CGPoint(10,20))
-        self.addSubview(iconButton1)
+        card.addSubview(iconButton1)
         
-        let iconButton2 = SelectButton(24,24,false,nil,"second")
-        addSubView(iconButton2)
+        let iconButton2 = SelectButton(24,24,false,card,"second")
+        card.addSubView(iconButton2)
         iconButton2.setPosition(CGPoint(10+24+2,20))
         
-        let iconButton3 = SelectButton(24,24,false,nil,"third")
-        addSubView(iconButton3)
+        let iconButton3 = SelectButton(24,24,false,card,"third")
+        card.addSubView(iconButton3)
         iconButton3.setPosition(CGPoint(10+24+2+24,20))
         
-        let iconButton4 = SelectButton(24,24,false,nil,"fourth")
-        addSubView(iconButton4)
+        let iconButton4 = SelectButton(24,24,false,card,"fourth")
+        card.addSubView(iconButton4)
         iconButton4.setPosition(CGPoint(10+24+2+24+24+1,20))/**/
          /**/
         
