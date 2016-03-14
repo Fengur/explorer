@@ -110,10 +110,7 @@ class BasicView:CustomView {
     }
     func createSingleLineTextArea(){
         let card:Card = container.addSubView(Card(NaN, NaN, "TextInput: ", container, "singleLineTextAreaCard"))
-        let section = Section(200,200,container,"textContainer")
-        container.addSubview(section)
-        
-        let textArea:TextArea = section.addSubView(TextArea(180, 24, "This is a single line text area", section))
+        let textArea:TextArea = card.addSubView(TextArea(180, 24, "This is a single line text area", card))
         textArea
     }
     //create text
