@@ -104,7 +104,7 @@ class BasicView:CustomView {
         stepper
     }
     func createTextInput(){
-        let card:Card = container.addSubView(Card(NaN, NaN, "LeverStepper: ", container, "textInputCard"))
+        let card:Card = container.addSubView(Card(NaN, NaN, "TextInput: ", container, "textInputCard"))
         let textInput:TextInput = card.addSubView(TextInput(200, 28, "Description: ", "blue", card))
         textInput
     }
