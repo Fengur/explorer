@@ -11,7 +11,7 @@ class BasicView:CustomView {
         Swift.print("hello world")
         container = addSubView(Container(1000,800,self,"main"))
         
-        /**/
+        /*
         
         createButton()
         createTextButton()
@@ -21,10 +21,10 @@ class BasicView:CustomView {
         createTabBar()
         createIconButtons()
         createLeverStepper()
-
-
-        
         createTextInput()
+        
+        */
+        createSingleLineTextArea()
     }
     /**
      * Button
@@ -109,7 +109,63 @@ class BasicView:CustomView {
         textInput
     }
     
-    //create single-line text
+    /**
+     *
+     */
+    func createSingleLineTextArea(){
+        var css:String = ""
+        /*generics*/
+        css += "InsetShadow{"
+        css +=      "drop-shadow:drop-shadow(0px 0 #000000 0.4 4 4 1 2 true);"
+        css += "}"
+        
+        /*TextArea*/
+        css += "TextArea{"
+        css +=     "float:left;"
+        css +=     "clear:left;"
+        css +=     "width:180px;"
+        css +=     "height:24px;"
+        css +=     "fill:white;"
+        css +=     "line:grey9;"
+        css +=     "line-alpha:1;"
+        css +=     "line-thickness:1px;"
+        css +=     "line-offset-type:outside;"
+        css +=     "padding:0px;"
+        css +=     "drop-shadow:<InsetShadow>;"
+        css += "}"
+        css += "TextArea Text{"
+        css +=     "width:100%;"
+        css +=     "height:24px;"
+        css +=     "float:left;"
+        css +=     "clear:left;"
+        css +=     "font:Lucida Grande;"
+        css +=     "size:12px;"
+        css +=     "align:left;"
+        //css +=     "autoSize:none;"
+        css +=     "color:grey6;"
+        css +=     "type:input;"
+        css +=     "selectable:true;"
+        css +=     "wordWrap:true;"
+        //css +=     "margin-top:4px;"
+        css +=     "backgroundColor:orange;"
+        css +=     "background:false;"
+        //css +=     "leading:2px;"
+        //css +=     "multiline:true;"
+        css +=     "margin-top:4px;"
+        css +=     "margin-left:6px;"
+        css += "}"
+        
+        css += "Section#textContainer{fill:green;fill-alpha:0;float:left;clear:left;padding-top:20px;padding-left:20px;corner-radius:0px;}"
+        
+        
+        StyleManager.addStyle(css)
+        
+        let section = Section(200,200,container,"textContainer")
+        container.addSubview(section)
+        
+        let textArea:TextArea = section.addSubView(TextArea(180, 24, "This is a single line text area", section))
+        textArea
+    }
     //create text
     //create text area
     //create the search-box
