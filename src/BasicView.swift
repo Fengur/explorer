@@ -62,4 +62,115 @@ class BasicView:CustomView {
         }
         checkGroup.event = onEvent/*adds the event handler to the event exit point in the checkGroup*/
     }
+    /**
+     * TODO: create the LeverSpinner component with text
+     */
+    func createLeverSpinner(){
+        var css:String = ""
+        /*generics*/
+        css += "InsetShadow{"
+        css +=      "drop-shadow:drop-shadow(0px 0 #000000 0.4 4 4 1 2 true);"
+        css += "}"
+        css += "ButtonBase{"
+        css +=     "fill:linear-gradient(top,#FFFEFE,#E8E8E8);"
+        css += "}"
+        /*leverSpinner css*/
+        css += "Spinner{"
+        css +=      "float:left;"
+        css +=      "clear:left;"
+        css +=      "width:120px;"
+        css +=      "height:24px;"
+        css +=      "padding:0px;"
+        css += "}"
+        /*text css*/
+        css += "Spinner TextInput{"
+        css +=     "float:left;"
+        css +=     "clear:none;"
+        css +=     "width:90px;"
+        css +=     "height:28px;"
+        css +=     "margin-right:6px;"
+        //css +=     "margin-top:4px;"
+        css += "}"
+        css += "Spinner TextInput Text{"
+        css +=     "width:40px;"
+        css +=     "height:28px;"
+        css +=     "font:Lucida Grande;"
+        //css +=     "selectable:false;"
+        //css +=     "type:dynamic;"
+        css +=     "wordWrap:true;"
+        css +=     "size:12px;"
+        css +=     "color:gray;"
+        css +=     "align:left;"
+        css +=     "backgroundColor:orange;"
+        css +=     "background:false;"
+        css +=     "margin-top:2px;"
+        css +=     "float:left;"
+        css +=     "clear:none;"
+        css += "}"
+        css += "Spinner TextInput TextArea{"
+        css +=     "width:50px;"
+        css +=     "height:20px;"
+        css +=     "float:left;"
+        css +=     "clear:none;"
+        css +=     "fill:white;"
+        css +=     "fill-alpha:1;"
+        css +=     "line:grey9;"
+        css +=     "line-alpha:1;"
+        css +=     "line-thickness:1px;"
+        css +=     "line-offset-type:outside;"
+        css +=     "drop-shadow:<InsetShadow>;"
+        css += "}"
+        css += "Spinner TextInput TextArea Text{"
+        css +=     "width:100%;"
+        css +=     "align:right;"
+        css +=     "selectable:true;"
+        css +=     "type:input;"
+        //css +=     "mouseEnabled:true;"
+        css += "}"
+        
+        /*stepper css*/
+        
+        css += "Stepper{"
+        css +=    "padding-left:6px;"//<---temp fix
+        css +=    "float:left;"
+        css +=    "clear:none;"
+        css += "}"
+        css += "Stepper Button{"
+        css +=    "padding-left:0px;"//<---temp fix
+        css +=    "float:left;"
+        css +=    "width:10px,10px;"
+        css +=    "height:10px,10px;"
+        css +=    "margin-left:0px,1px;"
+        css +=    "fill-alpha:1;"
+        css +=    "line:grey7;"
+        css +=    "line-offset-type:outside;"
+        css +=    "line-alpha:1;"
+        css +=    "line-thickness:1px;"
+        //css +=    "drop-shadow:<SubtleShadow>,none;"
+        css += "}"
+        css += "Stepper Button#plus{"
+        css +=     "fill:<ButtonBase>,~/Desktop/svg/icons/arrow_up_closed.svg grey8;"//assets/svg/icons/arrow_up_closed.svg
+        css +=     "corner-radius:4px 4px 0px 0px;"
+        css +=     "margin-top:0px,1px;"
+        css += "}"
+        css += "Stepper Button#minus{"
+        css +=     "clear:left;"
+        css +=     "height:10px,10px;"
+        css +=     "fill:<ButtonBase>,~/Desktop/svg/icons/arrow_down_closed.svg grey8;"
+        css +=     "line-offset-type-top:inside;"
+        //css +=     "margin-top:0px;"
+        css +=     "corner-radius:0px 0px 4px 4px;"
+        css += "}"
+        
+        css += "Section#container{fill:green;fill-alpha:0;float:left;clear:left;padding-top:20px;padding-left:8px;}"
+        StyleManager.addStyle(css)
+        
+        let container = addSubView(Section(200,200,self,"container"))
+        
+        
+        let leverSpinner:LeverSpinner = container.addSubView(LeverSpinner(140, 40,"Value: ", 0, 1, CGFloat(Int.min), CGFloat(Int.max), 0, 100, 200, container))
+        leverSpinner
+        
+        
+    }
 }
