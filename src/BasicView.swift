@@ -20,8 +20,9 @@ class BasicView:CustomView {
         createSingleLineTextArea()
         createText()
         createTextArea()
-
         createSearchBox()
+        
+        //continue here: 
     }
     /**
      * Button
