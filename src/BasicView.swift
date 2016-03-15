@@ -127,6 +127,11 @@ class BasicView:CustomView {
         let searchBox:TextArea = searchBoxCard.addSubView(TextArea(NaN, NaN, "Search", searchBoxCard))
         searchBox
     }
+    func createVSlider(){
+        let vSliderCard:Card = container.addSubView(Card(NaN, NaN, "Vertical slider: ", container, "vSliderCard"))
+        let vSlider:VSlider = vSliderCard.addSubView(VSlider(24,60,30,0,vSliderCard))
+        vSlider
+    }
     
     //vertical slider
     //horizontal slider
