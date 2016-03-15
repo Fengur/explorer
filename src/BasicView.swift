@@ -21,9 +21,10 @@ class BasicView:CustomView {
         createText()
         createTextArea()
         createSearchBox()
-        createVSlider()
-        */
+        
         createHSlider()
+        */
+        createVSlider()
     }
     /**
      * Button
@@ -132,9 +133,7 @@ class BasicView:CustomView {
         let vSliderCard:Card = container.addSubView(Card(NaN, NaN, "Vertical slider: ", container, "vSliderCard"))
         let vSlider:VSlider = vSliderCard.addSubView(VSlider(6,60,30,0,vSliderCard))
         vSlider
-        
     }
-    
     func createHSlider(){
         let hSliderCard:Card = container.addSubView(Card(NaN, NaN, "Horizontal slider: ", container, "hSliderCard"))
         let hSlider:HSlider = hSliderCard.addSubView(HSlider(120,6,70,0,hSliderCard))
