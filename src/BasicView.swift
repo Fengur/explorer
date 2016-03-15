@@ -140,14 +140,14 @@ class BasicView:CustomView {
         hSlider
     }
     /**
-    * CheckButton
-    */
+     * CheckButton
+     */
     func createCheckBox(){
-        var checkBoxSection:Card = addSubView(Section(NaN, NaN, "CheckBox: ", self, "checkBoxSection"));
-        var checkBoxContainer:Element = checkBoxSection.addSubView(Element(NaN,NaN,checkBoxSection,"checkBoxContainer"));
-        var checkBox1:CheckBox = checkBoxContainer.addChild(new CheckBox(NaN,NaN,false,false,false,checkBoxContainer));
-        var checkBox2:CheckBox = checkBoxContainer.addChild(new CheckBox(NaN,NaN,false,false,true,checkBoxContainer));
-        checkBoxContainer.addChild(new CheckGroup([checkBox1,checkBox2], checkBox2)) as CheckGroup;
+        let checkBoxCard:Card = addSubView(Card(NaN, NaN, "CheckBox: ", self, "checkBoxCard"))
+        let checkBoxContainer:Element = checkBoxCard.addSubView(Element(NaN,NaN,checkBoxCard,"checkBoxContainer"))
+        let checkBox1:CheckBox = checkBoxCard.addSubView(CheckBox(NaN,NaN,false,checkBoxCard))
+        let checkBox2:CheckBox = checkBoxCard.addSubView(CheckBox(NaN,NaN,true,checkBoxCard))
+        checkBoxContainer.addSubView(CheckGroup([checkBox1,checkBox2], checkBox2))
     }
     //checkboxs
     //radiobulletbuttons
