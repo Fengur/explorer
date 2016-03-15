@@ -7,7 +7,7 @@ class BasicView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         
-        /**/
+        /*
         createButton()
         createTextButton()
         createRadioBullet()
@@ -23,7 +23,8 @@ class BasicView:CustomView {
         createSearchBox()
         createVSlider()
         createHSlider()
-
+        */
+        createCheckBox
         
     }
     /**
@@ -143,7 +144,7 @@ class BasicView:CustomView {
      * CheckButton
      */
     func createCheckBox(){
-        let checkBoxCard:Card = addSubView(Card(NaN, NaN, "CheckBox: ", self, "checkBoxCard"))
+        let checkBoxCard:Card = container.addSubView(Card(NaN, NaN, "CheckBox: ", container, "checkBoxCard"))
         let checkBoxContainer:Element = checkBoxCard.addSubView(Element(NaN,NaN,checkBoxCard,"checkBoxContainer"))
         let checkBox1:CheckBox = checkBoxCard.addSubView(CheckBox(NaN,NaN,false,checkBoxCard))
         let checkBox2:CheckBox = checkBoxCard.addSubView(CheckBox(NaN,NaN,true,checkBoxCard))
