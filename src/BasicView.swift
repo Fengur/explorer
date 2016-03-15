@@ -139,6 +139,7 @@ class BasicView:CustomView {
         let hSlider:HSlider = hSliderCard.addSubView(HSlider(120,6,70,0,hSliderCard))
         hSlider
     }
+    
     //checkboxs
     //radiobulletbuttons
     
