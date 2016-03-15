@@ -22,7 +22,7 @@ class BasicView:CustomView {
         createTextArea()
         createSearchBox()
         
-        //continue here: 
+        //continue here: check what type of fill the iconbutonsvgs have. then fix the problem. i think its the path svg that cant get a new color
     }
     /**
      * Button
