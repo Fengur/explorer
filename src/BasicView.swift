@@ -131,7 +131,7 @@ class BasicView:CustomView {
     }
     func createVSlider(){
         let vSliderCard:Card = container.addSubView(Card(NaN, NaN, "Vertical slider: ", container, "vSliderCard"))
-        let vSlider:VSlider = vSliderCard.addSubView(VSlider(6,60,70,0,vSliderCard))
+        let vSlider:VSlider = vSliderCard.addSubView(VSlider(6,60,30,0,vSliderCard))
         vSlider
     }
     func createHSlider(){
