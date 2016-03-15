@@ -7,7 +7,7 @@ class BasicView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         
-        /**/
+        /*
         createButton()
         createTextButton()
         createRadioBullet()
@@ -21,8 +21,9 @@ class BasicView:CustomView {
         createText()
         createTextArea()
         createSearchBox()
-
         createVSlider()
+        */
+        createHSlider()
     }
     /**
      * Button
@@ -135,8 +136,9 @@ class BasicView:CustomView {
     }
     
     func createHSlider(){
-        var hSliderSection:Section = container.addChild(Card(NaN, NaN, "Horizontal slider: ", self, "hSliderCard"))
-        var hSlider:HSlider = hSliderSection.addChild(new HSlider(120,24,70,0,hSliderSection)) as HSlider;
+        let hSliderCard:Card = container.addSubView(Card(NaN, NaN, "Horizontal slider: ", self, "hSliderCard"))
+        let hSlider:HSlider = hSliderCard.addSubView(HSlider(120,24,70,0,hSliderCard))
+        hSlider
     }
     //checkboxs
     //radiobulletbuttons
