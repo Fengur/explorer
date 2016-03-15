@@ -127,7 +127,6 @@ class BasicView:CustomView {
         let searchBox:TextArea = searchBoxCard.addSubView(TextArea(NaN, NaN, "Search", searchBoxCard))
         searchBox
     }
-    //create the search-box
     
     //vertical slider
     //horizontal slider
