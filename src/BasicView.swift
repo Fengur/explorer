@@ -136,8 +136,8 @@ class BasicView:CustomView {
     }
     
     func createHSlider(){
-        let hSliderCard:Card = container.addSubView(Card(NaN, NaN, "Horizontal slider: ", self, "hSliderCard"))
-        let hSlider:HSlider = hSliderCard.addSubView(HSlider(120,24,70,0,hSliderCard))
+        let hSliderCard:Card = container.addSubView(Card(NaN, NaN, "Horizontal slider: ", container, "hSliderCard"))
+        let hSlider:HSlider = hSliderCard.addSubView(HSlider(120,6,70,0,hSliderCard))
         hSlider
     }
     //checkboxs
