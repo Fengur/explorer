@@ -120,8 +120,6 @@ class BasicView:CustomView {
         textArea
     }
     
-    //create text
-    //create text area
     //create the search-box
     
     //vertical slider
