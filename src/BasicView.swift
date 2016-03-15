@@ -122,7 +122,7 @@ class BasicView:CustomView {
         textArea
     }
     func createSearchBox(){
-        let searchBoxCard:Card = container.addSubView(Card(NaN, NaN, "Search box: ", self, "searchBoxCard"))
+        let searchBoxCard:Card = container.addSubView(Card(NaN, NaN, "Search box: ", container, "searchBoxCard"))
         let searchBox:TextArea = searchBoxCard.addSubView(TextArea(NaN, NaN, "Search", searchBoxCard))
         searchBox
     }
