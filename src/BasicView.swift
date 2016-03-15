@@ -130,6 +130,8 @@ class BasicView:CustomView {
     
     //vertical slider
     //horizontal slider
+    //checkboxs
+    //radiobulletbuttons
     
     //slider textArea
     //list
