@@ -138,6 +138,7 @@ class BasicView:CustomView {
     //slider list
     
     //comboBox
+    //createColorTag
     
     
 }
