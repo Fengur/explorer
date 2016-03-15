@@ -7,7 +7,7 @@ class BasicView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         
-        /**/
+        /*
         createButton()
         createTextButton()
         createRadioBullet()
@@ -20,6 +20,8 @@ class BasicView:CustomView {
         createSingleLineTextArea()
         createText()
         createTextArea()
+        */
+        createSearchBox()
     }
     /**
      * Button
@@ -122,6 +124,7 @@ class BasicView:CustomView {
     func createSearchBox(){
         let searchBoxCard:Card = container.addSubView(Card(NaN, NaN, "Search box: ", self, "searchBoxCard"))
         let searchBox:TextArea = searchBoxCard.addSubView(TextArea(NaN, NaN, "Search", searchBoxCard))
+        searchBox
     }
     //create the search-box
     
