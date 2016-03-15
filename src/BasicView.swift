@@ -134,8 +134,10 @@ class BasicView:CustomView {
         
     }
     
-    //vertical slider
-    //horizontal slider
+    func createHNodeSlider(){
+        var hNodeSliderCard:Card = container.addSubView(Section(NaN, NaN, "Horizontal node slider: ", container, "hNodeSliderSection"))
+        var hNodeSlider:HNodeSlider = hNodeSliderSection.addSubView(HNodeSlider(120, 20, 20, 0, 1, hNodeSliderSection))
+    }
     //checkboxs
     //radiobulletbuttons
     
