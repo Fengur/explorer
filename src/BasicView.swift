@@ -26,8 +26,9 @@ class BasicView:CustomView {
         createCheckBox()
         createRadioButton()
         createColorTag()
-        */
         createVNodeSlider()
+        */
+        createHNodeSlider()
     }
     /**
      * Button
@@ -185,17 +186,16 @@ class BasicView:CustomView {
         vNodeSlider
     }
     func createHNodeSlider(){
-        var hNodeSliderCard:Card = container.addSubView(Card(NaN, NaN, "Horizontal node slider: ", container, "hNodeSliderCard")) as Section;
-        var hNodeSlider:HNodeSlider = hNodeSliderSection.addChild(new HNodeSlider(120, 20, 20, 0, 1, hNodeSliderSection)) as HNodeSlider;
+        let hNodeSliderCard:Card = container.addSubView(Card(NaN, NaN, "Horizontal node slider: ", container, "hNodeSliderCard"))
+        let hNodeSlider:HNodeSlider = hNodeSliderCard.addSubView(HNodeSlider(120, 20, 20, 0, 1, hNodeSliderCard))
+        hNodeSlider
     }
     
     
     //slider textArea
     //list
     //slider list
-    
     //comboBox
-    
     
     
 }
