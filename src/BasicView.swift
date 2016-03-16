@@ -7,7 +7,7 @@ class BasicView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         
-        /**/
+        /*
         createButton()
         createTextButton()
         createRadioBullet()
@@ -25,8 +25,9 @@ class BasicView:CustomView {
         createHSlider()
         createCheckBox()
         createRadioButton()
-
         createColorTag()
+        */
+        createVNodeSlider()
     }
     /**
      * Button
@@ -177,6 +178,11 @@ class BasicView:CustomView {
         //selectables[0].setSelected(true)
         let selectGroup = SelectGroup(selectables,selectables[0])
         selectGroup
+    }
+    func createVNodeSlider(){
+        let vNodeSliderCard:Card = container.addSubView(Card(NaN, NaN, "Vertical node slider: ", container, "vNodeSliderCard"))
+        let vNodeSlider:VNodeSlider = vNodeSliderCard.addSubView(VNodeSlider(20, 70, 20, 0, 1, vNodeSliderCard))
+        vNodeSlider
     }
     
     
