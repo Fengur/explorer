@@ -160,10 +160,10 @@ class BasicView:CustomView {
         let radioButton1:RadioButton = radioButtonContainer.addSubView(RadioButton(NaN,NaN,"Option 1",false,radioButtonContainer))
         let radioButton2:RadioButton = radioButtonContainer.addSubView(RadioButton(NaN,NaN,"Option 2",true,radioButtonContainer))
         let selectGroup:SelectGroup = radioButtonContainer.addSubView(SelectGroup([radioButton1,radioButton2],radioButton2))
-        func onSelectGroupChange(event:SelectGroupEvent){
-            Swift.print("event.selectable: " + event.selectable);
+        func onSelectGroupChange(event:Event){
+            Swift.print("event.selectable: " + "\(event)");
         }
-        selectGroup.addEventListener(SelectGroupEvent.SELECT_GROUP_CHANGE, onSelectGroupChange);
+        selectGroup.event = onSelectGroupChange
     }
     //radiobulletbuttons
     
