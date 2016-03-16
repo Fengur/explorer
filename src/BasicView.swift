@@ -167,12 +167,14 @@ class BasicView:CustomView {
     }
     
     
+    //createColorTag
+    
     //slider textArea
     //list
     //slider list
     
     //comboBox
-    //createColorTag
+    
     
     
 }
