@@ -141,7 +141,7 @@ class BasicView:CustomView {
         hSlider
     }
     /**
-     * CheckButton
+     * Checkbox
      */
     func createCheckBox(){
         let checkBoxCard:Card = container.addSubView(Card(NaN, NaN, "CheckBox: ", container, "checkBoxCard"))
@@ -151,7 +151,7 @@ class BasicView:CustomView {
         let checkGroup:CheckGroup = CheckGroup([checkBox1,checkBox2], checkBox2)
         checkGroup
     }
-    //checkboxs
+    //
     //radiobulletbuttons
     
     //slider textArea
