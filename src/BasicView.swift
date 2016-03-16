@@ -167,18 +167,11 @@ class BasicView:CustomView {
     }
     func createColorTag(){
         let colorTagCard:Card = container.addSubView(Card(NaN, NaN, "Color tags: ", self, "colorTagSection"))
-        let colorTagContainer:Section = container.addSubView(Section(NaN,NaN,container,"colorTagContainer"))
-        let blueColorTag:RadioBullet = colorTagContainer.addSubView(RadioBullet(NaN,NaN,false,false,true,colorTagContainer,"blue"))
-        
-        let colors:Array<String> = ["blue","red","orange","green"]
-        /*
-        var redColorTag:RadioBullet = colorTagContainer.addChild(new RadioBullet(NaN,NaN,false,false,false,colorTagContainer,"red")) as RadioBullet;
-        var orangeColorTag:RadioBullet = colorTagContainer.addChild(new RadioBullet(NaN,NaN,false,false,false,colorTagContainer,"orange")) as RadioBullet;
-        var greenColorTag:RadioBullet = colorTagContainer.addChild(new RadioBullet(NaN,NaN,false,false,false,colorTagContainer,"green")) as RadioBullet;
-        var yellowColorTag:RadioBullet = colorTagContainer.addChild(new RadioBullet(NaN,NaN,false,false,false,colorTagContainer,"yellow")) as RadioBullet;
-        var purpleColorTag:RadioBullet = colorTagContainer.addChild(new RadioBullet(NaN,NaN,false,false,false,colorTagContainer,"purple")) as RadioBullet;
-        var greyColorTag:RadioBullet = colorTagContainer.addChild(new RadioBullet(NaN,NaN,false,false,false,colorTagContainer,"grey")) as RadioBullet;
-        */
+        let colorTagContainer:Section = colorTagCard.addSubView(Section(NaN,NaN,colorTagCard,"colorTagContainer"))
+        let colors:Array<String> = ["blue","red","orange","green","yellow","purple","purple"]
+        for color in colors{
+            colorTagContainer.addSubView(RadioBullet(NaN,NaN,false,colorTagContainer,color))
+        } 
         let selectables = SelectParser.selectables(colorTagContainer)
         let selectGroup = SelectGroup(selectables,selectables[0])
         selectGroup
