@@ -166,9 +166,9 @@ class BasicView:CustomView {
         selectGroup.event = onSelectGroupChange
     }
     func createColorTag(){
-        let colorTagSection:Section = stage.addChild(new Section(NaN, NaN, "Color tags: ", this, "colorTagSection")) as Section;
-        let colorTagContainer:Element = colorTagSection.addChild(new Element(NaN,NaN,colorTagSection,"colorTagContainer")) as Element;
-        let blueColorTag:RadioBullet = colorTagContainer.addChild(new RadioBullet(NaN,NaN,false,false,true,colorTagContainer,"blue")) as RadioBullet;
+        let colorTagSection:Section = stage.addSubView(Section(NaN, NaN, "Color tags: ", this, "colorTagSection")) as Section;
+        let colorTagContainer:Element = colorTagSection.addSubView(new Element(NaN,NaN,colorTagSection,"colorTagContainer")) as Element;
+        let blueColorTag:RadioBullet = colorTagContainer.addSubView(new RadioBullet(NaN,NaN,false,false,true,colorTagContainer,"blue")) as RadioBullet;
         
         let colors:Array<String> = ["blue","red","orange","green"]
         /*
@@ -179,7 +179,8 @@ class BasicView:CustomView {
         var purpleColorTag:RadioBullet = colorTagContainer.addChild(new RadioBullet(NaN,NaN,false,false,false,colorTagContainer,"purple")) as RadioBullet;
         var greyColorTag:RadioBullet = colorTagContainer.addChild(new RadioBullet(NaN,NaN,false,false,false,colorTagContainer,"grey")) as RadioBullet;
         */
-        colorTagContainer.addChild(new SelectGroup([blueColorTag,redColorTag,orangeColorTag,greenColorTag,blueColorTag,yellowColorTag,purpleColorTag,greyColorTag])) as SelectGroup;
+        let selectables = SelectParser.selectables(colorTagContainer)
+        SelectGroup()
     }
     
     //createColorTag
