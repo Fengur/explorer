@@ -181,7 +181,6 @@ class BasicView:CustomView {
     }
     func createVNodeSlider(){
         let vNodeSliderCard:Card = container.addSubView(Card(NaN, NaN, "Vertical node slider: ", container, "vNodeSliderCard"))
-        vNodeSliderCard
         let vNodeSlider:VNodeSlider = vNodeSliderCard.addSubView(VNodeSlider(20, 70, 20, 0, 1, vNodeSliderCard))
         vNodeSlider
     }
