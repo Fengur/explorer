@@ -184,7 +184,10 @@ class BasicView:CustomView {
         let vNodeSlider:VNodeSlider = vNodeSliderCard.addSubView(VNodeSlider(20, 70, 20, 0, 1, vNodeSliderCard))
         vNodeSlider
     }
-    
+    func createHNodeSlider(){
+        var hNodeSliderCard:Card = container.addSubView(Card(NaN, NaN, "Horizontal node slider: ", container, "hNodeSliderCard")) as Section;
+        var hNodeSlider:HNodeSlider = hNodeSliderSection.addChild(new HNodeSlider(120, 20, 20, 0, 1, hNodeSliderSection)) as HNodeSlider;
+    }
     
     
     //slider textArea
