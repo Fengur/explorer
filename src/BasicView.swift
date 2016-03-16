@@ -165,7 +165,7 @@ class BasicView:CustomView {
         }
         selectGroup.event = onSelectGroupChange
     }
-    //radiobulletbuttons
+    
     
     //slider textArea
     //list
