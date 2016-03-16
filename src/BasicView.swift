@@ -24,7 +24,7 @@ class BasicView:CustomView {
         createVSlider()
         createHSlider()
         */
-        createCheckBox
+        createCheckBox()
         
     }
     /**
@@ -146,9 +146,6 @@ class BasicView:CustomView {
     func createCheckBox(){
         let checkBoxCard:Card = container.addSubView(Card(NaN, NaN, "CheckBox: ", container, "checkBoxCard"))
         let checkBoxContainer:Section = checkBoxCard.addSubView(Section(NaN,NaN,checkBoxCard,"checkBoxContainer"))
-        let checkBox1:CheckBox = checkBoxCard.addSubView(CheckBox(NaN,NaN,false,checkBoxCard))
-        let checkBox2:CheckBox = checkBoxCard.addSubView(CheckBox(NaN,NaN,true,checkBoxCard))
-        checkBoxContainer.addSubView(CheckGroup([checkBox1,checkBox2], checkBox2))
     }
     //checkboxs
     //radiobulletbuttons
