@@ -169,7 +169,7 @@ class BasicView:CustomView {
     func createColorTag(){
         let colorTagCard:Card = container.addSubView(Card(NaN, NaN, "Color tags: ", container, "colorTagCard"))
         let colorTagContainer:Section = colorTagCard.addSubView(Section(NaN,NaN,colorTagCard,"colorTagContainer"))
-        let colors:Array<String> = ["blue","red","orange","green","yellow","purple","purple"]
+        let colors:Array<String> = ["blue","red","orange","green","yellow","purple","grey"]
         for color in colors{
             colorTagContainer.addSubView(RadioBullet(NaN,NaN,false,colorTagContainer,color))
         }
