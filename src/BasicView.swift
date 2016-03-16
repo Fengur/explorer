@@ -166,18 +166,19 @@ class BasicView:CustomView {
         selectGroup.event = onSelectGroupChange
     }
     func createColorTag(){
-        let colorTagCard:Card = container.addSubView(Card(NaN, NaN, "Color tags: ", self, "colorTagSection"))
+        let colorTagCard:Card = container.addSubView(Card(NaN, NaN, "Color tags: ", self, "colorTagCard"))
         let colorTagContainer:Section = colorTagCard.addSubView(Section(NaN,NaN,colorTagCard,"colorTagContainer"))
         let colors:Array<String> = ["blue","red","orange","green","yellow","purple","purple"]
         for color in colors{
             colorTagContainer.addSubView(RadioBullet(NaN,NaN,false,colorTagContainer,color))
-        } 
+        }
         let selectables = SelectParser.selectables(colorTagContainer)
+        selectables[0].setSelected(true)
         let selectGroup = SelectGroup(selectables,selectables[0])
         selectGroup
     }
     
-    //createColorTag
+    
     
     //slider textArea
     //list
