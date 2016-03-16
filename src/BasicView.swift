@@ -24,8 +24,6 @@ class BasicView:CustomView {
         createVSlider()
         createHSlider()
         createCheckBox()
-
-
         createRadioButton()
         
     }
