@@ -165,7 +165,20 @@ class BasicView:CustomView {
         }
         selectGroup.event = onSelectGroupChange
     }
-    
+    func createColorTag(){
+        let colorTagSection:Section = stage.addChild(new Section(NaN, NaN, "Color tags: ", this, "colorTagSection")) as Section;
+        let colorTagContainer:Element = colorTagSection.addChild(new Element(NaN,NaN,colorTagSection,"colorTagContainer")) as Element;
+        let blueColorTag:RadioBullet = colorTagContainer.addChild(new RadioBullet(NaN,NaN,false,false,true,colorTagContainer,"blue")) as RadioBullet;
+        /*
+        var redColorTag:RadioBullet = colorTagContainer.addChild(new RadioBullet(NaN,NaN,false,false,false,colorTagContainer,"red")) as RadioBullet;
+        var orangeColorTag:RadioBullet = colorTagContainer.addChild(new RadioBullet(NaN,NaN,false,false,false,colorTagContainer,"orange")) as RadioBullet;
+        var greenColorTag:RadioBullet = colorTagContainer.addChild(new RadioBullet(NaN,NaN,false,false,false,colorTagContainer,"green")) as RadioBullet;
+        var yellowColorTag:RadioBullet = colorTagContainer.addChild(new RadioBullet(NaN,NaN,false,false,false,colorTagContainer,"yellow")) as RadioBullet;
+        var purpleColorTag:RadioBullet = colorTagContainer.addChild(new RadioBullet(NaN,NaN,false,false,false,colorTagContainer,"purple")) as RadioBullet;
+        var greyColorTag:RadioBullet = colorTagContainer.addChild(new RadioBullet(NaN,NaN,false,false,false,colorTagContainer,"grey")) as RadioBullet;
+        */
+        colorTagContainer.addChild(new SelectGroup([blueColorTag,redColorTag,orangeColorTag,greenColorTag,blueColorTag,yellowColorTag,purpleColorTag,greyColorTag])) as SelectGroup;
+    }
     
     //createColorTag
     
