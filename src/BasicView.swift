@@ -151,7 +151,20 @@ class BasicView:CustomView {
         let checkGroup:CheckGroup = CheckGroup([checkBox1,checkBox2], checkBox2)
         checkGroup
     }
-    //
+    /**
+     * RadioButton
+     */
+    func createRadioButton(){
+        let radioButtonCard:Card = container.addSubView(Card(NaN, NaN, "Radio buttons: ", container, "radioButtonSection"))
+        let radioButtonContainer:Element = radioButtonSection.addSubView(new Element(NaN,NaN,radioButtonSection,"radioButtonContainer"))// :TODO: rename to background
+        let radioButton1:RadioButton = radioButtonContainer.addChild(new RadioButton(NaN,NaN,false,false,"Option 1",false,radioButtonContainer)) as RadioButton;
+        let radioButton2:RadioButton = radioButtonContainer.addChild(new RadioButton(NaN,NaN,false,false,"Option 2",true,radioButtonContainer)) as RadioButton;
+        let selectGroup:SelectGroup = radioButtonContainer.addChild(new SelectGroup([radioButton1,radioButton2],radioButton2)) as SelectGroup;
+        func onSelectGroupChange(event:SelectGroupEvent):void{
+            trace("event.selectable: " + event.selectable);
+        }
+        selectGroup.addEventListener(SelectGroupEvent.SELECT_GROUP_CHANGE, onSelectGroupChange);
+    }
     //radiobulletbuttons
     
     //slider textArea
