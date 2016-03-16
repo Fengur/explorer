@@ -160,14 +160,12 @@ class BasicView:CustomView {
         let radioButtonCard:Card = container.addSubView(Card(NaN, NaN, "Radio buttons: ", container, "radioButtonSection"))
         let radioButtonContainer:Element = radioButtonCard.addSubView(Section(NaN,NaN,radioButtonCard,"radioButtonContainer"))// :TODO: rename to background
         let radioButton1:RadioButton = radioButtonContainer.addSubView(RadioButton(80,14,"Option 1",false,radioButtonContainer))
-        radioButton1
-        
-        /*let radioButton2:RadioButton = radioButtonContainer.addSubView(RadioButton(NaN,NaN,"Option 2",true,radioButtonContainer))
+        let radioButton2:RadioButton = radioButtonContainer.addSubView(RadioButton(NaN,NaN,"Option 2",true,radioButtonContainer))
         let selectGroup:SelectGroup = radioButtonContainer.addSubView(SelectGroup([radioButton1,radioButton2],radioButton2))
         func onSelectGroupChange(event:Event){
         Swift.print("event.selectable: " + "\(event)");
         }
-        selectGroup.event = onSelectGroupChange*/
+        selectGroup.event = onSelectGroupChange
     }
     //radiobulletbuttons
     
