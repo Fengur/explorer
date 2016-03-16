@@ -169,6 +169,8 @@ class BasicView:CustomView {
         let colorTagSection:Section = stage.addChild(new Section(NaN, NaN, "Color tags: ", this, "colorTagSection")) as Section;
         let colorTagContainer:Element = colorTagSection.addChild(new Element(NaN,NaN,colorTagSection,"colorTagContainer")) as Element;
         let blueColorTag:RadioBullet = colorTagContainer.addChild(new RadioBullet(NaN,NaN,false,false,true,colorTagContainer,"blue")) as RadioBullet;
+        
+        let colors:Array<String> = ["blue","red","orange","green"]
         /*
         var redColorTag:RadioBullet = colorTagContainer.addChild(new RadioBullet(NaN,NaN,false,false,false,colorTagContainer,"red")) as RadioBullet;
         var orangeColorTag:RadioBullet = colorTagContainer.addChild(new RadioBullet(NaN,NaN,false,false,false,colorTagContainer,"orange")) as RadioBullet;
