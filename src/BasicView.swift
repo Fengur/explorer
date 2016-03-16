@@ -167,7 +167,7 @@ class BasicView:CustomView {
         selectGroup.event = onSelectGroupChange
     }
     func createColorTag(){
-        let colorTagCard:Card = container.addSubView(Card(NaN, NaN, "Color tags: ", self, "colorTagCard"))
+        let colorTagCard:Card = container.addSubView(Card(NaN, NaN, "Color tags: ", container, "colorTagCard"))
         let colorTagContainer:Section = colorTagCard.addSubView(Section(NaN,NaN,colorTagCard,"colorTagContainer"))
         let colors:Array<String> = ["blue","red","orange","green","yellow","purple","purple"]
         for color in colors{
