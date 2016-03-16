@@ -174,7 +174,7 @@ class BasicView:CustomView {
             colorTagContainer.addSubView(RadioBullet(NaN,NaN,false,colorTagContainer,color))
         }
         let selectables = SelectParser.selectables(colorTagContainer)
-        selectables[0].setSelected(true)
+        //selectables[0].setSelected(true)
         let selectGroup = SelectGroup(selectables,selectables[0])
         selectGroup
     }
