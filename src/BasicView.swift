@@ -191,10 +191,10 @@ class BasicView:CustomView {
         hNodeSlider
     }
     
-    
-    //slider textArea
     //list
     //slider list
+    
+    //slider textArea
     //comboBox
     
     
