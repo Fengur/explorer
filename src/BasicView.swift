@@ -180,7 +180,8 @@ class BasicView:CustomView {
         var greyColorTag:RadioBullet = colorTagContainer.addChild(new RadioBullet(NaN,NaN,false,false,false,colorTagContainer,"grey")) as RadioBullet;
         */
         let selectables = SelectParser.selectables(colorTagContainer)
-        SelectGroup()
+        let selectGroup = SelectGroup(selectables,selectables[0])
+        selectGroup
     }
     
     //createColorTag
