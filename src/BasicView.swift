@@ -7,7 +7,7 @@ class BasicView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         
-        /**/
+        /*        
         createButton()
         createTextButton()
         createRadioBullet()
@@ -23,8 +23,10 @@ class BasicView:CustomView {
         createSearchBox()
         createVSlider()
         createHSlider()
-
         createCheckBox()
+        */
+
+        createRadioButton()
         
     }
     /**
