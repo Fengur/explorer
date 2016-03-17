@@ -231,6 +231,12 @@ class BasicView:CustomView {
     
     
     
-    //slider textArea
+    private function createSliderTextArea():void {
+    var sliderTextAreaSection:Section = stage.addChild(new Section(NaN, NaN, "Slider text area: ", this, "sliderTextAreaSection")) as Section;
+    var text:String = FileParser.string(new File(File.applicationDirectory.url+"assets/txt/scrolltextarea.txt"));
+    var scrollTextArea:SliderTextArea = sliderTextAreaSection.addChild(new SliderTextArea(180,72,text,24,sliderTextAreaSection)) as SliderTextArea;
+    //			scrollTextArea.setSize(400, 250);
+    //			scrollTextAreaPanel.setPosition(new Point(LEFT_MARGIN+260,TOP_MARGIN));
+    }
     
 }
