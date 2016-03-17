@@ -198,8 +198,9 @@ class BasicView:CustomView {
         ListModifier.selectAt(list, 1);
     }
     
+    //comboBox
     //slider list
     //slider textArea
-    //comboBox
+    
     
 }
