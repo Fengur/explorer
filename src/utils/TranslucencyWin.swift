@@ -3,8 +3,8 @@ import Cocoa
 //this is the current window for the Stash app
 
 class TranslucencyWin:NSWindow, NSApplicationDelegate, NSWindowDelegate{
-    let w:CGFloat = 300
-    let h:CGFloat = 400
+    let w:CGFloat = 1000
+    let h:CGFloat = 800
     override var canBecomeMainWindow:Bool{return true}
     override var canBecomeKeyWindow:Bool{return true}/*If you want a titleless window to be able to become a key window, you need to create a subclass of NSWindow and override -canBecomeKeyWindow*/
     override var acceptsFirstResponder:Bool{return true}
@@ -29,7 +29,8 @@ class TranslucencyWin:NSWindow, NSApplicationDelegate, NSWindowDelegate{
         self.contentView?.addSubview(visualEffectView!)
         
         //let stashView = StashView(frame.width,frame.height)/*Sets the mainview of the window*/
-        //self.contentView?.addSubview(stashView)
+        let basicView = BasicView(w,h)
+        self.contentView?.addSubview(basicView)
     }
     func windowDidResize(notification: NSNotification) {
         //Swift.print("CustomWin.windowDidResize " + "\(self.frame.size)")
