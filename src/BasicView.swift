@@ -191,7 +191,6 @@ class BasicView:CustomView {
         let hNodeSlider:HNodeSlider = hNodeSliderCard.addSubView(HNodeSlider(120, 20, 20, 0, 1, hNodeSliderCard))
         hNodeSlider
     }
-    
     func createList(){
         let listCard:Card = container.addSubView(Card(NaN, NaN, "List: ", container, "listSection"))
         let xml = FileParser.xml("~/Desktop/scrollist.xml")/*assets/xml/list.xml*/
