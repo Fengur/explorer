@@ -7,7 +7,7 @@ class BasicView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         
-        /*
+        /**/
         createButton()
         createTextButton()
         createRadioBullet()
@@ -27,7 +27,7 @@ class BasicView:CustomView {
         createRadioButton()
         createColorTag()
         createVNodeSlider()
-        */
+
         createHNodeSlider()
     }
     /**
@@ -158,7 +158,7 @@ class BasicView:CustomView {
      * RadioButton
      */
     func createRadioButton(){
-        let radioButtonCard:Card = container.addSubView(Card(NaN, NaN, "Radio buttons: ", container, "radioButtonSection"))
+        let radioButtonCard:Card = container.addSubView(Card(NaN, NaN, "Radio buttons: ", container, "radioButtonCard"))
         let radioButtonContainer:Element = radioButtonCard.addSubView(Section(NaN,NaN,radioButtonCard,"radioButtonContainer"))// :TODO: rename to background
         let radioButton1:RadioButton = radioButtonContainer.addSubView(RadioButton(80,14,"Option 1",false,radioButtonContainer))
         let radioButton2:RadioButton = radioButtonContainer.addSubView(RadioButton(80,14,"Option 2",true,radioButtonContainer))
