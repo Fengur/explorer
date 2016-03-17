@@ -218,16 +218,19 @@ class BasicView:CustomView {
         let dp:DataProvider = DataProvider(xml)
         let combobox = comboBoxCard.addSubView(ComboBox(140,96,24,dp,false,0,comboBoxCard))
         combobox
-//		print("combobox: "+StyleResolver.stackString(combobox));
-//		comboBox.setOpen(false);
-//		comboBox.list.setSelected("white");
-//		comboBox.list.setMaxShowingItems(3);
+//		print("combobox: "+StyleResolver.stackString(combobox))
+//		comboBox.setOpen(false)
+//		comboBox.list.setSelected("white")
+//		comboBox.list.setMaxShowingItems(3)
 //		comboBox.list.getSelectedItem()["property"];/*returns the property*/
-//		comboBox.scrollList.scrollBar.visible = false;
-//		print("selected index: " + comboBox.scrollList.list.getSelectedIndex());
-//		print("selected Title: "+comboBox.scrollList.list.getSelectedTitle());
+//		comboBox.scrollList.scrollBar.visible = false
+//		print("selected index: " + comboBox.scrollList.list.getSelectedIndex())
+//		print("selected Title: "+comboBox.scrollList.list.getSelectedTitle())
 
     }
+    
+    
+    
     //slider textArea
     
 }
