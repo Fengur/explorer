@@ -214,5 +214,4 @@ class BasicView:CustomView {
     //comboBox
     //slider textArea
     
-    
 }
