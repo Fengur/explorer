@@ -231,12 +231,12 @@ class BasicView:CustomView {
     
     
     
-    private function createSliderTextArea():void {
-    var sliderTextAreaSection:Section = stage.addChild(new Section(NaN, NaN, "Slider text area: ", this, "sliderTextAreaSection")) as Section;
-    var text:String = FileParser.string(new File(File.applicationDirectory.url+"assets/txt/scrolltextarea.txt"));
-    var scrollTextArea:SliderTextArea = sliderTextAreaSection.addChild(new SliderTextArea(180,72,text,24,sliderTextAreaSection)) as SliderTextArea;
-    //			scrollTextArea.setSize(400, 250);
-    //			scrollTextAreaPanel.setPosition(new Point(LEFT_MARGIN+260,TOP_MARGIN));
+    func createSliderTextArea() {
+        let sliderTextAreaSection:Card = container.addSubView(Card(NaN, NaN, "Slider text area: ", container, "sliderTextAreaCard"))
+        let text:String = FileParser.content("~/Desktop/assets/txt/scrolltextarea.txt".tildePath)!
+        let scrollTextArea:SliderTextArea = container.addSubView(SliderTextArea(180,72,text,24,sliderTextAreaSection))
+//		scrollTextArea.setSize(400, 250);
+//		scrollTextAreaPanel.setPosition(new Point(LEFT_MARGIN+260,TOP_MARGIN));
     }
     
 }
