@@ -7,7 +7,7 @@ class BasicView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         
-        /*
+        /**/
         createButton()
         createTextButton()
         createRadioBullet()
@@ -31,7 +31,6 @@ class BasicView:CustomView {
         createList()
         createSliderList()
         createComboBox()
-        */
         createSliderTextArea()
     }
     /**
@@ -229,9 +228,6 @@ class BasicView:CustomView {
 //		print("selected Title: "+comboBox.scrollList.list.getSelectedTitle())
 
     }
-    
-    
-    
     func createSliderTextArea() {
         let sliderTextAreaCard:Card = container.addSubView(Card(NaN, NaN, "Slider text area: ", container, "sliderTextAreaCard"))
         let text:String = FileParser.content("~/Desktop/assets/txt/scrolltextarea.txt".tildePath)!
