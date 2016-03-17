@@ -192,14 +192,23 @@ class BasicView:CustomView {
     }
     func createList(){
         let listCard:Card = container.addSubView(Card(NaN, NaN, "List: ", container, "listCard"))
-        let xml = FileParser.xml("~/Desktop/assets/xml/list.xml")/*assets/xml/list.xml*/
+        let xml = FileParser.xml("~/Desktop/assets/xml/list.xml")
         let dp:DataProvider = DataProvider(xml)
         let list:List = listCard.addSubView(List(140, 76, NaN, dp,listCard))
         ListModifier.selectAt(list, 1);
     }
-    
+    func createSliderList(){
+        let sliderListCard:Card = container.addSubView(Card(140, 70, "Slider list: ", self, "sliderListCard"))
+        let xml = FileParser.xml("~/Desktop/assets/xml/scrollist.xml")//TODO:  create a method tht takes url and makes dp
+        let dp:DataProvider = DataProvider(xml)
+        let sliderList:SliderList = container.addSubView(SliderList(140, 72, 24, dp,sliderListCard))
+        ListModifier.select(sliderList, title: "white")
+        //scrollList.setMaxShowingItems(6);
+        //print("scrollList.list.getSelected(): " + scrollList.list.getSelected());
+        //var index:int = scrollList.list.getSelectedIndex();
+        //print("selected Title: "+scrollList.list.dataProvider.getItemAt(index).title);
+    }
     //comboBox
-    //slider list
     //slider textArea
     
     
