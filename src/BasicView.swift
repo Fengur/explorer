@@ -204,8 +204,7 @@ class BasicView:CustomView {
         let xml = FileParser.xml("~/Desktop/assets/xml/scrollist.xml")//TODO:  create a method tht takes url and makes dp
         let dp:DataProvider = DataProvider(xml)
         let sliderList:SliderList = sliderListCard.addSubView(SliderList(140, 96, 24, dp,sliderListCard))
-        sliderList
-        //ListModifier.select(sliderList, title: "white")
+        ListModifier.select(sliderList, "white")
         //scrollList.setMaxShowingItems(6);
         //print("scrollList.list.getSelected(): " + scrollList.list.getSelected());
         //var index:int = scrollList.list.getSelectedIndex();
