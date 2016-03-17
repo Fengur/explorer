@@ -7,7 +7,7 @@ class BasicView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         
-        /**/
+        /*
         createButton()
         createTextButton()
         createRadioBullet()
@@ -27,8 +27,9 @@ class BasicView:CustomView {
         createRadioButton()
         createColorTag()
         createVNodeSlider()
-
         createHNodeSlider()
+        */
+        createList()
     }
     /**
      * Button
@@ -192,10 +193,11 @@ class BasicView:CustomView {
     }
     
     func createList(){
-        var listCard:Card = container.addSubView(Card(NaN, NaN, "List: ", container, "listSection"))
-        var xml:XML = FileParser.xml(File(File.applicationDirectory.url+"assets/xml/list.xml"));
-        var dp:DataProvider = new DataProvider(xml);
-        var list:List = listCard.addChild(List(140, 72, NaN, dp,listCard));
+        let listCard:Card = container.addSubView(Card(NaN, NaN, "List: ", container, "listSection"))
+        let xml = FileParser.xml("~/Desktop/scrollist.xml")/*assets/xml/list.xml*/
+        let dp:DataProvider = DataProvider(xml)
+        let list:List = listCard.addSubView(List(140, 72, NaN, dp,listCard))
+        list
         //ListModifier.selectAt(list, 1);
     }
     
