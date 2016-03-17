@@ -7,7 +7,7 @@ class BasicView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         
-        /*
+        /**/
         createButton()
         createTextButton()
         createRadioBullet()
@@ -29,7 +29,7 @@ class BasicView:CustomView {
         createVNodeSlider()
         createHNodeSlider()
         createList()
-        */
+
         createSliderList()
     }
     /**
@@ -203,7 +203,7 @@ class BasicView:CustomView {
         let sliderListCard:Card = container.addSubView(Card(140, 70, "Slider list: ", container, "sliderListCard"))
         let xml = FileParser.xml("~/Desktop/assets/xml/scrollist.xml")//TODO:  create a method tht takes url and makes dp
         let dp:DataProvider = DataProvider(xml)
-        let sliderList:SliderList = sliderListCard.addSubView(SliderList(140, 96, 24, dp,sliderListCard))
+        let sliderList:SliderList = sliderListCard.addSubView(SliderList(140, 96, 24, dp, sliderListCard))
         ListModifier.select(sliderList, "white")
         //scrollList.setMaxShowingItems(6);
         //print("scrollList.list.getSelected(): " + scrollList.list.getSelected());
