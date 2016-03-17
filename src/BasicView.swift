@@ -191,7 +191,13 @@ class BasicView:CustomView {
         hNodeSlider
     }
     
-    
+    func createList(){
+        var listCard:Card = container.addSubView(Card(NaN, NaN, "List: ", container, "listSection"))
+        var xml:XML = FileParser.xml(File(File.applicationDirectory.url+"assets/xml/list.xml"));
+        var dp:DataProvider = new DataProvider(xml);
+        var list:List = listCard.addChild(List(140, 72, NaN, dp,listCard));
+        //ListModifier.selectAt(list, 1);
+    }
     
     //list
     //slider list
