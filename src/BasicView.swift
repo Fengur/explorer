@@ -211,6 +211,21 @@ class BasicView:CustomView {
         //print("selected Title: "+scrollList.list.dataProvider.getItemAt(index).title);
     }
     //comboBox
+    func createComboBox(){
+        var comboBoxCard:Card = container.addSubView(Card(NaN, NaN, "ComboBox: ", container, "comboBoxSection"))
+        var xml = FileParser.xml("~/Desktop/assets/xml/combobox.xml")
+        var dp:DataProvider = DataProvider(xml)
+        var combobox = comboBoxCard.addSubView(ComboBox(140,96,24,dp,false,0,comboBoxCard))
+//		print("combobox: "+StyleResolver.stackString(combobox));
+//		comboBox.setOpen(false);
+//		comboBox.list.setSelected("white");
+//		comboBox.list.setMaxShowingItems(3);
+//		comboBox.list.getSelectedItem()["property"];/*returns the property*/
+//		comboBox.scrollList.scrollBar.visible = false;
+//		print("selected index: " + comboBox.scrollList.list.getSelectedIndex());
+//		print("selected Title: "+comboBox.scrollList.list.getSelectedTitle());
+
+    }
     //slider textArea
     
 }
