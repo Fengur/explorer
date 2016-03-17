@@ -192,9 +192,6 @@ class BasicView:CustomView {
     }
     
     
-    //continue here: test the HNodeSlider
-    
-    
     
     //list
     //slider list
