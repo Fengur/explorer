@@ -235,7 +235,7 @@ class BasicView:CustomView {
     func createSliderTextArea() {
         let sliderTextAreaCard:Card = container.addSubView(Card(NaN, NaN, "Slider text area: ", container, "sliderTextAreaCard"))
         let text:String = FileParser.content("~/Desktop/assets/txt/scrolltextarea.txt".tildePath)!
-        let scrollTextArea:SliderTextArea = sliderTextAreaCard.addSubView(SliderTextArea(180,72,text,24,sliderTextAreaCard))
+        let scrollTextArea:SliderTextArea = sliderTextAreaCard.addSubView(SliderTextArea(180,68,text,24,sliderTextAreaCard))
         scrollTextArea
 //		scrollTextArea.setSize(400, 250);
 //		scrollTextAreaPanel.setPosition(new Point(LEFT_MARGIN+260,TOP_MARGIN));
