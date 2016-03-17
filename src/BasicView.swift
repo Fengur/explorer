@@ -235,6 +235,7 @@ class BasicView:CustomView {
         let sliderTextAreaSection:Card = container.addSubView(Card(NaN, NaN, "Slider text area: ", container, "sliderTextAreaCard"))
         let text:String = FileParser.content("~/Desktop/assets/txt/scrolltextarea.txt".tildePath)!
         let scrollTextArea:SliderTextArea = container.addSubView(SliderTextArea(180,72,text,24,sliderTextAreaSection))
+        scrollTextArea
 //		scrollTextArea.setSize(400, 250);
 //		scrollTextAreaPanel.setPosition(new Point(LEFT_MARGIN+260,TOP_MARGIN));
     }
