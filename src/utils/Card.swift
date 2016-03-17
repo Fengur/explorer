@@ -8,8 +8,8 @@ class Card:Element{
     }
     override func resolveSkin() {
         super.resolveSkin()
-        //addSubView(Element(NaN, NaN, self, "ruler"))
-        //addSubView(Text(NaN, NaN, text, self, "cardText"));
+        addSubView(Element(NaN, NaN, self, "ruler"))
+        addSubView(Text(NaN, NaN, text, self, "cardText"));
     }
     
     required init?(coder: NSCoder) {fatalError("init(coder:) has not been implemented")}
