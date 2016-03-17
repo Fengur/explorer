@@ -194,7 +194,7 @@ class BasicView:CustomView {
         let listCard:Card = container.addSubView(Card(NaN, NaN, "List: ", container, "listCard"))
         let xml = FileParser.xml("~/Desktop/assets/xml/list.xml")/*assets/xml/list.xml*/
         let dp:DataProvider = DataProvider(xml)
-        let list:List = listCard.addSubView(List(140, 72, NaN, dp,listCard))
+        let list:List = listCard.addSubView(List(140, 76, NaN, dp,listCard))
         ListModifier.selectAt(list, 1);
     }
     
