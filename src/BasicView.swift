@@ -199,9 +199,7 @@ class BasicView:CustomView {
     }
     
     //slider list
-    
     //slider textArea
     //comboBox
-    
     
 }
