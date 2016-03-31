@@ -17,7 +17,8 @@ class AdvanceView:CustomView {
         
     }
     func createTable(){
-        let xml:NSXMLElement = FileParser.xml("~/assets/xml/table.xml")
-        Swift.print("xml: " + "\(xml)")
+        let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/table.xml")
+        //Swift.print("xml: " + "\(xml)")
+        var node:Node = Node(xml)
     }
 }

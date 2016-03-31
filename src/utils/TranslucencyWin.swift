@@ -31,7 +31,7 @@ class TranslucencyWin:NSWindow, NSApplicationDelegate, NSWindowDelegate{
         //let stashView = StashView(frame.width,frame.height)/*Sets the mainview of the window*/
         //let basicView = BasicView(w,h)
         //self.contentView?.addSubview(basicView)
-        //
+        
         let advanceView = AdvanceView(w,h)
         self.contentView?.addSubview(advanceView)
     }
