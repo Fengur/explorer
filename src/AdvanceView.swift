@@ -5,5 +5,18 @@ class AdvanceView:CustomView {
     override func resolveSkin() {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
+        /**/
+        createTreeList()
+        createSliderTreeList()
+        createTable()
+    }
+    func createTreeList(){
+        
+    }
+    func createSliderTreeList(){
+        
+    }
+    func createTable(){
+        
     }
 }
