@@ -3,7 +3,6 @@ import Foundation
 class BasicView:CustomView {
     var container:Container!
     override func resolveSkin() {
-        StyleManager.addStylesByURL("~/Desktop/css/explorer/explorer.css")
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         
