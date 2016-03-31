@@ -29,8 +29,11 @@ class TranslucencyWin:NSWindow, NSApplicationDelegate, NSWindowDelegate{
         self.contentView?.addSubview(visualEffectView!)
         
         //let stashView = StashView(frame.width,frame.height)/*Sets the mainview of the window*/
-        let basicView = BasicView(w,h)
-        self.contentView?.addSubview(basicView)
+        //let basicView = BasicView(w,h)
+        //self.contentView?.addSubview(basicView)
+        //
+        let advanceView = AdvanceView(w,h)
+        self.contentView?.addSubview(advanceView)
     }
     func windowDidResize(notification: NSNotification) {
         //Swift.print("CustomWin.windowDidResize " + "\(self.frame.size)")
