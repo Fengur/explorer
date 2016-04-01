@@ -12,9 +12,9 @@ class OtherView:CustomView {
      */
     func createColorBox(){
         Swift.print("createColorBox")
-        let colorBoxCard:Card = container.addSubView(Card(200, 120, "ColorBox: ", container, "colorBoxCard"))
+        let colorBoxCard:Card = container.addSubView(Card(NaN, NaN, "ColorBox: ", container, "colorBoxCard"))
         colorBoxCard
-        let colorBox = colorBoxCard.addSubView(ColorBox(24,24,NSColor.cyanColor(),colorBoxCard))
+        let colorBox = colorBoxCard.addSubView(ColorBox(NaN,NaN,NSColor.cyanColor(),colorBoxCard))
         colorBox
     }
 }
