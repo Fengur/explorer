@@ -19,7 +19,8 @@ class OtherView:CustomView {
         colorBox
     }
     func createColorInput(){// :TODO: inpliment TextInput TextAre in the css
-        var colorInputBox:Section = addSubView(Section(NaN, NaN, "ColorInput: ", self, "colorInputSection"))
-        var colorInput:ColorInput = colorInputBox.addSubView(ColorInput(NaN,NaN,"Color: ",NSColor.magentaColor(),colorInputBox))
+        let colorInputCard:Card = addSubView(Card(NaN, NaN, "ColorInput: ", self, "colorInputCard"))
+        let colorInput:ColorInput = colorInputCard.addSubView(ColorInput(NaN,NaN,"Color: ",NSColor.magentaColor(),colorInputCard))
+        colorInput
     }
 }
