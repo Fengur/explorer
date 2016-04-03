@@ -7,6 +7,7 @@ class OtherView:CustomView {
         container = addSubView(Container(1000,800,self,"main"))
         //createColorBox()
         createColorInput()
+        createColorPanel()
     }
     /**
      *
@@ -24,5 +25,11 @@ class OtherView:CustomView {
         colorInputCard
         let colorInput:ColorInput = colorInputCard.addSubView(ColorInput(NaN,NaN,"Color: ",NSColor.magentaColor(),colorInputCard))
         colorInput
+    }
+    func createColorPanel(){
+        var colorPanelCard:Card = container.addSubView(Card(NaN, NaN, "ColorPanel: ", container, "colorPanelSection"))
+        var colorPanel = colorPanelCard.addSubView(ColorPanel(NaN,NaN,24,0xFF00FF,"Color",nil,nil,colorPanelSection))
+        //colorPanel.setPosition(new Point(0,144));
+        //colorPanel.setSize(300, 300);
     }
 }
