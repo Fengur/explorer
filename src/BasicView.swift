@@ -225,7 +225,6 @@ class BasicView:CustomView {
 //		comboBox.scrollList.scrollBar.visible = false
 //		print("selected index: " + comboBox.scrollList.list.getSelectedIndex())
 //		print("selected Title: "+comboBox.scrollList.list.getSelectedTitle())
-
     }
     func createSliderTextArea() {
         let sliderTextAreaCard:Card = container.addSubView(Card(NaN, NaN, "Slider text area: ", container, "sliderTextAreaCard"))
