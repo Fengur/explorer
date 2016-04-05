@@ -15,6 +15,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         */
         
         //Continue here: test rgb.nsCOlor and nsCOlor.hexString for the regular colors. whats wrong?
+        
+        let red:String = "0xFF0000"
+        //let green:String = "0x00FF00"
+        //let blue:String = "0x0000FF"
+        
+        let r:NSColor = NSColorParser.nsColor(red)
+        let redRGB = r.rgb
+        Swift.print("redRGB.r: " + "\(redRGB.r)")
+        Swift.print("redRGB.g: " + "\(redRGB.g)")
+        Swift.print("redRGB.b: " + "\(redRGB.b)")
     }
     func applicationWillTerminate(aNotification: NSNotification) {
         print("Good-bye")
