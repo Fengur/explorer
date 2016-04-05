@@ -7,13 +7,27 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     weak var window: NSWindow!/*<--This is here only so that the compiler wont throw an error*/
     var win:NSWindow?/*<--The window must be a class variable, local variables doesnt work*/
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        /**/
+        /*
         StyleManager.addStylesByURL("~/Desktop/css/window.css")
         StyleManager.addStylesByURL("~/Desktop/css/explorer/explorer.css")
         win = TranslucencyWin()//Win(1000,800)
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
-        
-        //continue here: try to convert an rgb to an hsb and then back again
+        */
+        testingHSB()
+    }
+    /**
+     *
+     */
+    func testingHSB(){
+        let nsColor:NSColor = NSColor.redColor()
+        let rgb:RGB = RGBParser.rgb(nsColor)
+        Swift.print("rgb.r: " + "\(rgb.r)")
+        Swift.print("rgb.g: " + "\(rgb.g)")
+        Swift.print("rgb.b: " + "\(rgb.b)")
+        let hsb:HSB = HSBParser.hsb(rgb)
+        Swift.print("hsb.h: " + "\(hsb.h)")
+        Swift.print("hsb.s: " + "\(hsb.s)")
+        Swift.print("hsb.b: " + "\(hsb.b)")
         
     }
     /**
@@ -35,6 +49,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Swift.print("tempColor.greenComponent: " + "\(tempColor.greenComponent)")
         Swift.print("tempColor.blueComponent: " + "\(tempColor.blueComponent)")
     }
+    
     func applicationWillTerminate(aNotification: NSNotification) {
         print("Good-bye")
     }
