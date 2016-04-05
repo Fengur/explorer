@@ -15,7 +15,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         */
         
         //continue here: test hsb2
-        testingHSB2()
+        //testingHSB2()
+        
+        Swift.print("-60 % 360: " + "\(360 % -60)")
         
         //testingHSB()
     }
