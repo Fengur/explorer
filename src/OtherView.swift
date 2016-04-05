@@ -28,7 +28,7 @@ class OtherView:CustomView {
     }
     func createColorPanel(){
         let colorPanelCard:Card = container.addSubView(Card(NaN, NaN, "ColorPanel: ", container, "colorPanelCard"))
-        let colorPanel = colorPanelCard.addSubView(ColorPanel(NaN,NaN,24,NSColor.magentaColor(),"Color",nil,nil,colorPanelCard))
+        let colorPanel = colorPanelCard.addSubView(ColorPanel(NaN,NaN,24,NSColor.magentaColor(),"Color",colorPanelCard))
         colorPanel
         //colorPanel.setPosition(new Point(0,144));
         //colorPanel.setSize(300, 300);
