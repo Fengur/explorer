@@ -20,15 +20,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      */
     func testingHSB(){
         let nsColor:NSColor = NSColor.redColor()
-        let rgb:RGB = RGBParser.rgb(nsColor)
+        var rgb:RGB = RGBParser.rgb(nsColor)
         Swift.print("rgb.r: " + "\(rgb.r)")
         Swift.print("rgb.g: " + "\(rgb.g)")
         Swift.print("rgb.b: " + "\(rgb.b)")
+        Swift.print("")
+        
         let hsb:HSB = HSBParser.hsb(rgb)
         Swift.print("hsb.h: " + "\(hsb.h)")
         Swift.print("hsb.s: " + "\(hsb.s)")
         Swift.print("hsb.b: " + "\(hsb.b)")
+        Swift.print("")
         
+        rgb = RGBParser.rgb(hsb)
+        Swift.print("rgb.r: " + "\(rgb.r)")
+        Swift.print("rgb.g: " + "\(rgb.g)")
+        Swift.print("rgb.b: " + "\(rgb.b)")
     }
     /**
      * NOTE: tests rgb.nsCOlor and nsCOlor.hexString for the regular colors. whats wrong?
