@@ -40,6 +40,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Swift.print("rgb.r: " + "\(rgb.r)")
         Swift.print("rgb.g: " + "\(rgb.g)")
         Swift.print("rgb.b: " + "\(rgb.b)")
+        
+        
+        Swift.print("nsColor.hueComponent: " + "\(nsColor.hueComponent*360)")
+        Swift.print("nsColor.saturationComponent: " + "\(nsColor.saturationComponent*100)")
+        Swift.print("nsColor.brightnessComponent: " + "\(nsColor.brightnessComponent*100)")
     }
     /**
      *
