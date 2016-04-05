@@ -25,6 +25,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Swift.print("redRGB.r: " + "\(redRGB.r)")
         Swift.print("redRGB.g: " + "\(redRGB.g)")
         Swift.print("redRGB.b: " + "\(redRGB.b)")
+        
+        let tempColor = NSColorParser.nsColor(redRGB)
+        Swift.print("tempColor.redComponent: " + "\(tempColor.redComponent)")
+        Swift.print("tempColor.greenComponent: " + "\(tempColor.greenComponent)")
+        Swift.print("tempColor.blueComponent: " + "\(tempColor.blueComponent)")
     }
     func applicationWillTerminate(aNotification: NSNotification) {
         print("Good-bye")
