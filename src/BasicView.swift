@@ -5,13 +5,13 @@ class BasicView:CustomView {
     override func resolveSkin() {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
-        
+        createLeverSpinner()
         /*
         createButton()
         createTextButton()
         createRadioBullet()
         createCheckBoxButton()
-        createLeverSpinner()
+        
         createTabBar()
         createIconButtons()
         createLeverStepper()
@@ -32,6 +32,7 @@ class BasicView:CustomView {
         createComboBox()
         createSliderTextArea()
         */
+        
     }
     /**
      * Button
