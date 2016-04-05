@@ -34,8 +34,9 @@ class OtherView:CustomView {
         //colorPanel.setSize(300, 300);
     }
     func createGradientPanel(){
-        var gradientPanelCard:Card = container.addSubView(Card(NaN, NaN, "GradientPanel: ", container, "gradientPanelCard"))
-        var gradient:IGradient = Gradient(Gradients.deepPurple())
-        var gradientPanel:GradientPanel = gradientPanelCard.addSubView(GradientPanel(200,NaN,20,gradient,gradientPanelCard))
+        let gradientPanelCard:Card = container.addSubView(Card(NaN, NaN, "GradientPanel: ", container, "gradientPanelCard"))
+        let gradient:IGradient = Gradient(Gradients.deepPurple())
+        let gradientPanel:GradientPanel = gradientPanelCard.addSubView(GradientPanel(200,NaN,20,gradient,gradientPanelCard))
+        gradientPanel
     }
 }
