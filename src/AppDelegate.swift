@@ -12,6 +12,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         StyleManager.addStylesByURL("~/Desktop/css/explorer/explorer.css")
         win = TranslucencyWin()//Win(1000,800)
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
+        
+        //continue here: try to convert an rgb to an hsb and then back again
+        
     }
     /**
      * NOTE: tests rgb.nsCOlor and nsCOlor.hexString for the regular colors. whats wrong?
