@@ -13,8 +13,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         win = TranslucencyWin()//Win(1000,800)
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         */
-        //testingHSB()
-        Swift.print(-1/1)
+        testingHSB()
+        
     }
     /**
      *
