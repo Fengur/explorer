@@ -24,7 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      */
     func testingHSB2(){
         let nsColor:NSColor = NSColor.magentaColor()
-        let rgb:RGB = RGBParser.rgb(nsColor)
+        var rgb:RGB = RGBParser.rgb(nsColor)
         Swift.print("rgb.r: " + "\(rgb.r)")
         Swift.print("rgb.g: " + "\(rgb.g)")
         Swift.print("rgb.b: " + "\(rgb.b)")
@@ -35,6 +35,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Swift.print("hsb.s: " + "\(hsb.s)")
         Swift.print("hsb.b: " + "\(hsb.b)")
         Swift.print("")
+        
+        rgb = RGBParser.rgb(hsb)
+        Swift.print("rgb.r: " + "\(rgb.r)")
+        Swift.print("rgb.g: " + "\(rgb.g)")
+        Swift.print("rgb.b: " + "\(rgb.b)")
     }
     /**
      *
