@@ -6,8 +6,8 @@ class OtherView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         //createColorBox()
-        //createColorInput()
-        createColorPanel()
+        createColorInput()
+        //createColorPanel()
     }
     /**
      *
@@ -29,7 +29,7 @@ class OtherView:CustomView {
     func createColorPanel(){
         let colorPanelCard:Card = container.addSubView(Card(NaN, NaN, "ColorPanel: ", container, "colorPanelCard"))
         colorPanelCard
-        let colorPanel = colorPanelCard.addSubView(ColorPanel(NaN,NaN,24,NSColor.magentaColor(),"Color",nil,nil,colorPanelCard))
+        let colorPanel = colorPanelCard.addSubView(ColorPanel(NaN,NaN,24,NSColor.redColor(),"Color",nil,nil,colorPanelCard))
         colorPanel
         //colorPanel.setPosition(new Point(0,144));
         //colorPanel.setSize(300, 300);
