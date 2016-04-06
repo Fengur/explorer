@@ -8,6 +8,7 @@ class OtherView:CustomView {
         //createColorBox()
         //createColorInput()
         //createColorPanel()
+        
         createGradientPanel()
     }
     /**
