@@ -39,7 +39,7 @@ class OtherView:CustomView {
         let gradientPanelCard:Card = container.addSubView(Card(NaN, NaN, "GradientPanel: ", container, "gradientPanelCard"))
         let gradientColors:Array<CGColor> = [NSColor.redColor().cgColor, NSColor.blueColor().cgColor]
         let gradient:IGradient = LinearGradient(gradientColors,[],π)
-        let gradientPanel:GradientPanel = gradientPanelCard.addSubView(GradientPanel(200,NaN,20,gradient,gradientPanelCard))
+        let gradientPanel:GradientPanel = gradientPanelCard.addSubView(GradientPanel(200,20,20,gradient,gradientPanelCard))
         gradientPanel
     }
 }
