@@ -35,7 +35,7 @@ class LiveEditView:CustomView {
         */
         /**/
         
-        let fileSystemWatcher = FileSystemWatcher(pathsToWatch: ["~/Desktop".tildePath]withUnsafeBufferPointer(body:))
+        let fileSystemWatcher = FileSystemWatcher(pathsToWatch: ["~/Desktop/test".tildePath])
         fileSystemWatcher.start()
     }
     /**
