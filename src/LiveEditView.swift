@@ -12,7 +12,7 @@ class LiveEditView:CustomView {
      */
     func liveEditTest1(){
         StyleManager.addStyle("#redBox{fill:red;float:left;clear:left;}")
-        let redbox = addSubView(Element(100,100,self,"redBox"))
+        let redBox = addSubView(Element(100,100,self,"redBox"))
         
         StyleManager.addStyle("#btn1{fill:green;float:left;clear:left;}")
         let btn = addSubView(Button(100,20,self,"btn1"))
@@ -20,13 +20,13 @@ class LiveEditView:CustomView {
         func onButtonClick(event:Event){
             if(event.type == ButtonEvent.upInside){
                 Swift.print("click")
-                redbox
+                redBox
                 let style = StyleManager.getStyle("#redBox")
                 var styleProperty = style?.getStyleProperty("fill")
                 Swift.print("styleProperty?.value: " + "\(styleProperty?.value)")
-                styleProperty!.value = NSColor.blueColor().hexString.uint
+                styleProperty!.value = ("0x"+NSColor.magentaColor().hexString).uint
                 Swift.print("styleProperty?.value: " + "\(styleProperty?.value)")
-                
+                ElementModifier.refresh(redBox)
             }
         }
         btn.event = onButtonClick
