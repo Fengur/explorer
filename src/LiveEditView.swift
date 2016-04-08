@@ -123,9 +123,8 @@ class FileWatcher {
      * Start listening for FSEvents
      */
     func start() {
-        if(started){return}
-        guard started == false else { return }
-        Swift.print("start")
+        Swift.print("start - has started: " + "\(started)")
+        if(started){return}/*<--only start if its not already started*/
         var context = FSEventStreamContext(version: 0, info: nil, retain: nil, release: nil, copyDescription: nil)
         context.info = UnsafeMutablePointer<Void>(unsafeAddressOf(self))
         let flags = UInt32(kFSEventStreamCreateFlagUseCFTypes | kFSEventStreamCreateFlagFileEvents)
@@ -138,8 +137,8 @@ class FileWatcher {
      * Stop listening for FSEvents
      */
     func stop() {
-        guard started == true else { return }
-        Swift.print("stop")
+        Swift.print("stop - has started: " + "\(started)")
+        if(!started){return}/*<--only stop if it has been started*/
         FSEventStreamStop(streamRef)
         FSEventStreamInvalidate(streamRef)
         FSEventStreamRelease(streamRef)
