@@ -211,8 +211,9 @@ public class FileSystemWatcher {
     private func processEvent(eventId: FSEventStreamEventId, eventPath: String, eventFlags: FSEventStreamEventFlags) {
         //Swift.print("test")
         Swift.print("\t eventId: \(eventId) - eventFlags:  \(eventFlags) - eventPath:  \(eventPath)", terminator: "\n")
-        if(eventFlags === kFSEventStreamEventFlagItemModified){
-            
+        Swift.print(0x00001000)
+        if(eventFlags == 0x00001000){
+            Swift.print("modified")
         }
     }
     
