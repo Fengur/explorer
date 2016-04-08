@@ -215,7 +215,7 @@ public class FileSystemWatcher {
         if(eventFlags == 128000){
             Swift.print("modified")
         }else if(eventFlags == 67584){//rename fires twice, once before and once after a file change
-            Swift.print("rename")
+            Swift.print("rename,add,remove")
         }else if(eventFlags == 111872){
             Swift.print("delete")
         }
