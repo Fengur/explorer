@@ -197,7 +197,7 @@ public class FileSystemWatcher {
         fileSystemWatcher.lastEventId = eventIds[numEvents - 1]
     }
     /**
-     * NOTE: I think you need to 
+     * NOTE: I think you need to create a switch to differentiate between eventFlags
      */
     private func processEvent(eventId: FSEventStreamEventId, eventPath: String, eventFlags: FSEventStreamEventFlags) {
         //Swift.print("test")
@@ -212,7 +212,7 @@ public class FileSystemWatcher {
         }
     }
     /**
-     *
+     * Start listening for FSEvents
      */
     public func start() {
         guard started == false else { return }
@@ -226,7 +226,7 @@ public class FileSystemWatcher {
         started = true
     }
     /**
-     *
+     * Stop listening for FSEvents
      */
     public func stop() {
         guard started == true else { return }
