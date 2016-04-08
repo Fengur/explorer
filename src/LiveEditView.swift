@@ -2,7 +2,7 @@ import Cocoa
 
 class LiveEditView:CustomView {
     var container:Container!
-    //var directoryObserver:DirectoryObserver?
+    var directoryObserver:DirectoryObserver?
     override func resolveSkin() {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
@@ -11,24 +11,26 @@ class LiveEditView:CustomView {
         
         Swift.print("~/Desktop/".tildePath)
         
+        /*
         let url = NSURL(fileURLWithPath: "~/Desktop".tildePath)
         let monitor = FolderMonitor(url: url, handler: {
-            Swift.print("Found change")
+        Swift.print("Found change")
         })
-        monitor
         
         
         monitor.start()
+        */
+        
         //monitor.stop()
         
-        //let theURL:NSURL = FilePathParser.path("~/Desktop/".tildePath)
-        /*
+        let theURL:NSURL = FilePathParser.path("~/Desktop/".tildePath)
+        
         self.directoryObserver = DirectoryObserver(URL: theURL, block: { [weak self] in
             Swift.print("change: " + "\(self)")
             
             //self?.doSomething()
             })
-        */
+        /**/
         
         /*let fileSystemWatcher = FileSystemWatcher(pathsToWatch: ["~/Desktop/".tildePath],sinceWhen: 0)
         fileSystemWatcher.start()*/
@@ -153,7 +155,7 @@ class DirectoryObserver {
         
         fileDescriptor = open(URL.path!, O_EVTONLY)
         
-        source = dispatch_source_create(DISPATCH_SOURCE_TYPE_VNODE,UInt(descriptor),DISPATCH_VNODE_WRITE,qq)
+        source = dispatch_source_create(DISPATCH_SOURCE_TYPE_VNODE,UInt(fileDescriptor),DISPATCH_VNODE_WRITE,dispatch_get_main_queue())
         //source = dispatch_source_create(DISPATCH_SOURCE_TYPE_VNODE, UInt(fileDescriptor), DISPATCH_VNODE_WRITE, dispatch_queue_create(nil, DISPATCH_QUEUE_CONCURRENT))
         dispatch_source_set_event_handler(source, { dispatch_async(dispatch_get_main_queue(), block) })
         dispatch_resume(source)
