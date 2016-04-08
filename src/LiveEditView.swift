@@ -35,8 +35,8 @@ class LiveEditView:CustomView {
         */
         /**/
         
-        let fileSystemWatcher = FileSystemWatcher(pathsToWatch: ["~/Desktop/test".tildePath])
-        fileSystemWatcher.start()
+        let fileWatcher = FileWatcher(pathsToWatch: ["~/Desktop/test".tildePath])
+        fileWatcher.start()
     }
     /**
      *
@@ -170,7 +170,7 @@ class DirectoryObserver {
     private let source: dispatch_source_t
 }
 
-public class FileSystemWatcher {
+public class FileWatcher {
     private let pathsToWatch: [String]
     private var started = false
     private var streamRef: FSEventStreamRef!
@@ -187,28 +187,29 @@ public class FileSystemWatcher {
      */
     private let eventCallback: FSEventStreamCallback = { (stream: ConstFSEventStreamRef, contextInfo: UnsafeMutablePointer<Void>, numEvents: Int, eventPaths: UnsafeMutablePointer<Void>, eventFlags: UnsafePointer<FSEventStreamEventFlags>, eventIds: UnsafePointer<FSEventStreamEventId>) in
         Swift.print("***** FSEventCallback Fired *****", terminator: "\n")
-        let fileSystemWatcher: FileSystemWatcher = unsafeBitCast(contextInfo, FileSystemWatcher.self)
+        let fileSystemWatcher: FileWatcher = unsafeBitCast(contextInfo, FileWatcher.self)
         let paths = unsafeBitCast(eventPaths, NSArray.self) as! [String]
-        
         for index in 0..<numEvents {
-            fileSystemWatcher.processEvent(eventIds[index], eventPath: paths[index], eventFlags: eventFlags[index])
+            fileSystemWatcher.handleEvent(eventIds[index], paths[index], eventFlags[index])
         }
-        
         fileSystemWatcher.lastEventId = eventIds[numEvents - 1]
     }
     /**
      * NOTE: I think you need to create a switch to differentiate between eventFlags
      */
-    private func processEvent(eventId: FSEventStreamEventId, eventPath: String, eventFlags: FSEventStreamEventFlags) {
+    private func handleEvent(eventId: FSEventStreamEventId, _ eventPath: String, _ eventFlags: FSEventStreamEventFlags) {
         //Swift.print("test")
         Swift.print("\t eventId: \(eventId) - eventFlags:  \(eventFlags) - eventPath:  \(eventPath)", terminator: "\n")
-        Swift.print(0x00001000)
-        if(eventFlags == 128000){
-            Swift.print("modified")
-        }else if(eventFlags == 67584){//rename fires twice, once before and once after a file change
-            Swift.print("rename,add,remove")
-        }else if(eventFlags == 111872){
-            Swift.print("delete")
+        switch eventFlags{
+            case 128000:
+                Swift.print("modified")
+            case 67584:
+                Swift.print("rename,add,remove")
+            case 111872:
+                Swift.print("delete")
+            default:
+                Swift.print("unsupported event: " + "\(eventFlags)")
+                break;
         }
     }
     /**
