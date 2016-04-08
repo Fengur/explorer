@@ -23,7 +23,7 @@ class LiveEditView:CustomView {
         
         //monitor.stop()
         
-        let theURL:NSURL = FilePathParser.path("~/Desktop/".tildePath)
+        //let theURL:NSURL = FilePathParser.path("~/Desktop/".tildePath)
         
         /*
         self.directoryObserver = DirectoryObserver(URL: theURL, block: { [weak self] in
@@ -35,8 +35,8 @@ class LiveEditView:CustomView {
         */
         /**/
         
-        /*let fileSystemWatcher = FileSystemWatcher(pathsToWatch: ["~/Desktop/".tildePath],sinceWhen: 0)
-        fileSystemWatcher.start()*/
+        let fileSystemWatcher = FileSystemWatcher(pathsToWatch: ["~/Desktop".tildePath],sinceWhen: 0)
+        fileSystemWatcher.start()
     }
     /**
      *
@@ -171,7 +171,9 @@ class DirectoryObserver {
 }
 
 public class FileSystemWatcher {
-    
+    private let pathsToWatch: [String]
+    private var started = false
+    private var streamRef: FSEventStreamRef!
     // MARK: - Initialization / Deinitialization
     
     public init(pathsToWatch: [String], sinceWhen: FSEventStreamEventId) {
@@ -190,6 +192,7 @@ public class FileSystemWatcher {
     // MARK: - Private Properties
     
     private let eventCallback: FSEventStreamCallback = { (stream: ConstFSEventStreamRef, contextInfo: UnsafeMutablePointer<Void>, numEvents: Int, eventPaths: UnsafeMutablePointer<Void>, eventFlags: UnsafePointer<FSEventStreamEventFlags>, eventIds: UnsafePointer<FSEventStreamEventId>) in
+        Swift.print("test")
         Swift.print("***** FSEventCallback Fired *****", terminator: "\n")
         
         let fileSystemWatcher: FileSystemWatcher = unsafeBitCast(contextInfo, FileSystemWatcher.self)
@@ -201,13 +204,12 @@ public class FileSystemWatcher {
         
         fileSystemWatcher.lastEventId = eventIds[numEvents - 1]
     }
-    private let pathsToWatch: [String]
-    private var started = false
-    private var streamRef: FSEventStreamRef!
+    
     
     // MARK: - Private Methods
     
     private func processEvent(eventId: FSEventStreamEventId, eventPath: String, eventFlags: FSEventStreamEventFlags) {
+        Swift.print("test")
         Swift.print("\t\(eventId) - \(eventFlags) - \(eventPath)", terminator: "\n")
     }
     
@@ -233,7 +235,7 @@ public class FileSystemWatcher {
     
     public func stop() {
         guard started == true else { return }
-        
+        Swift.print("stop")
         FSEventStreamStop(streamRef)
         FSEventStreamInvalidate(streamRef)
         FSEventStreamRelease(streamRef)
