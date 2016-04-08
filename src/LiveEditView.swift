@@ -24,7 +24,7 @@ class LiveEditView:CustomView {
                 let style = StyleManager.getStyle("#redBox")
                 var styleProperty = style?.getStyleProperty("fill")
                 Swift.print("styleProperty?.value: " + "\(styleProperty?.value)")
-                styleProperty!.value = NSColor.blueColor()
+                styleProperty!.value = NSColor.blueColor().hexString.uint
                 Swift.print("styleProperty?.value: " + "\(styleProperty?.value)")
                 
             }
