@@ -51,8 +51,15 @@ class LiveEditView:CustomView {
             if(event.type == ButtonEvent.upInside){
                 let style = StyleManager.getStyle("#testButton")
                 var styleProperty = style?.getStyleProperty("fill")
+                if(event.origin === lightThemeButton){
+                    
+                }
+                styleProperty!.value = StyleManager.getStyle("#lightTheme")?.getStyleProperty("fill")?.value
             }
         }
+        
+        lightThemeButton.event = onButtonClick
+        darkThemeButton.event = onButtonClick
             //manually change the styles that belong to the button that will change.
             //refresh self
         
