@@ -123,6 +123,7 @@ class FileWatcher {
      * Start listening for FSEvents
      */
     func start() {
+        if(started){return}
         guard started == false else { return }
         Swift.print("start")
         var context = FSEventStreamContext(version: 0, info: nil, retain: nil, release: nil, copyDescription: nil)
