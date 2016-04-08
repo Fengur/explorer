@@ -11,6 +11,8 @@ class LiveEditView:CustomView {
      *
      */
     func liveEditTest1(){
-        
+        StyleManager.addStyle("#redBox{fill:red;float:left;clear:left;}")
+        let redbox = addSubView(Element(100,100,self,"redBox"))
+        redbox
     }
 }
