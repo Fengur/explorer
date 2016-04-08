@@ -174,27 +174,19 @@ public class FileSystemWatcher {
     private let pathsToWatch: [String]
     private var started = false
     private var streamRef: FSEventStreamRef!
-    // MARK: - Initialization / Deinitialization
-    
+    public private(set) var lastEventId: FSEventStreamEventId
     public init(pathsToWatch: [String], sinceWhen: FSEventStreamEventId) {
         self.lastEventId = sinceWhen
         self.pathsToWatch = pathsToWatch
     }
-    
     convenience public init(pathsToWatch: [String]) {
         self.init(pathsToWatch: pathsToWatch, sinceWhen: FSEventStreamEventId(kFSEventStreamEventIdSinceNow))
     }
-    
-    deinit {
-        //stop()
-    }
-    
-    // MARK: - Private Properties
-    
+    /**
+     *
+     */
     private let eventCallback: FSEventStreamCallback = { (stream: ConstFSEventStreamRef, contextInfo: UnsafeMutablePointer<Void>, numEvents: Int, eventPaths: UnsafeMutablePointer<Void>, eventFlags: UnsafePointer<FSEventStreamEventFlags>, eventIds: UnsafePointer<FSEventStreamEventId>) in
-        //Swift.print("test")
         Swift.print("***** FSEventCallback Fired *****", terminator: "\n")
-        
         let fileSystemWatcher: FileSystemWatcher = unsafeBitCast(contextInfo, FileSystemWatcher.self)
         let paths = unsafeBitCast(eventPaths, NSArray.self) as! [String]
         
@@ -204,10 +196,9 @@ public class FileSystemWatcher {
         
         fileSystemWatcher.lastEventId = eventIds[numEvents - 1]
     }
-    
-    
-    // MARK: - Private Methods
-    
+    /**
+     * NOTE: I think you need to 
+     */
     private func processEvent(eventId: FSEventStreamEventId, eventPath: String, eventFlags: FSEventStreamEventFlags) {
         //Swift.print("test")
         Swift.print("\t eventId: \(eventId) - eventFlags:  \(eventFlags) - eventPath:  \(eventPath)", terminator: "\n")
@@ -220,13 +211,9 @@ public class FileSystemWatcher {
             Swift.print("delete")
         }
     }
-    
-    // MARK: - Pubic Properties
-    
-    public private(set) var lastEventId: FSEventStreamEventId
-    
-    // MARK: - Pubic Methods
-    
+    /**
+     *
+     */
     public func start() {
         guard started == false else { return }
         Swift.print("start")
@@ -234,13 +221,13 @@ public class FileSystemWatcher {
         context.info = UnsafeMutablePointer<Void>(unsafeAddressOf(self))
         let flags = UInt32(kFSEventStreamCreateFlagUseCFTypes | kFSEventStreamCreateFlagFileEvents)
         streamRef = FSEventStreamCreate(kCFAllocatorDefault, eventCallback, &context, pathsToWatch, lastEventId, 0, flags)
-        
         FSEventStreamScheduleWithRunLoop(streamRef, CFRunLoopGetMain(), kCFRunLoopDefaultMode)
         FSEventStreamStart(streamRef)
-        
         started = true
     }
-    
+    /**
+     *
+     */
     public func stop() {
         guard started == true else { return }
         Swift.print("stop")
@@ -248,8 +235,9 @@ public class FileSystemWatcher {
         FSEventStreamInvalidate(streamRef)
         FSEventStreamRelease(streamRef)
         streamRef = nil
-        
         started = false
     }
-    
+    deinit {
+        //stop()
+    }
 }
