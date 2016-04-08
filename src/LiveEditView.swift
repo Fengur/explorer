@@ -25,11 +25,14 @@ class LiveEditView:CustomView {
         
         let theURL:NSURL = FilePathParser.path("~/Desktop/".tildePath)
         
+        /*
         self.directoryObserver = DirectoryObserver(URL: theURL, block: { [weak self] in
             Swift.print("change: " + "\(self)")
             
             //self?.doSomething()
             })
+
+        */
         /**/
         
         /*let fileSystemWatcher = FileSystemWatcher(pathsToWatch: ["~/Desktop/".tildePath],sinceWhen: 0)
@@ -216,7 +219,7 @@ public class FileSystemWatcher {
     
     public func start() {
         guard started == false else { return }
-        
+        Swift.print("start")
         var context = FSEventStreamContext(version: 0, info: nil, retain: nil, release: nil, copyDescription: nil)
         context.info = UnsafeMutablePointer<Void>(unsafeAddressOf(self))
         let flags = UInt32(kFSEventStreamCreateFlagUseCFTypes | kFSEventStreamCreateFlagFileEvents)
