@@ -52,6 +52,7 @@ class LiveEditView:CustomView {
             if(event.type == ButtonEvent.upInside){
                 //let style = StyleManager.getStyle("#testButton")
                 //var styleProperty = style?.getStyleProperty("fill")
+                StyleManager.removeStyle("#testButton")
                 if(event.origin === lightThemeButton){
                     StyleManager.addStylesByURL("~/Desktop/light.css")
                     //styleProperty!.value = StyleManager.getStyle("#lightTheme")!.getStyleProperty("fill")!.value
