@@ -1,4 +1,4 @@
-import Foundation
+import Cocoa
 
 class LiveEditView:CustomView {
     var container:Container!
@@ -21,6 +21,12 @@ class LiveEditView:CustomView {
             if(event.type == ButtonEvent.upInside){
                 Swift.print("click")
                 redbox
+                let style = StyleManager.getStyle("#redBox")
+                var styleProperty = style?.getStyleProperty("fill")
+                Swift.print("styleProperty?.value: " + "\(styleProperty?.value)")
+                styleProperty!.value = NSColor.blueColor()
+                Swift.print("styleProperty?.value: " + "\(styleProperty?.value)")
+                
             }
         }
         btn.event = onButtonClick
