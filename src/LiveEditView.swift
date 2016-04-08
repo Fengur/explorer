@@ -62,7 +62,7 @@ class LiveEditView:CustomView {
                 }
                 Swift.print(StyleManager.getStyle("#testButton")!.getStyleProperty("fill")!.value)
             }
-            //ElementModifier.refresh(self)//refresh self
+            ElementModifier.refresh(self)//refresh self
 
             testButton.setSkinState(SkinStates.none)
         }
