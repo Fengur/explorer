@@ -53,7 +53,8 @@ class LiveEditView:CustomView {
                 let style = StyleManager.getStyle("#testButton")
                 var styleProperty = style?.getStyleProperty("fill")
                 if(event.origin === lightThemeButton){
-                    styleProperty!.value = StyleManager.getStyle("#lightTheme")!.getStyleProperty("fill")!.value
+                    StyleManager.getStyle(<#T##name: String##String#>)
+                    //styleProperty!.value = StyleManager.getStyle("#lightTheme")!.getStyleProperty("fill")!.value
                 }else if(event.origin === darkThemeButton){
                     styleProperty!.value = StyleManager.getStyle("#darkTheme")!.getStyleProperty("fill")!.value
                 }
