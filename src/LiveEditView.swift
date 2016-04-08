@@ -50,14 +50,16 @@ class LiveEditView:CustomView {
 
         func onButtonClick(event:Event){//manually change the styles that belong to the button that will change.
             if(event.type == ButtonEvent.upInside){
-                let style = StyleManager.getStyle("#testButton")
-                var styleProperty = style?.getStyleProperty("fill")
+                //let style = StyleManager.getStyle("#testButton")
+                //var styleProperty = style?.getStyleProperty("fill")
                 if(event.origin === lightThemeButton){
-                    StyleManager.getStyle(<#T##name: String##String#>)
+                    StyleManager.addStylesByURL("~/Desktop/light.css")
                     //styleProperty!.value = StyleManager.getStyle("#lightTheme")!.getStyleProperty("fill")!.value
                 }else if(event.origin === darkThemeButton){
-                    styleProperty!.value = StyleManager.getStyle("#darkTheme")!.getStyleProperty("fill")!.value
+                    StyleManager.addStylesByURL("~/Desktop/dark.css")
+                    //styleProperty!.value = StyleManager.getStyle("#darkTheme")!.getStyleProperty("fill")!.value
                 }
+                Swift.print(StyleManager.getStyle("#testButton")!.getStyleProperty("fill")!.value)
             }
             ElementModifier.refresh(self)//refresh self
         }
