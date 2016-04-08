@@ -40,6 +40,9 @@ class LiveEditView:CustomView {
         //create a light theme button
         //create a dark theme button
         
+        //onClick
+            //manually change the styles that belong to the button that will change. 
+            //refresh self
         
     }
 }
