@@ -2,12 +2,20 @@ import Cocoa
 
 class LiveEditView:CustomView {
     var container:Container!
+    var directoryObserver:DirectoryObserver?
     override func resolveSkin() {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         //liveEditTest1()
         //liveEditTest2()
         
+        Swift.print("~/Desktop/".tildePath)
+        
+        let theURL:URL = FilePathParser.path("~/Desktop/".tildePath)
+        self.directoryObserver = DirectoryObserver(URL: theURL, block: { [weak self] in
+            
+            self?.doSomething()
+            })
     }
     /**
      *
