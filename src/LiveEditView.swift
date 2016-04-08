@@ -37,7 +37,12 @@ class LiveEditView:CustomView {
      */
     func liveEditTest2(){
         //create a testBtn
+        StyleManager.addStyle("#btn1{fill:grey;float:left;clear:left;corner-radius:4px;}")
+        let testButton = addSubView(Button(100,20,self,"testButton"))
+        
         //create a light theme button
+        StyleManager.addStyle("#btn1{fill:green;float:left;clear:left;}")
+        let btn = addSubView(Button(100,20,self,"btn1"))
         //create a dark theme button
         
         //onClick
