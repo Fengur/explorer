@@ -11,10 +11,11 @@ class LiveEditView:CustomView {
         
         Swift.print("~/Desktop/".tildePath)
         
-        let theURL:URL = FilePathParser.path("~/Desktop/".tildePath)
+        let theURL:NSURL = FilePathParser.path("~/Desktop/".tildePath)
         self.directoryObserver = DirectoryObserver(URL: theURL, block: { [weak self] in
+            Swift.print("change: " + "\(self)")
             
-            self?.doSomething()
+            //self?.doSomething()
             })
     }
     /**
