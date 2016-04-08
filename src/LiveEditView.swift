@@ -192,7 +192,7 @@ public class FileSystemWatcher {
     // MARK: - Private Properties
     
     private let eventCallback: FSEventStreamCallback = { (stream: ConstFSEventStreamRef, contextInfo: UnsafeMutablePointer<Void>, numEvents: Int, eventPaths: UnsafeMutablePointer<Void>, eventFlags: UnsafePointer<FSEventStreamEventFlags>, eventIds: UnsafePointer<FSEventStreamEventId>) in
-        Swift.print("test")
+        //Swift.print("test")
         Swift.print("***** FSEventCallback Fired *****", terminator: "\n")
         
         let fileSystemWatcher: FileSystemWatcher = unsafeBitCast(contextInfo, FileSystemWatcher.self)
@@ -209,8 +209,8 @@ public class FileSystemWatcher {
     // MARK: - Private Methods
     
     private func processEvent(eventId: FSEventStreamEventId, eventPath: String, eventFlags: FSEventStreamEventFlags) {
-        Swift.print("test")
-        Swift.print("\t\(eventId) - \(eventFlags) - \(eventPath)", terminator: "\n")
+        //Swift.print("test")
+        Swift.print("\t eventId: \(eventId) - eventFlags:  \(eventFlags) - eventPath:  \(eventPath)", terminator: "\n")
     }
     
     // MARK: - Pubic Properties
