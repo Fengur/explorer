@@ -11,28 +11,9 @@ class LiveEditView:CustomView {
         
         Swift.print("~/Desktop/".tildePath)
         
-        /*
-        let url = NSURL(fileURLWithPath: "~/Desktop".tildePath)
-        let monitor = FolderMonitor(url: url, handler: {
-        Swift.print("Found change")
-        })
         
-        
-        monitor.start()
-        */
-        
-        //monitor.stop()
-        
-        //let theURL:NSURL = FilePathParser.path("~/Desktop/".tildePath)
-        
-        /*
-        self.directoryObserver = DirectoryObserver(URL: theURL, block: { [weak self] in
-            Swift.print("change: " + "\(self)")
-            
-            //self?.doSomething()
-            })
+        //let url = NSURL(fileURLWithPath: "~/Desktop".tildePath)
 
-        */
         /**/
         
         let fileWatcher = FileWatcher(["~/Desktop/test".tildePath])
