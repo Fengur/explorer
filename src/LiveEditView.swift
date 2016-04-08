@@ -82,10 +82,10 @@ class LiveEditView:CustomView {
     }
 }
 class FileWatcher {
-    private let paths: [String]
-    private var started = false
-    private var streamRef: FSEventStreamRef!
-    var lastEventId: FSEventStreamEventId
+    let paths: [String]
+    var started = false
+    var streamRef:FSEventStreamRef?
+    var lastEventId:FSEventStreamEventId
     init(_ paths: [String], _ sinceWhen: FSEventStreamEventId) {
         self.lastEventId = sinceWhen
         self.paths = paths
@@ -129,8 +129,8 @@ class FileWatcher {
         context.info = UnsafeMutablePointer<Void>(unsafeAddressOf(self))
         let flags = UInt32(kFSEventStreamCreateFlagUseCFTypes | kFSEventStreamCreateFlagFileEvents)
         streamRef = FSEventStreamCreate(kCFAllocatorDefault, eventCallback, &context, paths, lastEventId, 0, flags)
-        FSEventStreamScheduleWithRunLoop(streamRef, CFRunLoopGetMain(), kCFRunLoopDefaultMode)
-        FSEventStreamStart(streamRef)
+        FSEventStreamScheduleWithRunLoop(streamRef!, CFRunLoopGetMain(), kCFRunLoopDefaultMode)
+        FSEventStreamStart(streamRef!)
         started = true
     }
     /**
@@ -139,9 +139,9 @@ class FileWatcher {
     func stop() {
         Swift.print("stop - has started: " + "\(started)")
         if(!started){return}/*<--only stop if it has been started*/
-        FSEventStreamStop(streamRef)
-        FSEventStreamInvalidate(streamRef)
-        FSEventStreamRelease(streamRef)
+        FSEventStreamStop(streamRef!)
+        FSEventStreamInvalidate(streamRef!)
+        FSEventStreamRelease(streamRef!)
         streamRef = nil
         started = false
     }
