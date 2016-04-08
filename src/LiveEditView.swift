@@ -2,7 +2,7 @@ import Cocoa
 
 class LiveEditView:CustomView {
     var container:Container!
-    var directoryObserver:DirectoryObserver?
+    //var directoryObserver:DirectoryObserver?
     override func resolveSkin() {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
@@ -10,6 +10,16 @@ class LiveEditView:CustomView {
         //liveEditTest2()
         
         Swift.print("~/Desktop/".tildePath)
+        
+        let url = NSURL(fileURLWithPath: "~/Desktop".tildePath)
+        let monitor = FolderMonitor(url: url, handler: {
+            Swift.print("Found change")
+        })
+        monitor
+        
+        
+        monitor.start()
+        //monitor.stop()
         
         //let theURL:NSURL = FilePathParser.path("~/Desktop/".tildePath)
         /*
@@ -20,8 +30,8 @@ class LiveEditView:CustomView {
             })
         */
         
-        let fileSystemWatcher = FileSystemWatcher(pathsToWatch: ["~/Desktop/".tildePath],sinceWhen: 0)
-        fileSystemWatcher.start()
+        /*let fileSystemWatcher = FileSystemWatcher(pathsToWatch: ["~/Desktop/".tildePath],sinceWhen: 0)
+        fileSystemWatcher.start()*/
     }
     /**
      *
