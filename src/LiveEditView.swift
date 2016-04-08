@@ -25,8 +25,8 @@ class LiveEditView:CustomView {
                 var styleProperty = style?.getStyleProperty("fill")
                 Swift.print("styleProperty?.value: " + "\(styleProperty?.value)")
                 styleProperty!.value = ("0x"+NSColor.magentaColor().hexString).uint
-                Swift.print("styleProperty?.value: " + "\(StyleManager.getStyle("#redBox")?.getStyleProperty("fill"))")
-                ElementModifier.refresh(redBox)
+                Swift.print("styleProperty?.value: " + "\(StyleManager.getStyle("#redBox")?.getStyleProperty("fill")?.value)")
+                ElementModifier.refresh(self)
             }
         }
         btn.event = onButtonClick
