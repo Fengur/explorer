@@ -21,8 +21,7 @@ class LiveEditView:CustomView {
         */
         
         let fileSystemWatcher = FileSystemWatcher(pathsToWatch: ["~/Desktop/".tildePath],sinceWhen: 0)
-        fileSystemWatcher
-        
+        fileSystemWatcher.start()
     }
     /**
      *
