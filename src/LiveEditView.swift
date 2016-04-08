@@ -37,16 +37,23 @@ class LiveEditView:CustomView {
      */
     func liveEditTest2(){
         //create a testBtn
-        StyleManager.addStyle("#btn1{fill:grey;float:left;clear:left;corner-radius:4px;}")
+        StyleManager.addStyle("#testButton{fill:grey9;float:left;clear:left;corner-radius:4px;}")
         let testButton = addSubView(Button(100,20,self,"testButton"))
         
         //create a light theme button
-        StyleManager.addStyle("#btn1{fill:green;float:left;clear:left;}")
-        let btn = addSubView(Button(100,20,self,"btn1"))
+        StyleManager.addStyle("#lightTheme{fill:grey9;float:left;clear:left;corner-radius:4px;}")
+        let lightThemeButton = addSubView(Button(100,20,self,"lightTheme"))
         //create a dark theme button
-        
+        StyleManager.addStyle("#darkTheme{fill:grey3;float:left;clear:left;corner-radius:4px;}")
+        let darkThemeButton = addSubView(Button(100,20,self,"darkTheme"))
         //onClick
-            //manually change the styles that belong to the button that will change. 
+        func onButtonClick(event:Event){
+            if(event.type == ButtonEvent.upInside){
+                let style = StyleManager.getStyle("#testButton")
+                var styleProperty = style?.getStyleProperty("fill")
+            }
+        }
+            //manually change the styles that belong to the button that will change.
             //refresh self
         
     }
