@@ -6,6 +6,7 @@ class LiveEditView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         liveEditTest1()
+        liveEditTest2()
     }
     /**
      *
@@ -30,5 +31,11 @@ class LiveEditView:CustomView {
             }
         }
         btn.event = onButtonClick
+    }
+    /**
+     *
+     */
+    func liveEditTest2(){
+        
     }
 }
