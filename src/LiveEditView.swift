@@ -71,3 +71,24 @@ class LiveEditView:CustomView {
         darkThemeButton.event = onButtonClick
     }
 }
+class DirectoryObserver {
+    
+    deinit {
+        
+        dispatch_source_cancel(source)
+        close(fileDescriptor)
+    }
+    
+    init(URL: NSURL, block: dispatch_block_t) {
+        
+        fileDescriptor = open(URL.path!, O_EVTONLY)
+        source = dispatch_source_create(DISPATCH_SOURCE_TYPE_VNODE, UInt(fileDescriptor), DISPATCH_VNODE_WRITE, dispatch_queue_create(nil, DISPATCH_QUEUE_CONCURRENT))
+        dispatch_source_set_event_handler(source, { dispatch_async(dispatch_get_main_queue(), block) })
+        dispatch_resume(source)
+    }
+    
+    //
+    
+    private let fileDescriptor: CInt
+    private let source: dispatch_source_t
+}
