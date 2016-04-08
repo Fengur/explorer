@@ -186,7 +186,7 @@ public class FileSystemWatcher {
     }
     
     deinit {
-        stop()
+        //stop()
     }
     
     // MARK: - Private Properties
