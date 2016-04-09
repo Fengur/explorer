@@ -40,7 +40,7 @@ class LiveEditView:CustomView {
         
         let fileWatcher = FileWatcher(["~/Desktop/test/text.txt".tildePath])
         fileWatcher.start()
-        fileWatcher.event = handleEvent
+        //fileWatcher.event = handleEvent
     }
     
     /**
