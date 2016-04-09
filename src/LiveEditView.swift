@@ -38,7 +38,7 @@ class LiveEditView:CustomView {
 
         /**/
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "someObserver:", name: "SomeNotification", object: nil)
+        
         
         let fileWatcher = FileWatcher(["~/Desktop/test/text.txt".tildePath])
         fileWatcher.start()
@@ -56,9 +56,7 @@ class LiveEditView:CustomView {
         
         
     }
-    func someObserver(sender: AnyObject) {
-        Swift.print("works : " + "\(sender)")
-    }
+    
     /**
      *
      */
