@@ -65,7 +65,7 @@ class LiveEditView:CustomView {
         
         
         //fileWatcher.event = handleEvent
-
+        outsideVar += " abc "
         
         
     }
