@@ -48,10 +48,17 @@ class LiveEditView:CustomView {
         //let fileWatcher = FileWatcher(["~/Desktop/test/text.txt".tildePath])
         //fileWatcher.start()
         
+        let outsideVar:String = "test"
         
         
         
-        let filewatch = try! FileWatch(paths: ["~/Desktop/test/text.txt".tildePath],  createFlag: [.UseCFTypes, .FileEvents], runLoop: NSRunLoop.currentRunLoop(), latency: 3.0, eventHandler: theEventHandler)
+        
+        let filewatch = try! FileWatch(paths: ["~/Desktop/test/text.txt".tildePath],  createFlag: [.UseCFTypes, .FileEvents], runLoop: NSRunLoop.currentRunLoop(), latency: 3.0, eventHandler: { event in
+            Swift.print("workz " + outsideVar)
+            if event.flag.contains(.ItemIsFile) {
+                debugPrint(event.path)
+            }
+        })
         filewatch
         
         
