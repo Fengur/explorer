@@ -24,7 +24,12 @@ class LiveEditView:CustomView {
         
         }*/
     }
-    
+    func theEventHandler(event:FileWatch.Event){
+        Swift.print("works")
+        if event.flag.contains(.ItemIsFile) {
+            debugPrint(event.path)
+        }
+    }
     override func resolveSkin() {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
@@ -46,7 +51,7 @@ class LiveEditView:CustomView {
         
         
         
-        let filewatch = try! FileWatch(paths: ["~/Desktop/".tildePath],  createFlag: [.UseCFTypes, .FileEvents], runLoop: NSRunLoop.currentRunLoop(), latency: 3.0, eventHandler: eventHandler)
+        let filewatch = try! FileWatch(paths: ["~/Desktop/test/text.txt".tildePath],  createFlag: [.UseCFTypes, .FileEvents], runLoop: NSRunLoop.currentRunLoop(), latency: 3.0, eventHandler: theEventHandler)
         filewatch
         
         
@@ -55,12 +60,7 @@ class LiveEditView:CustomView {
         
         
     }
-    func eventhandler(event:FileWatch.Event){
-        Swift.print("works")
-        if event.flag.contains(.ItemIsFile) {
-            debugPrint(event.path)
-        }
-    }
+    
     /**
      *
      */
