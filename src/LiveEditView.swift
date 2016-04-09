@@ -3,6 +3,28 @@ import Cocoa
 class LiveEditView:CustomView {
     var container:Container!
     
+    
+    func handleEvent(event:Event) {
+        Swift.print("handleEvent()")
+        //Swift.print("\t eventId: \(eventeventId) - eventFlags:  \(eventFlags) - eventPath:  \(eventPath)")
+        
+        /*switch eventFlags{
+        case Flags.dataChange:
+        Swift.print("data change")
+        case Flags.change:
+        Swift.print("file change")
+        case Flags.delete:
+        Swift.print("delete")
+        case Flags.added:
+        Swift.print("added")
+        default:
+        Swift.print("unsupported event: " + "\(eventFlags)")
+        break;
+        
+        
+        }*/
+    }
+    
     override func resolveSkin() {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
@@ -18,7 +40,9 @@ class LiveEditView:CustomView {
         
         let fileWatcher = FileWatcher(["~/Desktop/test/text.txt".tildePath])
         fileWatcher.start()
+        fileWatcher.event = handleEvent
     }
+    
     /**
      *
      */
