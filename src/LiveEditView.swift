@@ -24,7 +24,17 @@ class LiveEditView:CustomView {
         
         }*/
     }
-    
+    var fileWatcher:FileWatcher?
+    func someObserver(notification: NSNotification) {//remember to place this in a class scope not a method scope
+        //Swift.print("someObserver " + "\(notification.userInfo!["data"]!)")
+        
+        //Swift.print("\(fileWatcher!.contextInfoCopy!)")
+        
+        
+        if((notification.userInfo!["data"]! as! String) == "\(fileWatcher!.contextInfoCopy!)"){
+            Swift.print("correct fileWatcher")
+        }
+    }
     override func resolveSkin() {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
@@ -38,20 +48,33 @@ class LiveEditView:CustomView {
 
         /**/
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "someObserver:", name: "SomeNotification", object: nil)
+        
+
+       
+        fileWatcher = FileWatcher(["~/Desktop/test/text.txt".tildePath],FSEventStreamEventId(kFSEventStreamEventIdSinceNow))
+        fileWatcher!.start()
         
         
-        //let fileWatcher = FileWatcher(["~/Desktop/test/text.txt".tildePath])
-        //fileWatcher.start()
+        let fileWatcherB = FileWatcher(["~/Desktop/test/text2.txt".tildePath],FSEventStreamEventId(kFSEventStreamEventIdSinceNow))
+        fileWatcherB.start()
+         /**/
+        /*
+        let theEventHandler:(event:FileWatch.Event)->Void = { event in
+        //Swift.print("test")
+        debugPrint(event.path)
+        /*if event.flag.contains(.ItemIsFile) {
+        debugPrint(event.path)
+        
+        }*/
+        }/**/
         
         
         let filewatch = try! FileWatch(paths: ["~/Desktop/test/text.txt".tildePath],  createFlag: [.UseCFTypes, .FileEvents], runLoop: NSRunLoop.currentRunLoop(), latency: 3.0, eventHandler: { event in
-            if event.flag.contains(.ItemIsFile) {
-                debugPrint(event.path)
-            }
-        })
-        
-        
-        
+        if event.flag.contains(.ItemIsFile) {
+        debugPrint(event.path)
+        }
+        })*/
         
         //fileWatcher.event = handleEvent
         
