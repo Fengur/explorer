@@ -53,7 +53,7 @@ class LiveEditView:CustomView {
         
         
         
-        let testing = { event in
+        let testing:(event:FileWatch.Event)->Void = { event in
             Swift.print("workz " + self.outsideVar)
             if event.flag.contains(.ItemIsFile) {
                 debugPrint(event.path)
