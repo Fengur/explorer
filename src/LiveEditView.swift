@@ -43,15 +43,20 @@ class LiveEditView:CustomView {
         //fileWatcher.event = handleEvent
         
         //Dispatch Event/Post Notification:
-        NSNotificationCenter.defaultCenter().postNotificationName("SomeNotification", object:self)
+        
         
         //Listen for Event/Observe Notification:
+        
+        
+        
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "someObserver:", name: "SomeNotification", object: nil)
-        func someObserver(sender: AnyObject) {
-            
-        }
+        
+        NSNotificationCenter.defaultCenter().postNotificationName("SomeNotification", object:nil)
     }
-    
+    func someObserver(sender: AnyObject) {
+        Swift.print("works")
+    }
     /**
      *
      */
