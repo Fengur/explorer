@@ -46,30 +46,21 @@ class LiveEditView:CustomView {
         
         
         
-        let filewatch = try! FileWatch(paths: ["~/Desktop/".tildePath],  createFlag: [.UseCFTypes, .FileEvents], runLoop: NSRunLoop.currentRunLoop(), latency: 3.0, eventHandler: { event in
-            Swift.print("works")
-            if event.flag.contains(.ItemIsFile) {
-                debugPrint(event.path)
-            }
-        })
+        let filewatch = try! FileWatch(paths: ["~/Desktop/".tildePath],  createFlag: [.UseCFTypes, .FileEvents], runLoop: NSRunLoop.currentRunLoop(), latency: 3.0, eventHandler: eventHandler)
         filewatch
         
         
         //fileWatcher.event = handleEvent
-        
-        //Dispatch Event/Post Notification:
-        
-        
-        //Listen for Event/Observe Notification:
-        
-        
-        
-        
-        
+
         
         
     }
-    
+    func eventhandler(event:FileWatch.Event){
+        Swift.print("works")
+        if event.flag.contains(.ItemIsFile) {
+            debugPrint(event.path)
+        }
+    }
     /**
      *
      */
