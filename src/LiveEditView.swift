@@ -57,7 +57,7 @@ class LiveEditView:CustomView {
         
     }
     func someObserver(sender: AnyObject) {
-        Swift.print("works")
+        Swift.print("works : " + "\(sender)")
     }
     /**
      *
