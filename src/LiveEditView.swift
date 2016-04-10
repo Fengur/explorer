@@ -54,7 +54,6 @@ class LiveEditView:CustomView {
         
         //When a css file changes. Remove all
     }
-    
     /**
      *
      */
