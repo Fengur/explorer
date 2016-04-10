@@ -144,6 +144,9 @@ class LiveEditView:CustomView {
         fileWatcher!.event = { [weak self] event in
             Swift.print(self)
             Swift.print(event.description)
+            if(event.fileChange) {
+                
+            }
         }
         
         fileWatcher!.start()
