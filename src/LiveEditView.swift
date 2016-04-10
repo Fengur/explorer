@@ -61,6 +61,9 @@ class LiveEditView:CustomView {
                 if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemCreated)) != 0 {/*file created*/
                     Swift.print("file created")
                 }
+                
+                (eventFlags & kFSEventStreamEventFlagItemRemoved) == kFSEventStreamEventFlagItemRemoved
+                
                 if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemRemoved)) != 0 {/*file removed*/
                     Swift.print("File removed: \(eventPath) - \(eventId)")
                 }
