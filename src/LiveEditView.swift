@@ -33,10 +33,17 @@ class LiveEditView:CustomView {
         container = addSubView(Container(1000,800,self,"main"))
         //liveEditTest1()
         //liveEditTest2()
+        liveEditTest3()
        
+       
+    }
+    /**
+     *
+     */
+    func fileWatchTest(){
         fileWatcher = FileWatcher(["~/Desktop/test/".tildePath],FSEventStreamEventId(kFSEventStreamEventIdSinceNow))
         
-       
+        
         fileWatcher!.event = { [weak self] event in
             self?.temp
             Swift.print(event.description)
@@ -124,7 +131,9 @@ class LiveEditView:CustomView {
         //on file change add the css file to the StyleManger.addStyleByURL(url) and call ElementModifier.refreshSkin(self)//refresh self
         
         //create a button
-        
+        StyleManager.addStyle("#redBox{fill:red;float:left;clear:left;}")
+        let redBox = addSubView(Element(100,100,self,"redBox"))
+        redBox
         //style the button with red color from an external css file named ~/Desktop/button.css
         
         //change the color to blue in the button.css file it should now change to blue when you edit the .css file and hit save
