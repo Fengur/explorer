@@ -141,13 +141,11 @@ class LiveEditView:CustomView {
         
         fileWatcher = FileWatcher(["~/Desktop/button.css".tildePath])
         
-        
         fileWatcher!.event = { [weak self] event in
             self?.temp
             Swift.print(event.description)
         }
         
         fileWatcher!.start()
-        
     }
 }
