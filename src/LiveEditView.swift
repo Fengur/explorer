@@ -34,16 +34,7 @@ class LiveEditView:CustomView {
         //liveEditTest1()
         //liveEditTest2()
         
-        //Swift.print("~/Desktop/".tildePath)
-        
-        
-        //let url = NSURL(fileURLWithPath: "~/Desktop".tildePath)
-
-        /**/
-        
-        
-        
-
+       
        
         fileWatcher = FileWatcher(["~/Desktop/test/".tildePath],FSEventStreamEventId(kFSEventStreamEventIdSinceNow))
         
