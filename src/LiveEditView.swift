@@ -41,7 +41,7 @@ class LiveEditView:CustomView {
         fileWatcher!.event = { [weak self] eventId, eventPath, eventFlags in
             //let url = NSURL(fileURLWithPath: eventPath)
             Swift.print("event " + "\(self?.temp)" + " eventPath: " + "\(eventPath)")
-            let url = NSURL(fileURLWithPath: eventPath)
+            let url = NSURL(fileURLWithPath: eventPath)//<--formats paths to: file:///Users/John/Desktop/test/text.txt
             Swift.print("url: " + "\(url)")
             
             /**
