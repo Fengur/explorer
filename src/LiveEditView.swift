@@ -144,8 +144,9 @@ class LiveEditView:CustomView {
         fileWatcher!.event = { [weak self] event in
             Swift.print(self)
             Swift.print(event.description)
-            if(event.fileChange) {
-                
+            if(event.fileChange && event.path == "~/Desktop/button.css".tildePath) {
+                StyleManager.addStylesByURL("~/Desktop/button.css",true)
+                ElementModifier.refreshSkin(self!)
             }
         }
         
