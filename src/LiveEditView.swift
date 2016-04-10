@@ -50,7 +50,9 @@ class LiveEditView:CustomView {
         
         //so basically you need to
         
-        //when a css file changes
+        //when a css file changes, reload the entire css structure. Then you need to retain all css paths that were added to StyleManager
+        
+        //When a css file changes. Remove all
     }
     
     /**
