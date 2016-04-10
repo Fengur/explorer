@@ -59,8 +59,10 @@ class LiveEditView:CustomView {
         fileWatcher!.onFileChange = { [weak self] eventId, eventPath, eventFlags in
             //let url = NSURL(fileURLWithPath: eventPath)
             Swift.print("onFileChange() " + "\(self?.temp)")
+            let url = NSURL(fileURLWithPath: eventPath)
             
             if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemIsFile)) != 0 {
+                // file change
                 if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemModified)) != 0 {// file modified
                     Swift.print("File modified: \(eventPath) - \(eventId)")
                 }
