@@ -43,49 +43,17 @@ class LiveEditView:CustomView {
          * PARAM: eventId: is an id number that the os uses to differentiate between events.
          * PARAM: eventFlag: pertains to the file event type.
          */
-        fileWatcher!.event = { [weak self] fileWatcherEvent in
+        fileWatcher!.event = { [weak self] event in
             //let url = NSURL(fileURLWithPath: eventPath)
             //Swift.print("event " + "\(self?.temp)" + " eventPath: " + "\(eventPath)")
             self?.temp
-            //Swift.print("\t eventId: \(eventId) - eventFlags:  \(eventFlags) - eventPath:  \(eventPath)")
+            Swift.print("\t eventId: \(event.eventId) - eventFlags:  \(event.eventFlags) - eventPath:  \(event.eventPath)")
             //let url = NSURL(fileURLWithPath: eventPath)//<--formats paths to: file:///Users/John/Desktop/test/text.txt
             //Swift.print("url: " + "\(url)")
             
-            Swift.print("fileWatcherEvent.fileChange: " + "\(fileWatcherEvent.fileChange)")
-            Swift.print("fileWatcherEvent.fileModified: " + "\(fileWatcherEvent.fileModified)")
+            Swift.print("fileWatcherEvent.fileChange: " + "\(event.fileChange)")
+            Swift.print("fileWatcherEvent.fileModified: " + "\(event.fileModified)")
             
-            /*
-            if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemIsFile)) != 0 {
-                Swift.print("file change")
-                if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemCreated)) != 0 {/*file created*/
-                    Swift.print("file created")
-                }
-                if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemRemoved)) != 0 {/*file removed*/
-                    Swift.print("File removed: \(eventPath) - \(eventId)")
-                }
-                if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemRenamed)) != 0 {/*file renamed*/
-                    Swift.print("file renamed")
-                }
-                if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemModified)) != 0 {/*file change*/
-                    Swift.print("File modified: \(eventPath) - \(eventId)")
-                }
-            }
-            if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemIsDir)) != 0 {/*directory change*/
-                Swift.print("directory change")
-                if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemCreated)) != 0 {/*directory created*/
-                    Swift.print("directory created: \(eventPath)")
-                }
-                if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemRemoved)) != 0 {/*directory removed*/
-                    Swift.print("directory removed: \(eventPath)")
-                }
-                if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemRenamed)) != 0 {/*directory renamed*/
-                    Swift.print("directory renamed: \(eventPath)")
-                }
-                if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemModified)) != 0 {/*directory modified*/
-                    Swift.print("directory modified: \(eventPath)")
-                }
-            
-            }*/
         }
         
         fileWatcher!.start()
