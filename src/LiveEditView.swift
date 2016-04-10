@@ -49,7 +49,7 @@ class LiveEditView:CustomView {
         
         fileWatcher!.event = { [weak self] eventId, eventPath, eventFlags in
             //let url = NSURL(fileURLWithPath: eventPath)
-            Swift.print("event " + "\(self?.temp)")
+            Swift.print("event " + "\(self?.temp)" + " eventPath: " + "\(eventPath)")
             let url = NSURL(fileURLWithPath: eventPath)
             url
             if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemIsFile)) != 0 {
