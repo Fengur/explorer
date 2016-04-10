@@ -121,8 +121,15 @@ class LiveEditView:CustomView {
     func liveEditTest3(){
         //watch a css file for changes
         
-        //on file change add the css file to the StyleManger.addStyleByURL(url)
+        //on file change add the css file to the StyleManger.addStyleByURL(url) and call ElementModifier.refreshSkin(self)//refresh self
         
-        //
+        //create a button
+        
+        //style the button with red color from an external css file named ~/Desktop/button.css
+        
+        //change the color to blue in the button.css file it should now change to blue when you edit the .css file and hit save
+        
+        
+        
     }
 }
