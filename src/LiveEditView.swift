@@ -33,8 +33,8 @@ class LiveEditView:CustomView {
         container = addSubView(Container(1000,800,self,"main"))
         //liveEditTest1()
         //liveEditTest2()
-        liveEditTest3()
-       
+        //liveEditTest3()
+        fileWatchTest()
        
     }
     /**
