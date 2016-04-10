@@ -47,12 +47,14 @@ class LiveEditView:CustomView {
             //let url = NSURL(fileURLWithPath: eventPath)
             //Swift.print("event " + "\(self?.temp)" + " eventPath: " + "\(eventPath)")
             self?.temp
-            Swift.print("\t eventId: \(event.eventId) - eventFlags:  \(event.eventFlags) - eventPath:  \(event.eventPath)")
+            //Swift.print("\t eventId: \(event.eventId) - eventFlags:  \(event.eventFlags) - eventPath:  \(event.eventPath)")
             //let url = NSURL(fileURLWithPath: eventPath)//<--formats paths to: file:///Users/John/Desktop/test/text.txt
             //Swift.print("url: " + "\(url)")
             
-            Swift.print("fileWatcherEvent.fileChange: " + "\(event.fileChange)")
-            Swift.print("fileWatcherEvent.fileModified: " + "\(event.fileModified)")
+            //Swift.print("fileWatcherEvent.fileChange: " + "\(event.fileChange)")
+            //Swift.print("fileWatcherEvent.fileModified: " + "\(event.fileModified)")
+            
+            Swift.print(event.description)
             
         }
         
