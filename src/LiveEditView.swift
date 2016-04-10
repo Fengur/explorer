@@ -54,29 +54,16 @@ class LiveEditView:CustomView {
             url
             if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemIsFile)) != 0 {
                 Swift.print("file change")
-                switch true{
-                    case 1:
-                        printin("one")
-                    case 3...8:
-                        printin("range from 3 to 8")
-                    default:
-                        break;
-                }
-                if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemCreated)) != 0 {
-                    // file created
+                if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemCreated)) != 0 {/*file created*/
                     Swift.print("file created")
                 }
-                if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemRemoved)) != 0 {
-                    // file removed
+                if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemRemoved)) != 0 {/*file removed*/
                     Swift.print("File removed: \(eventPath) - \(eventId)")
-                    
                 }
-                if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemRenamed)) != 0 {
-                    // file renamed
+                if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemRenamed)) != 0 {/*file renamed*/
                     Swift.print("file renamed")
                 }
-                // file change
-                if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemModified)) != 0 {// file modified
+                if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemModified)) != 0 {/*file change*/
                     Swift.print("File modified: \(eventPath) - \(eventId)")
                 }
             }
