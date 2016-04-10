@@ -35,6 +35,7 @@ class LiveEditView:CustomView {
             Swift.print("correct fileWatcher")
         }
     }
+    let tempString:String = "abc"
     override func resolveSkin() {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
@@ -53,6 +54,13 @@ class LiveEditView:CustomView {
 
        
         fileWatcher = FileWatcher(["~/Desktop/test/text.txt".tildePath],FSEventStreamEventId(kFSEventStreamEventIdSinceNow))
+        
+        fileWatcher!.onFileChange = { [unowned self] eventId, eventPath, eventFlags in
+            //let url = NSURL(fileURLWithPath: eventPath)
+            Swift.print("onFileChange() " + "\(self.tempString)")
+            
+        }
+        
         fileWatcher!.start()
         
         
