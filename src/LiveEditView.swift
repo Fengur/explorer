@@ -44,6 +44,9 @@ class LiveEditView:CustomView {
         
         fileWatcher!.start()
         self.temp += "abc"
+        
+        
+        //continue here: Setup the StyleManager to support live editing. This needs some thinking.
     }
     
     /**
