@@ -86,43 +86,11 @@ class LiveEditView:CustomView {
                     Swift.print("directory modified: \(eventPath)")
                 }
             }
-            
         }
         
         fileWatcher!.start()
         
-        
         self.temp += "abc"
-        
-        //let fileWatcherB = FileWatcher(["~/Desktop/test/text2.txt".tildePath],FSEventStreamEventId(kFSEventStreamEventIdSinceNow))
-        //fileWatcherB.start()
-         /**/
-        /*
-        let theEventHandler:(event:FileWatch.Event)->Void = { event in
-        //Swift.print("test")
-        debugPrint(event.path)
-        /*if event.flag.contains(.ItemIsFile) {
-        debugPrint(event.path)
-        
-        }*/
-        }/**/
-        
-        
-        let filewatch = try! FileWatch(paths: ["~/Desktop/test/text.txt".tildePath],  createFlag: [.UseCFTypes, .FileEvents], runLoop: NSRunLoop.currentRunLoop(), latency: 3.0, eventHandler: { event in
-        if event.flag.contains(.ItemIsFile) {
-        debugPrint(event.path)
-        }
-        })*/
-        
-        //fileWatcher.event = handleEvent
-        
-        //Dispatch Event/Post Notification:
-        
-        
-        //Listen for Event/Observe Notification:
-        
-        
-        
         
         
         
