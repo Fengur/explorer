@@ -54,6 +54,14 @@ class LiveEditView:CustomView {
             url
             if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemIsFile)) != 0 {
                 Swift.print("file change")
+                switch true{
+                    case 1:
+                        printin("one")
+                    case 3...8:
+                        printin("range from 3 to 8")
+                    default:
+                        break;
+                }
                 if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemCreated)) != 0 {
                     // file created
                     Swift.print("file created")
