@@ -38,9 +38,16 @@ class LiveEditView:CustomView {
        
         fileWatcher = FileWatcher(["~/Desktop/test/".tildePath],FSEventStreamEventId(kFSEventStreamEventIdSinceNow))
         
+        
+        /**
+         * PARAM: eventId: is an id number that the os uses to differentiate between events.
+         * PARAM: eventFlag: pertains to the file event type.
+         */
         fileWatcher!.event = { [weak self] eventId, eventPath, eventFlags in
             //let url = NSURL(fileURLWithPath: eventPath)
-            Swift.print("event " + "\(self?.temp)" + " eventPath: " + "\(eventPath)")
+            //Swift.print("event " + "\(self?.temp)" + " eventPath: " + "\(eventPath)")
+            self?.temp
+            Swift.print("\t eventId: \(eventId) - eventFlags:  \(eventFlags) - eventPath:  \(eventPath)")
             let url = NSURL(fileURLWithPath: eventPath)//<--formats paths to: file:///Users/John/Desktop/test/text.txt
             Swift.print("url: " + "\(url)")
             
