@@ -36,10 +36,7 @@ class LiveEditView:CustomView {
        
         fileWatcher = FileWatcher(["~/Desktop/test/".tildePath],FSEventStreamEventId(kFSEventStreamEventIdSinceNow))
         
-        /**
-         * PARAM: eventId: is an id number that the os uses to differentiate between events.
-         * PARAM: eventFlag: pertains to the file event type.
-         */
+       
         fileWatcher!.event = { [weak self] event in
             self?.temp
             Swift.print(event.description)
