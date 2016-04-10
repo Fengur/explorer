@@ -139,7 +139,15 @@ class LiveEditView:CustomView {
         
         //change the color to blue in the button.css file it should now change to blue when you edit the .css file and hit save
         
+        fileWatcher = FileWatcher(["~/Desktop/button.css".tildePath])
         
+        
+        fileWatcher!.event = { [weak self] event in
+            self?.temp
+            Swift.print(event.description)
+        }
+        
+        fileWatcher!.start()
         
     }
 }
