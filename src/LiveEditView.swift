@@ -115,4 +115,14 @@ class LiveEditView:CustomView {
         lightThemeButton.event = onButtonClick//onClick
         darkThemeButton.event = onButtonClick
     }
+    /**
+     *
+     */
+    func liveEditTest3(){
+        //watch a css file for changes
+        
+        //on file change add the css file to the StyleManger.addStyleByURL(url)
+        
+        //
+    }
 }
