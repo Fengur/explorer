@@ -51,7 +51,13 @@ class LiveEditView:CustomView {
             //let url = NSURL(fileURLWithPath: eventPath)
             Swift.print("event " + "\(self?.temp)" + " eventPath: " + "\(eventPath)")
             let url = NSURL(fileURLWithPath: eventPath)
-            url
+            Swift.print("url: " + "\(url)")
+            
+            /**
+             * The following code is to differentiate between the FSEvent flag types (aka file event types)
+             * NOTE: Be aware that .DS_STORE changes frequently when other files change
+             */
+            
             if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemIsFile)) != 0 {
                 Swift.print("file change")
                 if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemCreated)) != 0 {/*file created*/
