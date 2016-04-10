@@ -131,7 +131,8 @@ class LiveEditView:CustomView {
         //on file change add the css file to the StyleManger.addStyleByURL(url) and call ElementModifier.refreshSkin(self)//refresh self
         
         //create a button
-        StyleManager.addStyle("#redBox{fill:red;float:left;clear:left;}")
+        //StyleManager.addStyle("#redBox{fill:red;float:left;clear:left;}")
+        StyleManager.addStylesByURL("~/Desktop/button.css",true)
         let redBox = addSubView(Element(100,100,self,"redBox"))
         redBox
         //style the button with red color from an external css file named ~/Desktop/button.css
