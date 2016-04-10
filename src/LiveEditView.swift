@@ -59,15 +59,32 @@ class LiveEditView:CustomView {
                 }
                 if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemRemoved)) != 0 {
                     // file removed
-                    print("File removed: \(eventPath) - \(eventId)")
+                    Swift.print("File removed: \(eventPath) - \(eventId)")
                     
+                }
+                if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemRenamed)) != 0 {
+                    // file renamed
                 }
                 // file change
                 if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemModified)) != 0 {// file modified
                     Swift.print("File modified: \(eventPath) - \(eventId)")
                 }
             }
-            
+            if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemIsDir)) != 0 {
+                // directory change
+                if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemCreated)) != 0 {
+                    // directory created
+                    Swift.print("directory created: \(eventPath)")
+                }
+                if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemRemoved)) != 0 {
+                    // directory removed
+                    Swift.print("directory removed: \(eventPath)")
+                    
+                }
+                if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemRenamed)) != 0 {
+                    // directory renamed
+                }
+            }
             
         }
         
