@@ -25,17 +25,8 @@ class LiveEditView:CustomView {
         }*/
     }
     var fileWatcher:FileWatcher?
-    func someObserver(notification: NSNotification) {//remember to place this in a class scope not a method scope
-        //Swift.print("someObserver " + "\(notification.userInfo!["data"]!)")
-        
-        //Swift.print("\(fileWatcher!.contextInfoCopy!)")
-        
-        
-        if((notification.userInfo!["data"]! as! String) == "\(fileWatcher!.contextInfoCopy!)"){
-            Swift.print("correct fileWatcher")
-        }
-    }
-    let tempString:String = "abc"
+    
+    
     var temp:String = "123"
     override func resolveSkin() {
         super.resolveSkin()
@@ -43,25 +34,26 @@ class LiveEditView:CustomView {
         //liveEditTest1()
         //liveEditTest2()
         
-        Swift.print("~/Desktop/".tildePath)
+        //Swift.print("~/Desktop/".tildePath)
         
         
         //let url = NSURL(fileURLWithPath: "~/Desktop".tildePath)
 
         /**/
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "someObserver:", name: "SomeNotification", object: nil)
+        
         
 
        
         fileWatcher = FileWatcher(["~/Desktop/test/text.txt".tildePath],FSEventStreamEventId(kFSEventStreamEventIdSinceNow))
         
-        fileWatcher!.onFileChange = { [weak self] eventId, eventPath, eventFlags in
+        fileWatcher!.event = { [weak self] eventId, eventPath, eventFlags in
             //let url = NSURL(fileURLWithPath: eventPath)
-            Swift.print("onFileChange() " + "\(self?.temp)")
+            Swift.print("event " + "\(self?.temp)")
             let url = NSURL(fileURLWithPath: eventPath)
-            
+            url
             if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemIsFile)) != 0 {
+                Swift.print("file change")
                 // file change
                 if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemModified)) != 0 {// file modified
                     Swift.print("File modified: \(eventPath) - \(eventId)")
