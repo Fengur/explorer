@@ -45,7 +45,7 @@ class LiveEditView:CustomView {
         
 
        
-        fileWatcher = FileWatcher(["~/Desktop/test/text.txt".tildePath],FSEventStreamEventId(kFSEventStreamEventIdSinceNow))
+        fileWatcher = FileWatcher(["~/Desktop/test/".tildePath],FSEventStreamEventId(kFSEventStreamEventIdSinceNow))
         
         fileWatcher!.event = { [weak self] eventId, eventPath, eventFlags in
             //let url = NSURL(fileURLWithPath: eventPath)
@@ -56,6 +56,7 @@ class LiveEditView:CustomView {
                 Swift.print("file change")
                 if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemCreated)) != 0 {
                     // file created
+                    Swift.print("file created")
                 }
                 if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemRemoved)) != 0 {
                     // file removed
@@ -64,6 +65,7 @@ class LiveEditView:CustomView {
                 }
                 if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemRenamed)) != 0 {
                     // file renamed
+                    Swift.print("file renamed")
                 }
                 // file change
                 if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemModified)) != 0 {// file modified
@@ -82,7 +84,8 @@ class LiveEditView:CustomView {
                     
                 }
                 if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemRenamed)) != 0 {
-                    // directory renamed
+                    //directory renamed
+                    Swift.print("directory renamed: \(eventPath)")
                 }
                 if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemModified)) != 0 {
                     // directory modified
