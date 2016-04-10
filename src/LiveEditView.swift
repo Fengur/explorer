@@ -84,6 +84,10 @@ class LiveEditView:CustomView {
                 if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemRenamed)) != 0 {
                     // directory renamed
                 }
+                if (eventFlags & FSEventStreamEventFlags(kFSEventStreamEventFlagItemModified)) != 0 {
+                    // directory modified
+                    Swift.print("directory modified: \(eventPath)")
+                }
             }
             
         }
