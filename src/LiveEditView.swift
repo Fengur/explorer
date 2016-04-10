@@ -33,8 +33,8 @@ class LiveEditView:CustomView {
         container = addSubView(Container(1000,800,self,"main"))
         //liveEditTest1()
         //liveEditTest2()
-        //liveEditTest3()
-        fileWatchTest()
+        liveEditTest3()
+        //fileWatchTest()
        
     }
     /**
@@ -139,13 +139,13 @@ class LiveEditView:CustomView {
         
         //change the color to blue in the button.css file it should now change to blue when you edit the .css file and hit save
         
-        let fileWatcher = FileWatcher(["~/Desktop/button.css".tildePath])
+        fileWatcher = FileWatcher(["~/Desktop/button.css".tildePath])
         
-        fileWatcher.event = { [weak self] event in
+        fileWatcher!.event = { [weak self] event in
             Swift.print(self)
             Swift.print(event.description)
         }
         
-        fileWatcher.start()
+        fileWatcher!.start()
     }
 }
