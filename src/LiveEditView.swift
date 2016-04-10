@@ -48,7 +48,9 @@ class LiveEditView:CustomView {
         
         //continue here: Setup the StyleManager to support live editing. This needs some thinking.
         
-        //so basically you need to 
+        //so basically you need to
+        
+        //when a css file changes
     }
     
     /**
