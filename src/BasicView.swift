@@ -62,17 +62,16 @@ class BasicView:CustomView {
      */
     func createRadioBullet(){
         
-        /* let url:String = "~/Desktop/ElCapitan/basic/button/radiobullet.css"
-        StyleManager.addStylesByURL(url,false)*/
+        let url:String = "~/Desktop/ElCapitan/basic/button/radiobullet.css"
+        StyleManager.addStylesByURL(url,false)
         
         
         let card:Card = container.addSubView(Card(NaN, NaN, "RadioBullet: ", container, "radioBulletCard"))
-        card
-        /*let section = card.addSubView(Section(NaN,NaN,card,"radioBulletContainer"))
+        let section = card.addSubView(Section(NaN,NaN,card,"radioBulletSection"))
         let radioBullet1 = section.addSubView(RadioBullet(NaN,NaN,true,section))
         let radioBullet2 = section.addSubView(RadioBullet(NaN,NaN,false,section))
         let selectGroup = (SelectGroup([radioBullet1,radioBullet2],radioBullet1))
-        selectGroup*/
+        selectGroup
     }
     /**
      * CheckboxButtons
