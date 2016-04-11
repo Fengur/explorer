@@ -69,7 +69,7 @@ class BasicView:CustomView {
     func createRadioBullet(){
         
         let url:String = "~/Desktop/ElCapitan/basic/button/radiobullet.css"
-        StyleManager.addStylesByURL(url,false)
+        StyleManager.addStylesByURL(url,true)
         
         let card:Card = container.addSubView(Card(NaN, NaN, "RadioBullet: ", container, "radioBulletCard"))
         let section = card.addSubView(Section(NaN,NaN,card,"radioBulletSection"))
