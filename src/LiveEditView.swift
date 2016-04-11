@@ -138,13 +138,13 @@ class LiveEditView:CustomView {
         StyleManager.addStylesByURL(url,true)
         //let redBox = addSubView(Element(100,100,self,"redBox"))
         //redBox
-        let container = addSubView(Container(200,200,self,"radioBulletContainer"))
+        let container = addSubView(Container(200,200,self,"uiContainer"))
         
-        let radioBullet:RadioBullet = container.addSubView(RadioBullet(NaN,NaN,false,container))
-        radioBullet
+        //let radioBullet:RadioBullet = container.addSubView(RadioBullet(NaN,NaN,false,container))
+        //radioBullet
         
         //let card:Card = container.addSubView(Card(NaN, NaN, "RadioBullet: ", container, "radioBulletCard"))
-        let section = card.addSubView(Section(NaN,NaN,card,"radioBulletContainer"))
+        let section = container.addSubView(Section(NaN,NaN,container,"radioBulletSection"))
         let radioBullet1 = section.addSubView(RadioBullet(NaN,NaN,true,section))
         let radioBullet2 = section.addSubView(RadioBullet(NaN,NaN,false,section))
         let selectGroup = (SelectGroup([radioBullet1,radioBullet2],radioBullet1))
