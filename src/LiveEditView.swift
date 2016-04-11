@@ -136,7 +136,7 @@ class LiveEditView:CustomView {
         StyleManager.addStyle("Container#uiContainer{float:left;clear:left;padding:48px;")
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer/explorer.css")
         let url:String = "~/Desktop/ElCapitan/basic/button/radiobullet.css"
-        StyleManager.addStylesByURL(url,true)
+        StyleManager.addStylesByURL(url,false)
         //let redBox = addSubView(Element(100,100,self,"redBox"))
         //redBox
         let container = addSubView(Container(200,200,self,"uiContainer"))
