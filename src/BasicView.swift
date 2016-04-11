@@ -135,7 +135,6 @@ class BasicView:CustomView {
         fileWatcher!.start()
         
         let card:Card = container.addSubView(Card(NaN, NaN, "Icon button: ", container, "iconButtonCard"))
-        
         let iconButton1 = card.addSubView(SelectButton(NaN,NaN,false,card,"first"))
         let iconButton2 = card.addSubView(SelectButton(NaN,NaN,false,card,"second"))
         let iconButton3 = card.addSubView(SelectButton(NaN,NaN,true,card,"third"))
