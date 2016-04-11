@@ -8,7 +8,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var win:NSWindow?/*<--The window must be a class variable, local variables doesnt work*/
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         StyleManager.addStylesByURL("~/Desktop/css/window.css")
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer/explorer.css")
+        StyleManager.addStylesByURL("~/Desktop/css/explorer/card.css")
+        //StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer/explorer.css")
         //StyleManager.addStylesByURL("~/Desktop/css/explorer/explorer.css")
         win = Win(200,200/*1000,800*/)//TranslucencyWin()//
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
