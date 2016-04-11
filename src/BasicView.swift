@@ -14,7 +14,8 @@ class BasicView:CustomView {
         //createVNodeSlider()
         //createHNodeSlider()
         //createRadioBullet()
-        createCheckBox()
+        //createCheckBox()
+        createLeverStepper()
         /*
         createButton()
         createTextButton()
@@ -23,7 +24,7 @@ class BasicView:CustomView {
         createLeverSpinner()
         createTabBar()
         createIconButtons()
-        createLeverStepper()
+        
         createTextInput()
         createSingleLineTextArea()
         createText()
@@ -121,6 +122,7 @@ class BasicView:CustomView {
     }
     func createLeverStepper(){
         let card:Card = container.addSubView(Card(NaN, NaN, "LeverStepper: ", container, "leverStepperCard"))
+        card
         let stepper:LeverStepper = card.addSubView(LeverStepper(NaN,NaN,0,1,Int.min.cgFloat,Int.max.cgFloat,0,100,200,card))
         stepper
     }
