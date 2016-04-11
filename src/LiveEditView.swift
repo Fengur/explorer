@@ -148,7 +148,7 @@ class LiveEditView:CustomView {
         //let card:Card = container.addSubView(Card(NaN, NaN, "RadioBullet: ", container, "radioBulletCard"))
         let section = container.addSubView(Section(NaN,NaN,container,"radioBulletSection"))
         let radioBullet1 = section.addSubView(RadioBullet(NaN,NaN,true,section))
-        let radioBullet2 = section.addSubView(RadioBullet(NaN,NaN,false,containesectionr))
+        let radioBullet2 = section.addSubView(RadioBullet(NaN,NaN,false,section))
         let selectGroup = (SelectGroup([radioBullet1,radioBullet2],radioBullet1))
         selectGroup
         
