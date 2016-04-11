@@ -133,21 +133,22 @@ class LiveEditView:CustomView {
         //create a button
         //StyleManager.addStyle("#redBox{fill:red;float:left;clear:left;}")
         //StyleManager.addStylesByURL("~/Desktop/button.css",true)
-        StyleManager.addStyle("Container#uiContainer{float:left;clear:left;padding:48px;")
+        
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer/explorer.css")
         let url:String = "~/Desktop/ElCapitan/basic/button/radiobullet.css"
         StyleManager.addStylesByURL(url,false)
         //let redBox = addSubView(Element(100,100,self,"redBox"))
         //redBox
-        let container = addSubView(Container(200,200,self,"uiContainer"))
+        StyleManager.addStyle("Container#uiContainer{float:left;clear:left;padding:48px;")
+        let container = self.addSubView(Container(200,200,self,"uiContainer"))
         
         //let radioBullet:RadioBullet = container.addSubView(RadioBullet(NaN,NaN,false,container))
         //radioBullet
         
         //let card:Card = container.addSubView(Card(NaN, NaN, "RadioBullet: ", container, "radioBulletCard"))
-        let section = container.addSubView(Section(NaN,NaN,container,"radioBulletSection"))
-        let radioBullet1 = section.addSubView(RadioBullet(NaN,NaN,true,section))
-        let radioBullet2 = section.addSubView(RadioBullet(NaN,NaN,false,section))
+        //let section = container.addSubView(Section(NaN,NaN,container,"radioBulletSection"))
+        let radioBullet1 = container.addSubView(RadioBullet(NaN,NaN,true,container))
+        let radioBullet2 = container.addSubView(RadioBullet(NaN,NaN,false,container))
         let selectGroup = (SelectGroup([radioBullet1,radioBullet2],radioBullet1))
         selectGroup
         
