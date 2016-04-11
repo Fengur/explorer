@@ -135,7 +135,7 @@ class LiveEditView:CustomView {
         StyleManager.addStylesByURL("~/Desktop/button.css",true)
         //let redBox = addSubView(Element(100,100,self,"redBox"))
         //redBox
-        let button:Button = Button()
+        let button:Button = Button(NaN,NaN,self)
         //style the button with red color from an external css file named ~/Desktop/button.css
         
         //change the color to blue in the button.css file it should now change to blue when you edit the .css file and hit save
