@@ -141,7 +141,7 @@ class BasicView:CustomView {
         let iconButton3 = card.addSubView(SelectButton(NaN,NaN,true,card,"third"))
         let iconButton4 = card.addSubView(SelectButton(NaN,NaN,false,card,"fourth"))
         let selectGroup = SelectGroup([iconButton1,iconButton2,iconButton3,iconButton4],iconButton3);
-        selectGroup
+        selectGroup/**/
         /**/
     }
     func createLeverStepper(){
