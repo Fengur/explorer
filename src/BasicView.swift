@@ -113,24 +113,27 @@ class BasicView:CustomView {
         selectGroup
     }
     func createIconButtons(){
-        /*let url:String = "~/Desktop/ElCapitan/basic/stepper/leverstepper.css"
+        
+        /*
+        */
+        
+        let url:String = "~/Desktop/ElCapitan/basic/button/iconbutton.css"
         StyleManager.addStylesByURL(url,true)
         
         fileWatcher = FileWatcher([url.tildePath])
         
         fileWatcher!.event = { [weak self] event in
-        Swift.print(self)
-        Swift.print(event.description)
-        if(event.fileChange && event.path == url.tildePath) {
-        StyleManager.addStylesByURL(url,true)
-        ElementModifier.refreshSkin(self!)
-        ElementModifier.floatChildren(self!)
-        }
+            Swift.print(self)
+            Swift.print(event.description)
+            if(event.fileChange && event.path == url.tildePath) {
+                StyleManager.addStylesByURL(url,true)
+                ElementModifier.refreshSkin(self!)
+                ElementModifier.floatChildren(self!)
+            }
         }
         
         fileWatcher!.start()
         
-        */
         let card:Card = container.addSubView(Card(NaN, NaN, "Icon button: ", container, "iconButtonCard"))
         card
         /*let iconButton1 = card.addSubView(SelectButton(NaN,NaN,false,card,"first"))
