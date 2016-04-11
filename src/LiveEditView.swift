@@ -132,21 +132,24 @@ class LiveEditView:CustomView {
         
         //create a button
         //StyleManager.addStyle("#redBox{fill:red;float:left;clear:left;}")
-        StyleManager.addStylesByURL("~/Desktop/button.css",true)
+        //StyleManager.addStylesByURL("~/Desktop/button.css",true)
+        let url:String = "~/Desktop/radiobullet.css"
+        StyleManager.addStylesByURL(url,true)
         //let redBox = addSubView(Element(100,100,self,"redBox"))
         //redBox
-        let button:Button = Button(NaN,NaN,self)
+        let radioBullet:RadioBullet = RadioBullet(NaN,NaN,true,self)
+        radioBullet
         //style the button with red color from an external css file named ~/Desktop/button.css
         
         //change the color to blue in the button.css file it should now change to blue when you edit the .css file and hit save
         
-        fileWatcher = FileWatcher(["~/Desktop/button.css".tildePath])
+        fileWatcher = FileWatcher([url.tildePath])
         
         fileWatcher!.event = { [weak self] event in
             Swift.print(self)
             Swift.print(event.description)
-            if(event.fileChange && event.path == "~/Desktop/button.css".tildePath) {
-                StyleManager.addStylesByURL("~/Desktop/button.css",true)
+            if(event.fileChange && event.path == url.tildePath) {
+                StyleManager.addStylesByURL(url,true)
                 ElementModifier.refreshSkin(self!)
             }
         }
