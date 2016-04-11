@@ -121,6 +121,23 @@ class BasicView:CustomView {
         selectGroup
     }
     func createLeverStepper(){
+        let url:String = "~/Desktop/ElCapitan/basic/stepper/leverstepper.css"
+        StyleManager.addStylesByURL(url,true)
+        
+        fileWatcher = FileWatcher([url.tildePath])
+        
+        fileWatcher!.event = { [weak self] event in
+            Swift.print(self)
+            Swift.print(event.description)
+            if(event.fileChange && event.path == url.tildePath) {
+                StyleManager.addStylesByURL(url,true)
+                ElementModifier.refreshSkin(self!)
+                ElementModifier.floatChildren(self!)
+            }
+        }
+        
+        fileWatcher!.start()
+        
         let card:Card = container.addSubView(Card(NaN, NaN, "LeverStepper: ", container, "leverStepperCard"))
         card
         let stepper:LeverStepper = card.addSubView(LeverStepper(NaN,NaN,0,1,Int.min.cgFloat,Int.max.cgFloat,0,100,200,card))
@@ -167,8 +184,7 @@ class BasicView:CustomView {
      */
     func createCheckBox(){
         
-        let url:String = "~/Desktop/ElCapitan/basic/button/checkbox.css"
-        StyleManager.addStylesByURL(url,true)
+        
         
         
         let checkBoxCard:Card = container.addSubView(Card(NaN, NaN, "CheckBox: ", container, "checkBoxCard"))
@@ -184,19 +200,7 @@ class BasicView:CustomView {
         
         
         
-        fileWatcher = FileWatcher([url.tildePath])
         
-        fileWatcher!.event = { [weak self] event in
-            Swift.print(self)
-            Swift.print(event.description)
-            if(event.fileChange && event.path == url.tildePath) {
-                StyleManager.addStylesByURL(url,true)
-                ElementModifier.refreshSkin(self!)
-                ElementModifier.floatChildren(self!)
-            }
-        }
-        
-        fileWatcher!.start()
     }
     /**
      * RadioButton
