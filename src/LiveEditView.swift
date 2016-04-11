@@ -137,7 +137,9 @@ class LiveEditView:CustomView {
         StyleManager.addStylesByURL(url,true)
         //let redBox = addSubView(Element(100,100,self,"redBox"))
         //redBox
-        let radioBullet:RadioBullet = addSubView(RadioBullet(NaN,NaN,false,self))
+        let container = addSubView(Container(200,200,self,"radioBulletContainer"))
+        
+        let radioBullet:RadioBullet = container.addSubView(RadioBullet(NaN,NaN,false,container))
         radioBullet
         //style the button with red color from an external css file named ~/Desktop/button.css
         
