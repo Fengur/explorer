@@ -133,6 +133,7 @@ class LiveEditView:CustomView {
         //create a button
         //StyleManager.addStyle("#redBox{fill:red;float:left;clear:left;}")
         //StyleManager.addStylesByURL("~/Desktop/button.css",true)
+        StyleManager.addStyle("Container#uiContainer{float:left;clear:left;padding:48px;")
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer/explorer.css")
         let url:String = "~/Desktop/ElCapitan/basic/button/radiobullet.css"
         StyleManager.addStylesByURL(url,true)
