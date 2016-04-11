@@ -13,7 +13,8 @@ class BasicView:CustomView {
         container = addSubView(Container(1000,800,self,"main"))
         //createVNodeSlider()
         //createHNodeSlider()
-        createRadioBullet()
+        //createRadioBullet()
+        createCheckBox()
         /*
         createButton()
         createTextButton()
@@ -30,7 +31,7 @@ class BasicView:CustomView {
         createSearchBox()
         createVSlider()
         createHSlider()
-        createCheckBox()
+        
         createRadioButton()
         createColorTag()
         
@@ -78,20 +79,6 @@ class BasicView:CustomView {
         let selectGroup = (SelectGroup([radioBullet1,radioBullet2],radioBullet1))
         selectGroup
         
-        
-        fileWatcher = FileWatcher([url.tildePath])
-        
-        fileWatcher!.event = { [weak self] event in
-            Swift.print(self)
-            Swift.print(event.description)
-            if(event.fileChange && event.path == url.tildePath) {
-                StyleManager.addStylesByURL(url,true)
-                ElementModifier.refreshSkin(self!)
-                ElementModifier.floatChildren(self!)
-            }
-        }
-        
-        fileWatcher!.start()
     }
     /**
      * CheckboxButtons
@@ -183,6 +170,22 @@ class BasicView:CustomView {
         let checkBox2:CheckBox = checkBoxContainer.addSubView(CheckBox(NaN,NaN,true,checkBoxContainer))
         let checkGroup:CheckGroup = CheckGroup([checkBox1,checkBox2], checkBox2)
         checkGroup
+        
+        
+        
+        fileWatcher = FileWatcher([url.tildePath])
+        
+        fileWatcher!.event = { [weak self] event in
+            Swift.print(self)
+            Swift.print(event.description)
+            if(event.fileChange && event.path == url.tildePath) {
+                StyleManager.addStylesByURL(url,true)
+                ElementModifier.refreshSkin(self!)
+                ElementModifier.floatChildren(self!)
+            }
+        }
+        
+        fileWatcher!.start()
     }
     /**
      * RadioButton
