@@ -9,8 +9,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         /**/
         StyleManager.addStylesByURL("~/Desktop/css/window.css")
-        //StyleManager.addStylesByURL("~/Desktop/css/explorer/explorer.css")
-        win = TranslucencyWin()//Win(1000,800)
+        StyleManager.addStylesByURL("~/Desktop/css/explorer/explorer.css")
+        win = Win(1000,800)//TranslucencyWin()//
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
     }
     func applicationWillTerminate(aNotification: NSNotification) {
