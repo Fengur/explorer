@@ -7,10 +7,11 @@ class BasicView:CustomView {
         container = addSubView(Container(1000,800,self,"main"))
         //createVNodeSlider()
         //createHNodeSlider()
+        createRadioBullet()
         /*
         createButton()
         createTextButton()
-        createRadioBullet()
+        
         createCheckBoxButton()
         createLeverSpinner()
         createTabBar()
@@ -60,6 +61,11 @@ class BasicView:CustomView {
      * RadioBullet
      */
     func createRadioBullet(){
+        
+        let url:String = "~/Desktop/ElCapitan/basic/button/radiobullet.css"
+        StyleManager.addStylesByURL(url,false)
+        
+        
         let card:Card = container.addSubView(Card(NaN, NaN, "RadioBullet: ", container, "radioBulletCard"))
         let section = card.addSubView(Section(NaN,NaN,card,"radioBulletContainer"))
         let radioBullet1 = section.addSubView(RadioBullet(NaN,NaN,true,section))
