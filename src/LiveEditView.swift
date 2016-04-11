@@ -142,6 +142,15 @@ class LiveEditView:CustomView {
         
         let radioBullet:RadioBullet = container.addSubView(RadioBullet(NaN,NaN,false,container))
         radioBullet
+        
+        //let card:Card = container.addSubView(Card(NaN, NaN, "RadioBullet: ", container, "radioBulletCard"))
+        let section = card.addSubView(Section(NaN,NaN,card,"radioBulletContainer"))
+        let radioBullet1 = section.addSubView(RadioBullet(NaN,NaN,true,section))
+        let radioBullet2 = section.addSubView(RadioBullet(NaN,NaN,false,section))
+        let selectGroup = (SelectGroup([radioBullet1,radioBullet2],radioBullet1))
+        selectGroup
+        
+        
         //style the button with red color from an external css file named ~/Desktop/button.css
         
         //change the color to blue in the button.css file it should now change to blue when you edit the .css file and hit save
