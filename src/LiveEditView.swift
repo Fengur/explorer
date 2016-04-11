@@ -151,6 +151,7 @@ class LiveEditView:CustomView {
             if(event.fileChange && event.path == url.tildePath) {
                 StyleManager.addStylesByURL(url,true)
                 ElementModifier.refreshSkin(self!)
+                ElementModifier.floatChildren(self!)
             }
         }
         
