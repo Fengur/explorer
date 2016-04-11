@@ -152,10 +152,7 @@ class LiveEditView:CustomView {
         let selectGroup = (SelectGroup([radioBullet1,radioBullet2],radioBullet1))
         selectGroup
         
-        
         //style the button with red color from an external css file named ~/Desktop/button.css
-        
-        //change the color to blue in the button.css file it should now change to blue when you edit the .css file and hit save
         
         fileWatcher = FileWatcher([url.tildePath])
         

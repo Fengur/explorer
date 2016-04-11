@@ -65,7 +65,6 @@ class BasicView:CustomView {
         let url:String = "~/Desktop/ElCapitan/basic/button/radiobullet.css"
         StyleManager.addStylesByURL(url,false)
         
-        
         let card:Card = container.addSubView(Card(NaN, NaN, "RadioBullet: ", container, "radioBulletCard"))
         let section = card.addSubView(Section(NaN,NaN,card,"radioBulletSection"))
         let radioBullet1 = section.addSubView(RadioBullet(NaN,NaN,true,section))
