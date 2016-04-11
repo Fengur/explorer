@@ -164,6 +164,11 @@ class BasicView:CustomView {
      * Checkbox
      */
     func createCheckBox(){
+        
+        let url:String = "~/Desktop/ElCapitan/basic/button/checkbox.css"
+        StyleManager.addStylesByURL(url,true)
+        
+        
         let checkBoxCard:Card = container.addSubView(Card(NaN, NaN, "CheckBox: ", container, "checkBoxCard"))
         let checkBoxContainer:Section = checkBoxCard.addSubView(Section(NaN,NaN,checkBoxCard,"checkBoxContainer"))
         let checkBox1:CheckBox = checkBoxContainer.addSubView(CheckBox(NaN,NaN,false,checkBoxContainer))
