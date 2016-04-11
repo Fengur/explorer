@@ -3,27 +3,6 @@ import Cocoa
 class LiveEditView:CustomView {
     var container:Container!
     
-    
-    func handleEvent(event:Event) {
-        Swift.print("handleEvent()")
-        //Swift.print("\t eventId: \(eventeventId) - eventFlags:  \(eventFlags) - eventPath:  \(eventPath)")
-        
-        /*switch eventFlags{
-        case Flags.dataChange:
-        Swift.print("data change")
-        case Flags.change:
-        Swift.print("file change")
-        case Flags.delete:
-        Swift.print("delete")
-        case Flags.added:
-        Swift.print("added")
-        default:
-        Swift.print("unsupported event: " + "\(eventFlags)")
-        break;
-        
-        
-        }*/
-    }
     var fileWatcher:FileWatcher?
     
     
@@ -52,14 +31,6 @@ class LiveEditView:CustomView {
         fileWatcher!.start()
         self.temp += "abc"
         
-        
-        //continue here: Setup the StyleManager to support live editing. This needs some thinking.
-        
-        //so basically you need to
-        
-        //when a css file changes, reload the entire css structure. Then you need to retain all css paths that were added to StyleManager
-        
-        //When a css file changes. Remove all
     }
     /**
      *

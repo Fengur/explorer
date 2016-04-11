@@ -2,6 +2,8 @@ import Foundation
 
 class BasicView:CustomView {
     var container:Container!
+    
+    var fileWatcher:FileWatcher?
     override func resolveSkin() {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
