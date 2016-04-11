@@ -171,9 +171,11 @@ class BasicView:CustomView {
         
         let checkBoxCard:Card = container.addSubView(Card(NaN, NaN, "CheckBox: ", container, "checkBoxCard"))
         checkBoxCard
-        let checkBoxContainer:Section = checkBoxCard.addSubView(Section(NaN,NaN,checkBoxCard,"checkBoxContainer"))
-        /*let checkBox1:CheckBox = checkBoxContainer.addSubView(CheckBox(NaN,NaN,false,checkBoxContainer))
-        let checkBox2:CheckBox = checkBoxContainer.addSubView(CheckBox(NaN,NaN,true,checkBoxContainer))
+        let checkBoxContainer = checkBoxCard.addSubView(Section(NaN,NaN,checkBoxCard,"checkBoxSection"))
+        checkBoxContainer
+        let checkBox1 = checkBoxContainer.addSubView(CheckBox(NaN,NaN,false,checkBoxContainer))
+        checkBox1
+        /*let checkBox2:CheckBox = checkBoxContainer.addSubView(CheckBox(NaN,NaN,true,checkBoxContainer))
         let checkGroup:CheckGroup = CheckGroup([checkBox1,checkBox2], checkBox2)
         checkGroup*/
         
