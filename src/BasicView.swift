@@ -69,6 +69,7 @@ class BasicView:CustomView {
         
         let card:Card = container.addSubView(Card(NaN, NaN, "Buttons: ", container, "buttonCard"))
         card
+        
         /*
         let button = card.addSubView(Button(96,24,card))
         func onbuttonDown(event:Event){
