@@ -16,10 +16,10 @@ class BasicView:CustomView {
         //createRadioBullet()
         //createCheckBox()
         //createLeverStepper()
-        createIconButtons()
-
-        /*
+        //createIconButtons()
         createButton()
+        /*
+        
         createTextButton()
         
         createCheckBoxButton()
