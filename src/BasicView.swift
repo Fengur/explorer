@@ -48,8 +48,8 @@ class BasicView:CustomView {
      * Button
      */
     func createButton(){
-        /*
-        let url:String = "~/Desktop/ElCapitan/basic/button/button"
+        
+        let url:String = "~/Desktop/ElCapitan/basic/button/button.css"
         StyleManager.addStylesByURL(url,true)
         
         fileWatcher = FileWatcher([url.tildePath])
@@ -65,13 +65,15 @@ class BasicView:CustomView {
         }
         
         fileWatcher!.start()
-        */
+        /**/
         
         let card:Card = container.addSubView(Card(NaN, NaN, "Buttons: ", container, "buttonCard"))
         card
         
-        /*
+        
         let button = card.addSubView(Button(96,24,card))
+        button
+        /*
         func onbuttonDown(event:Event){
             if(event.type == ButtonEvent.upInside){
                 //var startTime:int = getTimer();
