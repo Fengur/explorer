@@ -114,9 +114,6 @@ class BasicView:CustomView {
     }
     func createIconButtons(){
         
-        /*
-        */
-        
         let url:String = "~/Desktop/ElCapitan/basic/button/iconbutton.css"
         StyleManager.addStylesByURL(url,false)
        
