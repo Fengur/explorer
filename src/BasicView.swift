@@ -72,6 +72,24 @@ class BasicView:CustomView {
      * TextButton
      */
     func createTextButton(){
+        
+        let url:String = "~/Desktop/ElCapitan/basic/button/button.css"
+        StyleManager.addStylesByURL(url,true)
+        
+        fileWatcher = FileWatcher([url.tildePath])
+        
+        fileWatcher!.event = { [weak self] event in
+            Swift.print(self)
+            Swift.print(event.description)
+            if(event.fileChange && event.path == url.tildePath) {
+                StyleManager.addStylesByURL(url,true)
+                ElementModifier.refreshSkin(self!)
+                ElementModifier.floatChildren(self!)
+            }
+        }
+        fileWatcher!.start()
+        
+        
         let card:Card = container.addSubView(Card(NaN, NaN, "TextButton: ", container, "textButtonCard"))
         card.addSubView(TextButton("Button",NaN,NaN,card))
     }
