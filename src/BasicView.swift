@@ -18,14 +18,12 @@ class BasicView:CustomView {
         //createLeverStepper()
         //createIconButtons()
         //createButton()
-        createTextButton()
+        //createTextButton()
+        createTabBar()
         /*
-        
-        
-        
         createCheckBoxButton()
         createLeverSpinner()
-        createTabBar()
+        
                 
         createTextInput()
         createSingleLineTextArea()
@@ -118,6 +116,23 @@ class BasicView:CustomView {
         leverSpinner
     }
     func createTabBar(){
+        let url:String = "~/Desktop/ElCapitan/basic/button/tabbar.css"
+        StyleManager.addStylesByURL(url,true)
+        
+        fileWatcher = FileWatcher([url.tildePath])
+        
+        fileWatcher!.event = { [weak self] event in
+            //Swift.print(self)
+            Swift.print(event.description)
+            if(event.fileChange && event.path == url.tildePath) {
+                StyleManager.addStylesByURL(url,true)
+                ElementModifier.refreshSkin(self!)
+                ElementModifier.floatChildren(self!)
+            }
+        }
+        fileWatcher!.start()
+        
+        
         let card:Card = container.addSubView(Card(NaN, NaN, "Tab bar: ", container, "tabBarCard"))
         let btn1 = card.addSubView(SelectTextButton(NaN,NaN,"first",false,card,"first"))
         let btn2 = card.addSubView(SelectTextButton(NaN,NaN,"second",true,card,"second"))
