@@ -178,9 +178,9 @@ class BasicView:CustomView {
         textArea
     }
     func createSearchBox(){
-        let url:String = "~/Desktop/ElCapitan/basic/button/tabbar.css"
+        let url:String = "~/Desktop/ElCapitan/basic/text/searchbox.css"
         StyleManager.addStylesByURL(url,true)
-        /*
+        
 
         fileWatcher = FileWatcher([url.tildePath])
         
@@ -195,7 +195,7 @@ class BasicView:CustomView {
         }
         fileWatcher!.start()
         
-        */
+        /**/
         let searchBoxCard:Card = container.addSubView(Card(NaN, NaN, "Search box: ", container, "searchBoxCard"))
         let searchBox:TextArea = searchBoxCard.addSubView(TextArea(NaN, NaN, "Search", searchBoxCard))
         searchBox
