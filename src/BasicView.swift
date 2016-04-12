@@ -20,6 +20,7 @@ class BasicView:CustomView {
         //createButton()
         //createTextButton()
         //createTabBar()
+        createSearchBox()
         /*
         createCheckBoxButton()
         createLeverSpinner()
@@ -29,7 +30,7 @@ class BasicView:CustomView {
         createSingleLineTextArea()
         createText()
         createTextArea()
-        createSearchBox()
+        
         createVSlider()
         createHSlider()
         
@@ -177,6 +178,24 @@ class BasicView:CustomView {
         textArea
     }
     func createSearchBox(){
+        let url:String = "~/Desktop/ElCapitan/basic/button/tabbar.css"
+        StyleManager.addStylesByURL(url,true)
+        /*
+
+        fileWatcher = FileWatcher([url.tildePath])
+        
+        fileWatcher!.event = { [weak self] event in
+            //Swift.print(self)
+            Swift.print(event.description)
+            if(event.fileChange && event.path == url.tildePath) {
+                StyleManager.addStylesByURL(url,true)
+                ElementModifier.refreshSkin(self!)
+                ElementModifier.floatChildren(self!)
+            }
+        }
+        fileWatcher!.start()
+        
+        */
         let searchBoxCard:Card = container.addSubView(Card(NaN, NaN, "Search box: ", container, "searchBoxCard"))
         let searchBox:TextArea = searchBoxCard.addSubView(TextArea(NaN, NaN, "Search", searchBoxCard))
         searchBox
