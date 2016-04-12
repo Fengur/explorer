@@ -73,7 +73,7 @@ class BasicView:CustomView {
      */
     func createTextButton(){
         
-        let url:String = "~/Desktop/ElCapitan/basic/button/button.css"
+        let url:String = "~/Desktop/ElCapitan/basic/button/textbutton.css"
         StyleManager.addStylesByURL(url,true)
         
         fileWatcher = FileWatcher([url.tildePath])
