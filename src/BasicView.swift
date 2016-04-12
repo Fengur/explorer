@@ -48,7 +48,6 @@ class BasicView:CustomView {
      * Button
      */
     func createButton(){
-        
         let url:String = "~/Desktop/ElCapitan/basic/button/button.css"
         StyleManager.addStylesByURL(url,true)
         
@@ -63,13 +62,10 @@ class BasicView:CustomView {
                 ElementModifier.floatChildren(self!)
             }
         }
-        
         fileWatcher!.start()
-        /**/
         
         let card:Card = container.addSubView(Card(NaN, NaN, "Buttons: ", container, "buttonCard"))
         card
-        
         
         let button = card.addSubView(Button(96,24,card))
         button
