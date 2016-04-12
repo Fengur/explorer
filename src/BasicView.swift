@@ -277,7 +277,7 @@ class BasicView:CustomView {
     //comboBox
     func createComboBox(){
         
-        let url:String = "~/Desktop/ElCapitan/basic/text/searchbox.css"
+        let url:String = "~/Desktop/ElCapitan/basic/combobox/combobox.css"
         StyleManager.addStylesByURL(url,true)
         
         
