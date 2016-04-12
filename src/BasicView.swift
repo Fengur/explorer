@@ -19,7 +19,7 @@ class BasicView:CustomView {
         //createIconButtons()
         //createButton()
         //createTextButton()
-        createTabBar()
+        //createTabBar()
         /*
         createCheckBoxButton()
         createLeverSpinner()
@@ -117,20 +117,9 @@ class BasicView:CustomView {
     }
     func createTabBar(){
         let url:String = "~/Desktop/ElCapitan/basic/button/tabbar.css"
-        StyleManager.addStylesByURL(url,true)
+        StyleManager.addStylesByURL(url,false)
         
-        fileWatcher = FileWatcher([url.tildePath])
         
-        fileWatcher!.event = { [weak self] event in
-            //Swift.print(self)
-            Swift.print(event.description)
-            if(event.fileChange && event.path == url.tildePath) {
-                StyleManager.addStylesByURL(url,true)
-                ElementModifier.refreshSkin(self!)
-                ElementModifier.floatChildren(self!)
-            }
-        }
-        fileWatcher!.start()
         
         
         let card:Card = container.addSubView(Card(NaN, NaN, "Tab bar: ", container, "tabBarCard"))
