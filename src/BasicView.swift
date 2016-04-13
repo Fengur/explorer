@@ -243,8 +243,8 @@ class BasicView:CustomView {
      */
     func createRadioButton(){
         
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/stepper/leverstepper.css")
-        let url:String = "~/Desktop/ElCapitan/basic/spinner/leverspinner.css"
+        //StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/button/radiobutton.css")
+        let url:String = "~/Desktop/ElCapitan/basic/button/radiobutton.css"
         StyleManager.addStylesByURL(url,true)
         
         fileWatcher = FileWatcher([url.tildePath])
@@ -260,9 +260,9 @@ class BasicView:CustomView {
         fileWatcher!.start()
         
         let radioButtonCard:Card = container.addSubView(Card(NaN, NaN, "Radio buttons: ", container, "radioButtonCard"))
-        let radioButtonContainer:Element = radioButtonCard.addSubView(Section(NaN,NaN,radioButtonCard,"radioButtonContainer"))// :TODO: rename to background
-        let radioButton1:RadioButton = radioButtonContainer.addSubView(RadioButton(80,14,"Option 1",false,radioButtonContainer))
-        let radioButton2:RadioButton = radioButtonContainer.addSubView(RadioButton(80,14,"Option 2",true,radioButtonContainer))
+        let section:Section = radioButtonCard.addSubView(Section(NaN,NaN,radioButtonCard,"radioButtonSection"))// :TODO: rename to background
+        let radioButton1:RadioButton = section.addSubView(RadioButton(80,14,"Option 1",false,section))
+        let radioButton2:RadioButton = section.addSubView(RadioButton(80,14,"Option 2",true,section))
         let selectGroup:SelectGroup = SelectGroup([radioButton1,radioButton2],radioButton2)
         func onSelectGroupChange(event:Event){
             Swift.print("event.selectable: " + "\(event)")
