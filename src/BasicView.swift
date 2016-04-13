@@ -334,7 +334,7 @@ class BasicView:CustomView {
         
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/slider/vslider.css")
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/text/textarea.css")
-        let url:String = "~/Desktop/ElCapitan/basic/list/slidertextarea.css"
+        let url:String = "~/Desktop/ElCapitan/basic/text/slidertextarea.css"
         StyleManager.addStylesByURL(url,true)
         
         fileWatcher = FileWatcher([url.tildePath])
