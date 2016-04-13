@@ -333,8 +333,8 @@ class BasicView:CustomView {
     func createSliderTextArea() {
         
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/slider/vslider.css")
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/text/list.css")
-        let url:String = "~/Desktop/ElCapitan/basic/list/sliderlist.css"
+        StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/text/textarea.css")
+        let url:String = "~/Desktop/ElCapitan/basic/list/slidertextarea.css"
         StyleManager.addStylesByURL(url,true)
         
         fileWatcher = FileWatcher([url.tildePath])
