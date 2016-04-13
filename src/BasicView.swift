@@ -30,15 +30,17 @@ class BasicView:CustomView {
         //createCheckBoxButton()
         //createLeverSpinner()
         //createRadioButton()
-        createVSlider()
+        //createVSlider()
+        //createHSlider()
+        createList()
         /*
         
         
         
         
-        createHSlider()
         
-        createList()
+        
+        
         createSliderList()
         createSliderTextArea()
         */
@@ -211,20 +213,6 @@ class BasicView:CustomView {
         let url:String = "~/Desktop/ElCapitan/basic/slider/vslider.css"
         StyleManager.addStylesByURL(url,true)
         
-        fileWatcher = FileWatcher([url.tildePath])
-        fileWatcher!.event = { event in
-            //Swift.print(self)
-            Swift.print(event.description)
-            if(event.fileChange && event.path == url.tildePath) {
-                StyleManager.addStylesByURL(url,true)
-                ElementModifier.refreshSkin(self)
-                ElementModifier.floatChildren(self)
-            }
-        }
-        fileWatcher!.start()
-        
-        
-        
         let vSliderCard:Card = container.addSubView(Card(NaN, NaN, "Vertical slider: ", container, "vSliderCard"))
         let vSlider:VSlider = vSliderCard.addSubView(VSlider(6,60,30,0,vSliderCard))
         vSlider
@@ -302,6 +290,22 @@ class BasicView:CustomView {
         hNodeSlider
     }
     func createList(){
+        
+        let url:String = "~/Desktop/ElCapitan/basic/list/list.css"
+        StyleManager.addStylesByURL(url,true)
+        
+        fileWatcher = FileWatcher([url.tildePath])
+        fileWatcher!.event = { event in
+            //Swift.print(self)
+            Swift.print(event.description)
+            if(event.fileChange && event.path == url.tildePath) {
+                StyleManager.addStylesByURL(url,true)
+                ElementModifier.refreshSkin(self)
+                ElementModifier.floatChildren(self)
+            }
+        }
+        fileWatcher!.start()
+        
         let listCard:Card = container.addSubView(Card(NaN, NaN, "List: ", container, "listCard"))
         let xml = FileParser.xml("~/Desktop/assets/xml/list.xml")
         let dp:DataProvider = DataProvider(xml)
