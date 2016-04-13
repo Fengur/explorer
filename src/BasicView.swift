@@ -278,11 +278,7 @@ class BasicView:CustomView {
     }
     func createVNodeSlider(){
         
-        //continue here: finish the VSlider
-        
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/slider/vslider.css")
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/text/slidertextarea.css")
-        let url:String = "~/Desktop/ElCapitan/basic/text/textarea.css"
+        let url:String = "~/Desktop/ElCapitan/basic/nodeslider/vnodeslider.css"
         StyleManager.addStylesByURL(url,true)
         
         fileWatcher = FileWatcher([url.tildePath])
