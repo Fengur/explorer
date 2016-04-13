@@ -32,7 +32,8 @@ class BasicView:CustomView {
         //createRadioButton()
         //createVSlider()
         //createHSlider()
-        createList()
+        //createList()
+        createSliderList()
         /*
         
         
@@ -41,7 +42,7 @@ class BasicView:CustomView {
         
         
         
-        createSliderList()
+        
         createSliderTextArea()
         */
     }
@@ -290,8 +291,17 @@ class BasicView:CustomView {
         hNodeSlider
     }
     func createList(){
-        
         let url:String = "~/Desktop/ElCapitan/basic/list/list.css"
+        StyleManager.addStylesByURL(url)
+        
+        let listCard:Card = container.addSubView(Card(NaN, NaN, "List: ", container, "listCard"))
+        let xml = FileParser.xml("~/Desktop/assets/xml/list.xml")
+        let dp:DataProvider = DataProvider(xml)
+        let list:List = listCard.addSubView(List(140, 73, NaN, dp,listCard))
+        ListModifier.selectAt(list, 1);
+    }
+    func createSliderList(){
+        let url:String = "~/Desktop/ElCapitan/basic/list/sliderlist.css"
         StyleManager.addStylesByURL(url,true)
         
         fileWatcher = FileWatcher([url.tildePath])
@@ -306,13 +316,6 @@ class BasicView:CustomView {
         }
         fileWatcher!.start()
         
-        let listCard:Card = container.addSubView(Card(NaN, NaN, "List: ", container, "listCard"))
-        let xml = FileParser.xml("~/Desktop/assets/xml/list.xml")
-        let dp:DataProvider = DataProvider(xml)
-        let list:List = listCard.addSubView(List(140, 73, NaN, dp,listCard))
-        ListModifier.selectAt(list, 1);
-    }
-    func createSliderList(){
         let sliderListCard:Card = container.addSubView(Card(NaN, NaN, "Slider list: ", container, "sliderListCard"))
         let xml = FileParser.xml("~/Desktop/assets/xml/scrollist.xml")//TODO:  create a method tht takes url and makes dp
         let dp:DataProvider = DataProvider(xml)
