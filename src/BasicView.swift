@@ -175,13 +175,13 @@ class BasicView:CustomView {
         
         fileWatcher = FileWatcher([url.tildePath])
         
-        fileWatcher!.event = { [weak self] event in
+        fileWatcher!.event = { event in
             //Swift.print(self)
             Swift.print(event.description)
             if(event.fileChange && event.path == url.tildePath) {
                 StyleManager.addStylesByURL(url,true)
-                ElementModifier.refreshSkin(self!)
-                ElementModifier.floatChildren(self!)
+                ElementModifier.refreshSkin(self)
+                ElementModifier.floatChildren(self)
             }
         }
         fileWatcher!.start()
