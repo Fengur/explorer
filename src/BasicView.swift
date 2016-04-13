@@ -28,14 +28,15 @@ class BasicView:CustomView {
         //createTextArea()
         //createSingleLineTextArea()
         //createCheckBoxButton()
-        createLeverSpinner()
+        //createLeverSpinner()
+        createRadioButton()
         /*
         
         
         
         createVSlider()
         createHSlider()
-        createRadioButton()
+        
         createList()
         createSliderList()
         createSliderTextArea()
@@ -116,18 +117,6 @@ class BasicView:CustomView {
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/stepper/leverstepper.css")
         let url:String = "~/Desktop/ElCapitan/basic/spinner/leverspinner.css"
         StyleManager.addStylesByURL(url,true)
-        
-        fileWatcher = FileWatcher([url.tildePath])
-        fileWatcher!.event = { event in
-            //Swift.print(self)
-            Swift.print(event.description)
-            if(event.fileChange && event.path == url.tildePath) {
-                StyleManager.addStylesByURL(url,true)
-                ElementModifier.refreshSkin(self)
-                ElementModifier.floatChildren(self)
-            }
-        }
-        fileWatcher!.start()
         
         let card:Card = container.addSubView(Card(NaN, NaN, "LeverSpinner: ", container, "leverSpinnerCard"))
         let leverSpinner:LeverSpinner = card.addSubView(LeverSpinner(NaN, NaN,"Value: ", 0, 1, Int.min.cgFloat, Int.max.cgFloat, 0, 100, 200, card))
@@ -253,6 +242,23 @@ class BasicView:CustomView {
      * RadioButton
      */
     func createRadioButton(){
+        
+        StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/stepper/leverstepper.css")
+        let url:String = "~/Desktop/ElCapitan/basic/spinner/leverspinner.css"
+        StyleManager.addStylesByURL(url,true)
+        
+        fileWatcher = FileWatcher([url.tildePath])
+        fileWatcher!.event = { event in
+            //Swift.print(self)
+            Swift.print(event.description)
+            if(event.fileChange && event.path == url.tildePath) {
+                StyleManager.addStylesByURL(url,true)
+                ElementModifier.refreshSkin(self)
+                ElementModifier.floatChildren(self)
+            }
+        }
+        fileWatcher!.start()
+        
         let radioButtonCard:Card = container.addSubView(Card(NaN, NaN, "Radio buttons: ", container, "radioButtonCard"))
         let radioButtonContainer:Element = radioButtonCard.addSubView(Section(NaN,NaN,radioButtonCard,"radioButtonContainer"))// :TODO: rename to background
         let radioButton1:RadioButton = radioButtonContainer.addSubView(RadioButton(80,14,"Option 1",false,radioButtonContainer))
