@@ -246,18 +246,6 @@ class BasicView:CustomView {
         let url:String = "~/Desktop/ElCapitan/basic/button/radiobutton.css"
         StyleManager.addStylesByURL(url,true)
         
-        fileWatcher = FileWatcher([url.tildePath])
-        fileWatcher!.event = { event in
-            //Swift.print(self)
-            Swift.print(event.description)
-            if(event.fileChange && event.path == url.tildePath) {
-                StyleManager.addStylesByURL(url,true)
-                ElementModifier.refreshSkin(self)
-                ElementModifier.floatChildren(self)
-            }
-        }
-        fileWatcher!.start()
-        
         let radioButtonCard:Card = container.addSubView(Card(NaN, NaN, "Radio buttons: ", container, "radioButtonCard"))
         let section:Section = radioButtonCard.addSubView(Section(NaN,NaN,radioButtonCard,"radioButtonSection"))// :TODO: rename to background
         let radioButton1:RadioButton = section.addSubView(RadioButton(80,14,"Option 1",false,section))
