@@ -39,19 +39,6 @@ class BasicView:CustomView {
         //createHNodeSlider()
         /*
         */
-        svgShadowTest()
-    }
-    /**
-     *
-     */
-    func svgShadowTest(){
-        var css:String = "Element#testBox{float:left;clear:left;}"
-        css += "Element#testBox{fill:~/Desktop/ElCapitan/svg/star.svg blue;}"
-        
-        css += "Element#testBox{drop-shadow:drop-shadow(3px 90 #FF0000 1.0 2.5 2.5 0 0 false);}"
-        StyleManager.addStyle(css)
-        let box = Element(50,50,container,"testBox")
-        container.addSubView(box)
     }
     /**
      * Button
