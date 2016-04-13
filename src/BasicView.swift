@@ -276,23 +276,8 @@ class BasicView:CustomView {
     }
     //comboBox
     func createComboBox(){
-        
         let url:String = "~/Desktop/ElCapitan/basic/combobox/combobox.css"
-        StyleManager.addStylesByURL(url,true)
-        
-        
-        fileWatcher = FileWatcher([url.tildePath])
-        
-        fileWatcher!.event = { [weak self] event in
-            //Swift.print(self)
-            Swift.print(event.description)
-            if(event.fileChange && event.path == url.tildePath) {
-                StyleManager.addStylesByURL(url,true)
-                ElementModifier.refreshSkin(self!)
-                ElementModifier.floatChildren(self!)
-            }
-        }
-        fileWatcher!.start()
+        StyleManager.addStylesByURL(url,false)
         
         let comboBoxCard:Card = container.addSubView(Card(NaN, NaN, "ComboBox: ", container, "comboBoxSection"))
         let xml = FileParser.xml("~/Desktop/assets/xml/combobox.xml")
