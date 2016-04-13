@@ -7,8 +7,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     weak var window: NSWindow!/*<--This is here only so that the compiler wont throw an error*/
     var win:NSWindow?/*<--The window must be a class variable, local variables doesnt work*/
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/window.css")
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/card.css")
+        //StyleManager.addStylesByURL("~/Desktop/ElCapitan/window.css")
+        //StyleManager.addStylesByURL("~/Desktop/ElCapitan/card.css")
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         //StyleManager.addStylesByURL("~/Desktop/css/explorer/explorer.css")
         win = Win(400,300/*1000,800*/)//TranslucencyWin()//
