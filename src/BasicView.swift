@@ -52,9 +52,6 @@ class BasicView:CustomView {
         StyleManager.addStyle(css)
         let box = Element(50,50,container,"testBox")
         container.addSubView(box)
-        
-        //continue here: the bug is that shadow needs some frame to be drawn. 
-        
     }
     /**
      * Button
