@@ -22,7 +22,8 @@ class BasicView:CustomView {
         //createTabBar()
         //createSearchBox()
         //createComboBox()
-        createColorTag()
+        //createColorTag()
+        createText()
         /*
         createCheckBoxButton()
         createLeverSpinner()
@@ -30,7 +31,7 @@ class BasicView:CustomView {
                 
         createTextInput()
         createSingleLineTextArea()
-        createText()
+        
         createTextArea()
         
         createVSlider()
@@ -169,6 +170,23 @@ class BasicView:CustomView {
         textArea
     }
     func createText(){
+        let url:String = "~/Desktop/ElCapitan/basic/text/text.css"
+        StyleManager.addStylesByURL(url,true)
+        
+        fileWatcher = FileWatcher([url.tildePath])
+        
+        fileWatcher!.event = { [weak self] event in
+            //Swift.print(self)
+            Swift.print(event.description)
+            if(event.fileChange && event.path == url.tildePath) {
+                StyleManager.addStylesByURL(url,true)
+                ElementModifier.refreshSkin(self!)
+                ElementModifier.floatChildren(self!)
+            }
+        }
+        fileWatcher!.start()
+        
+        
         let card:Card = container.addSubView(Card(NaN, NaN, "Text: ", container, "textCard"))
         let text:Text = card.addSubView(Text(100,24,"This is text: ",card))
         text
@@ -238,20 +256,6 @@ class BasicView:CustomView {
     func createColorTag(){
         let url:String = "~/Desktop/ElCapitan/basic/button/colortag.css"
         StyleManager.addStylesByURL(url,true)
-        
-        
-        fileWatcher = FileWatcher([url.tildePath])
-        
-        fileWatcher!.event = { [weak self] event in
-            //Swift.print(self)
-            Swift.print(event.description)
-            if(event.fileChange && event.path == url.tildePath) {
-                StyleManager.addStylesByURL(url,true)
-                ElementModifier.refreshSkin(self!)
-                ElementModifier.floatChildren(self!)
-            }
-        }
-        fileWatcher!.start()
         
         let colorTagCard:Card = container.addSubView(Card(NaN, NaN, "Color tags: ", container, "colorTagCard"))
         let colorTagSection:Section = colorTagCard.addSubView(Section(NaN,NaN,colorTagCard,"colorTagSection"))
