@@ -36,11 +36,16 @@ class BasicView:CustomView {
         //createSliderTextArea()
         
         //createVNodeSlider()
-        createHNodeSlider()
+        //createHNodeSlider()
         /*
-        
-        
         */
+        svgShadowTest()
+    }
+    /**
+     *
+     */
+    func svgShadowTest(){
+        
     }
     /**
      * Button
