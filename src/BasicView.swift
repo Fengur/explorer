@@ -26,9 +26,10 @@ class BasicView:CustomView {
         //createText()
         //createTextInput()
         //createTextArea()
-        createSingleLineTextArea()
-        /*
+        //createSingleLineTextArea()
         createCheckBoxButton()
+        /*
+        
         createLeverSpinner()
         
         createVSlider()
@@ -93,8 +94,23 @@ class BasicView:CustomView {
      * CheckboxButtons
      */
     func createCheckBoxButton(){
+        let url:String = "~/Desktop/ElCapitan/basic/button/checkboxbutton.css"
+        StyleManager.addStylesByURL(url,true)
+        
+        fileWatcher = FileWatcher([url.tildePath])
+        fileWatcher!.event = { event in
+            //Swift.print(self)
+            Swift.print(event.description)
+            if(event.fileChange && event.path == url.tildePath) {
+                StyleManager.addStylesByURL(url,true)
+                ElementModifier.refreshSkin(self)
+                ElementModifier.floatChildren(self)
+            }
+        }
+        fileWatcher!.start()
+        
         let card:Card = container.addSubView(Card(NaN, NaN, "CheckBoxButton: ", container, "checkBoxButtonCard"))
-        let section = card.addSubView(Section(NaN, NaN, card, "checkBoxButtonContainer")) /*this instance represents the inset shadow bagground and also holds the buttons*/
+        let section = card.addSubView(Section(NaN, NaN, card, "checkBoxButtonSection")) /*this instance represents the inset shadow bagground and also holds the buttons*/
         let checkBoxButton1 = section.addSubView(CheckBoxButton(NaN, NaN,"Option 1",true,section))
         let checkBoxButton2 = section.addSubView(CheckBoxButton(NaN, NaN,"Option 2",false,section))
         let checkGroup = CheckGroup([checkBoxButton1,checkBoxButton2],checkBoxButton1)/*Add the CheckBoxButtons to the checkGroup instance*/
