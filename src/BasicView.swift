@@ -11,8 +11,7 @@ class BasicView:CustomView {
         
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
-        //createVNodeSlider()
-        //createHNodeSlider()
+        
         //createRadioBullet()
         //createCheckBox()
         //createLeverStepper()
@@ -36,9 +35,11 @@ class BasicView:CustomView {
         //createSliderList()
         //createSliderTextArea()
         
-        
+        createVNodeSlider()
         
         /*
+        
+        //createHNodeSlider()
         */
     }
     /**
@@ -276,6 +277,26 @@ class BasicView:CustomView {
         selectGroup/**/
     }
     func createVNodeSlider(){
+        
+        //continue here: finish the VSlider
+        
+        StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/slider/vslider.css")
+        StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/text/slidertextarea.css")
+        let url:String = "~/Desktop/ElCapitan/basic/text/textarea.css"
+        StyleManager.addStylesByURL(url,true)
+        
+        fileWatcher = FileWatcher([url.tildePath])
+        fileWatcher!.event = { event in
+            //Swift.print(self)
+            Swift.print(event.description)
+            if(event.fileChange && event.path == url.tildePath) {
+                StyleManager.addStylesByURL(url,true)
+                ElementModifier.refreshSkin(self)
+                ElementModifier.floatChildren(self)
+            }
+        }
+        fileWatcher!.start()
+        
         let vNodeSliderCard:Card = container.addSubView(Card(NaN, NaN, "Vertical node slider: ", container, "vNodeSliderCard"))
         let vNodeSlider:VNodeSlider = vNodeSliderCard.addSubView(VNodeSlider(20, 70, 20, 0, 1, vNodeSliderCard))
         vNodeSlider
@@ -336,18 +357,6 @@ class BasicView:CustomView {
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/text/slidertextarea.css")
         let url:String = "~/Desktop/ElCapitan/basic/text/textarea.css"
         StyleManager.addStylesByURL(url,true)
-        
-        fileWatcher = FileWatcher([url.tildePath])
-        fileWatcher!.event = { event in
-            //Swift.print(self)
-            Swift.print(event.description)
-            if(event.fileChange && event.path == url.tildePath) {
-                StyleManager.addStylesByURL(url,true)
-                ElementModifier.refreshSkin(self)
-                ElementModifier.floatChildren(self)
-            }
-        }
-        fileWatcher!.start()
         
         let sliderTextAreaCard:Card = container.addSubView(Card(NaN, NaN, "Slider text area: ", container, "sliderTextAreaCard"))
         let text:String = FileParser.content("~/Desktop/assets/txt/scrolltextarea.txt".tildePath)!
