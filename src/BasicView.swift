@@ -113,7 +113,8 @@ class BasicView:CustomView {
      * TODO: create the LeverSpinner component with text
      */
     func createLeverSpinner(){
-        let url:String = "~/Desktop/ElCapitan/basic/button/checkboxbutton.css"
+        StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/spinner/leverstepper.css")
+        let url:String = "~/Desktop/ElCapitan/basic/spinner/leverspinner.css"
         StyleManager.addStylesByURL(url,true)
         
         fileWatcher = FileWatcher([url.tildePath])
