@@ -29,12 +29,13 @@ class BasicView:CustomView {
         //createSingleLineTextArea()
         //createCheckBoxButton()
         //createLeverSpinner()
-        createRadioButton()
+        //createRadioButton()
+        createVSlider()
         /*
         
         
         
-        createVSlider()
+        
         createHSlider()
         
         createList()
@@ -206,6 +207,10 @@ class BasicView:CustomView {
         searchBox
     }
     func createVSlider(){
+        
+        let url:String = "~/Desktop/ElCapitan/basic/slider/vslider.css"
+        StyleManager.addStylesByURL(url,true)
+        
         let vSliderCard:Card = container.addSubView(Card(NaN, NaN, "Vertical slider: ", container, "vSliderCard"))
         let vSlider:VSlider = vSliderCard.addSubView(VSlider(6,60,30,0,vSliderCard))
         vSlider
