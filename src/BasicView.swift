@@ -163,9 +163,7 @@ class BasicView:CustomView {
         let url:String = "~/Desktop/ElCapitan/basic/text/singlelinetextarea.css"
         StyleManager.addStylesByURL(url,true)
         
-        
         fileWatcher = FileWatcher([url.tildePath])
-        
         fileWatcher!.event = { event in
             //Swift.print(self)
             Swift.print(event.description)
