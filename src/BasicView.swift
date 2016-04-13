@@ -243,7 +243,6 @@ class BasicView:CustomView {
      */
     func createRadioButton(){
         
-        //StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/button/radiobutton.css")
         let url:String = "~/Desktop/ElCapitan/basic/button/radiobutton.css"
         StyleManager.addStylesByURL(url,true)
         
