@@ -24,8 +24,8 @@ class BasicView:CustomView {
         //createComboBox()
         //createColorTag()
         //createText()
-        createTextInput()
-        
+        //createTextInput()
+        createTextArea()
         /*
         createCheckBoxButton()
         createLeverSpinner()
@@ -34,7 +34,7 @@ class BasicView:CustomView {
         
         createSingleLineTextArea()
         
-        createTextArea()
+        
         
         createVSlider()
         createHSlider()
@@ -163,21 +163,7 @@ class BasicView:CustomView {
     }
     func createTextInput(){
         let url:String = "~/Desktop/ElCapitan/basic/text/textinput.css"
-        StyleManager.addStylesByURL(url,true)
-        
-        
-        fileWatcher = FileWatcher([url.tildePath])
-        
-        fileWatcher!.event = { event in
-            //Swift.print(self)
-            Swift.print(event.description)
-            if(event.fileChange && event.path == url.tildePath) {
-                StyleManager.addStylesByURL(url,true)
-                ElementModifier.refreshSkin(self)
-                ElementModifier.floatChildren(self)
-            }
-        }
-        fileWatcher!.start()
+        StyleManager.addStylesByURL(url,false)
         
         let card:Card = container.addSubView(Card(NaN, NaN, "TextInput: ", container, "textInputCard"))
         let textInput:TextInput = card.addSubView(TextInput(NaN, NaN, "Description: ", "blue", card))
@@ -197,6 +183,23 @@ class BasicView:CustomView {
         text
     }
     func createTextArea() {
+        let url:String = "~/Desktop/ElCapitan/basic/text/textarea.css"
+        StyleManager.addStylesByURL(url,true)
+        
+        
+        fileWatcher = FileWatcher([url.tildePath])
+        
+        fileWatcher!.event = { event in
+            //Swift.print(self)
+            Swift.print(event.description)
+            if(event.fileChange && event.path == url.tildePath) {
+                StyleManager.addStylesByURL(url,true)
+                ElementModifier.refreshSkin(self)
+                ElementModifier.floatChildren(self)
+            }
+        }
+        fileWatcher!.start()
+        
         let card:Card = container.addSubView(Card(NaN, NaN, "Text area: ", container, "textAreaCard"))
         let text:String = FileParser.content("~/Desktop/assets/txt/textarea.txt".tildePath)!
         let textArea:TextArea = card.addSubView(TextArea(180,68,text,card))
