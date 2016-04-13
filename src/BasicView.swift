@@ -163,18 +163,6 @@ class BasicView:CustomView {
         let url:String = "~/Desktop/ElCapitan/basic/text/singlelinetextarea.css"
         StyleManager.addStylesByURL(url,true)
         
-        fileWatcher = FileWatcher([url.tildePath])
-        fileWatcher!.event = { event in
-            //Swift.print(self)
-            Swift.print(event.description)
-            if(event.fileChange && event.path == url.tildePath) {
-                StyleManager.addStylesByURL(url,true)
-                ElementModifier.refreshSkin(self)
-                ElementModifier.floatChildren(self)
-            }
-        }
-        fileWatcher!.start()
-        
         let card:Card = container.addSubView(Card(NaN, NaN, "TextInput: ", container, "singleLineTextAreaCard"))
         let textArea:TextArea = card.addSubView(TextArea(NaN, NaN, "This is a single line text area", card))
         textArea
