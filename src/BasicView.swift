@@ -113,7 +113,7 @@ class BasicView:CustomView {
      * TODO: create the LeverSpinner component with text
      */
     func createLeverSpinner(){
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/spinner/leverstepper.css")
+        StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/stepper/leverstepper.css")
         let url:String = "~/Desktop/ElCapitan/basic/spinner/leverspinner.css"
         StyleManager.addStylesByURL(url,true)
         
