@@ -256,14 +256,14 @@ class BasicView:CustomView {
         let colorTagCard:Card = container.addSubView(Card(NaN, NaN, "Color tags: ", container, "colorTagCard"))
         let colorTagSection:Section = colorTagCard.addSubView(Section(NaN,NaN,colorTagCard,"colorTagSection"))
         colorTagSection
-        /*let colors:Array<String> = ["blue","red","orange","green","yellow","purple","grey"]
+        let colors:Array<String> = ["blue","red","orange","green","yellow","purple","grey"]
         for color in colors{
-        colorTagSection.addSubView(RadioBullet(NaN,NaN,false,colorTagSection,color))
+            colorTagSection.addSubView(RadioBullet(NaN,NaN,false,colorTagSection,color))
         }
         let selectables = SelectParser.selectables(colorTagSection)
         //selectables[0].setSelected(true)
         let selectGroup = SelectGroup(selectables,selectables[0])
-        selectGroup*/
+        selectGroup/**/
     }
     func createVNodeSlider(){
         let vNodeSliderCard:Card = container.addSubView(Card(NaN, NaN, "Vertical node slider: ", container, "vNodeSliderCard"))
