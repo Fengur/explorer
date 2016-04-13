@@ -34,7 +34,7 @@ class BasicView:CustomView {
         //createHSlider()
         //createList()
         //createSliderList()
-        createSliderTextArea()
+        //createSliderTextArea()
         
         
         
