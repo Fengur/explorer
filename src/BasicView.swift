@@ -301,6 +301,7 @@ class BasicView:CustomView {
         ListModifier.selectAt(list, 1);
     }
     func createSliderList(){
+        StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/list/list.css")
         let url:String = "~/Desktop/ElCapitan/basic/list/sliderlist.css"
         StyleManager.addStylesByURL(url,true)
         
@@ -319,7 +320,7 @@ class BasicView:CustomView {
         let sliderListCard:Card = container.addSubView(Card(NaN, NaN, "Slider list: ", container, "sliderListCard"))
         let xml = FileParser.xml("~/Desktop/assets/xml/scrollist.xml")//TODO:  create a method tht takes url and makes dp
         let dp:DataProvider = DataProvider(xml)
-        let sliderList:SliderList = sliderListCard.addSubView(SliderList(140, 74, 24, dp, sliderListCard))
+        let sliderList:SliderList = sliderListCard.addSubView(SliderList(140, 73, 24, dp, sliderListCard))
         ListModifier.select(sliderList, "blue")
         //scrollList.setMaxShowingItems(6);
         //print("scrollList.list.getSelected(): " + scrollList.list.getSelected());
