@@ -301,7 +301,7 @@ class BasicView:CustomView {
         fileWatcher!.start()
         
         let hNodeSliderCard:Card = container.addSubView(Card(NaN, NaN, "Horizontal node slider: ", container, "hNodeSliderCard"))
-        let hNodeSlider:HNodeSlider = hNodeSliderCard.addSubView(HNodeSlider(120, NaN, NaN, 0, 1, hNodeSliderCard))
+        let hNodeSlider:HNodeSlider = hNodeSliderCard.addSubView(HNodeSlider(120, 20, NaN, 0, 1, hNodeSliderCard))
         hNodeSlider
     }
     func createList(){
