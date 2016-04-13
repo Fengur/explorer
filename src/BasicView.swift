@@ -33,17 +33,12 @@ class BasicView:CustomView {
         //createVSlider()
         //createHSlider()
         //createList()
-        createSliderList()
-        /*
-        
-        
-        
-        
-        
-        
-        
-        
+        //createSliderList()
         createSliderTextArea()
+        
+        
+        
+        /*
         */
     }
     /**
@@ -306,18 +301,6 @@ class BasicView:CustomView {
         let url:String = "~/Desktop/ElCapitan/basic/list/sliderlist.css"
         StyleManager.addStylesByURL(url,true)
         
-        fileWatcher = FileWatcher([url.tildePath])
-        fileWatcher!.event = { event in
-            //Swift.print(self)
-            Swift.print(event.description)
-            if(event.fileChange && event.path == url.tildePath) {
-                StyleManager.addStylesByURL(url,true)
-                ElementModifier.refreshSkin(self)
-                ElementModifier.floatChildren(self)
-            }
-        }
-        fileWatcher!.start()
-        
         let sliderListCard:Card = container.addSubView(Card(NaN, NaN, "Slider list: ", container, "sliderListCard"))
         let xml = FileParser.xml("~/Desktop/assets/xml/scrollist.xml")//TODO:  create a method tht takes url and makes dp
         let dp:DataProvider = DataProvider(xml)
@@ -348,6 +331,24 @@ class BasicView:CustomView {
 //		print("selected Title: "+comboBox.scrollList.list.getSelectedTitle())
     }
     func createSliderTextArea() {
+        
+        StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/slider/vslider.css")
+        StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/text/list.css")
+        let url:String = "~/Desktop/ElCapitan/basic/list/sliderlist.css"
+        StyleManager.addStylesByURL(url,true)
+        
+        fileWatcher = FileWatcher([url.tildePath])
+        fileWatcher!.event = { event in
+            //Swift.print(self)
+            Swift.print(event.description)
+            if(event.fileChange && event.path == url.tildePath) {
+                StyleManager.addStylesByURL(url,true)
+                ElementModifier.refreshSkin(self)
+                ElementModifier.floatChildren(self)
+            }
+        }
+        fileWatcher!.start()
+        
         let sliderTextAreaCard:Card = container.addSubView(Card(NaN, NaN, "Slider text area: ", container, "sliderTextAreaCard"))
         let text:String = FileParser.content("~/Desktop/assets/txt/scrolltextarea.txt".tildePath)!
         let scrollTextArea:SliderTextArea = sliderTextAreaCard.addSubView(SliderTextArea(180,72,text,24,sliderTextAreaCard))
