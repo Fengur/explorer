@@ -202,7 +202,7 @@ class BasicView:CustomView {
         
         let card:Card = container.addSubView(Card(NaN, NaN, "Text area: ", container, "textAreaCard"))
         let text:String = FileParser.content("~/Desktop/assets/txt/textarea.txt".tildePath)!
-        let textArea:TextArea = card.addSubView(TextArea(180,68,text,card))
+        let textArea:TextArea = card.addSubView(TextArea(180,74,text,card))
         textArea
     }
     func createSearchBox(){
