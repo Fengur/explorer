@@ -163,7 +163,7 @@ class BasicView:CustomView {
     }
     func createTextInput(){
         let url:String = "~/Desktop/ElCapitan/basic/text/textinput.css"
-        StyleManager.addStylesByURL(url,false)
+        StyleManager.addStylesByURL(url,true)
         
         
         fileWatcher = FileWatcher([url.tildePath])
