@@ -46,7 +46,7 @@ class BasicView:CustomView {
      */
     func svgShadowTest(){
         var css:String = "Element#testBox{fill:blue;float:left;clear:left;}"
-        css += 
+        css += "Element#testBox{drop-shadow:drop-shadow(10px 90 #FF0000 1.3 10.5 10.5 0 0 false);}"
         StyleManager.addStyle(css)
         let box = Element(50,50,container,"testBox")
         container.addSubView(box)
