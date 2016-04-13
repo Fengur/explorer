@@ -23,13 +23,15 @@ class BasicView:CustomView {
         //createSearchBox()
         //createComboBox()
         //createColorTag()
-        createText()
+        //createText()
+        createTextInput()
+        
         /*
         createCheckBoxButton()
         createLeverSpinner()
         
-                
-        createTextInput()
+        
+        
         createSingleLineTextArea()
         
         createTextArea()
@@ -160,18 +162,9 @@ class BasicView:CustomView {
         stepper
     }
     func createTextInput(){
-        let card:Card = container.addSubView(Card(NaN, NaN, "TextInput: ", container, "textInputCard"))
-        let textInput:TextInput = card.addSubView(TextInput(NaN, NaN, "Description: ", "blue", card))
-        textInput
-    }
-    func createSingleLineTextArea(){
-        let card:Card = container.addSubView(Card(NaN, NaN, "TextInput: ", container, "singleLineTextAreaCard"))
-        let textArea:TextArea = card.addSubView(TextArea(NaN, NaN, "This is a single line text area", card))
-        textArea
-    }
-    func createText(){
-        let url:String = "~/Desktop/ElCapitan/basic/text/text.css"
-        StyleManager.addStylesByURL(url,true)
+        let url:String = "~/Desktop/ElCapitan/basic/text/textinput.css"
+        StyleManager.addStylesByURL(url,false)
+        
         
         fileWatcher = FileWatcher([url.tildePath])
         
@@ -186,6 +179,18 @@ class BasicView:CustomView {
         }
         fileWatcher!.start()
         
+        let card:Card = container.addSubView(Card(NaN, NaN, "TextInput: ", container, "textInputCard"))
+        let textInput:TextInput = card.addSubView(TextInput(NaN, NaN, "Description: ", "blue", card))
+        textInput
+    }
+    func createSingleLineTextArea(){
+        let card:Card = container.addSubView(Card(NaN, NaN, "TextInput: ", container, "singleLineTextAreaCard"))
+        let textArea:TextArea = card.addSubView(TextArea(NaN, NaN, "This is a single line text area", card))
+        textArea
+    }
+    func createText(){
+        let url:String = "~/Desktop/ElCapitan/basic/text/text.css"
+        StyleManager.addStylesByURL(url,false)
         
         let card:Card = container.addSubView(Card(NaN, NaN, "Text: ", container, "textCard"))
         let text:Text = card.addSubView(Text(100,24,"This is text: ",card))
