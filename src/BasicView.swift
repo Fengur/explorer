@@ -27,10 +27,11 @@ class BasicView:CustomView {
         //createTextInput()
         //createTextArea()
         //createSingleLineTextArea()
-        createCheckBoxButton()
+        //createCheckBoxButton()
+        createLeverSpinner()
         /*
         
-        createLeverSpinner()
+        
         
         createVSlider()
         createHSlider()
@@ -112,6 +113,21 @@ class BasicView:CustomView {
      * TODO: create the LeverSpinner component with text
      */
     func createLeverSpinner(){
+        let url:String = "~/Desktop/ElCapitan/basic/button/checkboxbutton.css"
+        StyleManager.addStylesByURL(url,true)
+        
+        fileWatcher = FileWatcher([url.tildePath])
+        fileWatcher!.event = { event in
+            //Swift.print(self)
+            Swift.print(event.description)
+            if(event.fileChange && event.path == url.tildePath) {
+                StyleManager.addStylesByURL(url,true)
+                ElementModifier.refreshSkin(self)
+                ElementModifier.floatChildren(self)
+            }
+        }
+        fileWatcher!.start()
+        
         let card:Card = container.addSubView(Card(NaN, NaN, "LeverSpinner: ", container, "leverSpinnerCard"))
         let leverSpinner:LeverSpinner = card.addSubView(LeverSpinner(NaN, NaN,"Value: ", 0, 1, Int.min.cgFloat, Int.max.cgFloat, 0, 100, 200, card))
         leverSpinner
