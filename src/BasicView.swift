@@ -301,6 +301,7 @@ class BasicView:CustomView {
         ListModifier.selectAt(list, 1);
     }
     func createSliderList(){
+        StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/slider/vslider.css")
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/list/list.css")
         let url:String = "~/Desktop/ElCapitan/basic/list/sliderlist.css"
         StyleManager.addStylesByURL(url,true)
