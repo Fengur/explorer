@@ -21,7 +21,8 @@ class BasicView:CustomView {
         //createTextButton()
         //createTabBar()
         //createSearchBox()
-        createComboBox()
+        //createComboBox()
+        createColorTag()
         /*
         createCheckBoxButton()
         createLeverSpinner()
@@ -36,7 +37,7 @@ class BasicView:CustomView {
         createHSlider()
         
         createRadioButton()
-        createColorTag()
+        
         
         
         createList()
@@ -235,6 +236,23 @@ class BasicView:CustomView {
         selectGroup.event = onSelectGroupChange
     }
     func createColorTag(){
+        let url:String = "~/Desktop/ElCapitan/basic/button/colortag.css"
+        StyleManager.addStylesByURL(url,true)
+        
+        
+        fileWatcher = FileWatcher([url.tildePath])
+        
+        fileWatcher!.event = { [weak self] event in
+            //Swift.print(self)
+            Swift.print(event.description)
+            if(event.fileChange && event.path == url.tildePath) {
+                StyleManager.addStylesByURL(url,true)
+                ElementModifier.refreshSkin(self!)
+                ElementModifier.floatChildren(self!)
+            }
+        }
+        fileWatcher!.start()
+        
         let colorTagCard:Card = container.addSubView(Card(NaN, NaN, "Color tags: ", container, "colorTagCard"))
         let colorTagContainer:Section = colorTagCard.addSubView(Section(NaN,NaN,colorTagCard,"colorTagContainer"))
         let colors:Array<String> = ["blue","red","orange","green","yellow","purple","grey"]
