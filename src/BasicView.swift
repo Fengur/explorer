@@ -95,19 +95,8 @@ class BasicView:CustomView {
      */
     func createCheckBoxButton(){
         let url:String = "~/Desktop/ElCapitan/basic/button/checkboxbutton.css"
-        StyleManager.addStylesByURL(url,true)
+        StyleManager.addStylesByURL(url,false)
         
-        fileWatcher = FileWatcher([url.tildePath])
-        fileWatcher!.event = { event in
-            //Swift.print(self)
-            Swift.print(event.description)
-            if(event.fileChange && event.path == url.tildePath) {
-                StyleManager.addStylesByURL(url,true)
-                ElementModifier.refreshSkin(self)
-                ElementModifier.floatChildren(self)
-            }
-        }
-        fileWatcher!.start()
         
         let card:Card = container.addSubView(Card(NaN, NaN, "CheckBoxButton: ", container, "checkBoxButtonCard"))
         let section = card.addSubView(Section(NaN, NaN, card, "checkBoxButtonSection")) /*this instance represents the inset shadow bagground and also holds the buttons*/
