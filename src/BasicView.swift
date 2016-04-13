@@ -254,12 +254,12 @@ class BasicView:CustomView {
         fileWatcher!.start()
         
         let colorTagCard:Card = container.addSubView(Card(NaN, NaN, "Color tags: ", container, "colorTagCard"))
-        let colorTagContainer:Section = colorTagCard.addSubView(Section(NaN,NaN,colorTagCard,"colorTagContainer"))
+        let colorTagSection:Section = colorTagCard.addSubView(Section(NaN,NaN,colorTagCard,"colorTagSection"))
         let colors:Array<String> = ["blue","red","orange","green","yellow","purple","grey"]
         for color in colors{
-            colorTagContainer.addSubView(RadioBullet(NaN,NaN,false,colorTagContainer,color))
+            colorTagSection.addSubView(RadioBullet(NaN,NaN,false,colorTagSection,color))
         }
-        let selectables = SelectParser.selectables(colorTagContainer)
+        let selectables = SelectParser.selectables(colorTagSection)
         //selectables[0].setSelected(true)
         let selectGroup = SelectGroup(selectables,selectables[0])
         selectGroup
