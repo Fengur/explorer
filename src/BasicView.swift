@@ -10,24 +10,20 @@ class BasicView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         
-        /**/
         createButton()
         createTextButton()
         createRadioBullet()
         createCheckBox()
         createRadioButton()
         createCheckBoxButton()
-        
         createLeverStepper()
         createLeverSpinner()
         createHSlider()
         createVSlider()
         createVolumeSlider()
         iconButton()
+        createTabBar()
         //createIconButtons()
-        //
-        //
-        //createTabBar()
         //createSearchBox()
         //createComboBox()
         //createColorTag()
@@ -35,22 +31,11 @@ class BasicView:CustomView {
         //createTextInput()
         //createTextArea()
         //createSingleLineTextArea()
-        //
-        //
-        //
-        //
-        //
         //createList()
         //createSliderList()
         //createSliderTextArea()
-        
         //createVNodeSlider()
         //createHNodeSlider()
-        //
-        //
-        //
-        
-        //
     }
     /**
      *
