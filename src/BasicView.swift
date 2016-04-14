@@ -36,7 +36,7 @@ class BasicView:CustomView {
         //createSliderTextArea()
         
         //createVNodeSlider()
-        createHNodeSlider()
+        //createHNodeSlider()
         /*
         */
     }
