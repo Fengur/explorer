@@ -275,7 +275,6 @@ class BasicView:CustomView {
         selectGroup/**/
     }
     func createVNodeSlider(){
-        
         let url:String = "~/Desktop/ElCapitan/basic/nodeslider/vnodeslider.css"
         StyleManager.addStylesByURL(url,true)
         
@@ -294,8 +293,6 @@ class BasicView:CustomView {
         let vNodeSliderCard:Card = container.addSubView(Card(NaN, NaN, "Vertical node slider: ", container, "vNodeSliderCard"))
         let vNodeSlider:VNodeSlider = vNodeSliderCard.addSubView(VNodeSlider(20, 70, 20, 0, 1, vNodeSliderCard))
         vNodeSlider
-        
-        
     }
     func createHNodeSlider(){
         
