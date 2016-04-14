@@ -29,9 +29,10 @@ class BasicView:CustomView {
         createComboBox()
         createTextArea()
         createSliderTextArea()
+        createText()
         //createSearchBox()
         //createColorTag()
-        //createText()
+        //
         //createTextInput()
         //
         //createSingleLineTextArea()
