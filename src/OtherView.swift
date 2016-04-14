@@ -30,6 +30,17 @@ class OtherView:CustomView {
         let url:String = "~/Desktop/ElCapitan/other/colorinput/colorinput.css"
         StyleManager.addStylesByURL(url,true)
         
+        Swift.print("createColorInput()")
+        let colorInputCard:Card = container.addSubView(Card(NaN, NaN, "ColorInput: ", container, "colorInputCard"))
+        colorInputCard
+        let colorInput:ColorInput = colorInputCard.addSubView(ColorInput(NaN,NaN,"Color: ",NSColor.magentaColor(),colorInputCard))
+        colorInput
+    }
+    func createColorPanel(){
+        
+        let url:String = "~/Desktop/ElCapitan/other/colorinput/colorinput.css"
+        StyleManager.addStylesByURL(url,true)
+        
         fileWatcher = FileWatcher([url.tildePath])
         fileWatcher!.event = { event in
             //Swift.print(self)
@@ -41,14 +52,8 @@ class OtherView:CustomView {
             }
         }
         fileWatcher!.start()
+
         
-        Swift.print("createColorInput()")
-        let colorInputCard:Card = container.addSubView(Card(NaN, NaN, "ColorInput: ", container, "colorInputCard"))
-        colorInputCard
-        let colorInput:ColorInput = colorInputCard.addSubView(ColorInput(NaN,NaN,"Color: ",NSColor.magentaColor(),colorInputCard))
-        colorInput
-    }
-    func createColorPanel(){
         let colorPanelCard:Card = container.addSubView(Card(NaN, NaN, "ColorPanel: ", container, "colorPanelCard"))
         let colorPanel = colorPanelCard.addSubView(ColorPanel(NaN,NaN,24,NSColor.magentaColor(),"Color",colorPanelCard))
         colorPanel
