@@ -5,7 +5,7 @@ class OtherView:CustomView {
     override func resolveSkin() {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
-        //createColorBox()
+        createColorBox()
         //createColorInput()
         //createColorPanel()
         
@@ -15,6 +15,26 @@ class OtherView:CustomView {
      *
      */
     func createColorBox(){
+        
+        let url:String = "~/Desktop/ElCapitan/basic/button/iconbuttons.css"
+        StyleManager.addStylesByURL(url,false)
+        
+        
+        
+        
+        fileWatcher = FileWatcher([url.tildePath])
+        fileWatcher!.event = { event in
+            //Swift.print(self)
+            Swift.print(event.description)
+            if(event.fileChange && event.path == url.tildePath) {
+                StyleManager.addStylesByURL(url,true)
+                ElementModifier.refreshSkin(self)
+                ElementModifier.floatChildren(self)
+            }
+        }
+        fileWatcher!.start()
+        
+        
         Swift.print("createColorBox")
         let colorBoxCard:Card = container.addSubView(Card(NaN, NaN, "ColorBox: ", container, "colorBoxCard"))
         colorBoxCard

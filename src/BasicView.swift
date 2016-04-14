@@ -156,22 +156,6 @@ class BasicView:CustomView {
         StyleManager.addStylesByURL(url,false)
         
         
-        
-        
-        fileWatcher = FileWatcher([url.tildePath])
-        fileWatcher!.event = { event in
-            //Swift.print(self)
-            Swift.print(event.description)
-            if(event.fileChange && event.path == url.tildePath) {
-                StyleManager.addStylesByURL(url,true)
-                ElementModifier.refreshSkin(self)
-                ElementModifier.floatChildren(self)
-            }
-        }
-        fileWatcher!.start()
-
-       
-        
         let card:Card = container.addSubView(Card(NaN, NaN, "Icon button: ", container, "iconButtonsCard"))
         let iconButton1 = card.addSubView(SelectButton(NaN,NaN,false,card,"first"))
         let iconButton2 = card.addSubView(SelectButton(NaN,NaN,false,card,"second"))
