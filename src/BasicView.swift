@@ -39,12 +39,11 @@ class BasicView:CustomView {
         //createHNodeSlider()
         //createVolumeSlider()
     }
-    
     /**
-     * Volume slider
+     *
      */
-    func createVolumeSlider(){
-        let url:String = "~/Desktop/ElCapitan/basic/slider/volumeslider.css"
+    func graphicButton(){
+        let url:String = "~/Desktop/ElCapitan/basic/button/iconbutton.css"
         StyleManager.addStylesByURL(url,true)
         
         fileWatcher = FileWatcher([url.tildePath])
@@ -58,6 +57,14 @@ class BasicView:CustomView {
             }
         }
         fileWatcher!.start()
+    }
+    /**
+     * Volume slider
+     */
+    func createVolumeSlider(){
+        let url:String = "~/Desktop/ElCapitan/basic/slider/volumeslider.css"
+        StyleManager.addStylesByURL(url,true)
+        
         
         let card:Card = container.addSubView(Card(NaN, NaN, "VolumeSlider: ", container, "volumeSliderCard"))
         let volumeSlider = card.addSubView(VolumeSlider(120,20,20,0,card))
@@ -158,11 +165,11 @@ class BasicView:CustomView {
     }
     func createIconButtons(){
         
-        let url:String = "~/Desktop/ElCapitan/basic/button/iconbutton.css"
+        let url:String = "~/Desktop/ElCapitan/basic/button/iconbuttons.css"
         StyleManager.addStylesByURL(url,false)
        
         
-        let card:Card = container.addSubView(Card(NaN, NaN, "Icon button: ", container, "iconButtonCard"))
+        let card:Card = container.addSubView(Card(NaN, NaN, "Icon button: ", container, "iconButtonsCard"))
         let iconButton1 = card.addSubView(SelectButton(NaN,NaN,false,card,"first"))
         let iconButton2 = card.addSubView(SelectButton(NaN,NaN,false,card,"second"))
         let iconButton3 = card.addSubView(SelectButton(NaN,NaN,true,card,"third"))
