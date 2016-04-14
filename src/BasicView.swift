@@ -49,9 +49,7 @@ class BasicView:CustomView {
         
         let card:Card = container.addSubView(Card(NaN, NaN, "Buttons: ", container, "buttonCard"))
         
-        
         let button = card.addSubView(Button(96,24,card))
-        
         
         func onbuttonDown(event:Event){
             if(event.type == ButtonEvent.upInside){
