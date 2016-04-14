@@ -57,6 +57,10 @@ class BasicView:CustomView {
             }
         }
         fileWatcher!.start()
+        
+        let card:Card = container.addSubView(Card(NaN, NaN, "Icon Button: ", container, "iconButtonCard"))
+        let button = card.addSubView(Button(NaN,NaN,card))
+        button
     }
     /**
      * Volume slider
@@ -77,11 +81,8 @@ class BasicView:CustomView {
     func createButton(){
         let url:String = "~/Desktop/ElCapitan/basic/button/button.css"
         StyleManager.addStylesByURL(url,false)
-        
         let card:Card = container.addSubView(Card(NaN, NaN, "Buttons: ", container, "buttonCard"))
-        
         let button = card.addSubView(Button(96,24,card))
-        
         func onbuttonDown(event:Event){
             if(event.type == ButtonEvent.upInside){
                 //var startTime:int = getTimer();
