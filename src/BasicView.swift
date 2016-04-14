@@ -26,12 +26,13 @@ class BasicView:CustomView {
         createList()
         createSliderList()
         createIconButtons()
+        createComboBox()
+        createTextArea()
         //createSearchBox()
-        //createComboBox()
         //createColorTag()
         //createText()
         //createTextInput()
-        //createTextArea()
+        //
         //createSingleLineTextArea()
         //
         //
@@ -359,10 +360,10 @@ class BasicView:CustomView {
         let url:String = "~/Desktop/ElCapitan/basic/combobox/combobox.css"
         StyleManager.addStylesByURL(url,false)
         
-        let comboBoxCard:Card = container.addSubView(Card(NaN, NaN, "ComboBox: ", container, "comboBoxSection"))
+        let card = container.addSubView(Card(NaN, NaN, "ComboBox: ", container, "comboBoxCard"))
         let xml = FileParser.xml("~/Desktop/assets/xml/combobox.xml")
         let dp:DataProvider = DataProvider(xml)
-        let combobox = comboBoxCard.addSubView(ComboBox(140,96,24,dp,false,0,comboBoxCard))
+        let combobox = card.addSubView(ComboBox(140,96,24,dp,false,0,card))
         combobox
 //		print("combobox: "+StyleResolver.stackString(combobox))
 //		comboBox.setOpen(false)
