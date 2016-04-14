@@ -24,7 +24,8 @@ class BasicView:CustomView {
         iconButton()
         createTabBar()
         createList()
-        //createIconButtons()
+        createSliderList()
+        createIconButtons()
         //createSearchBox()
         //createComboBox()
         //createColorTag()
@@ -33,7 +34,7 @@ class BasicView:CustomView {
         //createTextArea()
         //createSingleLineTextArea()
         //
-        //createSliderList()
+        //
         //createSliderTextArea()
         //createVNodeSlider()
         //createHNodeSlider()
@@ -347,7 +348,7 @@ class BasicView:CustomView {
         let xml = FileParser.xml("~/Desktop/assets/xml/scrollist.xml")//TODO:  create a method tht takes url and makes dp
         let dp:DataProvider = DataProvider(xml)
         let sliderList:SliderList = sliderListCard.addSubView(SliderList(140, 73, 24, dp, sliderListCard))
-        ListModifier.select(sliderList, "blue")
+        ListModifier.select(sliderList, "white")
         //scrollList.setMaxShowingItems(6);
         //print("scrollList.list.getSelected(): " + scrollList.list.getSelected());
         //var index:int = scrollList.list.getSelectedIndex();
