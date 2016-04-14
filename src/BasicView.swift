@@ -12,10 +12,13 @@ class BasicView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         
-        //createRadioBullet()
-        //createCheckBox()
+        createButton()
+        createTextButton()
+        
+        createRadioBullet()
+        createCheckBox()
         //createLeverStepper()
-        createIconButtons()
+        //createIconButtons()
         //
         //
         //createTabBar()
@@ -39,9 +42,9 @@ class BasicView:CustomView {
         //createHNodeSlider()
         //createVolumeSlider()
         //iconButton()
-        //createButton()
+        //
         
-        //createTextButton()
+        //
     }
     /**
      *
