@@ -21,6 +21,7 @@ class BasicView:CustomView {
         createLeverStepper()
         createLeverSpinner()
         createHSlider()
+        createVSlider()
         //createIconButtons()
         //
         //
@@ -35,7 +36,7 @@ class BasicView:CustomView {
         //
         //
         //
-        //createVSlider()
+        //
         //
         //createList()
         //createSliderList()
