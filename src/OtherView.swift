@@ -17,12 +17,8 @@ class OtherView:CustomView {
      *
      */
     func createColorBox(){
-        
         let url:String = "~/Desktop/ElCapitan/other/colorbox/colorbox.css"
         StyleManager.addStylesByURL(url,false)
-        
-        
-        
         
         fileWatcher = FileWatcher([url.tildePath])
         fileWatcher!.event = { event in
@@ -35,7 +31,6 @@ class OtherView:CustomView {
             }
         }
         fileWatcher!.start()
-        
         
         Swift.print("createColorBox")
         let colorBoxCard:Card = container.addSubView(Card(NaN, NaN, "ColorBox: ", container, "colorBoxCard"))
