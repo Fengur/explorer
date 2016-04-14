@@ -148,9 +148,6 @@ class BasicView:CustomView {
         let url:String = "~/Desktop/ElCapitan/basic/button/tabbar.css"
         StyleManager.addStylesByURL(url,false)
         
-        
-        
-        
         let card:Card = container.addSubView(Card(NaN, NaN, "Tab bar: ", container, "tabBarCard"))
         let btn1 = card.addSubView(SelectTextButton(NaN,NaN,"Tab 1",false,card,"first"))
         let btn2 = card.addSubView(SelectTextButton(NaN,NaN,"Tab 2",true,card,"second"))
