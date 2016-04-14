@@ -17,7 +17,9 @@ class BasicView:CustomView {
         createRadioButton()
         createCheckBoxButton()
         
-        //createLeverStepper()
+        createLeverStepper()
+        createLeverSpinner()
+        createHSlider()
         //createIconButtons()
         //
         //
@@ -30,10 +32,10 @@ class BasicView:CustomView {
         //createTextArea()
         //createSingleLineTextArea()
         //
-        //createLeverSpinner()
+        //
         //
         //createVSlider()
-        //createHSlider()
+        //
         //createList()
         //createSliderList()
         //createSliderTextArea()
