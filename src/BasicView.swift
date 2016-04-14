@@ -23,6 +23,7 @@ class BasicView:CustomView {
         createVolumeSlider()
         iconButton()
         createTabBar()
+        createList()
         //createIconButtons()
         //createSearchBox()
         //createComboBox()
@@ -31,7 +32,7 @@ class BasicView:CustomView {
         //createTextInput()
         //createTextArea()
         //createSingleLineTextArea()
-        //createList()
+        //
         //createSliderList()
         //createSliderTextArea()
         //createVNodeSlider()
