@@ -22,6 +22,8 @@ class BasicView:CustomView {
         createLeverSpinner()
         createHSlider()
         createVSlider()
+        createVolumeSlider()
+        iconButton()
         //createIconButtons()
         //
         //
@@ -44,8 +46,8 @@ class BasicView:CustomView {
         
         //createVNodeSlider()
         //createHNodeSlider()
-        //createVolumeSlider()
-        //iconButton()
+        //
+        //
         //
         
         //
