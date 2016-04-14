@@ -16,8 +16,8 @@ class BasicView:CustomView {
         //createCheckBox()
         //createLeverStepper()
         //createIconButtons()
-        //createButton()
-        //createTextButton()
+        //
+        //
         //createTabBar()
         //createSearchBox()
         //createComboBox()
@@ -38,7 +38,10 @@ class BasicView:CustomView {
         //createVNodeSlider()
         //createHNodeSlider()
         //createVolumeSlider()
-        iconButton()
+        //iconButton()
+        //createButton()
+        
+        createTextButton()
     }
     /**
      *
@@ -46,18 +49,6 @@ class BasicView:CustomView {
     func iconButton(){
         let url:String = "~/Desktop/ElCapitan/basic/button/iconbutton.css"
         StyleManager.addStylesByURL(url,true)
-        
-        fileWatcher = FileWatcher([url.tildePath])
-        fileWatcher!.event = { event in
-            //Swift.print(self)
-            Swift.print(event.description)
-            if(event.fileChange && event.path == url.tildePath) {
-                StyleManager.addStylesByURL(url,true)
-                ElementModifier.refreshSkin(self)
-                ElementModifier.floatChildren(self)
-            }
-        }
-        fileWatcher!.start()
         
         let card:Card = container.addSubView(Card(NaN, NaN, "Icon Button: ", container, "iconButtonCard"))
         let button = card.addSubView(Button(NaN,NaN,card,"question"))
@@ -82,6 +73,7 @@ class BasicView:CustomView {
     func createButton(){
         let url:String = "~/Desktop/ElCapitan/basic/button/button.css"
         StyleManager.addStylesByURL(url,false)
+        
         let card:Card = container.addSubView(Card(NaN, NaN, "Buttons: ", container, "buttonCard"))
         let button = card.addSubView(Button(96,24,card))
         func onbuttonDown(event:Event){
@@ -101,6 +93,21 @@ class BasicView:CustomView {
         
         let url:String = "~/Desktop/ElCapitan/basic/button/textbutton.css"
         StyleManager.addStylesByURL(url,false)
+        
+        
+        
+        fileWatcher = FileWatcher([url.tildePath])
+        fileWatcher!.event = { event in
+            //Swift.print(self)
+            Swift.print(event.description)
+            if(event.fileChange && event.path == url.tildePath) {
+                StyleManager.addStylesByURL(url,true)
+                ElementModifier.refreshSkin(self)
+                ElementModifier.floatChildren(self)
+            }
+        }
+        fileWatcher!.start()
+        
         
         let card:Card = container.addSubView(Card(NaN, NaN, "TextButton: ", container, "textButtonCard"))
         card.addSubView(TextButton("Button",NaN,NaN,card))
