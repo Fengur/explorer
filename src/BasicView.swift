@@ -10,7 +10,7 @@ class BasicView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         
-        createButton()
+        /*createButton()
         createTextButton()
         createRadioBullet()
         createCheckBox()
@@ -18,7 +18,7 @@ class BasicView:CustomView {
         createCheckBoxButton()
         
         createLeverStepper()
-        createLeverSpinner()
+        createLeverSpinner()*/
         createHSlider()
         //createIconButtons()
         //
@@ -255,6 +255,9 @@ class BasicView:CustomView {
         vSlider
     }
     func createHSlider(){
+        let url:String = "~/Desktop/ElCapitan/basic/slider/hslider.css"
+        StyleManager.addStylesByURL(url,true)
+        
         let hSliderCard:Card = container.addSubView(Card(NaN, NaN, "Horizontal slider: ", container, "hSliderCard"))
         let hSlider:HSlider = hSliderCard.addSubView(HSlider(120,6,70,0,hSliderCard))
         hSlider
