@@ -17,7 +17,7 @@ class BasicView:CustomView {
         createRadioBullet()
         createCheckBox()
         createRadioButton()
-        
+        createCheckBoxButton()
         
         //createLeverStepper()
         //createIconButtons()
@@ -31,7 +31,7 @@ class BasicView:CustomView {
         //createTextInput()
         //createTextArea()
         //createSingleLineTextArea()
-        //createCheckBoxButton()
+        //
         //createLeverSpinner()
         //
         //createVSlider()
@@ -288,7 +288,7 @@ class BasicView:CustomView {
     func createRadioButton(){
         
         let url:String = "~/Desktop/ElCapitan/basic/button/radiobutton.css"
-        StyleManager.addStylesByURL(url,true)
+        StyleManager.addStylesByURL(url,false)
         
         let radioButtonCard:Card = container.addSubView(Card(NaN, NaN, "Radio buttons: ", container, "radioButtonCard"))
         let section:Section = radioButtonCard.addSubView(Section(NaN,NaN,radioButtonCard,"radioButtonSection"))// :TODO: rename to background
