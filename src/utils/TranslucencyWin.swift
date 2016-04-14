@@ -29,7 +29,7 @@ class TranslucencyWin:NSWindow, NSApplicationDelegate, NSWindowDelegate{
         self.contentView?.addSubview(visualEffectView!)
 
         
-        let view = BasicView(w,h)// LiveEditView(w,h)//OtherView(w,h)//BasicView(w,h)////AdvanceView(w,h)//BasicView(w,h)StashView(frame.width,frame.height)/*Sets the mainview of the window*/
+        let view = LiveEditView(w,h)//BasicView(1000,800)// OtherView(w,h)//BasicView(w,h)////AdvanceView(w,h)//BasicView(w,h)StashView(frame.width,frame.height)/*Sets the mainview of the window*/
         self.contentView?.addSubview(view)
     }
     func windowDidResize(notification: NSNotification) {
