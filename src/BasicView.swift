@@ -37,8 +37,9 @@ class BasicView:CustomView {
         
         //createVNodeSlider()
         //createHNodeSlider()
-        createVolumeSlider()
+        //createVolumeSlider()
     }
+    
     /**
      * Volume slider
      */
