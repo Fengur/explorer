@@ -279,15 +279,6 @@ class BasicView:CustomView {
         let url:String = "~/Desktop/ElCapitan/basic/nodeslider/vnodeslider.css"
         StyleManager.addStylesByURL(url,true)
         
-        let vNodeSliderCard:Card = container.addSubView(Card(NaN, NaN, "Vertical node slider: ", container, "vNodeSliderCard"))
-        let vNodeSlider:VNodeSlider = vNodeSliderCard.addSubView(VNodeSlider(20, 70, 20, 0, 1, vNodeSliderCard))
-        vNodeSlider
-    }
-    func createHNodeSlider(){
-        
-        let url:String = "~/Desktop/ElCapitan/basic/nodeslider/hnodeslider.css"
-        StyleManager.addStylesByURL(url,true)
-        
         fileWatcher = FileWatcher([url.tildePath])
         fileWatcher!.event = { event in
             //Swift.print(self)
@@ -299,6 +290,17 @@ class BasicView:CustomView {
             }
         }
         fileWatcher!.start()
+        
+        let vNodeSliderCard:Card = container.addSubView(Card(NaN, NaN, "Vertical node slider: ", container, "vNodeSliderCard"))
+        let vNodeSlider:VNodeSlider = vNodeSliderCard.addSubView(VNodeSlider(20, 70, 20, 0, 1, vNodeSliderCard))
+        vNodeSlider
+        
+        
+    }
+    func createHNodeSlider(){
+        
+        let url:String = "~/Desktop/ElCapitan/basic/nodeslider/hnodeslider.css"
+        StyleManager.addStylesByURL(url,true)
         
         let hNodeSliderCard:Card = container.addSubView(Card(NaN, NaN, "Horizontal node slider: ", container, "hNodeSliderCard"))
         let hNodeSlider:HNodeSlider = hNodeSliderCard.addSubView(HNodeSlider(120, 20, 20, 0, 1, hNodeSliderCard))
