@@ -15,7 +15,7 @@ class BasicView:CustomView {
         //createRadioBullet()
         //createCheckBox()
         //createLeverStepper()
-        //createIconButtons()
+        createIconButtons()
         //
         //
         //createTabBar()
@@ -41,7 +41,7 @@ class BasicView:CustomView {
         //iconButton()
         //createButton()
         
-        createTextButton()
+        //createTextButton()
     }
     /**
      *
@@ -93,20 +93,6 @@ class BasicView:CustomView {
         
         let url:String = "~/Desktop/ElCapitan/basic/button/textbutton.css"
         StyleManager.addStylesByURL(url,false)
-        
-        
-        
-        fileWatcher = FileWatcher([url.tildePath])
-        fileWatcher!.event = { event in
-            //Swift.print(self)
-            Swift.print(event.description)
-            if(event.fileChange && event.path == url.tildePath) {
-                StyleManager.addStylesByURL(url,true)
-                ElementModifier.refreshSkin(self)
-                ElementModifier.floatChildren(self)
-            }
-        }
-        fileWatcher!.start()
         
         
         let card:Card = container.addSubView(Card(NaN, NaN, "TextButton: ", container, "textButtonCard"))
@@ -176,6 +162,22 @@ class BasicView:CustomView {
         
         let url:String = "~/Desktop/ElCapitan/basic/button/iconbuttons.css"
         StyleManager.addStylesByURL(url,false)
+        
+        
+        
+        
+        fileWatcher = FileWatcher([url.tildePath])
+        fileWatcher!.event = { event in
+            //Swift.print(self)
+            Swift.print(event.description)
+            if(event.fileChange && event.path == url.tildePath) {
+                StyleManager.addStylesByURL(url,true)
+                ElementModifier.refreshSkin(self)
+                ElementModifier.floatChildren(self)
+            }
+        }
+        fileWatcher!.start()
+
        
         
         let card:Card = container.addSubView(Card(NaN, NaN, "Icon button: ", container, "iconButtonsCard"))
