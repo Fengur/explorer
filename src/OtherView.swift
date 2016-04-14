@@ -7,8 +7,8 @@ class OtherView:CustomView {
     override func resolveSkin() {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
-        createColorBox()
-        //createColorInput()
+        //createColorBox()
+        createColorInput()
         //createColorPanel()
         
         //createGradientPanel()
@@ -18,6 +18,16 @@ class OtherView:CustomView {
      */
     func createColorBox(){
         let url:String = "~/Desktop/ElCapitan/other/colorbox/colorbox.css"
+        StyleManager.addStylesByURL(url,false)
+        
+        Swift.print("createColorBox")
+        let colorBoxCard:Card = container.addSubView(Card(NaN, NaN, "ColorBox: ", container, "colorBoxCard"))
+        colorBoxCard
+        let colorBox = colorBoxCard.addSubView(ColorBox(NaN,NaN,NSColor.cyanColor(),colorBoxCard))
+        colorBox
+    }
+    func createColorInput(){// :TODO: inpliment TextInput TextAre in the css
+        let url:String = "~/Desktop/ElCapitan/other/colorinput/colorinput.css"
         StyleManager.addStylesByURL(url,false)
         
         fileWatcher = FileWatcher([url.tildePath])
@@ -32,13 +42,6 @@ class OtherView:CustomView {
         }
         fileWatcher!.start()
         
-        Swift.print("createColorBox")
-        let colorBoxCard:Card = container.addSubView(Card(NaN, NaN, "ColorBox: ", container, "colorBoxCard"))
-        colorBoxCard
-        let colorBox = colorBoxCard.addSubView(ColorBox(NaN,NaN,NSColor.cyanColor(),colorBoxCard))
-        colorBox
-    }
-    func createColorInput(){// :TODO: inpliment TextInput TextAre in the css
         Swift.print("createColorInput()")
         let colorInputCard:Card = container.addSubView(Card(NaN, NaN, "ColorInput: ", container, "colorInputCard"))
         colorInputCard
