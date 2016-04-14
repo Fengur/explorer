@@ -28,7 +28,7 @@ class OtherView:CustomView {
     }
     func createColorInput(){// :TODO: inpliment TextInput TextAre in the css
         let url:String = "~/Desktop/ElCapitan/other/colorinput/colorinput.css"
-        StyleManager.addStylesByURL(url,false)
+        StyleManager.addStylesByURL(url,true)
         
         fileWatcher = FileWatcher([url.tildePath])
         fileWatcher!.event = { event in
