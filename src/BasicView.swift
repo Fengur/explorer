@@ -143,10 +143,10 @@ class BasicView:CustomView {
         StyleManager.addStylesByURL(url,false)
         
         let card:Card = container.addSubView(Card(NaN, NaN, "Tab bar: ", container, "tabBarCard"))
-        let btn1 = card.addSubView(SelectTextButton(NaN,NaN,"Tab 1",false,card,"first"))
-        let btn2 = card.addSubView(SelectTextButton(NaN,NaN,"Tab 2",true,card,"second"))
+        let btn1 = card.addSubView(SelectTextButton(NaN,NaN,"Tab 1",true,card,"first"))
+        let btn2 = card.addSubView(SelectTextButton(NaN,NaN,"Tab 2",false,card,"second"))
         let btn3 = card.addSubView(SelectTextButton(NaN,NaN,"Tab 3",false,card,"third"))
-        let selectGroup = SelectGroup([btn1,btn2,btn3],btn2)//SelectParser.selectables(card)
+        let selectGroup = SelectGroup([btn1,btn2,btn3],btn1)//SelectParser.selectables(card)
         selectGroup
     }
     func createIconButtons(){
