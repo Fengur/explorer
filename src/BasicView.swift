@@ -38,11 +38,12 @@ class BasicView:CustomView {
         //createVNodeSlider()
         //createHNodeSlider()
         //createVolumeSlider()
+        iconButton()
     }
     /**
      *
      */
-    func graphicButton(){
+    func iconButton(){
         let url:String = "~/Desktop/ElCapitan/basic/button/iconbutton.css"
         StyleManager.addStylesByURL(url,true)
         
@@ -59,7 +60,7 @@ class BasicView:CustomView {
         fileWatcher!.start()
         
         let card:Card = container.addSubView(Card(NaN, NaN, "Icon Button: ", container, "iconButtonCard"))
-        let button = card.addSubView(Button(NaN,NaN,card))
+        let button = card.addSubView(Button(NaN,NaN,card,"question"))
         button
     }
     /**
