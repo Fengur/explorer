@@ -59,7 +59,7 @@ class BasicView:CustomView {
         fileWatcher!.start()
         
         let card:Card = container.addSubView(Card(NaN, NaN, "VolumeSlider: ", container, "volumeSliderCard"))
-        let volumeSlider:HSlider = card.addSubView(HSlider(120,20,20,0,card,"volume"))
+        let volumeSlider = card.addSubView(VolumeSlider(120,20,20,0,card))
         volumeSlider.setProgressValue(0.5)
     }
     
