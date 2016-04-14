@@ -35,8 +35,8 @@ class BasicView:CustomView {
         //createSliderList()
         //createSliderTextArea()
         
-        //createVNodeSlider()
-        createHNodeSlider()
+        createVNodeSlider()
+        //createHNodeSlider()
         /*
         */
     }
