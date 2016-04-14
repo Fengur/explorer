@@ -2,6 +2,8 @@ import Cocoa
 
 class OtherView:CustomView {
     var container:Container!
+    var fileWatcher:FileWatcher?
+    
     override func resolveSkin() {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
@@ -16,7 +18,7 @@ class OtherView:CustomView {
      */
     func createColorBox(){
         
-        let url:String = "~/Desktop/ElCapitan/basic/button/iconbuttons.css"
+        let url:String = "~/Desktop/ElCapitan/other/colorbox/colorbox.css"
         StyleManager.addStylesByURL(url,false)
         
         
