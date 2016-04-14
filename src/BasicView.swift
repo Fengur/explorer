@@ -30,12 +30,13 @@ class BasicView:CustomView {
         createTextArea()
         createSliderTextArea()
         createText()
+        createSingleLineTextArea()
         //createSearchBox()
         //createColorTag()
         //
         //createTextInput()
         //
-        //createSingleLineTextArea()
+        //
         //
         //
         
