@@ -37,9 +37,32 @@ class BasicView:CustomView {
         
         //createVNodeSlider()
         //createHNodeSlider()
-        /*
-        */
+        createVolumeSlider()
     }
+    /**
+     * Volume slider
+     */
+    func createVolumeSlider(){
+        let url:String = "~/Desktop/ElCapitan/basic/slider/volumeslider.css"
+        StyleManager.addStylesByURL(url,true)
+        
+        fileWatcher = FileWatcher([url.tildePath])
+        fileWatcher!.event = { event in
+            //Swift.print(self)
+            Swift.print(event.description)
+            if(event.fileChange && event.path == url.tildePath) {
+                StyleManager.addStylesByURL(url,true)
+                ElementModifier.refreshSkin(self)
+                ElementModifier.floatChildren(self)
+            }
+        }
+        fileWatcher!.start()
+        
+        let card:Card = container.addSubView(Card(NaN, NaN, "Buttons: ", container, "volumeSliderCard"))
+        let volumeSlider:HSlider = card.addSubView(HSlider(120,20,20,0,card,"volume"))
+        volumeSlider
+    }
+    
     /**
      * Button
      */
@@ -276,17 +299,6 @@ class BasicView:CustomView {
         let url:String = "~/Desktop/ElCapitan/basic/nodeslider/vnodeslider.css"
         StyleManager.addStylesByURL(url,true)
         
-        fileWatcher = FileWatcher([url.tildePath])
-        fileWatcher!.event = { event in
-            //Swift.print(self)
-            Swift.print(event.description)
-            if(event.fileChange && event.path == url.tildePath) {
-                StyleManager.addStylesByURL(url,true)
-                ElementModifier.refreshSkin(self)
-                ElementModifier.floatChildren(self)
-            }
-        }
-        fileWatcher!.start()
         
         let vNodeSliderCard:Card = container.addSubView(Card(NaN, NaN, "Vertical node slider: ", container, "vNodeSliderCard"))
         let vNodeSlider:VNodeSlider = vNodeSliderCard.addSubView(VNodeSlider(20, 70, 20, 0, 1, vNodeSliderCard))
