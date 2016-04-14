@@ -28,6 +28,7 @@ class BasicView:CustomView {
         createIconButtons()
         createComboBox()
         createTextArea()
+        createSliderTextArea()
         //createSearchBox()
         //createColorTag()
         //createText()
@@ -36,7 +37,7 @@ class BasicView:CustomView {
         //createSingleLineTextArea()
         //
         //
-        //createSliderTextArea()
+        
         //createVNodeSlider()
         //createHNodeSlider()
     }
