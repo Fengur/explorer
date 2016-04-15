@@ -17,8 +17,8 @@ class AdvanceView:CustomView {
         
     }
     func createTable(){
-        let tableCard:Card = container.addSubView(Card(NaN, NaN, "Table: ", self, "tableCard"))
-        tableCard
+        let card = container.addSubView(Card(NaN, NaN, "Table: ", container, "tableCard"))
+        
         
     }
 }
