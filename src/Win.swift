@@ -3,7 +3,7 @@ import Cocoa
 class Win:Window{
     override func resolveSkin() {
         //super.resolveSkin()
-        self.contentView = OtherView(frame.width,frame.height)//BasicView(frame.width,frame.height)/*Sets the mainview of the window*/
+        self.contentView = AdvanceView(frame.width,frame.height)//OtherView//BasicView(frame.width,frame.height)/*Sets the mainview of the window*/
     }
     override func windowDidResize(notification: NSNotification) {
         //notification
