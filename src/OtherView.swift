@@ -20,9 +20,9 @@ class OtherView:CustomView {
         StyleManager.addStylesByURL(url,false)
         
         Swift.print("createColorBox")
-        let colorBoxCard:Card = container.addSubView(Card(NaN, NaN, "ColorBox: ", container, "colorBoxCard"))
-        colorBoxCard
-        let colorBox = colorBoxCard.addSubView(ColorBox(NaN,NaN,NSColor.cyanColor(),colorBoxCard))
+        let card:Card = container.addSubView(Card(NaN, NaN, "ColorBox: ", container, "colorBoxCard"))
+        card
+        let colorBox = card.addSubView(ColorBox(NaN,NaN,NSColor.cyanColor(),card))
         colorBox
     }
     func createColorInput(){// :TODO: inpliment TextInput TextAre in the css
