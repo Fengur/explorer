@@ -11,10 +11,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/card.css")
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         //StyleManager.addStylesByURL("~/Desktop/css/explorer/explorer.css")
-        win = Win(/*400,300*/1000,800)//TranslucencyWin()//
+        win = Win(400,300/*1000,800*/)//TranslucencyWin()//
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
     }
     func applicationWillTerminate(aNotification: NSNotification) {
         //print("Good-bye")
     }
 }
+
