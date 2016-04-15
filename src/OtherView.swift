@@ -10,9 +10,6 @@ class OtherView:CustomView {
         createColorBox()
         createColorInput()
         createColorPanel()
-        
-        
-        createColorPanel()
         createGradientPanel()
     }
     /**
