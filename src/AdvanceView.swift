@@ -19,12 +19,7 @@ class AdvanceView:CustomView {
     func createTable(){
         let tableCard:Card = container.addSubView(Card(NaN, NaN, "Table: ", self, "tableCard"))
         tableCard
-        let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/table.xml")
-        //Swift.print("xml: " + "\(xml)")
-        let node:Node = Node(xml)
-        node
-        //var table:Table = tableCard.addSubView(Table(NaN,NaN,database,tableCard))
-        //TableModifier.selectRow(table,1);
+        
     }
 }
 
