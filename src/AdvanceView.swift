@@ -27,3 +27,5 @@ class AdvanceView:CustomView {
         //TableModifier.selectRow(table,1);
     }
 }
+
+//create a new repo named Table on GitHub and a new xcode project. 
