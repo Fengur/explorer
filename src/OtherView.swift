@@ -49,7 +49,7 @@ class OtherView:CustomView {
         //colorPanel.setSize(300, 300);
     }
     func createGradientPanel(){
-        let url:String = "~/Desktop/ElCapitan/other/colorpanel/colorpanel.css"
+        let url:String = "~/Desktop/ElCapitan/other/gradientpanel/gradientpanel.css"
         StyleManager.addStylesByURL(url,true)
         
         fileWatcher = FileWatcher([url.tildePath])
