@@ -31,7 +31,7 @@ class AdvanceView:CustomView {
         fileWatcher!.start()
         
         let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/treelist.xml")
-        var treeList = card.addSubView(TreeList(140, 288, 24, Node(xml), card))
+        var treeList = card.addSubView(TreeList(140, 192, 24, Node(xml), card))
         
         Swift.print("selected: " + "\(TreeListParser.selected(treeList))")
         Swift.print("selectedIndex: " + "\(TreeListParser.selectedIndex(treeList))")//Output:  [2,2,0]
