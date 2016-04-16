@@ -7,23 +7,15 @@ class AdvanceView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         /**/
-        //createTreeList()
+        createTreeList()
         //createSliderTreeList()
-        createTable()
+        //createTable()
     }
     func createTreeList(){
-        
-        
-        //continue here: add the elcapitan style to the TreeList
-        
-    }
-    func createSliderTreeList(){
-        //get sliderTreeList working
-    }
-    func createTable(){
         let card = container.addSubView(Card(NaN, NaN, "Table: ", container, "tableCard"))
         
-        let url:String = "~/Desktop/ElCapitan/advance/table/table.css"
+        StyleManager.addStylesByURL("~/Desktop/css/treelistdemo.css")
+        let url:String = "~/Desktop/ElCapitan/advance/treelist/treelist.css"
         StyleManager.addStylesByURL(url,true)
         
         fileWatcher = FileWatcher([url.tildePath])
@@ -37,6 +29,53 @@ class AdvanceView:CustomView {
             }
         }
         fileWatcher!.start()
+        
+        let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/treelist.xml")
+        var treeList = container!.addSubView(TreeList(140, 288, 24, Node(xml), container))
+        
+        
+        Swift.print("selected: " + "\(TreeListParser.selected(treeList))")
+        Swift.print("selectedIndex: " + "\(TreeListParser.selectedIndex(treeList))")//Output:  [2,2,0]
+        Swift.print("selected Title: " + "\(XMLParser.attributesAt(treeList.node.xml, TreeListParser.selectedIndex(treeList))!["title"])")//Output: Oregano
+        TreeListModifier.unSelectAll(treeList)
+        
+        TreeListModifier.selectAt(treeList, [2])
+        TreeListModifier.collapseAt(treeList, [])//closes the treeList
+        TreeListModifier.explodeAt(treeList,[])//opens the treeList
+        
+        
+        treeList.node.removeAt([1])
+        treeList.node.addAt([1],  NSXMLElement("<item title=\"Fish\"/>"))/*new*/
+        
+        //Swift.print("\(treeList.node.xml)")
+        
+        //treeList
+        
+        func onTreeListEvent(event: Event) {//add local event handler
+            if(event.type == SelectEvent.select && event.immediate === treeList){
+                //Swift.print("onTreeListSelect()")
+                let selectedIndex:Array = TreeListParser.selectedIndex(treeList)
+                Swift.print("selectedIndex: " + "\(selectedIndex)")
+                //print("_scrollTreeList.database.xml.toXMLString(): " + _scrollTreeList.database.xml.toXMLString());
+                let selectedXML:NSXMLElement = XMLParser.childAt(treeList.node.xml, selectedIndex)!
+                //print("selectedXML: " + selectedXML);
+                Swift.print("selectedXML.toXMLString():")
+                Swift.print(selectedXML)//EXAMPLE output: <item title="Ginger"></item>
+            }
+        }
+        treeList.event = onTreeListEvent//add local event listener
+        
+        
+        //TODO: try the move up and move down methods
+    }
+    func createSliderTreeList(){
+        //get sliderTreeList working
+    }
+    func createTable(){
+        let card = container.addSubView(Card(NaN, NaN, "Table: ", container, "tableCard"))
+        
+        let url:String = "~/Desktop/ElCapitan/advance/table/table.css"
+        StyleManager.addStylesByURL(url,true)
         
         let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/table.xml")
         //Swift.print("xml: " + "\(xml)")
