@@ -68,10 +68,13 @@ class AdvanceView:CustomView {
         //TODO: try the move up and move down methods
     }
     func createSliderTreeList(){
-        
-        
-        //continue here: Set this up and your good to go.
-        
+        let card = container.addSubView(Card(NaN, NaN, "SliderTreeList: ", container, "sliderTreeListCard"))
+        let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/treelist.xml")
+
+        let scrollTreeList = card.addSubView(SliderTreeList(140, 192, 24, Node(xml),card))
+        scrollTreeList
+        //_scrollTreeList.database.addAt([0], <item title="Fish"/>);
+        //print("_scrollTreeList.treeList.database.xml.toXMLString(): " + _scrollTreeList.database.xml.toXMLString());
     }
     func createTable(){
         let card = container.addSubView(Card(NaN, NaN, "Table: ", container, "tableCard"))
