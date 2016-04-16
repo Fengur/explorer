@@ -58,6 +58,7 @@ class AdvanceView:CustomView {
     func createSliderTreeList(){
         StyleManager.addStylesByURL("~/Desktop/css/treelistdemo.css")
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/advance/treelist/treelist.css")
+        StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/slider/vslider.css")
         let url:String = "~/Desktop/ElCapitan/advance/treelist/slidertreelist.css"
         StyleManager.addStylesByURL(url,true)
         
