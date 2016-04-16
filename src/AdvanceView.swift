@@ -13,9 +13,12 @@ class AdvanceView:CustomView {
     }
     func createTreeList(){
         
+        
+        //continue here: add the elcapitan style to the TreeList
+        
     }
     func createSliderTreeList(){
-        
+        //get sliderTreeList working
     }
     func createTable(){
         let card = container.addSubView(Card(NaN, NaN, "Table: ", container, "tableCard"))
