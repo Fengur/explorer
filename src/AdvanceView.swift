@@ -8,7 +8,7 @@ class AdvanceView:CustomView {
         container = addSubView(Container(1000,800,self,"main"))
         
         createTreeList()
-        //createSliderTreeList()
+        createSliderTreeList()
         //createTable()
     }
     func createTreeList(){
@@ -29,7 +29,6 @@ class AdvanceView:CustomView {
         TreeListModifier.selectAt(treeList, [2])
         TreeListModifier.collapseAt(treeList, [])//closes the treeList
         TreeListModifier.explodeAt(treeList,[])//opens the treeList
-        
         
         treeList.node.removeAt([1])
         treeList.node.addAt([1],  NSXMLElement("<item title=\"Fish\"/>"))/*new*/
