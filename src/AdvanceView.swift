@@ -68,7 +68,10 @@ class AdvanceView:CustomView {
         //TODO: try the move up and move down methods
     }
     func createSliderTreeList(){
-        //get sliderTreeList working
+        
+        
+        //continue here: Set this up and your good to go.
+        
     }
     func createTable(){
         let card = container.addSubView(Card(NaN, NaN, "Table: ", container, "tableCard"))
