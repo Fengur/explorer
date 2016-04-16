@@ -7,8 +7,8 @@ class AdvanceView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         
-        createTreeList()
-        //createSliderTreeList()
+        //createTreeList()
+        createSliderTreeList()
         //createTable()
     }
     func createTreeList(){
@@ -21,11 +21,20 @@ class AdvanceView:CustomView {
         let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/treelist.xml")
         var treeList = card.addSubView(TreeList(140, 192, 24, Node(xml), card))
         
+        Swift.print("selected: " + "\(TreeListParser.selected(treeList))")
+        Swift.print("selectedIndex: " + "\(TreeListParser.selectedIndex(treeList))")//Output:  [2,2,0]
+        Swift.print("selected Title: " + "\(XMLParser.attributesAt(treeList.node.xml, TreeListParser.selectedIndex(treeList))!["title"])")//Output: Oregano
+        TreeListModifier.unSelectAll(treeList)
         
+        TreeListModifier.selectAt(treeList, [2])
+        TreeListModifier.collapseAt(treeList, [])//closes the treeList
+        TreeListModifier.explodeAt(treeList,[])//opens the treeList
+        
+        treeList.node.removeAt([1])
+        treeList.node.addAt([1],  NSXMLElement("<item title=\"Fish\"/>"))/*new*/
         
         //Swift.print("\(treeList.node.xml)")
         
-        treeList
         
         func onTreeListEvent(event: Event) {//add local event handler
             if(event.type == SelectEvent.select && event.immediate === treeList){
