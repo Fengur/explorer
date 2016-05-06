@@ -166,8 +166,6 @@ class BasicView:CustomView {
         let url:String = "~/Desktop/ElCapitan/basic/stepper/leverstepper.css"
         StyleManager.addStylesByURL(url,false)
         
-        
-        
         let card:Card = container.addSubView(Card(NaN, NaN, "LeverStepper: ", container, "leverStepperCard"))
         card
         let stepper:LeverStepper = card.addSubView(LeverStepper(NaN,NaN,0,1,Int.min.cgFloat,Int.max.cgFloat,0,100,200,card))
@@ -200,7 +198,6 @@ class BasicView:CustomView {
     func createTextArea() {
         let url:String = "~/Desktop/ElCapitan/basic/text/textarea.css"
         StyleManager.addStylesByURL(url,true)
-    
         
         let card:Card = container.addSubView(Card(NaN, NaN, "Text area: ", container, "textAreaCard"))
         let text:String = FileParser.content("~/Desktop/assets/txt/textarea.txt".tildePath)!
@@ -210,8 +207,7 @@ class BasicView:CustomView {
     func createSearchBox(){
         let url:String = "~/Desktop/ElCapitan/basic/text/searchbox.css"
         StyleManager.addStylesByURL(url,true)
-        
-        /**/
+
         let searchBoxCard:Card = container.addSubView(Card(NaN, NaN, "Search box: ", container, "searchBoxCard"))
         let searchBox:TextArea = searchBoxCard.addSubView(TextArea(NaN, NaN, "Search", searchBoxCard))
         searchBox
