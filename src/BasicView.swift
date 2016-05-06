@@ -2,11 +2,9 @@ import Foundation
 
 class BasicView:CustomView {
     var container:Container!
-    
     override func resolveSkin() {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
-        
         createButton()
         createTextButton()
         createRadioBullet()
@@ -31,7 +29,6 @@ class BasicView:CustomView {
         createSearchBox()
         createTextInput()
         createColorTag()
-        
         //createVNodeSlider()
         //createHNodeSlider()
     }
@@ -58,7 +55,6 @@ class BasicView:CustomView {
         let volumeSlider = card.addSubView(VolumeSlider(120,20,20,0,card))
         volumeSlider.setProgressValue(0.5)
     }
-    
     /**
      * Button
      */
@@ -76,16 +72,13 @@ class BasicView:CustomView {
             }
         }
         button.event = onbuttonDown
-        
     }
     /**
      * TextButton
      */
     func createTextButton(){
-        
         let url:String = "~/Desktop/ElCapitan/basic/button/textbutton.css"
         StyleManager.addStylesByURL(url,false)
-        
         
         let card:Card = container.addSubView(Card(NaN, NaN, "TextButton: ", container, "textButtonCard"))
         card.addSubView(TextButton("Button",NaN,NaN,card))
@@ -94,7 +87,6 @@ class BasicView:CustomView {
      * RadioBullet
      */
     func createRadioBullet(){
-        
         let url:String = "~/Desktop/ElCapitan/basic/button/radiobullet.css"
         StyleManager.addStylesByURL(url,true)
         
@@ -104,7 +96,6 @@ class BasicView:CustomView {
         let radioBullet2 = section.addSubView(RadioBullet(NaN,NaN,false,section))
         let selectGroup = (SelectGroup([radioBullet1,radioBullet2],radioBullet1))
         selectGroup
-        
     }
     /**
      * CheckboxButtons
