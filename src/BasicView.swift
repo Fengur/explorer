@@ -144,7 +144,6 @@ class BasicView:CustomView {
         let iconButton4 = card.addSubView(SelectButton(NaN,NaN,false,card,"fourth"))
         let selectGroup = SelectGroup([iconButton1,iconButton2,iconButton3,iconButton4],iconButton3);
         selectGroup/**/
-        /**/
     }
     func createLeverStepper(){
         let url:String = "~/Desktop/ElCapitan/basic/stepper/leverstepper.css"
