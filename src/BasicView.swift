@@ -49,8 +49,7 @@ class BasicView:CustomView {
     func createVolumeSlider(){
         let url:String = "~/Desktop/ElCapitan/basic/slider/volumeslider.css"
         StyleManager.addStylesByURL(url,true)
-        
-        
+        /*VolumeSlider*/
         let card:Card = container.addSubView(Card(NaN, NaN, "VolumeSlider: ", container, "volumeSliderCard"))
         let volumeSlider = card.addSubView(VolumeSlider(120,20,20,0,card))
         volumeSlider.setProgressValue(0.5)
@@ -61,7 +60,6 @@ class BasicView:CustomView {
     func createButton(){
         let url:String = "~/Desktop/ElCapitan/basic/button/button.css"
         StyleManager.addStylesByURL(url,false)
-        
         let card:Card = container.addSubView(Card(NaN, NaN, "Buttons: ", container, "buttonCard"))
         let button = card.addSubView(Button(96,24,card))
         func onbuttonDown(event:Event){
@@ -79,7 +77,6 @@ class BasicView:CustomView {
     func createTextButton(){
         let url:String = "~/Desktop/ElCapitan/basic/button/textbutton.css"
         StyleManager.addStylesByURL(url,false)
-        
         let card:Card = container.addSubView(Card(NaN, NaN, "TextButton: ", container, "textButtonCard"))
         card.addSubView(TextButton("Button",NaN,NaN,card))
     }
@@ -89,7 +86,6 @@ class BasicView:CustomView {
     func createRadioBullet(){
         let url:String = "~/Desktop/ElCapitan/basic/button/radiobullet.css"
         StyleManager.addStylesByURL(url,true)
-        
         let card:Card = container.addSubView(Card(NaN, NaN, "RadioBullet: ", container, "radioBulletCard"))
         let section = card.addSubView(Section(NaN,NaN,card,"radioBulletSection"))
         let radioBullet1 = section.addSubView(RadioBullet(NaN,NaN,true,section))
@@ -103,7 +99,6 @@ class BasicView:CustomView {
     func createCheckBoxButton(){
         let url:String = "~/Desktop/ElCapitan/basic/button/checkboxbutton.css"
         StyleManager.addStylesByURL(url,false)
-        
         
         let card:Card = container.addSubView(Card(NaN, NaN, "CheckBoxButton: ", container, "checkBoxButtonCard"))
         let section = card.addSubView(Section(NaN, NaN, card, "checkBoxButtonSection")) /*this instance represents the inset shadow bagground and also holds the buttons*/
@@ -139,10 +134,8 @@ class BasicView:CustomView {
         selectGroup
     }
     func createIconButtons(){
-        
         let url:String = "~/Desktop/ElCapitan/basic/button/iconbuttons.css"
         StyleManager.addStylesByURL(url,false)
-        
         
         let card:Card = container.addSubView(Card(NaN, NaN, "Icon button: ", container, "iconButtonsCard"))
         let iconButton1 = card.addSubView(SelectButton(NaN,NaN,false,card,"first"))
