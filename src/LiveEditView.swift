@@ -14,23 +14,18 @@ class LiveEditView:CustomView {
         //liveEditTest2()
         //liveEditTest3()
         //fileWatchTest()
-       
     }
     /**
      *
      */
     func fileWatchTest(){
         fileWatcher = FileWatcher(["~/Desktop/test/".tildePath],FSEventStreamEventId(kFSEventStreamEventIdSinceNow))
-        
-        
         fileWatcher!.event = { [weak self] event in
             self?.temp
             Swift.print(event.description)
         }
-        
         fileWatcher!.start()
         self.temp += "abc"
-        
     }
     /**
      *

@@ -136,7 +136,6 @@ class BasicView:CustomView {
     func createIconButtons(){
         let url:String = "~/Desktop/ElCapitan/basic/button/iconbuttons.css"
         StyleManager.addStylesByURL(url,false)
-        
         let card:Card = container.addSubView(Card(NaN, NaN, "Icon button: ", container, "iconButtonsCard"))
         let iconButton1 = card.addSubView(SelectButton(NaN,NaN,false,card,"first"))
         let iconButton2 = card.addSubView(SelectButton(NaN,NaN,false,card,"second"))
@@ -148,9 +147,7 @@ class BasicView:CustomView {
     func createLeverStepper(){
         let url:String = "~/Desktop/ElCapitan/basic/stepper/leverstepper.css"
         StyleManager.addStylesByURL(url,false)
-        
         let card:Card = container.addSubView(Card(NaN, NaN, "LeverStepper: ", container, "leverStepperCard"))
-        card
         let stepper:LeverStepper = card.addSubView(LeverStepper(NaN,NaN,0,1,Int.min.cgFloat,Int.max.cgFloat,0,100,200,card))
         stepper
     }
@@ -216,10 +213,6 @@ class BasicView:CustomView {
      * Checkbox
      */
     func createCheckBox(){
-        
-        
-        
-        
         let checkBoxCard:Card = container.addSubView(Card(NaN, NaN, "CheckBox: ", container, "checkBoxCard"))
         checkBoxCard
         let checkBoxContainer = checkBoxCard.addSubView(Section(NaN,NaN,checkBoxCard,"checkBoxSection"))
@@ -229,17 +222,11 @@ class BasicView:CustomView {
         let checkBox2:CheckBox = checkBoxContainer.addSubView(CheckBox(NaN,NaN,true,checkBoxContainer))
         let checkGroup:CheckGroup = CheckGroup([checkBox1,checkBox2], checkBox2)
         checkGroup
-        /**/
-        
-        
-        
-        
     }
     /**
      * RadioButton
      */
     func createRadioButton(){
-        
         let url:String = "~/Desktop/ElCapitan/basic/button/radiobutton.css"
         StyleManager.addStylesByURL(url,false)
         
@@ -256,7 +243,6 @@ class BasicView:CustomView {
     func createColorTag(){
         let url:String = "~/Desktop/ElCapitan/basic/button/colortag.css"
         StyleManager.addStylesByURL(url,true)
-        
         let colorTagCard:Card = container.addSubView(Card(NaN, NaN, "Color tags: ", container, "colorTagCard"))
         let colorTagSection:Section = colorTagCard.addSubView(Section(NaN,NaN,colorTagCard,"colorTagSection"))
         colorTagSection
@@ -272,14 +258,12 @@ class BasicView:CustomView {
     func createVNodeSlider(){
         let url:String = "~/Desktop/ElCapitan/basic/nodeslider/vnodeslider.css"
         StyleManager.addStylesByURL(url,true)
-        
-        
+
         let vNodeSliderCard:Card = container.addSubView(Card(NaN, NaN, "Vertical node slider: ", container, "vNodeSliderCard"))
         let vNodeSlider:VNodeSlider = vNodeSliderCard.addSubView(VNodeSlider(20, 70, 20, 0, 1, vNodeSliderCard))
         vNodeSlider
     }
     func createHNodeSlider(){
-        
         let url:String = "~/Desktop/ElCapitan/basic/nodeslider/hnodeslider.css"
         StyleManager.addStylesByURL(url,true)
         
@@ -333,7 +317,6 @@ class BasicView:CustomView {
 //		print("selected Title: "+comboBox.scrollList.list.getSelectedTitle())
     }
     func createSliderTextArea() {
-        
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/slider/vslider.css")
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/text/slidertextarea.css")
         let url:String = "~/Desktop/ElCapitan/basic/text/textarea.css"
@@ -346,5 +329,4 @@ class BasicView:CustomView {
 //		scrollTextArea.setSize(400, 250);
 //		scrollTextAreaPanel.setPosition(new Point(LEFT_MARGIN+260,TOP_MARGIN));
     }
-    
 }
