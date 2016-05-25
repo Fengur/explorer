@@ -297,7 +297,9 @@ class BasicView:CustomView {
         //var index:int = scrollList.list.getSelectedIndex();
         //print("selected Title: "+scrollList.list.dataProvider.getItemAt(index).title);
     }
-    //comboBox
+    /**
+     * NOTE: you can also create an XML as a string and call the "".xml call (instead of loading xml from a file)
+     */
     func createComboBox(){
         let url:String = "~/Desktop/ElCapitan/basic/combobox/combobox.css"
         StyleManager.addStylesByURL(url,false)
