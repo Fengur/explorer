@@ -32,7 +32,7 @@ class OtherView:CustomView {
         Swift.print("createColorInput()")
         let colorInputCard:Card = container.addSubView(Card(NaN, NaN, "ColorInput: ", container, "colorInputCard"))
         colorInputCard
-        let colorInput:ColorInput = colorInputCard.addSubView(ColorInput(NaN,NaN,"Color: ",NSColor.magentaColor(),colorInputCard))
+        let colorInput:ColorInput = colorInputCard.addSubView(ColorInput(NaN,NaN,"Color: ",NSColor.magentaColor(),colorInputCard))//NSColorParser.nsColor(Colors.MAGENTA)
         colorInput
     }
     func createColorPanel(){
