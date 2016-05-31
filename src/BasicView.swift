@@ -167,10 +167,12 @@ class BasicView:CustomView {
         let textArea:TextArea = card.addSubView(TextArea(NaN, NaN, "This is a single line text area", card))
         textArea
     }
+    /**
+     * This creates a textField
+     */
     func createText(){
         let url:String = "~/Desktop/ElCapitan/basic/text/text.css"
         StyleManager.addStylesByURL(url,false)
-        
         let card:Card = container.addSubView(Card(NaN, NaN, "Text: ", container, "textCard"))
         let text:Text = card.addSubView(Text(100,24,"This is text: ",card))
         text
