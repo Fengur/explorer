@@ -247,7 +247,6 @@ class BasicView:CustomView {
         StyleManager.addStylesByURL(url,true)
         let colorTagCard:Card = container.addSubView(Card(NaN, NaN, "Color tags: ", container, "colorTagCard"))
         let colorTagSection:Section = colorTagCard.addSubView(Section(NaN,NaN,colorTagCard,"colorTagSection"))
-        colorTagSection
         let colors:Array<String> = ["red","orange","yellow","green","blue","purple","grey"]
         for color in colors{
             colorTagSection.addSubView(RadioBullet(NaN,NaN,false,colorTagSection,color))
