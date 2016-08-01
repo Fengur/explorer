@@ -103,7 +103,7 @@ class LiveEditView:CustomView {
         //let redBox = addSubView(Element(100,100,self,"redBox"))
         //redBox
         
-        let container = self.addSubView(Container(200,200,self,"uiContainer"))
+        //let container = self.addSubView(Container(200,200,self,"uiContainer"))
         
         //let radioBullet:RadioBullet = container.addSubView(RadioBullet(NaN,NaN,false,container))
         //radioBullet
