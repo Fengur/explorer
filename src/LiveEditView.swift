@@ -2,10 +2,7 @@ import Cocoa
 
 class LiveEditView:CustomView {
     var container:Container!
-    
     var fileWatcher:FileWatcher?
-    
-    
     var temp:String = "123"
     override func resolveSkin() {
         super.resolveSkin()
