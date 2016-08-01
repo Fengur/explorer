@@ -78,7 +78,7 @@ class BasicView:CustomView {
         let url:String = "~/Desktop/ElCapitan/basic/button/textbutton.css"
         StyleManager.addStylesByURL(url,false)
         let card:Card = container.addSubView(Card(NaN, NaN, "TextButton: ", container, "textButtonCard"))
-        card.addSubView(TextButton("Button",NaN,NaN,card))
+        card.addSubView(TextButton(NaN,NaN,"Button",card))
     }
     /**
      * RadioBullet
