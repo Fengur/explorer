@@ -11,10 +11,7 @@ class LiveEditView:CustomView {
         //liveEditTest2()
         //liveEditTest3()
         //fileWatchTest()
-        let textAreaStyle = ""
-        StyleManager.addStyle(textAreaStyle)
-        let textArea = addSubView(TextArea(100,100,"some text",nil))
-        textArea
+        
     }
     /**
      *
