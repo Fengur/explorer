@@ -9,7 +9,7 @@ class LiveEditView:CustomView {
         container = addSubView(Container(1000,800,self,"main"))
         //liveEditTest1()
         //liveEditTest2()
-        liveEditTest3()
+        //liveEditTest3()
         //fileWatchTest()
     }
     /**
@@ -63,7 +63,6 @@ class LiveEditView:CustomView {
         StyleManager.addStyle("#darkTheme{fill:grey3;float:left;clear:left;corner-radius:4px;}")
         let darkThemeButton = addSubView(Button(100,20,self,"darkTheme"))
         
-
         func onButtonClick(event:Event){//manually change the styles that belong to the button that will change.
             if(event.type == ButtonEvent.upInside){
                 //let style = StyleManager.getStyle("#testButton")
@@ -86,7 +85,7 @@ class LiveEditView:CustomView {
         darkThemeButton.event = onButtonClick
     }
     /**
-     *
+     * Tests 2 RadioBullet
      */
     func liveEditTest3(){
         //watch a css file for changes
