@@ -10,9 +10,9 @@ class LiveEditView:CustomView {
     override func resolveSkin() {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
-        liveEditTest1()
+        //liveEditTest1()
         //liveEditTest2()
-        //liveEditTest3()
+        liveEditTest3()
         //fileWatchTest()
     }
     /**
@@ -100,7 +100,7 @@ class LiveEditView:CustomView {
         //StyleManager.addStyle("#redBox{fill:red;float:left;clear:left;}")
         //StyleManager.addStylesByURL("~/Desktop/button.css",true)
         StyleManager.addStyle("Container#uiContainer{float:left;clear:left;padding:48px;}")
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer/explorer.css")
+        StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         let url:String = "~/Desktop/ElCapitan/basic/button/radiobullet.css"
         StyleManager.addStylesByURL(url,false)
         //let redBox = addSubView(Element(100,100,self,"redBox"))
