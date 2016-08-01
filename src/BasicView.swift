@@ -277,7 +277,7 @@ class BasicView:CustomView {
         StyleManager.addStylesByURL(url)
         
         let listCard:Card = container.addSubView(Card(NaN, NaN, "List: ", container, "listCard"))
-        let xml = FileParser.xml("~/Desktop/assets/xml/list.xml")
+        let xml = FileParser.xml("~/Desktop/assets/xml/list.xml".tildePath)
         let dp:DataProvider = DataProvider(xml)
         let list:List = listCard.addSubView(List(140, 73, NaN, dp,listCard))
         ListModifier.selectAt(list, 1);
@@ -289,7 +289,7 @@ class BasicView:CustomView {
         StyleManager.addStylesByURL(url,true)
         
         let sliderListCard:Card = container.addSubView(Card(NaN, NaN, "Slider list: ", container, "sliderListCard"))
-        let xml = FileParser.xml("~/Desktop/assets/xml/scrollist.xml")//TODO:  create a method tht takes url and makes dp
+        let xml = FileParser.xml("~/Desktop/assets/xml/scrollist.xml".tildePath)//TODO:  create a method tht takes url and makes dp
         let dp:DataProvider = DataProvider(xml)
         let sliderList:SliderList = sliderListCard.addSubView(SliderList(140, 73, 24, dp, sliderListCard))
         ListModifier.select(sliderList, "white")
@@ -306,7 +306,7 @@ class BasicView:CustomView {
         StyleManager.addStylesByURL(url,false)
         
         let card = container.addSubView(Card(NaN, NaN, "ComboBox: ", container, "comboBoxCard"))
-        let xml = FileParser.xml("~/Desktop/assets/xml/combobox.xml")
+        let xml = FileParser.xml("~/Desktop/assets/xml/combobox.xml".tildePath)
         let dp:DataProvider = DataProvider(xml)
         let combobox = card.addSubView(ComboBox(140,96,24,dp,false,0,card))
         combobox
