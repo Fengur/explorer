@@ -5,7 +5,7 @@ class BasicView:CustomView {
     override func resolveSkin() {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
-        /*createButton()
+        createButton()
         createTextButton()
         createRadioBullet()
         createCheckBox()
@@ -18,9 +18,7 @@ class BasicView:CustomView {
         createVolumeSlider()
         iconButton()
         createTabBar()
-        */
         createList()
-        /*
         createSliderList()
         createIconButtons()
         createComboBox()
@@ -30,7 +28,7 @@ class BasicView:CustomView {
         createSingleLineTextArea()
         createSearchBox()
         createTextInput()
-        createColorTag()*/
+        createColorTag()
         //createVNodeSlider()
         //createHNodeSlider()
     }
@@ -278,12 +276,10 @@ class BasicView:CustomView {
         let url:String = "~/Desktop/ElCapitan/basic/list/list.css"
         StyleManager.addStylesByURL(url)
         
-        let menuSection = container.addSubView(Section(NaN, NaN, self,"menu"))
-        
-        //let listCard:Card = container.addSubView(Card(NaN, NaN, "List: ", container, "listCard"))
+        let listCard:Card = container.addSubView(Card(NaN, NaN, "List: ", container, "listCard"))
         let xml = FileParser.xml("~/Desktop/assets/xml/list.xml".tildePath)
         let dp:DataProvider = DataProvider(xml)
-        let list:List = menuSection.addSubView(List(140, 73, NaN, dp,menuSection))
+        let list:List = listCard.addSubView(List(140, 73, NaN, dp,listCard))
         list.selectAt(1)
     }
     func createSliderList(){
