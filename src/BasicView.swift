@@ -280,7 +280,7 @@ class BasicView:CustomView {
         let xml = FileParser.xml("~/Desktop/assets/xml/list.xml".tildePath)
         let dp:DataProvider = DataProvider(xml)
         let list:List = listCard.addSubView(List(140, 73, NaN, dp,listCard))
-        ListModifier.selectAt(list, 1);
+        list.selectAt(1)
     }
     func createSliderList(){
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/slider/vslider.css")
