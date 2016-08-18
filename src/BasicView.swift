@@ -278,10 +278,12 @@ class BasicView:CustomView {
         let url:String = "~/Desktop/ElCapitan/basic/list/list.css"
         StyleManager.addStylesByURL(url)
         
-        let listCard:Card = container.addSubView(Card(NaN, NaN, "List: ", container, "listCard"))
+        let menuSection = container.addSubView(Section(NaN, NaN, self,"menu"))
+        
+        //let listCard:Card = container.addSubView(Card(NaN, NaN, "List: ", container, "listCard"))
         let xml = FileParser.xml("~/Desktop/assets/xml/list.xml".tildePath)
         let dp:DataProvider = DataProvider(xml)
-        let list:List = listCard.addSubView(List(140, 73, NaN, dp,listCard))
+        let list:List = menuSection.addSubView(List(140, 73, NaN, dp,menuSection))
         list.selectAt(1)
     }
     func createSliderList(){
