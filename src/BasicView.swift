@@ -315,7 +315,7 @@ class BasicView:CustomView {
         let card = container.addSubView(Card(NaN, NaN, "ComboBox: ", container, "comboBoxCard"))
         let xml = FileParser.xml("~/Desktop/assets/xml/combobox.xml".tildePath)
         let dp:DataProvider = DataProvider(xml)
-        let combobox = card.addSubView(ComboBox(140,96.0+8,24,dp,false,0,card))//+8: top/bottom margin in the comboboxwin
+        let combobox = card.addSubView(ComboBox(170,96.0+8,24,dp,false,0,card))//+8: top/bottom margin in the comboboxwin
         combobox
 //		print("combobox: "+StyleResolver.stackString(combobox))
 //		comboBox.setOpen(false)
