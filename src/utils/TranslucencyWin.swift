@@ -14,6 +14,8 @@ class TranslucencyWin:NSWindow, NSApplicationDelegate, NSWindowDelegate{
      */
     override init(contentRect: NSRect, styleMask aStyle: Int, backing bufferingType: NSBackingStoreType, `defer` flag: Bool) {
         super.init(contentRect: NSRect(0,0,w,h), styleMask: NSBorderlessWindowMask|NSResizableWindowMask, backing: NSBackingStoreType.Buffered, `defer`: false)
+        WinModifier.align(self, Alignment.centerCenter, Alignment.centerCenter)
+        Swift.print("frame.origin: " + "\(frame.origin)")
         self.contentView!.wantsLayer = true;/*this can and is set in the view*/
         self.backgroundColor = NSColor.clearColor()/*Sets the window background color*/
         self.makeKeyAndOrderFront(nil)//moves the window to the front
