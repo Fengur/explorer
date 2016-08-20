@@ -38,8 +38,6 @@ class TranslucencyWin:NSWindow, NSApplicationDelegate, NSWindowDelegate{
         //Swift.print("CustomWin.windowDidResize " + "\(self.frame.size)")
         visualEffectView!.setFrameSize(self.frame.size)
     }
-    func windowDidResignKey(notification: NSNotification) {
-        Swift.print("windowDidResignKey")
-    }
+    
     required init?(coder: NSCoder) {fatalError("init(coder:) has not been implemented")}/*Required by the NSWindow*/
 }
