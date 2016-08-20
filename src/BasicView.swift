@@ -19,11 +19,13 @@ class BasicView:CustomView {
         createVolumeSlider()
         iconButton()
         createTabBar()
+        */
         createList()
+        /*
         createSliderList()
         createIconButtons()
         */
-        createComboBox()
+        //createComboBox()
         /*
         createTextArea()
         createSliderTextArea()
