@@ -306,6 +306,9 @@ class BasicView:CustomView {
      * NOTE: you can also create an XML as a string and call the "".xml call (instead of loading xml from a file)
      */
     func createComboBox(){
+        let listCSSURL:String = "~/Desktop/ElCapitan/basic/list/list.css"
+        StyleManager.addStylesByURL(listCSSURL)
+        
         let url:String = "~/Desktop/ElCapitan/basic/combobox/combobox.css"
         StyleManager.addStylesByURL(url,false)
         
