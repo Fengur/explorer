@@ -310,7 +310,7 @@ class BasicView:CustomView {
         StyleManager.addStylesByURL(listCSSURL)
         
         let url:String = "~/Desktop/ElCapitan/basic/combobox/combobox.css"
-        StyleManager.addStylesByURL(url,false)
+        StyleManager.addStylesByURL(url)
         
         let card = container.addSubView(Card(NaN, NaN, "ComboBox: ", container, "comboBoxCard"))
         let xml = FileParser.xml("~/Desktop/assets/xml/combobox.xml".tildePath)
