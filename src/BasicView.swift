@@ -20,12 +20,12 @@ class BasicView:CustomView {
         iconButton()
         createTabBar()
         */
-        createList()
+        //createList()
         /*
         createSliderList()
         createIconButtons()
         */
-        //createComboBox()
+        createComboBox()
         /*
         createTextArea()
         createSliderTextArea()
