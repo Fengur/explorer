@@ -6,8 +6,8 @@ class BasicView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         
-        createButton()
-        /*createTextButton()
+        /*createButton()
+        createTextButton()
         createRadioBullet()
         createCheckBox()
         createRadioButton()
