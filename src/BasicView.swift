@@ -6,7 +6,7 @@ class BasicView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         
-        /*createButton()
+        createButton()
         createTextButton()
         createRadioBullet()
         createCheckBox()
@@ -16,7 +16,7 @@ class BasicView:CustomView {
         createLeverSpinner()
         createHSlider()
         createVSlider()
-        */createVolumeSlider()/*
+        createVolumeSlider()
         iconButton()
         createTabBar()
         createList()
@@ -30,7 +30,7 @@ class BasicView:CustomView {
         createSearchBox()
         createTextInput()
         createColorTag()
-        */
+        
         //createVNodeSlider()
         //createHNodeSlider()
     }
