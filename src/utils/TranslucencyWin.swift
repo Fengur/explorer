@@ -3,8 +3,8 @@ import Cocoa
 //this is the current window for the Stash app
 
 class TranslucencyWin:NSWindow, NSApplicationDelegate, NSWindowDelegate{
-    let w:CGFloat = 350//1000
-    let h:CGFloat = 300//800
+    let w:CGFloat = 1000//350//1000
+    let h:CGFloat = 800//300//800
     override var canBecomeMainWindow:Bool{return true}
     override var canBecomeKeyWindow:Bool{return true}/*If you want a titleless window to be able to become a key window, you need to create a subclass of NSWindow and override -canBecomeKeyWindow*/
     override var acceptsFirstResponder:Bool{return true}
