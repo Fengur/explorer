@@ -318,15 +318,20 @@ class BasicView:CustomView {
         let xml = FileParser.xml("~/Desktop/assets/xml/combobox.xml".tildePath)
         let dp:DataProvider = DataProvider(xml)
         let combobox = card.addSubView(ComboBox(170,96.0+8,24,dp,false,0,card))//+8: top/bottom margin in the comboboxwin
-        combobox
-//		print("combobox: "+StyleResolver.stackString(combobox))
-//		comboBox.setOpen(false)
-//		comboBox.list.setSelected("white")
-//		comboBox.list.setMaxShowingItems(3)
-//		comboBox.list.getSelectedItem()["property"];/*returns the property*/
-//		comboBox.scrollList.scrollBar.visible = false
-//		print("selected index: " + comboBox.scrollList.list.getSelectedIndex())
-//		print("selected Title: "+comboBox.scrollList.list.getSelectedTitle())
+        
+        func comboBoxEvent(event:Event){
+            if(event.type == ComboBoxEvent.listSelect && event.origin === combobox){
+                let selectedTitle:String = (event as! ComboBoxEvent).selectedTitle
+                Swift.print("selectedTitle: " + "\(selectedTitle)")
+                let selectedProperty:String = (event as! ComboBoxEvent).selectedProperty
+                Swift.print("selectedProperty: " + "\(selectedProperty)")
+            }
+            Swift.print("combobox.selectedIndex: " + "\(combobox.selectedIndex)")
+        }
+        
+        combobox.event = comboBoxEvent
+		//print("combobox: "+StyleResolver.stackString(combobox))
+        //comboBox.list.setMaxShowingItems(3)//TODO: implement this somehow
     }
     func createSliderTextArea() {
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/slider/vslider.css")
