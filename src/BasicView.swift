@@ -1,4 +1,4 @@
-import Foundation
+import Cocoa
 
 class BasicView:CustomView {
     var container:Container!
@@ -43,7 +43,7 @@ class BasicView:CustomView {
         let lineStyle = LineStyle(20,NSColorParser.nsColor(Colors.green()).alpha(0.5),CGLineCap.Round)
         let line = GradientLineStyle(lineGradient,lineStyle)
         /*Rect*/
-        let rect = RectGraphic(40,40,200,200,fill,line)
+        let rect = RectGraphic(40,40,200,200,FillStyle(NSColor.blueColor()),line)
         addSubview(rect.graphic)
         rect.draw()
         /*Ellipse*/
@@ -51,7 +51,7 @@ class BasicView:CustomView {
         addSubview(ellipse.graphic)
         ellipse.draw()
         /*RoundRect*/
-        let roundRect = RoundRectGraphic(40,300,200,200,Fillet(50),fill.mix(Gradients.orange()),line.mix(Gradients.yellow(0.5)))
+        let roundRect = RoundRectGraphic(40,300,200,200,Fillet(50),fill.mix(Gradients.orange()),LineStyle(20,NSColorParser.nsColor(Colors.green()).alpha(1),CGLineCap.Round))
         addSubview(roundRect.graphic)
         roundRect.draw()
         /*Line*/
