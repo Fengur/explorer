@@ -9,8 +9,8 @@ class OtherView:CustomView {
         container = addSubView(Container(1000,800,self,"main"))
         //createColorBox()
         //createColorInput()
-        createColorPanel()
-        //createGradientPanel()
+        //createColorPanel()
+        createGradientPanel()
     }
     /**
      *
