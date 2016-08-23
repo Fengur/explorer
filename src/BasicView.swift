@@ -45,6 +45,7 @@ class BasicView:CustomView {
         
         let card:Card = container.addSubView(Card(NaN, NaN, "Icon Button: ", container, "iconButtonCard"))
         let button = card.addSubView(Button(NaN,NaN,card,"question"))
+        
         button
     }
     /**
