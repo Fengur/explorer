@@ -47,8 +47,6 @@ class BasicView:CustomView {
         let button = card.addSubView(Button(NaN,NaN,card,"question"))
         button
         
-        
-        
         //StyleParser.describe(StyleResolver.style(button))
     }
     /**
