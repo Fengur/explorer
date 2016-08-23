@@ -6,7 +6,7 @@ class BasicView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         
-        createButton()
+        /*createButton()
         createTextButton()
         createRadioBullet()
         createCheckBox()
@@ -17,7 +17,9 @@ class BasicView:CustomView {
         createHSlider()
         createVSlider()
         createVolumeSlider()
-        iconButton()
+        */
+        createIconButton()
+        /*
         createTabBar()
         createList()
         createSliderList()
@@ -29,7 +31,7 @@ class BasicView:CustomView {
         createSingleLineTextArea()
         createSearchBox()
         createTextInput()
-        createColorTag()
+        createColorTag()*/
         
         //createVNodeSlider()
         //createHNodeSlider()
@@ -37,7 +39,7 @@ class BasicView:CustomView {
     /**
      *
      */
-    func iconButton(){
+    func createIconButton(){
         let url:String = "~/Desktop/ElCapitan/basic/button/iconbutton.css"
         StyleManager.addStylesByURL(url,true)
         

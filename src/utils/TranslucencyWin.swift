@@ -27,17 +27,14 @@ class TranslucencyWin:NSWindow, NSApplicationDelegate, NSWindowDelegate{
         self.contentView = FlippedView(frame: NSRect(0,0,w,h))
         visualEffectView = TranslucencyView(frame: NSRect(0,0,w,h))
         
-        
         self.contentView?.addSubview(visualEffectView!)
-
         
-        let view = OtherView(w,h)//BasicView(w,h)//LiveEditView(w,h)////OtherView(w,h)////// (w,h)////AdvanceView(w,h)//StashView(frame.width,frame.height)/*Sets the mainview of the window*/
+        let view = BasicView(w,h)//LiveEditView(w,h)////OtherView(w,h)////// (w,h)////AdvanceView(w,h)//StashView(frame.width,frame.height)/*Sets the mainview of the window*/
         self.contentView?.addSubview(view)
     }
     func windowDidResize(notification: NSNotification) {
         //Swift.print("CustomWin.windowDidResize " + "\(self.frame.size)")
         visualEffectView!.setFrameSize(self.frame.size)
     }
-    
     required init?(coder: NSCoder) {fatalError("init(coder:) has not been implemented")}/*Required by the NSWindow*/
 }
