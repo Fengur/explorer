@@ -49,7 +49,7 @@ class BasicView:CustomView {
         
         
         
-        StyleParser.describe(StyleResolver.style(button))//TODO: write a blog-post about these methods when debugging
+        //StyleParser.describe(StyleResolver.style(button))
     }
     /**
      * Volume slider
