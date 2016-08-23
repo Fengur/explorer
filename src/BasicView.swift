@@ -47,6 +47,9 @@ class BasicView:CustomView {
         let button = card.addSubView(Button(NaN,NaN,card,"question"))
         button
         
+        
+        
+        StyleParser.describe(button.style)
     }
     /**
      * Volume slider
