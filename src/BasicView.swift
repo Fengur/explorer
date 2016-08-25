@@ -5,8 +5,10 @@ class BasicView:CustomView {
     override func resolveSkin() {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
-        
-        /*createButton()
+        createComponents()
+    }
+    func createComponents(){
+        createButton()
         createTextButton()
         createRadioBullet()
         createCheckBox()
@@ -17,9 +19,7 @@ class BasicView:CustomView {
         createHSlider()
         createVSlider()
         createVolumeSlider()
-        */
         createIconButton()
-        /*
         createTabBar()
         createList()
         createSliderList()
@@ -31,7 +31,7 @@ class BasicView:CustomView {
         createSingleLineTextArea()
         createSearchBox()
         createTextInput()
-        createColorTag()*/
+        createColorTag()
         
         //createVNodeSlider()
         //createHNodeSlider()
