@@ -5,15 +5,15 @@ class BasicView:CustomView {
     override func resolveSkin() {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
-        //createComponents()
+        createComponents()
         
-        
+        /*
         let lineStyle = LineStyle(1,NSColor.blackColor(),CGLineCap.Butt,CGLineJoin.Miter,10,0,[2,2])
         
         /*Rect*/
         let rect = RectGraphic(40,40,200,200,nil,lineStyle)
         addSubview(rect.graphic)
-        rect.draw()
+        rect.draw()*/
     }
     func createComponents(){
         createButton()
