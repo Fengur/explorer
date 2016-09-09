@@ -16,14 +16,11 @@ class BasicView:CustomView {
         rect.draw()*/
     }
     func createComponents(){
-        let start = NSDate() // <<<<<<<<<< Start time
+        let startTime = NSDate()
         
-        let end = NSDate()  // <<<<<<<<<<   end time
         
-        end.timeIntervalSinceDate(start)
-        //var startTime:Int = getTimer();
         
-        //Swift.print("selectRow-duration: " + (getTimer() - startTime));
+        
         createButton()
         createTextButton()
         createRadioBullet()
@@ -51,6 +48,8 @@ class BasicView:CustomView {
         
         //createVNodeSlider()
         //createHNodeSlider()
+        
+        Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")
     }
     /**
      *
