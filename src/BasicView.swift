@@ -20,7 +20,7 @@ class BasicView:CustomView {
         
         
         
-        
+        /*
         createButton()
         createTextButton()
         createRadioBullet()
@@ -34,7 +34,9 @@ class BasicView:CustomView {
         createVolumeSlider()
         createIconButton()
         createTabBar()
+        */
         createList()
+        /*
         createSliderList()
         createIconButtons()
         createComboBox()
@@ -45,7 +47,7 @@ class BasicView:CustomView {
         createSearchBox()
         createTextInput()
         createColorTag()
-        
+        */
         //createVNodeSlider()
         //createHNodeSlider()
         
