@@ -54,6 +54,8 @@ class BasicView:CustomView {
         Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")
         Swift.print("StyleResolver.recycleCount: " + "\(StyleResolver.recycleCount)")
         Swift.print("StyleResolver.lookUpCount: " + "\(StyleResolver.lookUpCount)")
+        
+        Swift.print("StyleResolver.addresses.keys.count: " + "\(StyleResolver.addresses.keys.count)")
     }
     /**
      *
