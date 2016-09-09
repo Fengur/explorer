@@ -16,7 +16,11 @@ class BasicView:CustomView {
         rect.draw()*/
     }
     func createComponents(){
+        let start = NSDate() // <<<<<<<<<< Start time
         
+        let end = NSDate()  // <<<<<<<<<<   end time
+        
+        end.timeIntervalSinceDate(start)
         //var startTime:Int = getTimer();
         
         //Swift.print("selectRow-duration: " + (getTimer() - startTime));
