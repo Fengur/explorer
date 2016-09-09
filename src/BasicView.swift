@@ -16,6 +16,9 @@ class BasicView:CustomView {
         rect.draw()*/
     }
     func createComponents(){
+        var startTime:int = getTimer();
+        
+        Swift.print("selectRow-duration: " + (getTimer() - startTime));
         createButton()
         createTextButton()
         createRadioBullet()
