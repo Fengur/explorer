@@ -49,31 +49,7 @@ class BasicView:CustomView {
         //createHNodeSlider()
         
         Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")
-        //Swift.print("StyleResolver.recycleCount: " + "\(StyleResolver.recycleCount)")
-        //Swift.print("StyleResolver.lookUpCount: " + "\(StyleResolver.lookUpCount)")
-        
-        //Swift.print("StyleResolver.addresses.keys.count: " + "\(StyleResolver.addresses.keys.count)")
-        Swift.print("StyleManager.styles.count: " + "\(StyleManager.styles.count)")
-        //StyleManager.styles.forEach{Swift.print("selector.count: " + "\($0.selectors.count)")}
-        
-        Swift.print("StyleManager.styles.count: " + "\(StyleManager.styles.count)")
-        //StyleManager.hashedStyles = StyleManagerUtils.groupBy(StyleManager.styles, f: { $0.selectors.count.string })
-        Swift.print("StyleManager.hashedStyles.keys.count: " + "\(StyleManager.hashedStyles.keys.count)")
-        
-        Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
-        
-        /*StyleManager.hashedStyles.values.forEach{
-        
-        Swift.print("$0.count: " + "\($0.count)")
-        }
-        StyleManager.hashedStyles.keys.forEach{
-        Swift.print("key: " + "\($0)")
-        }*/
-        
-        StyleManager.hashedStyles.forEach{
-            Swift.print("key: " + "\($0.0)")
-            Swift.print("value.count: " + "\($0.1.count)")
-        }
+      
 
     }
     /**
