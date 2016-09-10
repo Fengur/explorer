@@ -20,33 +20,3 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 }
 
-private class Utils{
-    /**
-     * Creates a directory with lists of styles. if style.selector.count is 3, then its added to the key:3 and also every key that is bigger than 3
-     * PARAM: f: the key to group by (its a method that gets each item in items)
-     * PARAM: items: the items to be grouped
-     * PARAM: o: is an item in items
-     *
-     */
-    class func groupBy<T, H: Hashable>(items: [T], f: (T) -> H) -> [H: [T]] {
-        return items.reduce([:], combine: { (var ac: [H: [T]], o: T) -> [H: [T]] in
-            append(&ac,o,f)
-            return ac/*Return the grouped list*/
-        })
-    }
-    /**
-     *
-     */
-    class func append<T, H: Hashable>(/*hashedStyles*/inout ac:[H: [T]]/*Dictionary<String,[IStyle]>*/, /*style*/_ o:T,_ f: (T) -> H){
-        let selectorCount = f(o)/*h is the key, an item is passed to f to get h*/
-        if var c = ac[selectorCount] {/*if something already exist at key: h then append to that value*/
-            c.append(o)
-            ac.updateValue(c, forKey: selectorCount)/*re-add that value*/
-        }
-        ac.keys.forEach{
-            if(String(selectorCount).int > String($0).int) {
-                ac.updateValue([o], forKey: selectorCount)/*add the item from items as an array*/
-            }
-        }
-    }
-}
