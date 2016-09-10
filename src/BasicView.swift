@@ -54,7 +54,7 @@ class BasicView:CustomView {
         
         Swift.print("StyleResolver.addresses.keys.count: " + "\(StyleResolver.addresses.keys.count)")
         Swift.print("StyleManager.styles.count: " + "\(StyleManager.styles.count)")
-        //StyleManager.styles.forEach{Swift.print("selector.count: " + "\($0.selectors.count)")}
+        StyleManager.styles.forEach{Swift.print("selector.count: " + "\($0.selectors.count)")}
         
         
     }
