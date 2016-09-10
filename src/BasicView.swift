@@ -49,7 +49,7 @@ class BasicView:CustomView {
         //createHNodeSlider()
         
         Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")
-      
+        Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
 
     }
     /**
