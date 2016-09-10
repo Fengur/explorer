@@ -67,10 +67,12 @@ class BasicView:CustomView {
         StyleManager.hashedStyles.keys.forEach{
         Swift.print("key: " + "\($0)")
         }*/
+        /*
         StyleManager.hashedStyles.forEach{
             Swift.print("key: " + "\($0.0)")
             Swift.print("value.count: " + "\($0.1.count)")
         }
+        */
     }
     /**
      *
