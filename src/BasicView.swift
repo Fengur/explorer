@@ -49,12 +49,12 @@ class BasicView:CustomView {
         //createHNodeSlider()
         
         Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")
-        Swift.print("StyleResolver.recycleCount: " + "\(StyleResolver.recycleCount)")
+        //Swift.print("StyleResolver.recycleCount: " + "\(StyleResolver.recycleCount)")
         Swift.print("StyleResolver.lookUpCount: " + "\(StyleResolver.lookUpCount)")
         
-        Swift.print("StyleResolver.addresses.keys.count: " + "\(StyleResolver.addresses.keys.count)")
+        //Swift.print("StyleResolver.addresses.keys.count: " + "\(StyleResolver.addresses.keys.count)")
         Swift.print("StyleManager.styles.count: " + "\(StyleManager.styles.count)")
-        StyleManager.styles.forEach{Swift.print("selector.count: " + "\($0.selectors.count)")}
+        //StyleManager.styles.forEach{Swift.print("selector.count: " + "\($0.selectors.count)")}
         
         
     }
