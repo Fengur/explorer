@@ -10,7 +10,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/window.css")
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/card.css")
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
-        StyleManager.hashedStyles = Utils.groupBy(StyleManager.styles, f: { String($0.selectors.count) })
+        let hashedStyles = Utils.groupBy(StyleManager.styles, f: { $0.selectors.count.string })
         //StyleManager.addStylesByURL("~/Desktop/css/explorer/explorer.css")
         win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
@@ -30,13 +30,13 @@ private class Utils{
      */
     class func groupBy<T, H: Hashable>(items: [T], f: (T) -> H) -> [H: [T]] {
         return items.reduce([:], combine: { (var ac: [H: [T]], o: T) -> [H: [T]] in
-            let selectorCount:Int = f(o)/*h is the key, an item is passed to f to get h*/
+            let selectorCount = f(o)/*h is the key, an item is passed to f to get h*/
             if var c = ac[selectorCount] {/*if something already exist at key: h then append to that value*/
                 c.append(o)
                 ac.updateValue(c, forKey: selectorCount)/*re-add that value*/
             }
             ac.keys.forEach{
-                if(h > $0) {
+                if(selectorCount.hashValue > $0) {
                     ac.updateValue([o], forKey: selectorCount)/*add the item from items as an array*/
                 }
             }
