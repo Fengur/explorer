@@ -18,9 +18,6 @@ class BasicView:CustomView {
     func createComponents(){
         let startTime = NSDate()
         
-        
-        
-        
         createButton()
         createTextButton()
         createRadioBullet()
