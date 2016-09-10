@@ -56,7 +56,13 @@ class BasicView:CustomView {
         Swift.print("StyleManager.styles.count: " + "\(StyleManager.styles.count)")
         //StyleManager.styles.forEach{Swift.print("selector.count: " + "\($0.selectors.count)")}
         
+        Swift.print("StyleManager.styles.count: " + "\(StyleManager.styles.count)")
+        //StyleManager.hashedStyles = StyleManagerUtils.groupBy(StyleManager.styles, f: { $0.selectors.count.string })
+        Swift.print("StyleManager.hashedStyles.keys.count: " + "\(StyleManager.hashedStyles.keys.count)")
         
+        StyleManager.hashedStyles.values.forEach{
+            Swift.print("$0.count: " + "\($0.count)")
+        }
     }
     /**
      *
