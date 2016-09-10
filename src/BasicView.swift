@@ -50,7 +50,7 @@ class BasicView:CustomView {
         
         Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")
         //Swift.print("StyleResolver.recycleCount: " + "\(StyleResolver.recycleCount)")
-        Swift.print("StyleResolver.lookUpCount: " + "\(StyleResolver.lookUpCount)")
+        //Swift.print("StyleResolver.lookUpCount: " + "\(StyleResolver.lookUpCount)")
         
         //Swift.print("StyleResolver.addresses.keys.count: " + "\(StyleResolver.addresses.keys.count)")
         Swift.print("StyleManager.styles.count: " + "\(StyleManager.styles.count)")
@@ -59,6 +59,8 @@ class BasicView:CustomView {
         Swift.print("StyleManager.styles.count: " + "\(StyleManager.styles.count)")
         //StyleManager.hashedStyles = StyleManagerUtils.groupBy(StyleManager.styles, f: { $0.selectors.count.string })
         Swift.print("StyleManager.hashedStyles.keys.count: " + "\(StyleManager.hashedStyles.keys.count)")
+        
+        Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
         
         /*StyleManager.hashedStyles.values.forEach{
         
