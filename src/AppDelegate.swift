@@ -30,23 +30,23 @@ private class Utils{
      */
     class func groupBy<T, H: Hashable>(items: [T], f: (T) -> H) -> [H: [T]] {
         return items.reduce([:], combine: { (var ac: [H: [T]], o: T) -> [H: [T]] in
-            let selectorCount = f(o)/*h is the key, an item is passed to f to get h*/
-            if var c = ac[selectorCount] {/*if something already exist at key: h then append to that value*/
-                c.append(o)
-                ac.updateValue(c, forKey: selectorCount)/*re-add that value*/
-            }
-            ac.keys.forEach{
-                if(String(selectorCount).int > String($0).int) {
-                    ac.updateValue([o], forKey: selectorCount)/*add the item from items as an array*/
-                }
-            }
+            append(ac,)
             return ac/*Return the grouped list*/
         })
     }
     /**
      *
      */
-    class func append(hashedStyles:Dictionary<String,[IStyle]>, _ styles:Array<IStyle>){
-        
+    class func append<T, H: Hashable>(/*hashedStyles*/ac:Dictionary<String,[IStyle]>, /*style*/_ o:T,_ f: (T) -> H){
+        let selectorCount = f(o)/*h is the key, an item is passed to f to get h*/
+        if var c = ac[selectorCount] {/*if something already exist at key: h then append to that value*/
+            c.append(o)
+            ac.updateValue(c, forKey: selectorCount)/*re-add that value*/
+        }
+        ac.keys.forEach{
+            if(String(selectorCount).int > String($0).int) {
+                ac.updateValue([o], forKey: selectorCount)/*add the item from items as an array*/
+            }
+        }
     }
 }
