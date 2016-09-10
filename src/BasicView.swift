@@ -68,8 +68,8 @@ class BasicView:CustomView {
         Swift.print("key: " + "\($0)")
         }*/
         StyleManager.hashedStyles.forEach{
-            Swift.print("$0.0: " + "\($0.0)")
-            Swift.print("$0.1: " + "\($0.1)")
+            Swift.print("key: " + "\($0.0)")
+            Swift.print("value.count: " + "\($0.1.count)")
         }
     }
     /**
