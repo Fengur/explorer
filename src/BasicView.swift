@@ -53,6 +53,8 @@ class BasicView:CustomView {
         Swift.print("StyleResolver.lookUpCount: " + "\(StyleResolver.lookUpCount)")
         
         Swift.print("StyleResolver.addresses.keys.count: " + "\(StyleResolver.addresses.keys.count)")
+        Swift.print("StyleManager.styles.count: " + "\(StyleManager.styles.count)")
+        StyleManager.styles.forEach{$0.}
     }
     /**
      *
