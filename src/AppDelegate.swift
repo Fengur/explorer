@@ -10,9 +10,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/window.css")
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/card.css")
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
-        Swift.print("StyleManager.styles.count: " + "\(StyleManager.styles.count)")
-        StyleManager.hashedStyles = StyleManagerUtils.groupBy(StyleManager.styles, f: { $0.selectors.count.string })
-        Swift.print("StyleManager.hashedStyles.keys.count: " + "\(StyleManager.hashedStyles.keys.count)")
+        
         //StyleManager.addStylesByURL("~/Desktop/css/explorer/explorer.css")
         win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
