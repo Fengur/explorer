@@ -43,5 +43,10 @@ private class Utils{
             return ac/*Return the grouped list*/
         })
     }
-    
+    /**
+     *
+     */
+    class func append(hashedStyles[]){
+        
+    }
 }
