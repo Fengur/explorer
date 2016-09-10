@@ -36,7 +36,7 @@ private class Utils{
                 ac.updateValue(c, forKey: selectorCount)/*re-add that value*/
             }
             ac.keys.forEach{
-                if(selectorCount.hashValue > $0) {
+                if(String(selectorCount).int > $0.selectors.count) {
                     ac.updateValue([o], forKey: selectorCount)/*add the item from items as an array*/
                 }
             }
