@@ -46,7 +46,7 @@ private class Utils{
     /**
      *
      */
-    class func append(hashedStyles:Dictionary<>){
+    class func append(hashedStyles:Dictionary<String,[IStyle]>, _ styles:Array<IStyle>){
         
     }
 }
