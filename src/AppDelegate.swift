@@ -8,9 +8,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var win:NSWindow?/*<--The window must be a class variable, local variables doesnt work*/
     func applicationDidFinishLaunching(aNotification:NSNotification) {
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/button/button.css")
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
-        win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
-        NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
+        //StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
+        //win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
+        //NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
+    }
+    /**
+     *
+     */
+    func reflectionTest(){
+        let selector:ISelector = Selector("Button",[],"id",[])
+        let xml:XML = Reflectable.toXML(selector)
+        
     }
     /**
      * Testing
