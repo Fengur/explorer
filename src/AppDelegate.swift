@@ -20,8 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let selector:ISelector = Selector("Button",[],"id",[])
         let xml:XML = selector.toXML(selector)
 
-        Swift.print("xml.string: " + "\(xml.string)")
-        Swift.print("xml.XMLString: " + "\(xml.XMLString)")
+        Swift.print(xml.string)
     }
     /**
      * Testing
