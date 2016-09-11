@@ -12,9 +12,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         //let startTime = NSDate()
         //createComponents()
-        let selectors:[ISelector] = [Selector("Window",[],""),Selector("List",[],""),Selector("Button",[],"",[])]
-        let element:IElement = Button(100,20)
-        StyleResolver.style(selectors,element)
+        
         /*
         for var i = 0; i < 2000; ++i{
             
