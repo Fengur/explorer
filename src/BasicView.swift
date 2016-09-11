@@ -6,7 +6,7 @@ class BasicView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         let startTime = NSDate()
-        //createComponents()
+        createComponents()
         Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")
        
         
@@ -23,7 +23,7 @@ class BasicView:CustomView {
         
         
         createButton()
-        createTextButton()
+        /*createTextButton()
         createRadioBullet()
         createCheckBox()
         createRadioButton()
@@ -47,7 +47,7 @@ class BasicView:CustomView {
         createSingleLineTextArea()
         createSearchBox()
         createTextInput()
-        createColorTag()
+        createColorTag()*/
 
         //createVNodeSlider()
         //createHNodeSlider()
