@@ -10,6 +10,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/window.css")
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/card.css")
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
+        Swift.print("StyleManager.styleTree.keys: " + "\(StyleManager.styleTree.keys)")
         //let startTime = NSDate()
         //createComponents()
         let selectors:[ISelector] = [Selector("Button",[],"",[])]//Selector("Window",[],""),Selector("List",[],""),
