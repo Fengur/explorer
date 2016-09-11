@@ -6,14 +6,9 @@ class BasicView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         let startTime = NSDate()
-        //createComponents()
-        let selectors:[ISelector] = [Selector("Window",[],"custom"),Selector("List",[],"secondary"),Selector("Button",[],"special",["over"])]
-        let element:IElement = Button(100,20)
-        for var i = 0; i < 2000; ++i{
-            StyleResolver.style(selectors,element)
-        }
+        createComponents()
         Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")
-        Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
+       
         
         
         /*
