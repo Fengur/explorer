@@ -11,7 +11,7 @@ class BasicView:CustomView {
         //Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
         
         //try to parse an instance into xml:
-        
+        reflect
         //<Selectors>
             //<Selector element="" id="">
                 //<states>
