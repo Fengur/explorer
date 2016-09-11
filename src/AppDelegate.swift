@@ -19,7 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func reflectionTest(){
         let selector:ISelector = Selector("Button",[],"id",[])
         let xml:XML = selector.toXML(selector)
-        xml.string//.XMLString
+
         Swift.print("xml.string: " + "\(xml.string)")
         Swift.print("xml.XMLString: " + "\(xml.XMLString)")
     }
