@@ -10,14 +10,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/button/button.css")
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         //win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
-        //NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
+        NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         reflectionTest()
     }
     /**
      *
      */
     func reflectionTest(){
-        let selector:ISelector = Selector("Button",[],"id",[])
+        let selector:ISelector = Selector("Button",[],"id",["over","down"])/*"special","custom"*/
         let xml:XML = selector.toXML(selector)
 
         Swift.print(xml.string)
