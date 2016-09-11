@@ -10,6 +10,9 @@ class BasicView:CustomView {
         Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")
         //Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
         
+        //Continue here:
+        //try to record all elementSelectors used and store them in a string then try to request all styles 
+        //try to save all complete styles as they are created. Store to disk
         
         /*
         let lineStyle = LineStyle(1,NSColor.blackColor(),CGLineCap.Butt,CGLineJoin.Miter,10,0,[2,2])
