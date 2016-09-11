@@ -10,7 +10,13 @@ class BasicView:CustomView {
         Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")
         //Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
         
-        //
+        
+        //<Selectors>
+            //<Selector>
+                //
+            //</Selector>
+        //</Selectors>
+        
         
         //Continue here:
         //try to record all elementSelectors used and store them in a string then try to request all styles 
