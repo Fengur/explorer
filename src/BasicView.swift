@@ -23,11 +23,11 @@ class BasicView:CustomView {
         
         
         createButton()
-        /*createTextButton()
+        createTextButton()
         createRadioBullet()
         createCheckBox()
         createRadioButton()
-        createCheckBoxButton()
+        /*createCheckBoxButton()
         createLeverStepper()
         createLeverSpinner()
         createHSlider()
