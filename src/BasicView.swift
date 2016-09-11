@@ -6,7 +6,7 @@ class BasicView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         let startTime = NSDate()
-        createComponents()
+        //createComponents()
         Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")
        
         
