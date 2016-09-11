@@ -7,7 +7,11 @@ class BasicView:CustomView {
         container = addSubView(Container(1000,800,self,"main"))
         let startTime = NSDate()
         //createComponents()
-        
+        let selectors:[ISelector] = [Selector()]
+        let element:IElement = Button(100,20)
+        for var i = 0; i < 200; ++i{
+            StyleResolver.style(selectors,element)
+        }
         Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")
         Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
         
