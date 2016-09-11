@@ -15,8 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //let startTime = NSDate()
         //createComponents()
         let selectors:[ISelector] = [Selector("Window",[],""),Selector("List",[],""),Selector("Button",[],"",[])]//
-        let element:IElement = Button(100,20)
-        let style = StyleResolver.style2(selectors,element)
+        let style = StyleResolver.style2(selectors)
         style.describe()
         /*
         for var i = 0; i < 2000; ++i{
