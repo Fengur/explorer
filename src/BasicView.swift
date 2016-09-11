@@ -12,8 +12,8 @@ class BasicView:CustomView {
         
         
         //<Selectors>
-            //<Selector>
-                //
+            //<Selector element="" id="">
+                //<Selectors></Selectors>
             //</Selector>
         //</Selectors>
         
