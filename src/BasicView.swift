@@ -7,7 +7,7 @@ class BasicView:CustomView {
         container = addSubView(Container(1000,800,self,"main"))
         let startTime = NSDate()
         //createComponents()
-        let selectors:[ISelector] = [Selector()]
+        let selectors:[ISelector] = [Selector("Window",[],"custom"),Selector("List"),Selector("Button",[],"special")]
         let element:IElement = Button(100,20)
         for var i = 0; i < 200; ++i{
             StyleResolver.style(selectors,element)
