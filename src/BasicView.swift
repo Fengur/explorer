@@ -8,7 +8,7 @@ class BasicView:CustomView {
         let startTime = NSDate()
         createComponents()
         Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")
-        Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
+        //Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
         
         
         /*
@@ -27,7 +27,7 @@ class BasicView:CustomView {
         createRadioBullet()
         createCheckBox()
         createRadioButton()
-        /*createCheckBoxButton()
+        createCheckBoxButton()
         createLeverStepper()
         createLeverSpinner()
         createHSlider()
@@ -47,7 +47,7 @@ class BasicView:CustomView {
         createSingleLineTextArea()
         createSearchBox()
         createTextInput()
-        createColorTag()*/
+        createColorTag()
 
         //createVNodeSlider()
         //createHNodeSlider()
