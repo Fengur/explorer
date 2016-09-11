@@ -10,9 +10,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/window.css")
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/card.css")
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
+        //let startTime = NSDate()
+        //createComponents()
+        let selectors:[ISelector] = [Selector("Window",[],""),Selector("List",[],""),Selector("Button",[],"",[])]
+        let element:IElement = Button(100,20)
+        StyleResolver.style(selectors,element)
+        /*
+        for var i = 0; i < 2000; ++i{
+            
+        }
+        */
+        //Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")
+        //Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
         
         //StyleManager.addStylesByURL("~/Desktop/css/explorer/explorer.css")
-        win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
+        //win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
     }
     func applicationWillTerminate(aNotification: NSNotification) {
