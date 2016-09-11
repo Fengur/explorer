@@ -10,10 +10,14 @@ class BasicView:CustomView {
         Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")
         //Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
         
+        //try to parse an instance into xml:
         
         //<Selectors>
             //<Selector element="" id="">
-                //<Selectors></Selectors>
+                //<states>
+                    //<state>over</state>
+                //</states>
+                //<classIds></classIds>
             //</Selector>
         //</Selectors>
         
