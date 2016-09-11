@@ -5,7 +5,12 @@ class BasicView:CustomView {
     override func resolveSkin() {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
-        createComponents()
+        let startTime = NSDate()
+        //createComponents()
+        
+        Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")
+        Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
+        
         
         /*
         let lineStyle = LineStyle(1,NSColor.blackColor(),CGLineCap.Butt,CGLineJoin.Miter,10,0,[2,2])
@@ -16,7 +21,7 @@ class BasicView:CustomView {
         rect.draw()*/
     }
     func createComponents(){
-        let startTime = NSDate()
+        
         
         createButton()
         createTextButton()
@@ -48,8 +53,7 @@ class BasicView:CustomView {
         //createVNodeSlider()
         //createHNodeSlider()
         
-        Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")
-        Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
+        
 
     }
     /**
