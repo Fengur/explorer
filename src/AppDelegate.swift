@@ -11,6 +11,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         //win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
         //NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
+        reflectionTest()
     }
     /**
      *
@@ -20,7 +21,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let xml:XML = selector.toXML(selector)
         xml.string//.XMLString
         Swift.print("xml.string: " + "\(xml.string)")
-        
+        Swift.print("xml.XMLString: " + "\(xml.XMLString)")
     }
     /**
      * Testing
