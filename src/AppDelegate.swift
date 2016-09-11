@@ -9,7 +9,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(aNotification:NSNotification) {
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/window.css")
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/card.css")
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
+        StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/button/button.css")
+        //StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         Swift.print("StyleManager.styleTree.keys: " + "\(StyleManager.styleTree.keys)")
         //let startTime = NSDate()
         //createComponents()
