@@ -8,7 +8,7 @@ class BasicView:CustomView {
         let startTime = NSDate()
         createComponents()
         Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")
-       
+        Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
         
         
         /*
