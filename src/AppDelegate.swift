@@ -26,7 +26,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         //from XML to selector
         //"<p>text</p>"//
-        let xmlStr:String = "<Selector><element type=\"String\">Button</element></Selector>"//<classIds type=\"Array\"></classIds><id type=\"String\">custom</id><states type=\"Array\"><0 type=\"String\">over</0><1 type=\"String\">down</1></states>
+        let xmlStr:String = "<Selector><element type=\"String\">Button</element><classIds type=\"Array\"><0></0></classIds><id type=\"String\">custom</id></Selector>"//<states type=\"Array\"><0 type=\"String\">over</0><1 type=\"String\">down</1></states>
         let newXML:XML = xmlStr.xml
         
         Swift.print("newXML.XMLString: " + "\(newXML.XMLString)")
