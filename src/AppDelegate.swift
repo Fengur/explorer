@@ -17,10 +17,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      *
      */
     func reflectionTest(){
+        /*
+        //From selector to xml
         let selector:ISelector = Selector("Button",[],"custom",["over","down"])/*"special","custom"*/
         let xml:XML = Reflection.toXML(selector)
-
         Swift.print(xml.string)
+        */
+        
+        //from XML to selector
+        let xmlStr:String = "<Selector><element type=\"String\">Button</element><classIds type=\"Array\"></classIds><id type=\"String\">custom</id><states type=\"Array\"><0 type=\"String\">over</0><1 type=\"String\">down</1></states></Selector>"
+        let xml:XML = xmlStr.xml
+        //continue here
+        
     }
     /**
      * Testing
