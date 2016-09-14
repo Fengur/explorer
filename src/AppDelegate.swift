@@ -28,8 +28,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let xmlStr:String = "<p>text</p>"//"<Selector><element type=\"String\">Button</element><classIds type=\"Array\"></classIds><id type=\"String\">custom</id><states type=\"Array\"><0 type=\"String\">over</0><1 type=\"String\">down</1></states></Selector>"
         let newXML:XML = xmlStr.xml
         Swift.print("newXML.XMLString: " + "\(newXML.XMLString)")
-        
-        let test:String = XMLParser.valueAt(newXML, [0])!
+        Swift.print("newXML.children!.count: " + "\(newXML.children!.count)")
+        let test = XMLParser.childAt(newXML.children!, 0)
         Swift.print("test: " + "\(test)")
         /*
         
