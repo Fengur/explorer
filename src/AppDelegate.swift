@@ -27,7 +27,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //from XML to selector
         let xmlStr:String = "<Selector><element type=\"String\">Button</element><classIds type=\"Array\"></classIds><id type=\"String\">custom</id><states type=\"Array\"><0 type=\"String\">over</0><1 type=\"String\">down</1></states></Selector>"
         let xml:XML = xmlStr.xml
-        
+        let newSelector:
         
         //continue here
         
