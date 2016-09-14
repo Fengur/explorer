@@ -25,9 +25,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         */
         
         //from XML to selector
-        let xmlStr:String = "<p>text</p>"//"<Selector><element type=\"String\">Button</element><classIds type=\"Array\"></classIds><id type=\"String\">custom</id><states type=\"Array\"><0 type=\"String\">over</0><1 type=\"String\">down</1></states></Selector>"
+        //"<p>text</p>"//
+        let xmlStr:String = "<Selector><element type=\"String\">Button</element></Selector>"//<classIds type=\"Array\"></classIds><id type=\"String\">custom</id><states type=\"Array\"><0 type=\"String\">over</0><1 type=\"String\">down</1></states>
         let newXML:XML = xmlStr.xml
-        XMLParser.root(<#T##xmlStr: String##String#>)
+        
         Swift.print("newXML.XMLString: " + "\(newXML.XMLString)")
         Swift.print("newXML.children!.count: " + "\(newXML.children!.count)")
         let test = XMLParser.childAt(newXML.children!, 0)
