@@ -50,9 +50,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         func readFromDisk(){
             let xml:XML = FileParser.xml("~/Desktop/selectors.xml".tildePath)
-            let selectors:[ISelector] = []
+            var selectors:[ISelector] = []
             xml.children?.forEach{
-                selectors += Selector.selector($0 as! XML)
+                selectors.append(Selector.selector($0 as! XML))
             }
         }
         //wrap the selector in an selectors root xml
