@@ -38,6 +38,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             Swift.print("selectorString: " + "\(selectorString)")
         }
         inputTest()
+        
+        //continue here: store the xml string to disk.
+        //
     }
     /**
      * Testing
