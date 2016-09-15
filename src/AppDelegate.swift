@@ -33,6 +33,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let test = XMLParser.childAt(xml.children!, 0)
             Swift.print("test: " + "\(test)")
         }
+        //inputTest()
     }
     /**
      * Testing
