@@ -22,7 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let xml:XML = Reflection.toXML(selector)
             Swift.print(xml.string)
         }
-        outputTest()
+        //outputTest()
 
         func inputTest(){//from XML to selector
             let xmlStr:String = "<Selector><element type=\"String\">Button</element><classIds type=\"Array\"></classIds><id type=\"String\">custom</id><states type=\"Array\"><item type=\"String\">over</item><item type=\"String\">down</item></states></Selector>"
@@ -33,7 +33,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let test = XMLParser.childAt(xml.children!, 0)
             Swift.print("test: " + "\(test)")
         }
-        //inputTest()
+        inputTest()
     }
     /**
      * Testing
