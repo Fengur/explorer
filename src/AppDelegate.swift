@@ -44,12 +44,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //you need to collect all selectors in one string, and then after the app has initialized, you need to save this string to disk
         
         func writeToDisk(){
-            let contentToWriteToDisk = "<data>" + AppDelegate.selectorsString + "</data>"
+            let contentToWriteToDisk = "<data>" + AppDelegate.selectorsString + "</data>"//wrap the selector in an selectors root xml
             FileModifier.write("~/Desktop/selectors.xml".tildePath, contentToWriteToDisk)
         }
         
         func readFromDisk()->[[ISelector]]{
-            let xml:XML = FileParser.xml("~/Desktop/selectors.xml".tildePath)
+            let xml:XML = FileParser.xml("~/Desktop/selectors.xml".tildePath)//then try toload this selectors.xml and convert every selector into Selector instancces in an array
             var data:[[ISelector]] = []
             xml.children?.forEach{
                 var selectors:[ISelector] = []
@@ -61,20 +61,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 }
                 data.append(selectors)
             }
-            Swift.print("data.count: " + "\(data.count)")
+            Swift.print("data.count: " + "\(data.count)")//then check the count
             return data
         }
         let data = readFromDisk()
+        let startTime = NSDate()
         data.forEach{
-            StyleResolver.style($0, nil)
+            StyleResolver.style($0, nil)//then use the StyleResolver to resolve every selector
         }
-        //wrap the selector in an selectors root xml
-        //then try toload this selectors.xml and convert every selector into Selector instancces in an array
-        //then check the count
-        //then use the StyleResolver to resolve every selector
-        //then try to measure the time of resolving all selectors
-        
-        
+        Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")//then try to measure the time of resolving all selectors
+
     }
     /**
      * Testing
