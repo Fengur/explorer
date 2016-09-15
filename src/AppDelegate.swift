@@ -48,7 +48,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             FileModifier.write("~/Desktop/selectors.xml".tildePath, contentToWriteToDisk)
         }
         
-        func readFromDisk(){
+        func readFromDisk()->[[ISelector]]{
             let xml:XML = FileParser.xml("~/Desktop/selectors.xml".tildePath)
             var data:[[ISelector]] = []
             xml.children?.forEach{
@@ -62,8 +62,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 data.append(selectors)
             }
             Swift.print("data.count: " + "\(data.count)")
+            return data
         }
-        readFromDisk()
+        let data = readFromDisk()
+        data.forEach{
+            StyleResolver.style($0, nil)
+        }
         //wrap the selector in an selectors root xml
         //then try toload this selectors.xml and convert every selector into Selector instancces in an array
         //then check the count
