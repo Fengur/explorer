@@ -50,12 +50,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         func readFromDisk(){
             let xml:XML = FileParser.xml("~/Desktop/selectors.xml".tildePath)
-            var selectors:[ISelector] = []
+            var data:[[ISelector]] = []
             xml.children?.forEach{
+                var selectors:[ISelector] = []
                 let child:XML = $0 as! XML
-                selectors.append(Selector.selector(child))
+                child.children?.forEach{
+                    let subChild:XML = $0 as! XML
+                    let selector:ISelector = Selector.selector(subChild)
+                    selectors.append(selector)
+                }
+                data.append(selectors)
             }
-            Swift.print("selectors.count: " + "\(selectors.count)")
+            Swift.print("data.count: " + "\(data.count)")
         }
         readFromDisk()
         //wrap the selector in an selectors root xml
