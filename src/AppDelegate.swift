@@ -38,11 +38,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let selectorString:String = SelectorParser.selectorString(selector)
             Swift.print("selectorString: " + "\(selectorString)")
         }
-        inputTest()
+        //inputTest()
         
         //continue here: store the xml string to disk.
         //you need to collect all selectors in one string, and then after the app has initialized, you need to save this string to disk
         
+        let textTowWriteToDisk = "<hello>world</hello>"
+        FileModifier.write("~/Desktop/selectors.xml", textTowWriteToDisk)
         //wrap the selector in an selectors root xml
         //then try toload this selectors.xml and convert every selector into Selector instancces in an array
         //then check the count
