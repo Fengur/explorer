@@ -52,9 +52,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let xml:XML = FileParser.xml("~/Desktop/selectors.xml".tildePath)
             var selectors:[ISelector] = []
             xml.children?.forEach{
-                selectors.append(Selector.selector($0 as! XML))
+                let child:XML = $0 as! XML
+                selectors.append(Selector.selector(child))
             }
+            Swift.print("selectors.count: " + "\(selectors.count)")
         }
+        readFromDisk()
         //wrap the selector in an selectors root xml
         //then try toload this selectors.xml and convert every selector into Selector instancces in an array
         //then check the count
