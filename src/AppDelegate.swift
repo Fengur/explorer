@@ -68,7 +68,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let startTime = NSDate()
         var styles:[IStyle] = []
         data.forEach{
-            let style:IStyle = StyleResolver.style($0, nil)
+            let style:IStyle = StyleResolver.style($0, Text(100,20))
             styles.append(style)//then use the StyleResolver to resolve every selector
         }
         Swift.print("styles.count: " + "\(styles.count)")
