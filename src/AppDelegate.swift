@@ -49,7 +49,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         func readFromDisk(){
-            
+            let xml:XML = FileParser.xml("~/Desktop/selectors.xml".tildePath)
+            xml.children?.forEach{
+                $0
+            }
         }
         //wrap the selector in an selectors root xml
         //then try toload this selectors.xml and convert every selector into Selector instancces in an array
