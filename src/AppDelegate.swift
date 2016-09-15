@@ -40,7 +40,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         inputTest()
         
         //continue here: store the xml string to disk.
-        //
+        //you need to collect all selectors in one string, and then after the app has initialized, you need to save this string to disk
+        //wrap the selector in an selectors root xml
+        //then try toload this selectors.xml and convert every selector into Selector instancces in an array
+        //then check the count
+        //then use the StyleResolver to resolve every selector
+        //then try to measure the time of resolving all selectors
+        
+        
     }
     /**
      * Testing
