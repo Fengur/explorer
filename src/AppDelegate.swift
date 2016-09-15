@@ -12,7 +12,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
-        //reflectionTest()
+        reflectionTest()
     }
     /**
      *
@@ -43,8 +43,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //continue here: store the xml string to disk.
         //you need to collect all selectors in one string, and then after the app has initialized, you need to save this string to disk
         
-        let textTowWriteToDisk = "<hello>hello world</hello>"
-        FileModifier.write("~/Desktop/selectors.xml".tildePath, textTowWriteToDisk)
+        let contentToWriteToDisk = "<data>" + AppDelegate.selectorsString + "</data>"
+        FileModifier.write("~/Desktop/selectors.xml".tildePath, contentToWriteToDisk)
         //wrap the selector in an selectors root xml
         //then try toload this selectors.xml and convert every selector into Selector instancces in an array
         //then check the count
