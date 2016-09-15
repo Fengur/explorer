@@ -25,7 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         outputTest()
 
         func inputTest(){//from XML to selector
-            let xmlStr:String = "<Selector><element type=\"String\">Button</element><classIds type=\"Array\"><a1></a1></classIds><id type=\"String\">custom</id></Selector>"//<states type=\"Array\"><0 type=\"String\">over</0><1 type=\"String\">down</1></states>
+            let xmlStr:String = "<Selector><element type=\"String\">Button</element><classIds type=\"Array\"></classIds><id type=\"String\">custom</id><states type=\"Array\"><item type=\"String\">over</item><item type=\"String\">down</item></states></Selector>"
             let xml:XML = xmlStr.xml
             
             Swift.print("xml.XMLString: " + "\(xml.XMLString)")
