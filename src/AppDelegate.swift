@@ -66,9 +66,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         let data = readFromDisk()
         let startTime = NSDate()
+        var styles:[IStyle] = []
         data.forEach{
-            StyleResolver.style($0, nil)//then use the StyleResolver to resolve every selector
+            let style:IStyle = StyleResolver.style($0, nil)
+            styles.append(style)//then use the StyleResolver to resolve every selector
         }
+        Swift.print("styles.count: " + "\(styles.count)")
         Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")//then try to measure the time of resolving all selectors
 
     }
