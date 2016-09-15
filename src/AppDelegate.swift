@@ -17,33 +17,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      *
      */
     func reflectionTest(){
-        /*
-        //From selector to xml
-        let selector:ISelector = Selector("Button",[],"custom",["over","down"])/*"special","custom"*/
-        let xml:XML = Reflection.toXML(selector)
-        Swift.print(xml.string)
-        */
-        
-        //from XML to selector
-        //"<p>text</p>"//
-        
-        //continue here: xml cant use number in the name so just use "item" as the name for items in an array. then test the bellow:
-        
-        let xmlStr:String = "<Selector><element type=\"String\">Button</element><classIds type=\"Array\"><a1></a1></classIds><id type=\"String\">custom</id></Selector>"//<states type=\"Array\"><0 type=\"String\">over</0><1 type=\"String\">down</1></states>
-        let newXML:XML = xmlStr.xml
-        
-        Swift.print("newXML.XMLString: " + "\(newXML.XMLString)")
-        Swift.print("newXML.children!.count: " + "\(newXML.children!.count)")
-        let test = XMLParser.childAt(newXML.children!, 0)
-        Swift.print("test: " + "\(test)")
-        /*
-        
-        let newSelector:ISelector = Selector.selector(newXML)
-        let selectorString:String = SelectorParser.selectorString(newSelector)
-        Swift.print("selectorString: " + "\(selectorString)")
-        */
-        //continue here
-        
+        func outputTest(){//From selector to xml
+            let selector:ISelector = Selector("Button",[],"custom",["over","down"])/*"special","custom"*/
+            let xml:XML = Reflection.toXML(selector)
+            Swift.print(xml.string)
+        }
+        outputTest()
+
+        func inputTest(){//from XML to selector
+            let xmlStr:String = "<Selector><element type=\"String\">Button</element><classIds type=\"Array\"><a1></a1></classIds><id type=\"String\">custom</id></Selector>"//<states type=\"Array\"><0 type=\"String\">over</0><1 type=\"String\">down</1></states>
+            let xml:XML = xmlStr.xml
+            
+            Swift.print("xml.XMLString: " + "\(xml.XMLString)")
+            Swift.print("xml.children!.count: " + "\(xml.children!.count)")
+            let test = XMLParser.childAt(xml.children!, 0)
+            Swift.print("test: " + "\(test)")
+        }
     }
     /**
      * Testing
