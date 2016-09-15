@@ -30,8 +30,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             
             Swift.print("xml.XMLString: " + "\(xml.XMLString)")
             Swift.print("xml.children!.count: " + "\(xml.children!.count)")
-            let test = XMLParser.childAt(xml.children!, 0)
+            let test = XMLParser.childAt(xml.children!, 0)!.value
             Swift.print("test: " + "\(test)")
+            
+            let selector:ISelector = Selector.selector(xml)
+            let selectorString:String = SelectorParser.selectorString(selector)
+            Swift.print("selectorString: " + "\(selectorString)")
         }
         inputTest()
     }
