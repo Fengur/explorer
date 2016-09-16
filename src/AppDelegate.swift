@@ -9,9 +9,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     static var selectorsString:String = ""
     func applicationDidFinishLaunching(aNotification:NSNotification) {
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/button/button.css")
+        let startTime = NSDate()
         
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
-        
+        Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         //reflectionTest()
