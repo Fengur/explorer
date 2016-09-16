@@ -14,6 +14,7 @@ class BasicView:CustomView {
         //you should be able to get to bellow 1 sec for basic components. Which is pretty good.Then by just making the code better this will go even further down
         //the big time hog is the resolvment of the styles, this can be fixed with the new idea about not looking up all styles for every addition but skipping styles the has been absorbed by other more spesific styles, basicly a more efficient resolvment algo (1-days work probably)
         
+        //Start drawing the speedier style retrival system out on postits. get a grip of the concept, test things in your mind first. 
         
         //Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
         
@@ -38,6 +39,9 @@ class BasicView:CustomView {
             container.addSubView(Button(24,24,container,id))
         }
     }
+    /**
+     * NOTE: loads in 1.17secs (could be improved with a better style retreval system, or cahching the styles, maybe to around 0.5secs)
+     */
     func createComponents(){
         createButton()
         createTextButton()
