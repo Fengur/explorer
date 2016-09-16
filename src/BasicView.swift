@@ -34,7 +34,7 @@ class BasicView:CustomView {
         }
     }
     func createComponents(){
-        createButton()
+        //createButton()
         /*createTextButton()
         */
         //createRadioBullet()
@@ -53,21 +53,25 @@ class BasicView:CustomView {
 
         createIconButton()
         
-        */createTabBar()
+        */
+        //createTabBar()
         
-        createList()
+        //createList()
         
-        createSliderList()
+        //createSliderList()
         //createIconButtons()
         //createComboBox()
-        createTextArea()
-        createSliderTextArea()
+        //createTextArea()
+        //createSliderTextArea()
         createText()
-        createSingleLineTextArea()
+        createText()
+        createText()
+        createText()
+        //createSingleLineTextArea()
         //createSearchBox()
-        createTextInput()
+        //createTextInput()
 
-        createColorTag()
+        //createColorTag()
 
         //createVNodeSlider()
         //createHNodeSlider()
