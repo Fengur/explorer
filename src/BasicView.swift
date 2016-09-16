@@ -5,6 +5,8 @@ class BasicView:CustomView {
     override func resolveSkin() {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
+        let url:String = "~/Desktop/ElCapitan/basic/button/colortag.css"
+        StyleManager.addStylesByURL(url,true)
         let startTime = NSDate()
         createComponents()
         
@@ -63,15 +65,15 @@ class BasicView:CustomView {
         //createComboBox()
         //createTextArea()
         //createSliderTextArea()
-        createText()
-        createText()
-        createText()
-        createText()
+        //createText()
         //createSingleLineTextArea()
         //createSearchBox()
         //createTextInput()
 
-        //createColorTag()
+        createColorTag()
+        createColorTag()
+        createColorTag()
+        createColorTag()
 
         //createVNodeSlider()
         //createHNodeSlider()
@@ -292,8 +294,7 @@ class BasicView:CustomView {
         selectGroup.event = onSelectGroupChange
     }
     func createColorTag(){
-        let url:String = "~/Desktop/ElCapitan/basic/button/colortag.css"
-        StyleManager.addStylesByURL(url,true)
+        
         let colorTagCard:Card = container.addSubView(Card(NaN, NaN, "Color tags: ", container, "colorTagCard"))
         let colorTagSection:Section = colorTagCard.addSubView(Section(NaN,NaN,colorTagCard,"colorTagSection"))
         let colors:Array<String> = ["red","orange","yellow","green","blue","purple","grey"]
