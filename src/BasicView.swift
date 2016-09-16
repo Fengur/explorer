@@ -24,7 +24,7 @@ class BasicView:CustomView {
         rect.draw()*/
     }
     func buttonTest(){
-        let buttonStyle:String = "Container#main Button{fill:green;float:left;}"
+        let buttonStyle:String = "Container#main Button{fill:green;float:left;}Button#clear{clear:left}"
         StyleManager.addStyle(buttonStyle)
         for var i = 0; i < 1; ++i{
             let id:String = i % 12 == 0 ? "clear" : ""
