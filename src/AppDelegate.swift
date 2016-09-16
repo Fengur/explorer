@@ -9,10 +9,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     static var selectorsString:String = ""
     func applicationDidFinishLaunching(aNotification:NSNotification) {
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/button/button.css")
+        
+        let str = "abc def ghij"
+        let matches = RegExp.matches(str, "\\w{3}")
+        for match:NSTextCheckingResult in matches {
+            Swift.print("match.numberOfRanges: " + "\(match.numberOfRanges)")
+            let content = (str as NSString).substringWithRange(match.rangeAtIndex(0))/*the entire match*/
+            Swift.print("content: " + "\(content)")
+            let name = (str as NSString).substringWithRange(match.rangeAtIndex(1))/*capturing group 1*/
+            Swift.print("name: " + "\(name)")
+            //let properties = (str as NSString).substringWithRange(match.rangeAtIndex(2))/*capturing group 2*/
+        }
+        
+        /*
+        
         let startTime = NSDate()
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
+        
+        */
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         //reflectionTest()
         
