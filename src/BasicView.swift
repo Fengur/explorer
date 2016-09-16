@@ -42,9 +42,8 @@ class BasicView:CustomView {
     }
     func createComponents(){
         createButton()
-        
-        /*
         createTextButton()
+        /*
         createRadioBullet()
         createCheckBox()
         createRadioButton()
@@ -115,8 +114,6 @@ class BasicView:CustomView {
      * TextButton
      */
     func createTextButton(){
-        let url:String = "~/Desktop/ElCapitan/basic/button/textbutton.css"
-        StyleManager.addStylesByURL(url,false)
         let card:Card = container.addSubView(Card(NaN, NaN, "TextButton: ", container, "textButtonCard"))
         card.addSubView(TextButton(NaN,NaN,"Button",card))
     }
