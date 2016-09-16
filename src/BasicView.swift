@@ -52,7 +52,7 @@ class BasicView:CustomView {
         createHSlider()
         createVSlider()
         createVolumeSlider()
-        createIconButton()
+        //createIconButton()
         createTabBar()
         /*createList()
         createSliderList()
