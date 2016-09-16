@@ -59,13 +59,13 @@ class BasicView:CustomView {
         createIconButtons()
         createComboBox()
         createTextArea()
-        /*createSliderTextArea()
+        createSliderTextArea()
         createText()
         createSingleLineTextArea()
         createSearchBox()
         createTextInput()
         createColorTag()
-        */
+        /**/
         //createVNodeSlider()
         //createHNodeSlider()
 
@@ -186,8 +186,6 @@ class BasicView:CustomView {
      * This creates a textField
      */
     func createText(){
-        let url:String = "~/Desktop/ElCapitan/basic/text/text.css"
-        StyleManager.addStylesByURL(url,false)
         let card:Card = container.addSubView(Card(NaN, NaN, "Text: ", container, "textCard"))
         let text:Text = card.addSubView(Text(100,24,"This is text: ",card))
         text
@@ -311,11 +309,6 @@ class BasicView:CustomView {
         //comboBox.list.setMaxShowingItems(3)//TODO: implement this somehow
     }
     func createSliderTextArea() {
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/slider/vslider.css")
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/text/slidertextarea.css")
-        let url:String = "~/Desktop/ElCapitan/basic/text/textarea.css"
-        StyleManager.addStylesByURL(url,true)
-        
         let sliderTextAreaCard:Card = container.addSubView(Card(NaN, NaN, "Slider text area: ", container, "sliderTextAreaCard"))
         let text:String = FileParser.content("~/Desktop/assets/txt/scrolltextarea.txt".tildePath)!
         let scrollTextArea:SliderTextArea = sliderTextAreaCard.addSubView(SliderTextArea(180,72,text,24,sliderTextAreaCard))
