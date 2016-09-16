@@ -24,7 +24,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
     }
     /**
-     *
+     * NOTE: records all elementSelectors used and store them in a string then try to request all styles
+     * NOTE: saves all complete styles as they are created. Store to disk
      */
     func reflectionTest(){
         func outputTest(){//From selector to xml
