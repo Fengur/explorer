@@ -219,18 +219,11 @@ class BasicView:CustomView {
         searchBox
     }
     func createVSlider(){
-        
-        let url:String = "~/Desktop/ElCapitan/basic/slider/vslider.css"
-        StyleManager.addStylesByURL(url,true)
-        
         let vSliderCard:Card = container.addSubView(Card(NaN, NaN, "Vertical slider: ", container, "vSliderCard"))
         let vSlider:VSlider = vSliderCard.addSubView(VSlider(6,60,30,0,vSliderCard))
         vSlider
     }
     func createHSlider(){
-        let url:String = "~/Desktop/ElCapitan/basic/slider/hslider.css"
-        StyleManager.addStylesByURL(url,true)
-        
         let hSliderCard:Card = container.addSubView(Card(NaN, NaN, "Horizontal slider: ", container, "hSliderCard"))
         let hSlider:HSlider = hSliderCard.addSubView(HSlider(120,6,70,0,hSliderCard))
         hSlider
