@@ -16,8 +16,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             Swift.print("match.numberOfRanges: " + "\(match.numberOfRanges)")
             let content = (str as NSString).substringWithRange(match.rangeAtIndex(0))/*the entire match*/
             Swift.print("content: " + "\(content)")
-            let name = (str as NSString).substringWithRange(match.rangeAtIndex(1))/*capturing group 1*/
-            Swift.print("name: " + "\(name)")
+            //let name = (str as NSString).substringWithRange(match.rangeAtIndex(1))/*capturing group 1*/
+            //Swift.print("name: " + "\(name)")
             //let properties = (str as NSString).substringWithRange(match.rangeAtIndex(2))/*capturing group 2*/
         }
         
