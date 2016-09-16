@@ -1,14 +1,17 @@
 import Cocoa
-
 class BasicView:CustomView {
     var container:Container!
     override func resolveSkin() {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
-        let url:String = "~/Desktop/ElCapitan/basic/button/colortag.css"
-        StyleManager.addStylesByURL(url,true)
         let startTime = NSDate()
         createComponents()
+        
+        
+        //Continue here: Its the loading of the styles that is slow. either loading a file it self or adding to styleManger
+        //To speed things up: all you have to do is populate explorer.css with all the css for all components in basic, advance and other and toggle them like in legacy code
+        //to speed things up further: more enums/structs smarter loops etc. 
+        //you should be able to get to bellow 1 sec for basic components. Which is pretty good.Then by just making the code better this will go even further down
         
         //Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
         
@@ -70,9 +73,6 @@ class BasicView:CustomView {
         //createSearchBox()
         //createTextInput()
 
-        createColorTag()
-        createColorTag()
-        createColorTag()
         createColorTag()
 
         //createVNodeSlider()
@@ -294,7 +294,8 @@ class BasicView:CustomView {
         selectGroup.event = onSelectGroupChange
     }
     func createColorTag(){
-        
+        let url:String = "~/Desktop/ElCapitan/basic/button/colortag.css"
+        StyleManager.addStylesByURL(url,true)
         let colorTagCard:Card = container.addSubView(Card(NaN, NaN, "Color tags: ", container, "colorTagCard"))
         let colorTagSection:Section = colorTagCard.addSubView(Section(NaN,NaN,colorTagCard,"colorTagSection"))
         let colors:Array<String> = ["red","orange","yellow","green","blue","purple","grey"]
