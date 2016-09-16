@@ -49,9 +49,9 @@ class BasicView:CustomView {
         createCheckBoxButton()
         createLeverStepper()
         createLeverSpinner()
-        /*createHSlider()
+        createHSlider()
         createVSlider()
-        createVolumeSlider()
+        /*createVolumeSlider()
         createIconButton()
         createTabBar()
         createList()
@@ -141,14 +141,15 @@ class BasicView:CustomView {
         }
         checkGroup.event = onEvent/*adds the event handler to the event exit point in the checkGroup*/
     }
+    func createLeverStepper(){
+        let card:Card = container.addSubView(Card(NaN, NaN, "LeverStepper: ", container, "leverStepperCard"))
+        let stepper:LeverStepper = card.addSubView(LeverStepper(NaN,NaN,0,1,Int.min.cgFloat,Int.max.cgFloat,0,100,200,card))
+        stepper
+    }
     /**
      * TODO: create the LeverSpinner component with text
      */
     func createLeverSpinner(){
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/stepper/leverstepper.css")
-        let url:String = "~/Desktop/ElCapitan/basic/spinner/leverspinner.css"
-        StyleManager.addStylesByURL(url,true)
-        
         let card:Card = container.addSubView(Card(NaN, NaN, "LeverSpinner: ", container, "leverSpinnerCard"))
         let leverSpinner:LeverSpinner = card.addSubView(LeverSpinner(NaN, NaN,"Value: ", 0, 1, Int.min.cgFloat, Int.max.cgFloat, 0, 100, 200, card))
         leverSpinner
@@ -173,11 +174,7 @@ class BasicView:CustomView {
         let selectGroup = SelectGroup([iconButton1,iconButton2,iconButton3,iconButton4],iconButton3);
         selectGroup/**/
     }
-    func createLeverStepper(){
-        let card:Card = container.addSubView(Card(NaN, NaN, "LeverStepper: ", container, "leverStepperCard"))
-        let stepper:LeverStepper = card.addSubView(LeverStepper(NaN,NaN,0,1,Int.min.cgFloat,Int.max.cgFloat,0,100,200,card))
-        stepper
-    }
+    
     func createTextInput(){
         let url:String = "~/Desktop/ElCapitan/basic/text/textinput.css"
         StyleManager.addStylesByURL(url,false)
