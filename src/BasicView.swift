@@ -12,7 +12,7 @@ class BasicView:CustomView {
         //To speed things up: all you have to do is populate explorer.css with all the css for all components in basic, advance and other and toggle them like in legacy code
         //to speed things up further: more enums/structs smarter loops etc. 
         //you should be able to get to bellow 1 sec for basic components. Which is pretty good.Then by just making the code better this will go even further down
-        //the big time hog is the 
+        //the big time hog is the resolvment of the styles, this can be fixed with the new idea about not looking up all styles for every addition but skipping styles the has been absorbed by other more spesific styles, basicly a more efficient resolvment algo (1-days work probably)
         
         
         //Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
@@ -73,6 +73,21 @@ class BasicView:CustomView {
 
     }
     /**
+     * Button
+     */
+    func createButton(){
+        let card:Card = container.addSubView(Card(NaN, NaN, "Buttons: ", container, "buttonCard"))
+        let button = card.addSubView(Button(96,24,card))
+        func onbuttonDown(event:Event){
+            if(event.type == ButtonEvent.upInside){
+                //var startTime:int = getTimer();
+                //StyleResolver.style(event.target as Button);
+                //print("selectRow-duration: " + (getTimer() - startTime));
+            }
+        }
+        button.event = onbuttonDown
+    }
+    /**
      *
      */
     func createIconButton(){
@@ -95,23 +110,6 @@ class BasicView:CustomView {
         let card:Card = container.addSubView(Card(NaN, NaN, "VolumeSlider: ", container, "volumeSliderCard"))
         let volumeSlider = card.addSubView(VolumeSlider(120,20,20,0,card))
         volumeSlider.setProgressValue(0.5)
-    }
-    /**
-     * Button
-     */
-    func createButton(){
-        let url:String = "~/Desktop/ElCapitan/basic/button/button.css"
-        StyleManager.addStylesByURL(url,false)
-        let card:Card = container.addSubView(Card(NaN, NaN, "Buttons: ", container, "buttonCard"))
-        let button = card.addSubView(Button(96,24,card))
-        func onbuttonDown(event:Event){
-            if(event.type == ButtonEvent.upInside){
-                //var startTime:int = getTimer();
-                //StyleResolver.style(event.target as Button);
-                //print("selectRow-duration: " + (getTimer() - startTime));
-            }
-        }
-        button.event = onbuttonDown
     }
     /**
      * TextButton
