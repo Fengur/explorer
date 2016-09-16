@@ -5,13 +5,12 @@ class BasicView:CustomView {
     override func resolveSkin() {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
-        
-        //createComponents()
+        let startTime = NSDate()
+        createComponents()
         
         //Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
         
-        let startTime = NSDate()
-        buttonTest()
+        //buttonTest()
         Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")
         //Continue here:
         
@@ -24,10 +23,10 @@ class BasicView:CustomView {
         rect.draw()*/
     }
     /**
-     * NOTE: it takes 0.44sec to make 144 buttons
+     * NOTE: it takes 0.44sec to make 144 buttons (the same with gradient applied)
      */
     func buttonTest(){
-        let buttonStyle:String = "Container#main Button{fill:green;float:left;}Button#clear{clear:left;}"
+        let buttonStyle:String = "Container#main Button{fill:linear-gradient(top,red,blue);float:left;}Button#clear{clear:left;}"
         StyleManager.addStyle(buttonStyle)
         for var i = 0; i < 144; ++i{
             let id:String = i % 12 == 0 ? "clear" : ""//the 13th element drops down bellow
@@ -41,7 +40,7 @@ class BasicView:CustomView {
         createCheckBox()
         createRadioButton()
         createCheckBoxButton()
-        createLeverStepper()
+        /*createLeverStepper()
         createLeverSpinner()
         createHSlider()
         createVSlider()
@@ -61,7 +60,7 @@ class BasicView:CustomView {
         createSearchBox()
         createTextInput()
         createColorTag()
-
+        */
         //createVNodeSlider()
         //createHNodeSlider()
         
