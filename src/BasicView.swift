@@ -273,9 +273,6 @@ class BasicView:CustomView {
         hNodeSlider
     }
     func createList(){
-        let url:String = "~/Desktop/ElCapitan/basic/list/list.css"
-        StyleManager.addStylesByURL(url)
-        
         let listCard:Card = container.addSubView(Card(NaN, NaN, "List: ", container, "listCard"))
         let xml = FileParser.xml("~/Desktop/assets/xml/list.xml".tildePath)
         let dp:DataProvider = DataProvider(xml)
@@ -283,11 +280,6 @@ class BasicView:CustomView {
         list.selectAt(1)
     }
     func createSliderList(){
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/slider/vslider.css")
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/list/list.css")
-        let url:String = "~/Desktop/ElCapitan/basic/list/sliderlist.css"
-        StyleManager.addStylesByURL(url,true)
-        
         let sliderListCard:Card = container.addSubView(Card(NaN, NaN, "Slider list: ", container, "sliderListCard"))
         let xml = FileParser.xml("~/Desktop/assets/xml/scrollist.xml".tildePath)//TODO:  create a method tht takes url and makes dp
         let dp:DataProvider = DataProvider(xml)
