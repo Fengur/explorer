@@ -19,8 +19,6 @@ class BasicView:CustomView {
         
         //buttonTest()
         
-        //Continue here:
-        
         /*
         let lineStyle = LineStyle(1,NSColor.blackColor(),CGLineCap.Butt,CGLineJoin.Miter,10,0,[2,2])
         
@@ -167,17 +165,11 @@ class BasicView:CustomView {
     }
     
     func createTextInput(){
-        let url:String = "~/Desktop/ElCapitan/basic/text/textinput.css"
-        StyleManager.addStylesByURL(url,false)
-        
         let card:Card = container.addSubView(Card(NaN, NaN, "TextInput: ", container, "textInputCard"))
         let textInput:TextInput = card.addSubView(TextInput(NaN, NaN, "Description: ", "blue", card))
         textInput
     }
     func createSingleLineTextArea(){
-        let url:String = "~/Desktop/ElCapitan/basic/text/singlelinetextarea.css"
-        StyleManager.addStylesByURL(url,true)
-        
         let card:Card = container.addSubView(Card(NaN, NaN, "TextInput: ", container, "singleLineTextAreaCard"))
         let textArea:TextArea = card.addSubView(TextArea(NaN, NaN, "This is a single line text area", card))
         textArea
@@ -239,7 +231,6 @@ class BasicView:CustomView {
         selectGroup.event = onSelectGroupChange
     }
     func createColorTag(){
-        
         let colorTagCard:Card = container.addSubView(Card(NaN, NaN, "Color tags: ", container, "colorTagCard"))
         let colorTagSection:Section = colorTagCard.addSubView(Section(NaN,NaN,colorTagCard,"colorTagSection"))
         let colors:Array<String> = ["red","orange","yellow","green","blue","purple","grey"]
