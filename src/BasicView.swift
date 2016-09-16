@@ -24,10 +24,10 @@ class BasicView:CustomView {
         rect.draw()*/
     }
     func buttonTest(){
-        let buttonStyle:String = "Container#main Button{fill:green;float:left;}Button#clear{clear:left}"
+        let buttonStyle:String = "Container#main Button{fill:green;float:left;}Button#clear{clear:left;}"
         StyleManager.addStyle(buttonStyle)
-        for var i = 0; i < 1; ++i{
-            let id:String = i % 12 == 0 ? "clear" : ""
+        for var i = 0; i < 24; ++i{
+            let id:String = i % 12 == 0 ? "clear" : ""//the 13th element drops down bellow
             container.addSubView(Button(24,24,container,id))
         }
     }
