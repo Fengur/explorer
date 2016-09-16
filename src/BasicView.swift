@@ -12,6 +12,8 @@ class BasicView:CustomView {
         //To speed things up: all you have to do is populate explorer.css with all the css for all components in basic, advance and other and toggle them like in legacy code
         //to speed things up further: more enums/structs smarter loops etc. 
         //you should be able to get to bellow 1 sec for basic components. Which is pretty good.Then by just making the code better this will go even further down
+        //the big time hog is the 
+        
         
         //Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
         
