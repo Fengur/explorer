@@ -6,7 +6,7 @@ class BasicView:CustomView {
         container = addSubView(Container(1000,800,self,"main"))
         let startTime = NSDate()
         createComponents()
-        
+        Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")
         
         //Continue here: Its the loading of the styles that is slow. either loading a file it self or adding to styleManger
         //To speed things up: all you have to do is populate explorer.css with all the css for all components in basic, advance and other and toggle them like in legacy code
@@ -16,7 +16,7 @@ class BasicView:CustomView {
         //Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
         
         //buttonTest()
-        Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")
+        
         //Continue here:
         
         /*
@@ -39,47 +39,36 @@ class BasicView:CustomView {
         }
     }
     func createComponents(){
-        //createButton()
-        /*createTextButton()
-        */
-        //createRadioBullet()
-        //createCheckBox()
-        //createRadioButton()
-        //createCheckBoxButton()
+        createButton()
+        
         /*
+        createTextButton()
+        createRadioBullet()
+        createCheckBox()
+        createRadioButton()
+        createCheckBoxButton()
         createLeverStepper()
-
         createLeverSpinner()
-
         createHSlider()
         createVSlider()
-
         createVolumeSlider()
-
         createIconButton()
-        
-        */
-        //createTabBar()
-        
-        //createList()
-        
-        //createSliderList()
-        //createIconButtons()
-        //createComboBox()
-        //createTextArea()
-        //createSliderTextArea()
-        //createText()
-        //createSingleLineTextArea()
-        //createSearchBox()
-        //createTextInput()
-
+        createTabBar()
+        createList()
+        createSliderList()
+        createIconButtons()
+        createComboBox()
+        createTextArea()
+        createSliderTextArea()
+        createText()
+        createSingleLineTextArea()
+        createSearchBox()
+        createTextInput()
         createColorTag()
-
+        */
         //createVNodeSlider()
         //createHNodeSlider()
-        
-        
-        /**/
+
     }
     /**
      *
