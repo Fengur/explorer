@@ -51,10 +51,10 @@ class BasicView:CustomView {
         createLeverSpinner()
         createHSlider()
         createVSlider()
-        /*createVolumeSlider()
+        createVolumeSlider()
         createIconButton()
         createTabBar()
-        createList()
+        /*createList()
         createSliderList()
         createIconButtons()
         createComboBox()
@@ -89,9 +89,6 @@ class BasicView:CustomView {
      *
      */
     func createIconButton(){
-        let url:String = "~/Desktop/ElCapitan/basic/button/iconbutton.css"
-        StyleManager.addStylesByURL(url,true)
-        
         let card:Card = container.addSubView(Card(NaN, NaN, "Icon Button: ", container, "iconButtonCard"))
         let button = card.addSubView(Button(NaN,NaN,card,"question"))
         button
@@ -102,9 +99,6 @@ class BasicView:CustomView {
      * Volume slider
      */
     func createVolumeSlider(){
-        let url:String = "~/Desktop/ElCapitan/basic/slider/volumeslider.css"
-        StyleManager.addStylesByURL(url,true)
-        /*VolumeSlider*/
         let card:Card = container.addSubView(Card(NaN, NaN, "VolumeSlider: ", container, "volumeSliderCard"))
         let volumeSlider = card.addSubView(VolumeSlider(120,20,20,0,card))
         volumeSlider.setProgressValue(0.5)
@@ -155,9 +149,6 @@ class BasicView:CustomView {
         leverSpinner
     }
     func createTabBar(){
-        let url:String = "~/Desktop/ElCapitan/basic/button/tabbar.css"
-        StyleManager.addStylesByURL(url,false)
-        
         let card:Card = container.addSubView(Card(NaN, NaN, "Tab bar: ", container, "tabBarCard"))
         let btn1 = card.addSubView(SelectTextButton(NaN,NaN,"Tab 1",true,card,"first"))
         let btn2 = card.addSubView(SelectTextButton(NaN,NaN,"Tab 2",false,card,"second"))
