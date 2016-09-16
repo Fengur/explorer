@@ -43,10 +43,9 @@ class BasicView:CustomView {
     func createComponents(){
         createButton()
         createTextButton()
-        /*
         createRadioBullet()
         createCheckBox()
-        createRadioButton()
+        /*createRadioButton()
         createCheckBoxButton()
         createLeverStepper()
         createLeverSpinner()
@@ -121,8 +120,6 @@ class BasicView:CustomView {
      * RadioBullet
      */
     func createRadioBullet(){
-        let url:String = "~/Desktop/ElCapitan/basic/button/radiobullet.css"
-        StyleManager.addStylesByURL(url,true)
         let card:Card = container.addSubView(Card(NaN, NaN, "RadioBullet: ", container, "radioBulletCard"))
         let section = card.addSubView(Section(NaN,NaN,card,"radioBulletSection"))
         let radioBullet1 = section.addSubView(RadioBullet(NaN,NaN,true,section))
@@ -134,9 +131,6 @@ class BasicView:CustomView {
      * CheckboxButtons
      */
     func createCheckBoxButton(){
-        let url:String = "~/Desktop/ElCapitan/basic/button/checkboxbutton.css"
-        StyleManager.addStylesByURL(url,false)
-        
         let card:Card = container.addSubView(Card(NaN, NaN, "CheckBoxButton: ", container, "checkBoxButtonCard"))
         let section = card.addSubView(Section(NaN, NaN, card, "checkBoxButtonSection")) /*this instance represents the inset shadow bagground and also holds the buttons*/
         let checkBoxButton1 = section.addSubView(CheckBoxButton(NaN, NaN,"Option 1",true,section))
