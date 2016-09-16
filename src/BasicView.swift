@@ -247,14 +247,10 @@ class BasicView:CustomView {
      */
     func createCheckBox(){
         let checkBoxCard:Card = container.addSubView(Card(NaN, NaN, "CheckBox: ", container, "checkBoxCard"))
-        checkBoxCard
         let checkBoxContainer = checkBoxCard.addSubView(Section(NaN,NaN,checkBoxCard,"checkBoxSection"))
-        checkBoxContainer
         let checkBox1 = checkBoxContainer.addSubView(CheckBox(NaN,NaN,false,checkBoxContainer))
-        checkBox1
         let checkBox2:CheckBox = checkBoxContainer.addSubView(CheckBox(NaN,NaN,true,checkBoxContainer))
-        let checkGroup:CheckGroup = CheckGroup([checkBox1,checkBox2], checkBox2)
-        checkGroup
+        _ = CheckGroup([checkBox1,checkBox2], checkBox2)
     }
     /**
      * RadioButton
