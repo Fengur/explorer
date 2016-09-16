@@ -5,14 +5,14 @@ class BasicView:CustomView {
     override func resolveSkin() {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
-        let startTime = NSDate()
-        createComponents()
-        Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")
+        
+        //createComponents()
+        
         //Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
         
-        
+        let startTime = NSDate()
         buttonTest()
-        
+        Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")
         //Continue here:
         
         /*
@@ -24,7 +24,7 @@ class BasicView:CustomView {
         rect.draw()*/
     }
     func buttonTest(){
-        let buttonStyle:String = "Container#main Button{fill:green;}"
+        let buttonStyle:String = "Container#main Button{fill:green;float:left;}"
         StyleManager.addStyle(buttonStyle)
         for var i = 0; i < 1; ++i{
             container.addSubView(Button(24,24,container))
