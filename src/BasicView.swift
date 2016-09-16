@@ -240,7 +240,7 @@ class BasicView:CustomView {
         let selectables = SelectParser.selectables(colorTagSection)
         //selectables[0].setSelected(true)
         let selectGroup = SelectGroup(selectables,selectables[0])
-        selectGroup/**/
+        selectGroup
     }
     func createVNodeSlider(){
         let url:String = "~/Desktop/ElCapitan/basic/nodeslider/vnodeslider.css"
