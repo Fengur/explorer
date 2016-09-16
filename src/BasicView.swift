@@ -27,8 +27,8 @@ class BasicView:CustomView {
         let buttonStyle:String = "Container#main Button{fill:green;float:left;}"
         StyleManager.addStyle(buttonStyle)
         for var i = 0; i < 1; ++i{
-            let id:String = i 
-            container.addSubView(Button(24,24,container))
+            let id:String = i % 12 == 0 ? "clear" : ""
+            container.addSubView(Button(24,24,container,id))
         }
     }
     func createComponents(){
