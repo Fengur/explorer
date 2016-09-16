@@ -16,6 +16,7 @@ class BasicView:CustomView {
         
         //Start drawing the speedier style retrival system out on postits. get a grip of the concept, test things in your mind first. 
         //you could also try to save all style requests in a textFile, then load them via an xml doc. Then hi-jack stylemanager to use a dictionary with absolute styles for everything, just to see the speed and know what to aim for
+        //add this to the css classes: http://nshipster.com/swift-comparison-protocols/
         
         //Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
         
