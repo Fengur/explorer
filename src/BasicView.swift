@@ -15,7 +15,7 @@ class BasicView:CustomView {
         //the big time hog is the resolvment of the styles, this can be fixed with the new idea about not looking up all styles for every addition but skipping styles the has been absorbed by other more spesific styles, basicly a more efficient resolvment algo (1-days work probably)
         
         //Start drawing the speedier style retrival system out on postits. get a grip of the concept, test things in your mind first. 
-        //you could also try to save all style requests in a textFile, then load
+        //you could also try to save all style requests in a textFile, then load them via an xml doc. Then hi-jack stylemanager to use a dictionary with absolute styles for everything, just to see the speed and know what to aim for
         
         //Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
         
