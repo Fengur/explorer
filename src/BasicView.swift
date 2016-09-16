@@ -56,9 +56,9 @@ class BasicView:CustomView {
         createTabBar()
         createList()
         createSliderList()
-        /*createIconButtons()
+        createIconButtons()
         createComboBox()
-        createTextArea()
+        /*createTextArea()
         createSliderTextArea()
         createText()
         createSingleLineTextArea()
@@ -163,7 +163,7 @@ class BasicView:CustomView {
         let iconButton3 = card.addSubView(SelectButton(NaN,NaN,true,card,"third"))
         let iconButton4 = card.addSubView(SelectButton(NaN,NaN,false,card,"fourth"))
         let selectGroup = SelectGroup([iconButton1,iconButton2,iconButton3,iconButton4],iconButton3);
-        selectGroup/**/
+        selectGroup
     }
     
     func createTextInput(){
@@ -294,12 +294,6 @@ class BasicView:CustomView {
      * NOTE: you can also create an XML as a string and call the "".xml call (instead of loading xml from a file)
      */
     func createComboBox(){
-        let listCSSURL:String = "~/Desktop/ElCapitan/basic/list/list.css"
-        StyleManager.addStylesByURL(listCSSURL)
-        
-        let url:String = "~/Desktop/ElCapitan/basic/combobox/combobox.css"
-        StyleManager.addStylesByURL(url)
-        
         let card = container.addSubView(Card(NaN, NaN, "ComboBox: ", container, "comboBoxCard"))
         let xml = FileParser.xml("~/Desktop/assets/xml/combobox.xml".tildePath)
         let dp:DataProvider = DataProvider(xml)
