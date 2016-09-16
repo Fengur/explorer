@@ -9,10 +9,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     static var selectorsString:String = ""
     func applicationDidFinishLaunching(aNotification:NSNotification) {
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/button/button.css")
-        //StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
-        //win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
+        StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
+        win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
-        reflectionTest()
+        //reflectionTest()
         
         
         //Continue here: So its not the retrival of the styles that is slow. Although making it 30x faster is nice!

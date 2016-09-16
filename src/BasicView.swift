@@ -11,7 +11,7 @@ class BasicView:CustomView {
         //Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
         
         
-        
+        buttonTest()
         
         //Continue here:
         
@@ -23,9 +23,14 @@ class BasicView:CustomView {
         addSubview(rect.graphic)
         rect.draw()*/
     }
+    func buttonTest(){
+        let buttonStyle:String = "Container#main Button{fill:green;}"
+        StyleManager.addStyle(buttonStyle)
+        for var i = 0; i < 1; ++i{
+            container.addSubView(Button(24,24,container))
+        }
+    }
     func createComponents(){
-        
-        
         createButton()
         createTextButton()
         createRadioBullet()
