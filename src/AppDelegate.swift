@@ -10,8 +10,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(aNotification:NSNotification) {
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/button/button.css")
         
-        let str = "abc def ghij"
-        let matches = RegExp.matches(str, "\\w{3}")
+        let str = "blue:0000FF green:00FF00 red:FF0000"
+        let matches = RegExp.matches(str, "(\\w.*?\\):()")
         for match:NSTextCheckingResult in matches {
             Swift.print("match.numberOfRanges: " + "\(match.numberOfRanges)")
             let content = (str as NSString).substringWithRange(match.rangeAtIndex(0))/*the entire match*/
