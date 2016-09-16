@@ -35,16 +35,18 @@ class BasicView:CustomView {
     }
     func createComponents(){
         createButton()
-        createTextButton()
-        createRadioBullet()
-        createCheckBox()
+        /*createTextButton()
+        */createRadioBullet()
+        createCheckBox()/*
         createRadioButton()
         createCheckBoxButton()
-        /*createLeverStepper()
+        createLeverStepper()
         createLeverSpinner()
         createHSlider()
         createVSlider()
+        */
         createVolumeSlider()
+        /*
         createIconButton()
         createTabBar()
         
