@@ -58,8 +58,8 @@ class BasicView:CustomView {
         createSliderList()
         createIconButtons()
         createComboBox()
-        /*createTextArea()
-        createSliderTextArea()
+        createTextArea()
+        /*createSliderTextArea()
         createText()
         createSingleLineTextArea()
         createSearchBox()
@@ -193,9 +193,6 @@ class BasicView:CustomView {
         text
     }
     func createTextArea() {
-        let url:String = "~/Desktop/ElCapitan/basic/text/textarea.css"
-        StyleManager.addStylesByURL(url,true)
-        
         let card:Card = container.addSubView(Card(NaN, NaN, "Text area: ", container, "textAreaCard"))
         let text:String = FileParser.content("~/Desktop/assets/txt/textarea.txt".tildePath)!
         let textArea:TextArea = card.addSubView(TextArea(180,74,text,card))
