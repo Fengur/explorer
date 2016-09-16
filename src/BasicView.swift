@@ -6,7 +6,7 @@ class BasicView:CustomView {
         container = addSubView(Container(1000,800,self,"main"))
         let startTime = NSDate()
         createComponents()
-        Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")
+        Swift.print("create content time: " + "\(abs(startTime.timeIntervalSinceNow))")
         
         //Continue here: Its the loading of the styles that is slow. either loading a file it self or adding to styleManger
         //To speed things up: all you have to do is populate explorer.css with all the css for all components in basic, advance and other and toggle them like in legacy code
@@ -46,10 +46,10 @@ class BasicView:CustomView {
         createRadioBullet()
         createCheckBox()
         createRadioButton()
-        /*createCheckBoxButton()
+        createCheckBoxButton()
         createLeverStepper()
         createLeverSpinner()
-        createHSlider()
+        /*createHSlider()
         createVSlider()
         createVolumeSlider()
         createIconButton()
@@ -165,8 +165,6 @@ class BasicView:CustomView {
         selectGroup
     }
     func createIconButtons(){
-        let url:String = "~/Desktop/ElCapitan/basic/button/iconbuttons.css"
-        StyleManager.addStylesByURL(url,false)
         let card:Card = container.addSubView(Card(NaN, NaN, "Icon button: ", container, "iconButtonsCard"))
         let iconButton1 = card.addSubView(SelectButton(NaN,NaN,false,card,"first"))
         let iconButton2 = card.addSubView(SelectButton(NaN,NaN,false,card,"second"))
@@ -176,8 +174,6 @@ class BasicView:CustomView {
         selectGroup/**/
     }
     func createLeverStepper(){
-        let url:String = "~/Desktop/ElCapitan/basic/stepper/leverstepper.css"
-        StyleManager.addStylesByURL(url,false)
         let card:Card = container.addSubView(Card(NaN, NaN, "LeverStepper: ", container, "leverStepperCard"))
         let stepper:LeverStepper = card.addSubView(LeverStepper(NaN,NaN,0,1,Int.min.cgFloat,Int.max.cgFloat,0,100,200,card))
         stepper
@@ -267,8 +263,7 @@ class BasicView:CustomView {
         selectGroup.event = onSelectGroupChange
     }
     func createColorTag(){
-        let url:String = "~/Desktop/ElCapitan/basic/button/colortag.css"
-        StyleManager.addStylesByURL(url,true)
+        
         let colorTagCard:Card = container.addSubView(Card(NaN, NaN, "Color tags: ", container, "colorTagCard"))
         let colorTagSection:Section = colorTagCard.addSubView(Section(NaN,NaN,colorTagCard,"colorTagSection"))
         let colors:Array<String> = ["red","orange","yellow","green","blue","purple","grey"]
