@@ -11,7 +11,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/button/button.css")
         
         let str = "blue:0000FF green:00FF00 red:FF0000"
-        let matches = RegExp.matches(str, "(\\w.*?\\):([A-Z0-9])")
+        let matches = RegExp.matches(str, "(\\w+?)\\:([A-Z0-9]+?)( |$)")
         for match:NSTextCheckingResult in matches {
             Swift.print("match.numberOfRanges: " + "\(match.numberOfRanges)")
             let content = (str as NSString).substringWithRange(match.rangeAtIndex(0))/*the entire match*/
