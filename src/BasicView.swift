@@ -37,19 +37,19 @@ class BasicView:CustomView {
         createButton()
         /*createTextButton()
         */createRadioBullet()
-        createCheckBox()/*
+        createCheckBox()
         createRadioButton()
         createCheckBoxButton()
-        
-        createLeverStepper()
         /*
+        createLeverStepper()
+
         createLeverSpinner()
 
         createHSlider()
         createVSlider()
-*/
+
         createVolumeSlider()
-        /*
+
         createIconButton()
         
         createTabBar()
@@ -67,14 +67,12 @@ class BasicView:CustomView {
         createTextInput()
 
         createColorTag()
-*/
-        /*
-        */
+
         //createVNodeSlider()
         //createHNodeSlider()
         
         
-
+        */
     }
     /**
      *
