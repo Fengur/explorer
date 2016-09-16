@@ -59,7 +59,7 @@ class BasicView:CustomView {
         
         createSliderList()
         //createIconButtons()
-        createComboBox()
+        //createComboBox()
         createTextArea()
         createSliderTextArea()
         createText()
