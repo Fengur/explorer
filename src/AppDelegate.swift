@@ -27,7 +27,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         //styleReflection()
         
-        Swift.print([] is AnyArray)
+        //let temp:Any = ["",""]
+        let temp2:Any = []
+        Swift.print("temp2.dynamicType: " + "\(temp2.dynamicType)")
+        Swift.print(temp2 is AnyArray)
     }
     /**
      *
