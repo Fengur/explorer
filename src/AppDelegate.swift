@@ -25,12 +25,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         //Continue here: So its not the retrival of the styles that is slow. Although making it 30x faster is nice!
 
-        //styleReflection()
+        styleReflection()
         
         //let temp:Any = ["",""]
-        let temp2:Any = []
+        /*let temp2:Any = []
         Swift.print("temp2.dynamicType: " + "\(temp2.dynamicType)")
-        Swift.print(temp2 is AnyArray)
+        Swift.print(temp2 is AnyArray)*/
     }
     /**
      *
