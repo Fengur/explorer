@@ -34,7 +34,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //let selector = Selector("Button",[],"custom",["over"])
         let styleProperty = StyleProperty("fill",0xFF00FF,0)
         //let style = Style("",[selector],[styleProperty])
-        
+        let properties = Reflection.reflect(styleProperty)
+        properties.forEach{
+            Swift.print("$0.label: " + "\($0.label)")
+            Swift.print("$0.value: " + "\($0.value)")
+            Swift.print("$0.value.dynamicType: " + "\($0.value.dynamicType)")
+          
+        }
     }
     /**
      * NOTE: records all elementSelectors used and store them in a string then try to request all styles
