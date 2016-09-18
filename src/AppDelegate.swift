@@ -18,17 +18,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
         
-        /**/
+
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         //reflectionTest()
         
         
         //Continue here: So its not the retrival of the styles that is slow. Although making it 30x faster is nice!
-        //then it could either be drawing of may graphics elements, creating many nsviews, or gathering inheritance info
-        
-        //test creating many NSViews
-        
-        //actually: try to create 200 Buttons with basic style and add them to a window. 200 buttons at: 10px by 10px in size With the same style
+
         
     }
     /**
