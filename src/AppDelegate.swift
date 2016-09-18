@@ -32,8 +32,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      */
     func styleReflection(){
         let selector = Selector("Button",[],"custom",["over"])
-        let styleProperty = StyleProperty("fill",0xFF00FF,0)
-        let style = Style("",[selector],[styleProperty])
+        //let styleProperty = StyleProperty("fill",0xFF00FF,0)
+        let style = Style("",[selector],[])
         /*let properties = Reflection.reflect(styleProperty)
         properties.forEach{
             Swift.print("$0.label: " + "\($0.label)")
