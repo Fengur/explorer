@@ -49,8 +49,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             //</StyleProperties>
         //</Style>
         let selector = Selector("Button",[],"custom",["over"])
-        //let styleProperty = StyleProperty("fill",0xFF00FF,0)
-        let style:IStyle = Style("",[selector],[])
+        let styleProperty = StyleProperty("fill",0xFF00FF,0)
+        let style:IStyle = Style("",[selector],[styleProperty])
         
         /*let properties = Reflection.reflect(styleProperty)
         properties.forEach{
