@@ -52,6 +52,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //continue here: converting to xml now works. Next is converting from xml to Style,styleProperty and Selector
         //See ISelector for how this can be accomplised, its basically traversing xml, easy!!!
         
+        // you need to store NSColor not Uint etc in the StyleProperty
+        // and TexField instead of Dictionary
+        // and you need to test converting Gradient to xml
+        
         let selector = Selector("Window",[],"special",["focus"])
         let selector2 = Selector("Button",[],"custom",["over"])
         let styleProperty = StyleProperty("fill",0xFF00FF,0)
