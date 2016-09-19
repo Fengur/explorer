@@ -54,12 +54,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // you need to store NSColor not Uint etc in the StyleProperty
         // and TexField instead of Dictionary
+        // and add an Ems() type
+        // you cant differentiate types on based on DOuble, Int etc. 
         // and you need to test converting Gradient to xml
         
         let selector = Selector("Window",[],"special",["focus"])
         let selector2 = Selector("Button",[],"custom",["over"])
-        let styleProperty = StyleProperty("fill",0xFF00FF,0)
-        let styleProperty2 = StyleProperty("line",0x0000FF,0)
+        let styleProperty = StyleProperty("fill",UInt(0xFF00FF),0)
+        let styleProperty2 = StyleProperty("line",UInt(0x0000FF),0)
         let style:IStyle = Style("",[selector,selector2],[styleProperty,styleProperty2])
         
         /*let properties = Reflection.reflect(styleProperty)
