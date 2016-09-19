@@ -41,7 +41,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //<Style name="">
             //<Selectors><Selectors>
             //<StyleProperties>
-                //<item>
+                //<item type="StyleProperty">
                     //<name>fill</name>
                     //<value type=UInt>red</value>
                     //<depth>1</depth>
