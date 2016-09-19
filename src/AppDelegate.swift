@@ -50,7 +50,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //</Style>
         
         //continue here: converting to xml now works. Next is converting from xml to Style,styleProperty and Selector
-        //See selector for how this can be accomplised
+        //See ISelector for how this can be accomplised, its basically traversing xml, easy!!!
         
         let selector = Selector("Window",[],"special",["focus"])
         let selector2 = Selector("Button",[],"custom",["over"])
