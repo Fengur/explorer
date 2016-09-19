@@ -48,9 +48,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 //</item>
             //</StyleProperties>
         //</Style>
-        let selector = Selector("Button",[],"custom",["over"])
+        let selector = Selector("Window",[],"special",["focus"])
+        let selector2 = Selector("Button",[],"custom",["over"])
         let styleProperty = StyleProperty("fill",0xFF00FF,0)
-        let style:IStyle = Style("",[selector],[styleProperty])
+        let styleProperty2 = StyleProperty("line",0x0000FF,0)
+        let style:IStyle = Style("",[selector,selector2],[styleProperty,styleProperty2])
         
         /*let properties = Reflection.reflect(styleProperty)
         properties.forEach{
