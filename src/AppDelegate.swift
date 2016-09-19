@@ -36,6 +36,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      *
      */
     func styleReflection(){
+        //Reflection design of Style:
+
+        //<Style name="">
+            //<Selectors><Selectors>
+            //<StyleProperties>
+                //<item>
+                    //<name>fill</name>
+                    //<value type=UInt>red</value>
+                    //<depth>1</depth>
+                //</item>
+            //</StyleProperties>
+        //</Style>
         let selector = Selector("Button",[],"custom",["over"])
         //let styleProperty = StyleProperty("fill",0xFF00FF,0)
         let style:IStyle = Style("",[selector],[])
