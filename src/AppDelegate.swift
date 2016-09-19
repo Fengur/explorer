@@ -53,9 +53,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //See ISelector for how this can be accomplised, its basically traversing xml, easy!!!
         
         // you need to store NSColor not Uint etc in the StyleProperty
-        // and TexField instead of Dictionary
+        // and TexField/TextFormat instead of Dictionary
         // and add an Ems() type
-        // you cant differentiate types on based on DOuble, Int etc. 
+        // you cant differentiate types based on DOuble, Int etc.
         // and you need to test converting Gradient to xml
         
         let selector = Selector("Window",[],"special",["focus"])
