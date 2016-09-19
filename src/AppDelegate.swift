@@ -50,7 +50,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //</Style>
         let selector = Selector("Button",[],"custom",["over"])
         //let styleProperty = StyleProperty("fill",0xFF00FF,0)
-        let style:IStyle = Style("",[selector],[])
+        //let style:IStyle = Style("",[selector],[])
         
         /*let properties = Reflection.reflect(styleProperty)
         properties.forEach{
@@ -59,7 +59,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             Swift.print("$0.value.dynamicType: " + "\($0.value.dynamicType)")
           
         }*/
-        let xml:XML = Reflection.toXML(style)
+        let xml:XML = Reflection.toXML(selector)
         Swift.print(xml.string)
     }
     /**
