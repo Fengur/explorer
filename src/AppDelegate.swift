@@ -48,6 +48,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 //</item>
             //</StyleProperties>
         //</Style>
+        
+        //continue here: converting to xml now works. Next is converting from xml to Style,styleProperty and Selector
+        //See selector for how this can be accomplised
+        
         let selector = Selector("Window",[],"special",["focus"])
         let selector2 = Selector("Button",[],"custom",["over"])
         let styleProperty = StyleProperty("fill",0xFF00FF,0)
