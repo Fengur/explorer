@@ -5,7 +5,7 @@ class BasicView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         let startTime = NSDate()
-        createComponents()
+        //createComponents()
         Swift.print("create content time: " + "\(abs(startTime.timeIntervalSinceNow))")
         
         //Continue here: Its the loading of the styles that is slow. either loading a file it self or adding to styleManger
