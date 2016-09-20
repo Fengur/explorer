@@ -12,12 +12,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         
         
-        /*
+        /**/
         let startTime = NSDate()
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
-        */
+
 
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         //reflectionTest()
@@ -25,7 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         //Continue here: So its not the retrival of the styles that is slow. Although making it 30x faster is nice!
 
-        styleReflection()
+        //styleReflection()
         
         //let temp:Any = ["",""]
         /*let temp2:Any = []
