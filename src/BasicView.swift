@@ -5,7 +5,7 @@ class BasicView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         let startTime = NSDate()
-        //createComponents()
+        createComponents()
         Swift.print("create content time: " + "\(abs(startTime.timeIntervalSinceNow))")
         
         //Continue here: Its the loading of the styles that is slow. either loading a file it self or adding to styleManger
@@ -46,7 +46,7 @@ class BasicView:CustomView {
      */
     func createComponents(){
         createButton()
-        createTextButton()
+        /*createTextButton()
         createRadioBullet()
         createCheckBox()
         createRadioButton()
@@ -69,7 +69,7 @@ class BasicView:CustomView {
         createSearchBox()
         createTextInput()
         createColorTag()
-        /**/
+        */
         //createVNodeSlider()
         //createHNodeSlider()
 
@@ -78,6 +78,7 @@ class BasicView:CustomView {
      * Button
      */
     func createButton(){
+        Swift.print("createButton")
         let card:Card = container.addSubView(Card(NaN, NaN, "Buttons: ", container, "buttonCard"))
         let button = card.addSubView(Button(96,24,card))
         func onbuttonDown(event:Event){
