@@ -9,7 +9,7 @@ class BasicView:CustomView {
         Swift.print("create content time: " + "\(abs(startTime.timeIntervalSinceNow))")
         
         
-        //continue here: the problem is that the styles arent loaded now. Fix that and you should be back on track
+    
         
         
         //Continue here: Its the loading of the styles that is slow. either loading a file it self or adding to styleManger
@@ -49,9 +49,6 @@ class BasicView:CustomView {
      * NOTE: loads in 1.17secs (could be improved with a better style retreval system, or cahching the styles, maybe to around 0.5secs)
      */
     func createComponents(){
-        
-        //continue here: leverStepper is missing svg graphics. try to find the bug
-        
         createButton()
         createTextButton()
         createRadioBullet()
