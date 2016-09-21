@@ -8,6 +8,10 @@ class BasicView:CustomView {
         createComponents()
         Swift.print("create content time: " + "\(abs(startTime.timeIntervalSinceNow))")
         
+        
+        //continue here: the problem is that the styles arent loaded now. Fix that and you should be back on track
+        
+        
         //Continue here: Its the loading of the styles that is slow. either loading a file it self or adding to styleManger
         //To speed things up: all you have to do is populate explorer.css with all the css for all components in basic, advance and other and toggle them like in legacy code
         //to speed things up further: more enums/structs smarter loops etc. 
