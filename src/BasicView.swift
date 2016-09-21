@@ -5,10 +5,8 @@ class BasicView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         let startTime = NSDate()
-        //createComponents()
+        createComponents()
         Swift.print("create content time: " + "\(abs(startTime.timeIntervalSinceNow))")
-        
-        StyleResolver.isStoringSelectors
         
         //Continue here: Its the loading of the styles that is slow. either loading a file it self or adding to styleManger
         //To speed things up: all you have to do is populate explorer.css with all the css for all components in basic, advance and other and toggle them like in legacy code
@@ -82,6 +80,11 @@ class BasicView:CustomView {
     func createButton(){
         Swift.print("createButton")
         let card:Card = container.addSubView(Card(NaN, NaN, "Buttons: ", container, "buttonCard"))
+        let cardStyle = StyleResolver.style(card)
+        Swift.print("")
+        Swift.print("cardStyle.describe()")
+        cardStyle.describe()
+        Swift.print("")
         Swift.print("card")
         let button = card.addSubView(Button(96,24,card))
         Swift.print("button")
