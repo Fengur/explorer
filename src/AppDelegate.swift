@@ -49,11 +49,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //continue here: converting to xml now works. Next is converting from xml to Style,styleProperty and Selector
         //See ISelector for how this can be accomplised, its basically traversing xml, easy!!!
         
-        // you need to store NSColor not Uint etc in the StyleProperty
-        // and TexField/TextFormat instead of Dictionary
-        // and add an Ems() type
-        // you cant differentiate types based on DOuble, Int etc.
+        
+        // and add an Ems() type (EMS isnt used alot if at all so dont worry about that for the moment)
         // and you need to test converting Gradient to xml
+        
+        
+        //Continue here: Test if you can get NSColor working with reflecting a style, then gradient, the dropshadow etc, TextFormat isnt imp atm since its not used as a css value much if at all
+        
+        
         
         let selector = Selector("Window",[],"special",["focus"])
         let selector2 = Selector("Button",[],"custom",["over"])
