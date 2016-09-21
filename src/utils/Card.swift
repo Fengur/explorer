@@ -8,15 +8,8 @@ class Card:Element{
     }
     override func resolveSkin() {
         super.resolveSkin()
-        Swift.print("getWidth(): " + "\(getWidth())")
-        Swift.print("getHeight(): " + "\(getHeight())")
         addSubView(Element(NaN, NaN, self, "ruler"))
-        Swift.print("card.ruler created")
-        addSubView(Text(NaN, NaN, text, self, "cardText"));
-        Swift.print("card text created")
+        addSubView(Text(NaN, NaN, text, self, "cardText"))
     }
     required init?(coder: NSCoder) {fatalError("init(coder:) has not been implemented")}
 }
-
-
-//continue here: the problem is in Text. probably the color isnt getting through correctly
