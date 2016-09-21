@@ -52,15 +52,15 @@ class BasicView:CustomView {
         
         //continue here: leverStepper is missing svg graphics. try to find the bug
         
-        /*createButton()
+        createButton()
         createTextButton()
         createRadioBullet()
         createCheckBox()
         createRadioButton()
         createCheckBoxButton()
-        */
+        
         createLeverStepper()
-        /*
+        
         createLeverSpinner()
         createHSlider()
         createVSlider()
@@ -78,7 +78,7 @@ class BasicView:CustomView {
         createSearchBox()
         createTextInput()
         createColorTag()
-        */
+        
         //createVNodeSlider()
         //createHNodeSlider()
 
