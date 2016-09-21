@@ -56,8 +56,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         //Continue here: Test if you can get NSColor working with reflecting a style, then gradient, the dropshadow etc, TextFormat isnt imp atm since its not used as a css value much if at all
         
-        
-        
+
         let selector = Selector("Window",[],"special",["focus"])
         let selector2 = Selector("Button",[],"custom",["over"])
         let styleProperty = StyleProperty("fill",UInt(0xFF00FF),0)
