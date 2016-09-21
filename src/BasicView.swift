@@ -87,16 +87,8 @@ class BasicView:CustomView {
      * Button
      */
     func createButton(){
-        Swift.print("createButton")
         let card:Card = container.addSubView(Card(NaN, NaN, "Buttons: ", container, "buttonCard"))
-        //let cardStyle = StyleResolver.style(card)
-        //Swift.print("")
-        //Swift.print("cardStyle.describe()")
-        //cardStyle.describe()
-        Swift.print("")
-        Swift.print("card")
         let button = card.addSubView(Button(96,24,card))
-        Swift.print("button")
         func onbuttonDown(event:Event){
             if(event.type == ButtonEvent.upInside){
                 //var startTime:int = getTimer();
