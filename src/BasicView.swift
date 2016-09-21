@@ -49,10 +49,13 @@ class BasicView:CustomView {
      * NOTE: loads in 1.17secs (could be improved with a better style retreval system, or cahching the styles, maybe to around 0.5secs)
      */
     func createComponents(){
-        createButton()
+        
+        //continue here: leverStepper is missing svg graphics. try to find the bug
+        
+        /*createButton()
         createTextButton()
         createRadioBullet()
-        /*createCheckBox()
+        createCheckBox()
         createRadioButton()
         createCheckBoxButton()
         createLeverStepper()
