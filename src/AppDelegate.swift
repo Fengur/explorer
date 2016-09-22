@@ -27,7 +27,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         styleReflection()
         
+        NSColor.redColor().cgColor
+        let temp:[Any] = [NSColor.redColor().cgColor]
+        let isCGColor = temp[0] is CGColor
+        Swift.print("temp[0].dynamicType: " + "\(temp[0].dynamicType)")
+        Swift.print("isCGColor: " + "\(isCGColor)")
 
+        /**/
+        
+        
+        //Continue here: figure out how to reflect  CGAffineTransform. first you need to create a test to figure out how to assert the "is CGAffineTransform" assert
+        
+        
     }
     /**
      *
@@ -54,14 +65,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // and you need to test converting Gradient to xml
         
         
-        //Continue here: Test if you can get NSColor working with reflecting a style, then gradient, the dropshadow etc, TextFormat isnt imp atm since its not used as a css value much if at all
+        //Continue here: Test if you can get NSColor working with reflecting a style, then gradient, the dropshadow etc, TextFormat isn't imp atm since its not used as a css value much if at all
         
 
-        let selector = Selector("Window",[],"special",["focus"])
-        let selector2 = Selector("Button",[],"custom",["over"])
-        let styleProperty = StyleProperty("fill",UInt(0xFF00FF),0)
-        let styleProperty2 = StyleProperty("line",UInt(0x0000FF),0)
-        let style:IStyle = Style("",[selector,selector2],[styleProperty,styleProperty2])
+        //let selector = Selector("Window",[],"special",["focus"])
+        //let selector2 = Selector("Button",[],"custom",["over"])
+        let gradient = LinearGradient(Gradients.teal(0.5),[],π/2)//
+        //let color = NSColorParser.nsColor(0xFF0000)
+        let styleProperty = StyleProperty("fill",gradient/*color*/,0)
+        //let styleProperty2 = StyleProperty("line",NSColorParser.nsColor(0x0000FF),0)
+        let style:IStyle = Style("",[/*selector,selector2*/],[styleProperty/*styleProperty1*/])
         
         /*let properties = Reflection.reflect(styleProperty)
         properties.forEach{
