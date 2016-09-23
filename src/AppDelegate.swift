@@ -42,8 +42,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Swift.print("transform is Reflectable: " + "\(transform is Reflectable)")
         /**/
         if CFGetTypeID(tempVar as! AnyObject) == CGColorGetTypeID() {
-            let reflectable = tempVar as! Reflectable
-            Swift.print("reflectable: " + "\(reflectable)")
+            let reflectable:Reflectable = tempVar as! CGColorRef
+            Swift.print("reflectable: " + "\(reflectable.reflection.value)")
             Swift.print("found CGColor")
         }
         /**/
