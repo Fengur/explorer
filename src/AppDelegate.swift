@@ -40,6 +40,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         //Actually, for special types like CGAffineTransform etc, you should make an protocol named: Reflectable that you extend CGColor CGTransform etc. that package these types into an organized xml child
         //Then all you do is:
+        
+        
+        //CGAffineTranform optional isnt being detected, nore is the CGColor, try to make an isolated test and see if it works
+        
     }
     /**
      *
