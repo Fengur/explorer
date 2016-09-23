@@ -25,7 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         //Continue here: So its not the retrival of the styles that is slow. Although making it 30x faster is nice!
 
-        //styleReflection()
+        styleReflection()
         
         //Swift.print("NSColor.redColor().cgColor is Reflectable: " + "\(NSColor.redColor().cgColor is Reflectable)")
         /*
