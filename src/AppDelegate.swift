@@ -25,10 +25,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         //Continue here: So its not the retrival of the styles that is slow. Although making it 30x faster is nice!
 
-        styleReflection()
+        //styleReflection()
         
         //Swift.print("NSColor.redColor().cgColor is Reflectable: " + "\(NSColor.redColor().cgColor is Reflectable)")
-        /*
+        
         let cgColor:CGColorRef = NSColor.redColor().cgColor
         let tempVar:Any = cgColor
         Swift.print("tempVar is Reflectable: " + "\(tempVar is Reflectable)")
@@ -42,9 +42,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Swift.print("transform is Reflectable: " + "\(transform is Reflectable)")
         /**/
         if CFGetTypeID(tempVar as! AnyObject) == CGColorGetTypeID() {
+            let reflectable = tempVar as! Reflectable
+            Swift.print("reflectable: " + "\(reflectable)")
             Swift.print("found CGColor")
         }
-        */
+        /**/
         //Continue here: figure out how to reflect  CGAffineTransform. first you need to create a test to figure out how to assert the "is CGAffineTransform" assert
         
         //Actually, for special types like CGAffineTransform etc, you should make an protocol named: Reflectable that you extend CGColor CGTransform etc. that package these types into an organized xml child
