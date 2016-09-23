@@ -71,9 +71,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         //let selector = Selector("Window",[],"special",["focus"])
         //let selector2 = Selector("Button",[],"custom",["over"])
-        //let gradient = LinearGradient(Gradients.teal(0.5),[],π/2)//
-        let color = NSColorParser.nsColor(0xFF0000)
-        let styleProperty = StyleProperty("fill",color/*gradient*/,0)
+        let gradient = LinearGradient(Gradients.teal(0.5),[],π/2)//
+        //let color = NSColorParser.nsColor(0xFF0000)
+        let styleProperty = StyleProperty("fill",gradient/*color*/,0)
         //let styleProperty2 = StyleProperty("line",NSColorParser.nsColor(0x0000FF),0)
         let style:IStyle = Style("",[/*selector,selector2*/],[styleProperty/*styleProperty1*/])
         
