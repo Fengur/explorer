@@ -28,7 +28,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //styleReflection()
         
         //Swift.print("NSColor.redColor().cgColor is Reflectable: " + "\(NSColor.redColor().cgColor is Reflectable)")
-        let tempVar:AnyObject = NSColor.redColor().cgColor
+        let cgColor:CGColorRef = NSColor.redColor().cgColor
+        let tempVar:AnyObject = cgColor
         Swift.print("tempVar is Reflectable: " + "\(tempVar is Reflectable)")
         let temp:[Any] = [NSColor.redColor().cgColor]
         let isCGColor = temp[0] as? Reflectable != nil
