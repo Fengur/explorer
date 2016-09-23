@@ -40,7 +40,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Swift.print("transform is CGAffineTransform: " + "\(transform is CGAffineTransform)")
         Swift.print("transform is Reflectable: " + "\(transform is Reflectable)")
         /**/
-        
+        if CFGetTypeID(tempVar) == CGColorGetTypeID() {
+            Swift.print("found CGColor")
+        }
         
         //Continue here: figure out how to reflect  CGAffineTransform. first you need to create a test to figure out how to assert the "is CGAffineTransform" assert
         
