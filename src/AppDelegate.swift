@@ -30,7 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //Swift.print("NSColor.redColor().cgColor is Reflectable: " + "\(NSColor.redColor().cgColor is Reflectable)")
         /*
         let cgColor:CGColorRef = NSColor.redColor().cgColor
-        let tempVar:AnyObject = cgColor
+        let tempVar:Any = cgColor
         Swift.print("tempVar is Reflectable: " + "\(tempVar is Reflectable)")
         let temp:[Any] = [NSColor.redColor().cgColor]
         let isCGColor = temp[0] as? Reflectable != nil
@@ -41,7 +41,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Swift.print("transform is CGAffineTransform: " + "\(transform is CGAffineTransform)")
         Swift.print("transform is Reflectable: " + "\(transform is Reflectable)")
         /**/
-        if CFGetTypeID(tempVar) == CGColorGetTypeID() {
+        if CFGetTypeID(tempVar as! AnyObject) == CGColorGetTypeID() {
             Swift.print("found CGColor")
         }
         */
