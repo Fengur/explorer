@@ -34,7 +34,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let isCGColor = temp[0] as? Reflectable != nil
         Swift.print("temp[0].dynamicType: " + "\(temp[0].dynamicType)")
         Swift.print("isCGColor: " + "\(isCGColor)")
-
+        
+        let transform:Any = CGAffineTransform.init()
+        Swift.print("transform is CGAffineTransform: " + "\(transform is CGAffineTransform)")
+        Swift.print("transform is Reflectable: " + "\(transform is Reflectable)")
         /**/
         
         
