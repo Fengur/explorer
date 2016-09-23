@@ -45,6 +45,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      */
     static func typeAssertion(){
         
+        //Continue here: Try to get the type of CGTransform that is nil. Might need to use RegExp, Check stackoverflow etc
+        
         let cgColor:CGColorRef = NSColor.redColor().cgColor
         let tempVar:Any = cgColor
         Swift.print("tempVar is Reflectable: " + "\(tempVar is Reflectable)")
