@@ -25,15 +25,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         //Continue here: So its not the retrival of the styles that is slow. Although making it 30x faster is nice!
 
-        styleReflection()
-        /*
+        //styleReflection()
+        
         NSColor.redColor().cgColor
         let temp:[Any] = [NSColor.redColor().cgColor]
-        let isCGColor = temp[0] is CGColor
+        let isCGColor = temp[0] is Reflectable
         Swift.print("temp[0].dynamicType: " + "\(temp[0].dynamicType)")
         Swift.print("isCGColor: " + "\(isCGColor)")
 
-        */
+        /**/
         
         
         //Continue here: figure out how to reflect  CGAffineTransform. first you need to create a test to figure out how to assert the "is CGAffineTransform" assert
