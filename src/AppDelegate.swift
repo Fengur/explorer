@@ -27,9 +27,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         //styleReflection()
         
-        NSColor.redColor().cgColor
+        //Swift.print("NSColor.redColor().cgColor is Reflectable: " + "\(NSColor.redColor().cgColor is Reflectable)")
+        let tempVar:AnyObject = NSColor.redColor().cgColor
+        Swift.print("tempVar is Reflectable: " + "\(tempVar is Reflectable)")
         let temp:[Any] = [NSColor.redColor().cgColor]
-        let isCGColor = temp[0] is Reflectable
+        let isCGColor = temp[0] as? Reflectable != nil
         Swift.print("temp[0].dynamicType: " + "\(temp[0].dynamicType)")
         Swift.print("isCGColor: " + "\(isCGColor)")
 
