@@ -38,7 +38,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         //Continue here: figure out how to reflect  CGAffineTransform. first you need to create a test to figure out how to assert the "is CGAffineTransform" assert
         
-        
+        //Actually, for special types like CGAffineTransform etc, you should make an protocol named: Reflectable that you extend CGColor CGTransform etc. that package these types into an organized xml child
+        //Then all you do is: 
     }
     /**
      *
