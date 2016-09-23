@@ -28,6 +28,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //styleReflection()
         
         //Swift.print("NSColor.redColor().cgColor is Reflectable: " + "\(NSColor.redColor().cgColor is Reflectable)")
+        /*
         let cgColor:CGColorRef = NSColor.redColor().cgColor
         let tempVar:AnyObject = cgColor
         Swift.print("tempVar is Reflectable: " + "\(tempVar is Reflectable)")
@@ -43,7 +44,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if CFGetTypeID(tempVar) == CGColorGetTypeID() {
             Swift.print("found CGColor")
         }
-        
+        */
         //Continue here: figure out how to reflect  CGAffineTransform. first you need to create a test to figure out how to assert the "is CGAffineTransform" assert
         
         //Actually, for special types like CGAffineTransform etc, you should make an protocol named: Reflectable that you extend CGColor CGTransform etc. that package these types into an organized xml child
