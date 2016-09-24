@@ -23,21 +23,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //reflectionTest()
         
         
-        //Continue here: So its not the retrival of the styles that is slow. Although making it 30x faster is nice!
+        //Continue here: So its not the retrival of the styles that is slow. Although making it 30x faster with the tail trick is nice!
 
         styleReflection()
         //typeAssertion()
         
-        //Swift.print("NSColor.redColor().cgColor is Reflectable: " + "\(NSColor.redColor().cgColor is Reflectable)")
-        
-        /**/
-        //Continue here: figure out how to reflect  CGAffineTransform. first you need to create a test to figure out how to assert the "is CGAffineTransform" assert
-        
-        //Actually, for special types like CGAffineTransform etc, you should make an protocol named: Reflectable that you extend CGColor CGTransform etc. that package these types into an organized xml child
-        //Then all you do is:
-        
-        
-        //CGAffineTranform optional isnt being detected, nore is the CGColor, try to make an isolated test and see if it works
         
     }
     /**
@@ -45,7 +35,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      */
     func typeAssertion(){
         
-        //Continue here: Try to get the type of CGTransform that is nil. Might need to use RegExp, Check stackoverflow etc
         /*
         let cgColor:CGColorRef = NSColor.redColor().cgColor
         let tempVar:Any = cgColor
@@ -87,15 +76,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             //</StyleProperties>
         //</Style>
         
-        //continue here: converting to xml now works. Next is converting from xml to Style,styleProperty and Selector
-        //See ISelector for how this can be accomplised, its basically traversing xml, easy!!!
-        
-        
-        // and add an Ems() type (EMS isnt used alot if at all so dont worry about that for the moment)
+        // and add an Ems() type (EMS isn't used alot if at all so don't worry about that for the moment)
         // and you need to test converting Gradient to xml
         
         
-        //Continue here: Test if you can get NSColor working with reflecting a style, then gradient, the dropshadow etc, TextFormat isn't imp atm since its not used as a css value much if at all
+        //Continue here: try to add dropshadow to a style
         
 
         //let selector = Selector("Window",[],"special",["focus"])
