@@ -25,8 +25,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         //Continue here: So its not the retrival of the styles that is slow. Although making it 30x faster is nice!
 
-        styleReflection()
-        //typeAssertion()
+        //styleReflection()
+        typeAssertion()
         
         //Swift.print("NSColor.redColor().cgColor is Reflectable: " + "\(NSColor.redColor().cgColor is Reflectable)")
         
@@ -43,10 +43,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     /**
      *
      */
-    static func typeAssertion(){
+    func typeAssertion(){
         
         //Continue here: Try to get the type of CGTransform that is nil. Might need to use RegExp, Check stackoverflow etc
-        
+        /*
         let cgColor:CGColorRef = NSColor.redColor().cgColor
         let tempVar:Any = cgColor
         Swift.print("tempVar is Reflectable: " + "\(tempVar is Reflectable)")
@@ -55,15 +55,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Swift.print("temp[0].dynamicType: " + "\(temp[0].dynamicType)")
         Swift.print("isCGColor: " + "\(isCGColor)")
         
-        let transform:Any = CGAffineTransform.init()
-        Swift.print("transform is CGAffineTransform: " + "\(transform is CGAffineTransform)")
-        Swift.print("transform is Reflectable: " + "\(transform is Reflectable)")
+        
         /**/
         if CFGetTypeID(tempVar as! AnyObject) == CGColorGetTypeID() {
             let reflectable:Reflectable = tempVar as! CGColorRef
             Swift.print("reflectable: " + "\(reflectable.reflection.value)")
             Swift.print("found CGColor")
         }
+        */
+        let transform:Any? = CGAffineTransform.init()
+        Swift.print("transform.dynamicType: " + "\(transform.dynamicType)")
+        Swift.print("transform is CGAffineTransform: " + "\(transform is CGAffineTransform)")
+        Swift.print("transform is Reflectable: " + "\(transform is Reflectable)")
     }
     /**
      *
