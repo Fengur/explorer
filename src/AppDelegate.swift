@@ -64,6 +64,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         */
         let transform:Any? = CGAffineTransform.init()
+        if(transform != nil){Swift.print("transform!.dynamicType: " + "\(transform!.dynamicType)")}
         Swift.print("transform.dynamicType: " + "\(transform.dynamicType)")
         Swift.print("transform is CGAffineTransform: " + "\(transform is CGAffineTransform)")
         Swift.print("transform is Reflectable: " + "\(transform is Reflectable)")
