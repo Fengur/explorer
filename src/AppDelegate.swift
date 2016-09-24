@@ -80,7 +80,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // and you need to test converting Gradient to xml
         
         
-        //Continue here: test radialGradient
+        //Continue here: Time to see if you can recreate the Style from xml!
         
 
         //let selector = Selector("Window",[],"special",["focus"])
