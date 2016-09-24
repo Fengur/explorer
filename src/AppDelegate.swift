@@ -80,7 +80,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // and you need to test converting Gradient to xml
         
         
-        //Continue here: Time to see if you can recreate the Style from xml!
+        //Continue here: Time to see if you can recreate the Style from xml! (first do this with StyleProperty, and assert that this stil works with the Selector)
+        //Also take a look at Unwrap repo on github how sundval does it
         
 
         //let selector = Selector("Window",[],"special",["focus"])
