@@ -80,16 +80,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // and you need to test converting Gradient to xml
         
         
-        //Continue here: try to add dropshadow to a style
+        //Continue here: try to add dropshadow to a style, then test radialGradient
         
 
         //let selector = Selector("Window",[],"special",["focus"])
         //let selector2 = Selector("Button",[],"custom",["over"])
-        let gradient = LinearGradient(Gradients.teal(0.5),[],π/2)//
+        let dropShadow = DropShadow(NSColor.blackColor(),0,0,2,false)
+        //let gradient = LinearGradient(Gradients.teal(0.5),[],π/2)//
         //let color = NSColorParser.nsColor(0xFF0000)
-        let styleProperty = StyleProperty("fill",gradient/*color*/,0)
+        //let styleProperty = StyleProperty("fill",gradient/*color*/,0)
         //let styleProperty2 = StyleProperty("line",NSColorParser.nsColor(0x0000FF),0)
-        let style:IStyle = Style("",[/*selector,selector2*/],[styleProperty/*styleProperty1*/])
+        let styleProperty3 = StyleProperty("dropShadow",dropShadow,0)
+        
+        let style:IStyle = Style("",[/*selector,selector2*/],[styleProperty3/*styleProperty1*/])
         
         /*let properties = Reflection.reflect(styleProperty)
         properties.forEach{
