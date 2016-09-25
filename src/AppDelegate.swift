@@ -40,8 +40,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let xml = Reflection.toXML(dropShadow)
         //Swift.print(xml.string)
         //3. unWrap the XML to a new dropshadow instance
-        
+        let newDropShadow:DropShadow? = DropShadow.unWrap(xml)
         //4. compare the two dropshadow instances
+        
     }
     /**
      *
