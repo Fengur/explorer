@@ -29,6 +29,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //typeAssertion()
         unWrapTest()
         
+        //Continue here: test unWrapping StyleProperty, Selector and then Style, then try to store many stylesand respawn many styles
+        
     }
     /**
      * Test If you can UnWrap DropShadow, then add UInt,Float,Double,Int etc
