@@ -23,7 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //reflectionTest()
         
         
-        //Continue here: So its not the retrival of the styles that is slow. Although making it 30x faster with the tail trick is nice!
+        //IMPORTANT: So its not the retrival of the styles that is slow. Although making it 30x faster with the tail trick is nice!
 
         styleReflection()
         //typeAssertion()
@@ -31,10 +31,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
     }
     /**
-     * test If you can UnWrap DropShadow, then add UInt,Float,Double,Int etc
+     * Test If you can UnWrap DropShadow, then add UInt,Float,Double,Int etc
      */
     func unWrapTest(){
-    
+        //1. Create a DropShadow instance
+        
+        //2. reflect the dropshadow instance
+        
+        //3. 
     }
     /**
      *
