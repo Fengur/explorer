@@ -25,7 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         //IMPORTANT: So its not the retrival of the styles that is slow. Although making it 30x faster with the tail trick is nice!
 
-        styleReflection()
+        //styleReflection()
         //typeAssertion()
         unWrapTest()
         
@@ -35,9 +35,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      */
     func unWrapTest(){
         //1. Create a DropShadow instance
-        
+        let dropShadow = DropShadow(NSColor.blackColor(),0,0,2,false)
         //2. reflect the dropshadow instance to XML
-        
+        let xml = Reflection.toXML(dropShadow)
+        Swift.print(xml.string)
         //3. unWrap the XML to a new dropshadow instance
         
         //4. compare the two dropshadow instances
