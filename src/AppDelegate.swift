@@ -40,8 +40,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let xml = Reflection.toXML(dropShadow)
         //Swift.print(xml.string)
         //3. unWrap the XML to a new dropshadow instance
-        var newDropShadow:DropShadow?
-        newDropShadow = dropShadow.unWrap(xml)
+        let newDropShadow:DropShadow? = DropShadow.unWrap(xml)
         //4. compare the two dropshadow instances
         if(newDropShadow!.color == dropShadow.color && newDropShadow!.blurRadius == dropShadow.blurRadius){
             Swift.print("is Equal")
