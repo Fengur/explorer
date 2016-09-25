@@ -27,8 +27,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         styleReflection()
         //typeAssertion()
+        unWrapTest()
         
-        
+    }
+    /**
+     * test If you can UnWrap DropShadow, then add UInt,Float,Double,Int etc
+     */
+    func unWrapTest(){
+    
     }
     /**
      *
