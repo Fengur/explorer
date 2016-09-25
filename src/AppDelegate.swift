@@ -36,9 +36,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func unWrapTest(){
         //1. Create a DropShadow instance
         
-        //2. reflect the dropshadow instance
+        //2. reflect the dropshadow instance to XML
         
-        //3. 
+        //3. unWrap the XML to a new dropshadow instance
+        
+        //4. compare the two dropshadow instances
     }
     /**
      *
