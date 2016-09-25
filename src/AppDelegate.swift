@@ -38,7 +38,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let dropShadow = DropShadow(NSColor.blackColor(),0,0,2,false)
         //2. reflect the dropshadow instance to XML
         let xml = Reflection.toXML(dropShadow)
-        Swift.print(xml.string)
+        //Swift.print(xml.string)
         //3. unWrap the XML to a new dropshadow instance
         
         //4. compare the two dropshadow instances
