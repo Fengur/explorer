@@ -29,7 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //typeAssertion()
         unWrapTest()
         
-        //Continue here: test unWrapping StyleProperty, Selector and then Style, then try to store many stylesand respawn many styles
+        //Continue here: test unWrapping Gradient , StyleProperty, Selector and then Style, then try to store many stylesand respawn many styles
         
     }
     /**
