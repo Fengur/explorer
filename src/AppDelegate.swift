@@ -37,8 +37,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      */
     func wrapUnWrapGradientTest(){
         //1. Create an instance
+        let instance = LinearGradient(Gradients.deepPurple(),[0,1])
         //2. reflect the instance to XML
+        let xml = Reflection.toXML(instance)
         //3. unWrap the XML to a new instance
+        let newInstance = DropShadow.unWrap(xml)
         //4. compare the two instances
     }
     /**
