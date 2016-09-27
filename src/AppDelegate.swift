@@ -41,7 +41,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //2. reflect the instance to XML
         let xml = Reflection.toXML(instance)
         //3. unWrap the XML to a new instance
-        let newInstance = DropShadow.unWrap(xml)
+        let newInstance:LinearGradient = LinearGradient.unWrap(xml)
         //4. compare the two instances
     }
     /**
