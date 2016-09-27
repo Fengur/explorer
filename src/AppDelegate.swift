@@ -41,8 +41,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //2. reflect the instance to XML
         let xml = Reflection.toXML(instance)
         //3. unWrap the XML to a new instance
-        let newInstance:LinearGradient = LinearGradient.unWrap(xml)
+        let newInstance:LinearGradient? = LinearGradient.unWrap(xml)
         //4. compare the two instances
+        if(ArrayAsserter.equals(instance.colors, newInstance!.colors) && ArrayAsserter.equals(instance.locations, newInstance!.locations) && instance.rotation == newInstance!.rotation){
+            Swift.print("is Equal")
+        }else{
+            Swift.print("is not equal")
+        }
+        
+        //UNwrap in Gradient is missing transformation. add it
+        
     }
     /**
      * Test If you can UnWrap DropShadow, then add UInt,Float,Double,Int etc
