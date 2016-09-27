@@ -27,15 +27,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         //styleReflection()
         //typeAssertion()
-        unWrapTest()
+        //wrapUnWrapDropShadowTest()
         
         //Continue here: test unWrapping Gradient , StyleProperty, Selector and then Style, then try to store many stylesand respawn many styles
         
     }
     /**
+     *
+     */
+    func wrapUnWrapGradientTest(){
+        //1. Create an instance
+        //2. reflect the instance to XML
+        //3. unWrap the XML to a new instance
+        //4. compare the two instances
+    }
+    /**
      * Test If you can UnWrap DropShadow, then add UInt,Float,Double,Int etc
      */
-    func unWrapTest(){
+    func wrapUnWrapDropShadowTest(){
         //1. Create a DropShadow instance
         let dropShadow = DropShadow(NSColor.blackColor(),0,0,2,false)
         //2. reflect the dropshadow instance to XML
