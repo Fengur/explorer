@@ -53,7 +53,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //3. unWrap the XML to a new instance
         let newInstance:StyleProperty? = StyleProperty.unWrap(xml)
         //4. compare the two instances (Naive assert)
-        if(instance.name == newInstance!.name){
+        if(instance.name == newInstance!.name && instance.depth == newInstance!.depth){
             Swift.print("is Equal")
         }else{
             Swift.print("is not equal")
