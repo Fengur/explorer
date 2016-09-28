@@ -37,7 +37,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //typeAssertion()
         //dropShadowTest()
         //gradientTest()
-        stylePropertyTest()
+        //stylePropertyTest()
+        selectorTest()
+    }
+    /**
+     *
+     */
+    func selectorTest(){
+        //1. Create an instance
+        let instance:Selector = Selector("Window",[],"special",["focus"])
+        //2. reflect the instance to XML
+        let xml = Reflection.toXML(instance)
+        Swift.print("xml.XMLString: " + "\(xml.XMLString)")
+        //3. unWrap the XML to a new instance
+        //let newInstance:Selector? = Selector.unWrap(xml)
+        //4. compare the two instances (Naive assert)
         
     }
     /**
