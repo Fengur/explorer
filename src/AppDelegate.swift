@@ -31,6 +31,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         wrapUnWrapGradientTest()
         
         //Continue here: StyleProperty, Selector and then Style, then try to store many stylesand respawn many styles
+    
+        //Continue here: add support for unwrapping RadialGradient aswell
     }
     /**
      * Test unWrapping Gradient
@@ -48,7 +50,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Swift.print("newInstance?.locations: " + "\(newInstance?.locations)")
         Swift.print("newInstance?.rotation: " + "\(newInstance?.rotation)")
         Swift.print("newInstance?.transformation: " + "\(newInstance?.transformation)")
-        //4. compare the two instances
+        //4. compare the two instances (Naive assert)
         if(/*ArrayAsserter.equals(instance.colors, newInstance!.colors) &&*/ ArrayAsserter.equals(instance.locations, newInstance!.locations) && instance.rotation == newInstance!.rotation){
             Swift.print("is Equal")
         }else{
