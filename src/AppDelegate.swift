@@ -39,12 +39,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //gradientTest()
         //stylePropertyTest()
         //selectorTest()
-        styleTest()
+        styleTesting()
     }
     /**
      *
      */
-    func styleTest(){
+    func styleTesting(){
         //1. Create an instance
         
         let selector = Selector("Window",[],"special",["focus"])
@@ -57,7 +57,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let styleProperty2 = StyleProperty("line",NSColorParser.nsColor(0x0000FF),0)
         //let styleProperty3 = StyleProperty("dropShadow",dropShadow,0)
         
-        let instance:Style = Style("testStyle",[selector,selector2],[styleProperty,styleProperty2])
+        let instance:Style = Style("custom",[selector,selector2],[styleProperty,styleProperty2])
         //2. reflect the instance to XML
         let xml = Reflection.toXML(instance)
         Swift.print("xml.XMLString: " + "\(xml.XMLString)")
