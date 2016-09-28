@@ -210,7 +210,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let test = XMLParser.childAt(xml.children!, 0)!.value
             Swift.print("test: " + "\(test)")
             
-            let selector:ISelector = Selector.selector(xml)
+            let selector:ISelector = Selector.unWrap(xml)!
             let selectorString:String = SelectorParser.selectorString(selector)
             Swift.print("selectorString: " + "\(selectorString)")
         }
@@ -232,7 +232,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 let child:XML = $0 as! XML
                 child.children?.forEach{
                     let subChild:XML = $0 as! XML
-                    let selector:ISelector = Selector.selector(subChild)
+                    let selector:ISelector = Selector.unWrap(subChild)!
                     selectors.append(selector)
                 }
                 data.append(selectors)
