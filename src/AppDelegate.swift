@@ -49,7 +49,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             Swift.print("is not equal")
         }
         
-        //Continue here: UNwrap in Gradient is missing transformation. add it
+        
         
     }
     /**
