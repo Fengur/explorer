@@ -50,9 +50,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let xml = Reflection.toXML(instance)
         Swift.print("xml.XMLString: " + "\(xml.XMLString)")
         //3. unWrap the XML to a new instance
-        //let newInstance:Selector? = Selector.unWrap(xml)
-        //4. compare the two instances (Naive assert)
-        
+        let newInstance:Selector? = Selector.unWrap(xml)
+        //4. compare the two instances
+        if(instance.id == newInstance!.id && instance.element == newInstance!.element && ArrayAsserter.equals(instance.states, newInstance!.states)){
+            Swift.print("is Equal")
+        }else{
+            Swift.print("is not equal")
+        }
     }
     /**
      *
