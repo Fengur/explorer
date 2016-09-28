@@ -39,12 +39,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      */
     func wrapUnWrapGradientTest(){
         //1. Create an instance
-        let instance = LinearGradient(Gradients.deepPurple(),[0,1])
+        let instance = RadialGradient(Gradients.deepPurple(),[0,1])//LinearGradient(Gradients.deepPurple(),[0,1])
         //2. reflect the instance to XML
         let xml = Reflection.toXML(instance)
         Swift.print("xml.XMLString: " + "\(xml.XMLString)")
         //3. unWrap the XML to a new instance
-        let newInstance:LinearGradient? = LinearGradient.unWrap(xml)
+        let newInstance:RadialGradient? = RadialGradient.unWrap(xml)
         Swift.print("newInstance: " + "\(newInstance)")
         Swift.print("newInstance?.colors: " + "\(newInstance?.colors)")
         Swift.print("newInstance?.locations: " + "\(newInstance?.locations)")
