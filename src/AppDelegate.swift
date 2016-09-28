@@ -40,6 +40,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let instance = LinearGradient(Gradients.deepPurple(),[0,1])
         //2. reflect the instance to XML
         let xml = Reflection.toXML(instance)
+        Swift.print("xml.XMLString: " + "\(xml.XMLString)")
         //3. unWrap the XML to a new instance
         let newInstance:LinearGradient? = LinearGradient.unWrap(xml)
         //4. compare the two instances
