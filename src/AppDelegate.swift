@@ -20,26 +20,37 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         */
 
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
-        //reflectionTest()
         
-        
-        //IMPORTANT: So its not the retrival of the styles that is slow. Although making it 30x faster with the tail trick is nice!
-
-        //styleReflection()
-        //typeAssertion()
-        //wrapUnWrapDropShadowTest()
-        wrapUnWrapGradientTest()
-        
-        //Continue here: StyleProperty, Selector and then Style, then try to store many stylesand respawn many styles
-    
-        //Continue here: add support for unwrapping RadialGradient aswell
+        wrappingtests()
     }
     /**
-     * Test unWrapping Gradient
+     *
      */
-    func wrapUnWrapGradientTest(){
+    func wrappingtests(){
+        //reflectionTest()
+      
+        //IMPORTANT: So its not the retrival of the styles that is slow. Although making it 30x faster with the tail trick is nice!
+       
+        //Continue here: StyleProperty, Selector and then Style, then try to store many styles and respawn many styles
+        //styleReflection()
+        //typeAssertion()
+        //dropShadowTest()
+        //gradientTest()
+        stylePropertyTest()
+        
+    }
+    /**
+     *
+     */
+    func stylePropertyTest(){
+        
+    }
+    /**
+     * Test unWrapping Gradient (LinearGradient,RadialGradient)
+     */
+    func gradientTest(){
         //1. Create an instance
-        let instance = RadialGradient(Gradients.deepPurple(),[0,1])//LinearGradient(Gradients.deepPurple(),[0,1])
+        let instance = RadialGradient(Gradients.deepPurple(),[0,1])//LinearGradient
         //2. reflect the instance to XML
         let xml = Reflection.toXML(instance)
         Swift.print("xml.XMLString: " + "\(xml.XMLString)")
@@ -60,7 +71,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     /**
      * Test If you can UnWrap DropShadow, then add UInt,Float,Double,Int etc
      */
-    func wrapUnWrapDropShadowTest(){
+    func dropShadowTest(){
         //1. Create a DropShadow instance
         let dropShadow = DropShadow(NSColor.blackColor(),0,0,2,false)
         //2. reflect the dropshadow instance to XML
