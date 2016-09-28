@@ -52,7 +52,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //3. unWrap the XML to a new instance
         let newInstance:Selector? = Selector.unWrap(xml)
         //4. compare the two instances
-        if(instance.id == newInstance!.id && instance.element == newInstance!.element && ArrayAsserter.equals(instance.states, newInstance!.states)){
+        if(instance.id == newInstance!.id && instance.element == newInstance!.element && ArrayAsserter.equals(instance.states, newInstance!.states) && ArrayAsserter.equals(instance.classIds, newInstance!.classIds)){
             Swift.print("is Equal")
         }else{
             Swift.print("is not equal")
