@@ -24,7 +24,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         wrappingtests()
     }
     /**
-     *
+     * TODO: see if you can recreate the Style from xml! (first do this with StyleProperty, and assert that this stil works with the Selector)
+     * TODO:  and add an Ems() type (EMS isn't used alot if at all so don't worry about that for the moment)
+     // and you need to test converting Gradient to xml
+     
+
      */
     func wrappingtests(){
         //reflectionTest()
@@ -43,6 +47,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      *
      */
     func stylePropertyTest(){
+        //1. Create an instance
+        let instance = RadialGradient(Gradients.deepPurple(),[0,1])//LinearGradient
+        //2. reflect the instance to XML
+        let xml = Reflection.toXML(instance)
+        Swift.print("xml.XMLString: " + "\(xml.XMLString)")
+        //3. unWrap the XML to a new instance
+        
+        //4. compare the two instances (Naive assert)
         
     }
     /**
@@ -138,12 +150,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             //</StyleProperties>
         //</Style>
         
-        // and add an Ems() type (EMS isn't used alot if at all so don't worry about that for the moment)
-        // and you need to test converting Gradient to xml
         
         
-        //Continue here: Time to see if you can recreate the Style from xml! (first do this with StyleProperty, and assert that this stil works with the Selector)
-        //Also take a look at Unwrap repo on github how sundval does it
+        
         
 
         //let selector = Selector("Window",[],"special",["focus"])
