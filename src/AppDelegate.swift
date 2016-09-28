@@ -44,6 +44,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Swift.print("xml.XMLString: " + "\(xml.XMLString)")
         //3. unWrap the XML to a new instance
         let newInstance:LinearGradient? = LinearGradient.unWrap(xml)
+        Swift.print("newInstance: " + "\(newInstance)")
+        Swift.print("newInstance?.colors: " + "\(newInstance?.colors)")
+        Swift.print("newInstance?.locations: " + "\(newInstance?.locations)")
+        Swift.print("newInstance?.rotation: " + "\(newInstance?.rotation)")
+        Swift.print("newInstance?.transformation: " + "\(newInstance?.transformation)")
         //4. compare the two instances
         if(ArrayAsserter.equals(instance.colors, newInstance!.colors) && ArrayAsserter.equals(instance.locations, newInstance!.locations) && instance.rotation == newInstance!.rotation){
             Swift.print("is Equal")
