@@ -51,9 +51,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let xml = Reflection.toXML(instance)
         Swift.print("xml.XMLString: " + "\(xml.XMLString)")
         //3. unWrap the XML to a new instance
-        
+        let newInstance:StyleProperty? = StyleProperty.unWrap(xml)
         //4. compare the two instances (Naive assert)
-        
+        if(instance.name == newInstance!.name){
+            Swift.print("is Equal")
+        }else{
+            Swift.print("is not equal")
+        }
     }
     /**
      * Test unWrapping Gradient (LinearGradient,RadialGradient)
