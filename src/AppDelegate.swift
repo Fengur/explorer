@@ -28,12 +28,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //styleReflection()
         //typeAssertion()
         //wrapUnWrapDropShadowTest()
+        wrapUnWrapGradientTest()
         
-        //Continue here: test unWrapping Gradient , StyleProperty, Selector and then Style, then try to store many stylesand respawn many styles
+        //Continue here: StyleProperty, Selector and then Style, then try to store many stylesand respawn many styles
         
     }
     /**
-     *
+     * Test unWrapping Gradient
      */
     func wrapUnWrapGradientTest(){
         //1. Create an instance
@@ -49,9 +50,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }else{
             Swift.print("is not equal")
         }
-        
-        
-        
     }
     /**
      * Test If you can UnWrap DropShadow, then add UInt,Float,Double,Int etc
