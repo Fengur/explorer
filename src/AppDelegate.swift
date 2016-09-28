@@ -25,10 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     /**
      * TODO: see if you can recreate the Style from xml! (first do this with StyleProperty, and assert that this stil works with the Selector)
-     * TODO:  and add an Ems() type (EMS isn't used alot if at all so don't worry about that for the moment)
-     // and you need to test converting Gradient to xml
-     
-
+     * TODO: and add an Ems() type (EMS isn't used alot if at all so don't worry about that for the moment)
      */
     func wrappingtests(){
         //reflectionTest()
@@ -48,7 +45,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      */
     func stylePropertyTest(){
         //1. Create an instance
-        let instance = RadialGradient(Gradients.deepPurple(),[0,1])//LinearGradient
+        let color = NSColorParser.nsColor(0xFF0000)
+        let instance = StyleProperty("fill",color,0)
         //2. reflect the instance to XML
         let xml = Reflection.toXML(instance)
         Swift.print("xml.XMLString: " + "\(xml.XMLString)")
@@ -149,10 +147,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 //</item>
             //</StyleProperties>
         //</Style>
-        
-        
-        
-        
         
 
         //let selector = Selector("Window",[],"special",["focus"])
