@@ -38,7 +38,37 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //dropShadowTest()
         //gradientTest()
         //stylePropertyTest()
-        selectorTest()
+        //selectorTest()
+        styleTest()
+    }
+    /**
+     *
+     */
+    func styleTest(){
+        //1. Create an instance
+        
+        let selector = Selector("Window",[],"special",["focus"])
+        let selector2 = Selector("Button",[],"custom",["over"])
+        //let dropShadow = DropShadow(NSColor.blackColor(),0,0,2,false)
+        //let gradient = LinearGradient(Gradients.teal(0.5),[],π/2)//
+        let gradient2 = RadialGradient(Gradients.teal(0.5),[],π/2)//
+        //let color = NSColorParser.nsColor(0xFF0000)
+        let styleProperty = StyleProperty("fill",gradient2/*color*/,0)
+        let styleProperty2 = StyleProperty("line",NSColorParser.nsColor(0x0000FF),0)
+        //let styleProperty3 = StyleProperty("dropShadow",dropShadow,0)
+        
+        let instance:Style = Style("testStyle",[selector,selector2],[styleProperty,styleProperty2])
+        //2. reflect the instance to XML
+        let xml = Reflection.toXML(instance)
+        Swift.print("xml.XMLString: " + "\(xml.XMLString)")
+        //3. unWrap the XML to a new instance
+        let newInstance:Style? = Selector.unWrap(xml)
+        //4. compare the two instances (Naive assert)
+        if(instance.name == newInstance!.name){
+            Swift.print("is Equal")
+        }else{
+            Swift.print("is not equal")
+        }
     }
     /**
      *
