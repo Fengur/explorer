@@ -21,7 +21,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
-        wrappingtests()
+        //wrappingtests()
+        
+        let xml = "<a><one>text</one></a>".xml
+        XMLParser.firstNode(xml, one)
     }
     /**
      * TODO: see if you can recreate the Style from xml! (first do this with StyleProperty, and assert that this stil works with the Selector)
