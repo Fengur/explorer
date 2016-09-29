@@ -24,7 +24,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //wrappingtests()
         
         let xml = "<a><one>text</one></a>".xml
-        XMLParser.firstNode(xml, one)
+        let child = xml.firstNode("one")!
+        Swift.print("child.value: " + "\(child.value)")
     }
     /**
      * TODO: see if you can recreate the Style from xml! (first do this with StyleProperty, and assert that this stil works with the Selector)
