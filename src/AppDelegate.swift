@@ -32,6 +32,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Swift.print("child.value: " + "\(child.stringValue)")//Output: text
         Swift.print("child.childCount: " + "\(child.childCount)")
         
+        let granChild = child.children![0]
+        Swift.print("granChild.name: " + "\(granChild.name)")
+        Swift.print("granChild.childCount: " + "\(granChild.childCount)")
+
+        
     }
     /**
      * TODO: see if you can recreate the Style from xml! (first do this with StyleProperty, and assert that this stil works with the Selector)
