@@ -23,8 +23,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         //wrappingtests()
         
-        let xml = "<a><one><two>text</two></one></a>".xml
+        let xml = "<a><one>text</one></a>".xml
         let child = xml.firstNode("one")!
+        Swift.print("child: " + "\(child)")
         Swift.print("child.childCount: " + "\(child.childCount)")
         Swift.print("child.children?.count: " + "\(child.children?.count)")
         Swift.print("child.value: " + "\(child.stringValue)")//Output: text
