@@ -25,8 +25,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let xml = "<a><one>text</one></a>".xml
         let child = xml.firstNode("one")!
-        child.hasComplexContent()
-
+        Swift.print("child.hasComplexContent: " + "\(child.hasComplexContent)")
+        Swift.print("child.hasSimpleContent: " + "\(child.hasSimpleContent)")
         
     }
     /**
