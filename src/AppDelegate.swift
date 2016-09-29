@@ -40,9 +40,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //typeAssertion()
         //dropShadowTest()
         //gradientTest()
-        stylePropertyTest()
+        //stylePropertyTest()
         //selectorTest()
-        //styleTesting()
+        styleTesting()
     }
     /**
      *
