@@ -66,6 +66,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Swift.print("xml.XMLString: " + "\(xml.XMLString)")
         //3. unWrap the XML to a new instance
         let newInstance:Style? = Style.unWrap(xml)
+        Swift.print("newInstance?.name: " + "\(newInstance?.name)")
         //4. compare the two instances (Naive assert)
         if(instance.name == newInstance!.name){
             Swift.print("is Equal")
