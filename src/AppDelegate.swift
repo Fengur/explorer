@@ -25,7 +25,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let xml = "<a><one><two>text</two></one></a>".xml
         let child = xml.firstNode("one")!
-        Swift.print("child.value: " + "\(child.value)")//Output: text
+        Swift.print("child.childCount: " + "\(child.childCount)")
+        Swift.print("child.children?.count: " + "\(child.children?.count)")
+        Swift.print("child.value: " + "\(child.stringValue)")//Output: text
         Swift.print("child.childCount: " + "\(child.childCount)")
         
     }
