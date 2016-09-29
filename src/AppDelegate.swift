@@ -63,7 +63,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let instance:Style = Style("custom",[selector,selector2],[styleProperty,styleProperty2])
         //2. reflect the instance to XML
         let xml = Reflection.toXML(instance)
-        Swift.print("xml.XMLString: " + "\(xml.XMLString)")
+        //Swift.print("xml.XMLString: " + "\(xml.XMLString)")
         //3. unWrap the XML to a new instance
         let newInstance:Style? = Style.unWrap(xml)
         Swift.print("newInstance?.name: " + "\(newInstance?.name)")
