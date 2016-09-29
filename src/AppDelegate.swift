@@ -25,7 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let xml = "<a><one>text</one></a>".xml
         let child = xml.firstNode("one")!
-        Swift.print("child.value: " + "\(child.value)")
+        Swift.print("child.value: " + "\(child.value)")//Output: text
     }
     /**
      * TODO: see if you can recreate the Style from xml! (first do this with StyleProperty, and assert that this stil works with the Selector)
