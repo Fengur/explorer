@@ -25,7 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let xml = "<a><one>text</one></a>".xml
         let child = xml.firstNode("one")!
-        child
+        child.hasComplexContent()
 
         
     }
