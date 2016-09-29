@@ -21,12 +21,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
-        //wrappingtests()
+        wrappingtests()
         
-        let xml = "<a><one>text</one></a>".xml
-        let child = xml.firstNode("one")!
-        Swift.print("child.hasComplexContent: " + "\(child.hasComplexContent)")
-        Swift.print("child.hasSimpleContent: " + "\(child.hasSimpleContent)")
+        
         
     }
     /**
