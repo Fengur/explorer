@@ -51,7 +51,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //1. Create an instance
         let selector = Selector("Window",[],"special",["focus"])
         let selector2 = Selector("Button",[],"custom",["over"])
-        //let dropShadow = DropShadow(NSColor.blackColor(),0,0,2,false)
+        let dropShadow = DropShadow(NSColor.blackColor(),0,0,2,false)
         //let gradient = LinearGradient(Gradients.teal(0.5),[],π/2)//
         let gradient2 = RadialGradient(Gradients.teal(0.5),[],π/2)//
         //let color = NSColorParser.nsColor(0xFF0000)
@@ -59,7 +59,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let styleProperty2 = StyleProperty("line",NSColorParser.nsColor(0x0000FF),0)
         let styleProperty3 = StyleProperty("dropShadow",dropShadow,0)
         
-        let instance:Style = Style("custom",[selector,selector2],[styleProperty,styleProperty2])
+        let instance:Style = Style("custom",[selector,selector2],[styleProperty,styleProperty2,styleProperty3])
         //2. reflect the instance to XML
         let xml = Reflection.toXML(instance)
         //Swift.print("xml.XMLString: " + "\(xml.XMLString)")
