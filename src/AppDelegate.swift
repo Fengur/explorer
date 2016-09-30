@@ -49,7 +49,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      */
     func styleTesting(){
         //1. Create an instance
-        
         let selector = Selector("Window",[],"special",["focus"])
         let selector2 = Selector("Button",[],"custom",["over"])
         //let dropShadow = DropShadow(NSColor.blackColor(),0,0,2,false)
@@ -58,7 +57,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //let color = NSColorParser.nsColor(0xFF0000)
         let styleProperty = StyleProperty("fill",gradient2/*color*/,0)
         let styleProperty2 = StyleProperty("line",NSColorParser.nsColor(0x0000FF),0)
-        //let styleProperty3 = StyleProperty("dropShadow",dropShadow,0)
+        let styleProperty3 = StyleProperty("dropShadow",dropShadow,0)
         
         let instance:Style = Style("custom",[selector,selector2],[styleProperty,styleProperty2])
         //2. reflect the instance to XML
