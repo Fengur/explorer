@@ -62,10 +62,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let instance:Style = Style("custom",[selector,selector2],[styleProperty,styleProperty2,styleProperty3])
         //2. reflect the instance to XML
         let xml = Reflection.toXML(instance)
-        //Swift.print("xml.XMLString: " + "\(xml.XMLString)")
+        Swift.print("xml.XMLString: " + "\(xml.XMLString)")
         //3. unWrap the XML to a new instance
         let newInstance:Style? = Style.unWrap(xml)
-        Swift.print("newInstance?.name: " + "\(newInstance?.name)")
+        //Swift.print("newInstance?.name: " + "\(newInstance?.name)")
         //4. compare the two instances (Naive assert)
         if(instance.name == newInstance!.name && instance.selectors.count == newInstance!.selectors.count && instance.styleProperties.count == newInstance!.styleProperties.count){
             Swift.print("is Equal")
