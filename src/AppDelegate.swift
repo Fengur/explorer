@@ -24,6 +24,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         writeXMLToDisk()
         Swift.print("Storing styles time: " + "\(abs(startTime2.timeIntervalSinceNow))")
     }
+    
+    //continue here: Maybe not store xml nodes that are empty, or arrays that has no items. 6000 lines of xml is a bit excesive
+    
     func writeXMLToDisk(){
         var contentToWriteToDisk = "<data>"
         StyleManager.styles.forEach{
