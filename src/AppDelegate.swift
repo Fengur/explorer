@@ -22,7 +22,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
         //wrappingtests()
+        let startTime2 = NSDate()
         writeXMLToDisk()
+        Swift.print("Storing styles time: " + "\(abs(startTime2.timeIntervalSinceNow))")
     }
     func writeXMLToDisk(){
         var contentToWriteToDisk = "<data>"
