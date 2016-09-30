@@ -68,7 +68,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let newInstance:Style? = Style.unWrap(xml)
         Swift.print("newInstance?.name: " + "\(newInstance?.name)")
         //4. compare the two instances (Naive assert)
-        if(instance.name == newInstance!.name){
+        if(instance.name == newInstance!.name && instance.selectors.count == newInstance!.selectors.count && instance.styleProperties.count == newInstance!.styleProperties.count){
             Swift.print("is Equal")
         }else{
             Swift.print("is not equal")
