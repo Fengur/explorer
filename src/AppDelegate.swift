@@ -23,6 +23,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         //wrappingtests()
     }
+    func writeXMLToDisk(){
+        var contentToWriteToDisk = "<data>"
+        StyleManager.styles.forEach{
+            let xml = Reflection.toXML($0)
+            contentToWriteToDisk += xml.XMLString
+            //Swift.print("xml.XMLString: " + "\(xml.XMLString)")
+        }
+        contentToWriteToDisk += "</data>"//wrap the selector in an selectors root xml
+        FileModifier.write("~/Desktop/xmlSelectors.xml".tildePath, contentToWriteToDisk)
+    }
     /**
      * TODO: see if you can recreate the Style from xml! (first do this with StyleProperty, and assert that this stil works with the Selector)
      * TODO: and add an Ems() type (EMS isn't used alot if at all so don't worry about that for the moment)
@@ -249,10 +259,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             Swift.print("selectorString: " + "\(selectorString)")
         }
         //inputTest()
-        
-        //continue here: store the xml string to disk.
-        //you need to collect all selectors in one string, and then after the app has initialized, you need to save this string to disk
-        
+        /**
+         * NOTE: stores the xml string to disk.
+         * NOTE: collect all selectors in one string, and then after the app has initialized, you need to save this string to disk
+         */
         func writeToDisk(){
             let contentToWriteToDisk = "<data>" + AppDelegate.selectorsString + "</data>"//wrap the selector in an selectors root xml
             FileModifier.write("~/Desktop/selectors.xml".tildePath, contentToWriteToDisk)
