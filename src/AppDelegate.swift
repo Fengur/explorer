@@ -16,7 +16,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         readXMLFromDisk()
         win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
-
+        
+        //continue here: you need to test adding a color to a styleproperty.value, and then test what kind of type that instance is. 
+        //colorValue not supported: Optional(Optional(NSCustomColorSpace sRGB IEC61966-2.1 colorspace 0.905882 0.905882 0.905882 1)): 
 
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
