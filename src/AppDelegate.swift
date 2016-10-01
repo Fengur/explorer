@@ -10,23 +10,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(aNotification:NSNotification) {
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/button/button.css")
 
-        /*
+        /**/
         let startTime = NSDate()
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
-        */
+
 
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
         //wrappingtests()
-        /*
+        
         let startTime2 = NSDate()
         writeXMLToDisk()
         Swift.print("Storing styles time: " + "\(abs(startTime2.timeIntervalSinceNow))")//0.29sec for basic styles, pretty good!
-        */
+        /**/
         
-        readXMLFromDisk()
+        //readXMLFromDisk()
     }
     
     //Continue here: Try to read the styles to the styleManager, and measure the time it takes. (if its too lengthy even after the optimizations, then try json)
