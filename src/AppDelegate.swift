@@ -25,6 +25,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         writeXMLToDisk()
         Swift.print("Storing styles time: " + "\(abs(startTime2.timeIntervalSinceNow))")//0.29sec for basic styles, pretty good!
         */
+        
+        readXMLFromDisk()
     }
     
     //Continue here: Try to read the styles to the styleManager, and measure the time it takes. (if its too lengthy even after the optimizations, then try json)
@@ -41,6 +43,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         FileModifier.write("~/Desktop/styles.xml".tildePath, contentToWriteToDisk)//<--wrong name should be styles.xml
     }
     func readXMLFromDisk(){
+        let startTime = NSDate()
+
+        
         let xml:XML = FileParser.xml("~/Desktop/styles.xml".tildePath)//then try toload this selectors.xml and convert every selector into Selector instancces in an array
         var styles:[IStyle] = []
         xml.children?.forEach{
@@ -48,11 +53,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             if(style != nil) {styles.append(style!)}
         }
         Swift.print("styles.count: " + "\(styles.count)")//then check the count
-        
+        Swift.print("parse xml time: " + "\(abs(startTime.timeIntervalSinceNow))")//then try to measure the time of resolving all selectors
 
-        let startTime = NSDate()
+        let startTime2 = NSDate()
         StyleManager.addStyle(styles)
-        Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")//then try to measure the time of resolving all selectors
+        Swift.print("addStyle time: " + "\(abs(startTime2.timeIntervalSinceNow))")//then try to measure the time of resolving all selectors
 
     }
     
