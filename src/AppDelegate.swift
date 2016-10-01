@@ -38,8 +38,35 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             //Swift.print("xml.XMLString: " + "\(xml.XMLString)")
         }
         contentToWriteToDisk += "</data>"//wrap the selector in an selectors root xml
-        FileModifier.write("~/Desktop/xmlSelectors.xml".tildePath, contentToWriteToDisk)
+        FileModifier.write("~/Desktop/styles.xml".tildePath, contentToWriteToDisk)//<--wrong name should be styles.xml
     }
+    func readXMLFromDisk(){
+        let xml:XML = FileParser.xml("~/Desktop/styles.xml".tildePath)//then try toload this selectors.xml and convert every selector into Selector instancces in an array
+        var data:[[ISelector]] = []
+        xml.children?.forEach{
+            var selectors:[ISelector] = []
+            let child:XML = $0 as! XML
+            child.children?.forEach{
+                let subChild:XML = $0 as! XML
+                let selector:ISelector = Selector.unWrap(subChild)!
+                selectors.append(selector)
+            }
+            data.append(selectors)
+        }
+        Swift.print("data.count: " + "\(data.count)")//then check the count
+        
+
+        let startTime = NSDate()
+        var styles:[IStyle] = []
+        data.forEach{
+            let style:IStyle = StyleResolver.style($0, nil/*Text(100,20)*/)
+            styles.append(style)//then use the StyleResolver to resolve every selector
+        }
+        Swift.print("styles.count: " + "\(styles.count)")
+        Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")//then try to measure the time of resolving all selectors
+
+    }
+    
     /**
      * TODO: see if you can recreate the Style from xml! (first do this with StyleProperty, and assert that this stil works with the Selector)
      * TODO: and add an Ems() type (EMS isn't used alot if at all so don't worry about that for the moment)
