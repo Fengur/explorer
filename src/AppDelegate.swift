@@ -1,6 +1,7 @@
 import Cocoa
 /**
  * This is the main class for the application
+ * TODO: Maybe not store xml nodes that are empty, or arrays that has no items. 6000 lines of xml is a bit excesive
  */
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -18,22 +19,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
         
         //continue here: you need to test adding a color to a styleproperty.value, and then test what kind of type that instance is. 
-        //colorValue not supported: Optional(Optional(NSCustomColorSpace sRGB IEC61966-2.1 colorspace 0.905882 0.905882 0.905882 1)): 
+        //colorValue not supported: Optional(Optional(NSCustomColorSpace sRGB IEC61966-2.1 colorspace 0.905882 0.905882 0.905882 1)):
 
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
         //wrappingtests()
         
         let startTime2 = NSDate()
-        writeXMLToDisk()
+        //writeXMLToDisk()
         Swift.print("Storing styles time: " + "\(abs(startTime2.timeIntervalSinceNow))")//0.29sec for basic styles, pretty good!
         /**/
         
         //
     }
     
-    //Continue here: Try to read the styles to the styleManager, and measure the time it takes. (if its too lengthy even after the optimizations, then try json)
-    //Continue here: Maybe not store xml nodes that are empty, or arrays that has no items. 6000 lines of xml is a bit excesive
     
     func writeXMLToDisk(){
         var contentToWriteToDisk = "<data>"
