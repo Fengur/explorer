@@ -22,7 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //wrappingtests()
         let startTime2 = NSDate()
         writeXMLToDisk()
-        Swift.print("Storing styles time: " + "\(abs(startTime2.timeIntervalSinceNow))")
+        Swift.print("Storing styles time: " + "\(abs(startTime2.timeIntervalSinceNow))")//0.29sec for basic styles, nice!
     }
     
     //Continue here: Try to read the styles to the styleManager, and measure the time it takes. (if its too lengthy even after the optimizations, then try json)
