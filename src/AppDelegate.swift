@@ -20,11 +20,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
         //wrappingtests()
-        /*
+        
         let startTime2 = NSDate()
         writeXMLToDisk()
         Swift.print("Storing styles time: " + "\(abs(startTime2.timeIntervalSinceNow))")//0.29sec for basic styles, pretty good!
-        */
+        /**/
         
         //readXMLFromDisk()
     }
@@ -34,6 +34,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func writeXMLToDisk(){
         var contentToWriteToDisk = "<data>"
+        Swift.print("StyleManager.styles.count: " + "\(StyleManager.styles.count)")
         StyleManager.styles.forEach{
             let xml = Reflection.toXML($0)
             contentToWriteToDisk += xml.XMLString
