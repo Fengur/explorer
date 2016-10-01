@@ -10,12 +10,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(aNotification:NSNotification) {
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/button/button.css")
 
-        /*
+        /**/
         let startTime = NSDate()
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
-        */
+
 
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
@@ -26,7 +26,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Swift.print("Storing styles time: " + "\(abs(startTime2.timeIntervalSinceNow))")//0.29sec for basic styles, pretty good!
         */
         
-        readXMLFromDisk()
+        //readXMLFromDisk()
     }
     
     //Continue here: Try to read the styles to the styleManager, and measure the time it takes. (if its too lengthy even after the optimizations, then try json)
@@ -46,6 +46,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let startTime = NSDate()
         let xml:XML = FileParser.xml("~/Desktop/styles.xml".tildePath)//then try toload this selectors.xml and convert every selector into Selector instancces in an array
         var styles:[IStyle] = []
+        Swift.print("xml.children?.count: " + "\(xml.children?.count)")
         xml.children?.forEach{
             let style:Style? = Style.unWrap($0 as! XML)
             if(style != nil) {styles.append(style!)}
