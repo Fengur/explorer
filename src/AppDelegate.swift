@@ -44,8 +44,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     func readXMLFromDisk(){
         let startTime = NSDate()
-
-        
         let xml:XML = FileParser.xml("~/Desktop/styles.xml".tildePath)//then try toload this selectors.xml and convert every selector into Selector instancces in an array
         var styles:[IStyle] = []
         xml.children?.forEach{
@@ -54,7 +52,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         Swift.print("styles.count: " + "\(styles.count)")//then check the count
         Swift.print("parse xml time: " + "\(abs(startTime.timeIntervalSinceNow))")//then try to measure the time of resolving all selectors
-
         let startTime2 = NSDate()
         StyleManager.addStyle(styles)
         Swift.print("addStyle time: " + "\(abs(startTime2.timeIntervalSinceNow))")//then try to measure the time of resolving all selectors
