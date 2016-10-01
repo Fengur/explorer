@@ -11,9 +11,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/button/button.css")
 
         /**/
-        let startTime = NSDate()
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
-        Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
+        //let startTime = NSDate()
+        //StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
+        //Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
+        readXMLFromDisk()
         win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
 
 
@@ -26,7 +27,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Swift.print("Storing styles time: " + "\(abs(startTime2.timeIntervalSinceNow))")//0.29sec for basic styles, pretty good!
         /**/
         
-        //readXMLFromDisk()
+        //
     }
     
     //Continue here: Try to read the styles to the styleManager, and measure the time it takes. (if its too lengthy even after the optimizations, then try json)
@@ -34,7 +35,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func writeXMLToDisk(){
         var contentToWriteToDisk = "<data>"
-        Swift.print("StyleManager.styles.count: " + "\(StyleManager.styles.count)")
+        //Swift.print("StyleManager.styles.count: " + "\(StyleManager.styles.count)")
         StyleManager.styles.forEach{
             let xml = Reflection.toXML($0)
             contentToWriteToDisk += xml.XMLString
