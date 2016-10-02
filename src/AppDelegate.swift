@@ -146,11 +146,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             Swift.print("is not equal")
         }
         Swift.print("newInstance!.value: " + "\(newInstance!.value)")
-        let c:Any = NSColor.redColor()
+        let c:Any?  = NSColor.redColor()
         Swift.print("c: " + "\(c)")
+        Swift.print("c is NSColor: " + "\(c is NSColor)")
         let cCopy:NSColor = c as! NSColor
         Swift.print("cCopy: " + "\(cCopy)")
-        let colorValue:NSColor = newInstance!.value as! NSColor
+        let colorValue:NSColor? = newInstance!.value as? NSColor
         Swift.print("colorValue is NSColor: " + "\(colorValue)")
         
     }
