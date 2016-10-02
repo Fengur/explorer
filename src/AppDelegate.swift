@@ -145,7 +145,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }else{
             Swift.print("is not equal")
         }
-        Swift.print("newInstance!.value: " + "\(newInstance!.value as! NSColor != nil)")
+        Swift.print("newInstance!.value: " + "\(newInstance!.value as? NSColor != nil)")
     }
     /**
      * Test unWrapping Gradient (LinearGradient,RadialGradient)
