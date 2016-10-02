@@ -15,15 +15,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //let startTime = NSDate()
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         //Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
-        /*
+        
         readXMLFromDisk()
         win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
-        */
+        /**/
         
 
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
-        wrappingtests()
+        //wrappingtests()
         /*
         let startTime2 = NSDate()
         //writeXMLToDisk()
@@ -72,7 +72,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //typeAssertion()
         //dropShadowTest()
         //gradientTest()
-        stylePropertyTest()
+        //stylePropertyTest()
         //selectorTest()
         //styleTesting()
     }
