@@ -149,7 +149,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let colorValue:NSColor? = newInstance!.value as? NSColor
         Swift.print("colorValue: " + "\(colorValue)")
         
-        Swift.print("newInstance is NSColor: " + "\(newInstance is NSColor)")
+        Swift.print("newInstance is NSColor: " + "\(newInstance!.value is NSColor)")
         
         /*
         let c:Any?  = NSColor.redColor()
