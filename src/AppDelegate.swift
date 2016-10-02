@@ -15,14 +15,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //let startTime = NSDate()
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         //Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
+        /*
         readXMLFromDisk()
         win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
-        /**/
+        */
         
 
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
-        //wrappingtests()
+        wrappingtests()
         /*
         let startTime2 = NSDate()
         //writeXMLToDisk()
@@ -71,9 +72,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //typeAssertion()
         //dropShadowTest()
         //gradientTest()
-        //stylePropertyTest()
+        stylePropertyTest()
         //selectorTest()
-        styleTesting()
+        //styleTesting()
     }
     /**
      *
@@ -127,8 +128,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      */
     func stylePropertyTest(){
         //1. Create an instance
-        let color = NSColorParser.nsColor(0xFF0000)
-        let instance = StyleProperty("fill",color,0)
+        //let color = NSColorParser.nsColor(0xFF0000)
+        let padding:Padding = Padding(2.0,4.0,1.0,3.0)
+        let instance = StyleProperty("padding",padding,0)
         //2. reflect the instance to XML
         let xml = Reflection.toXML(instance)
         Swift.print("xml.XMLString: " + "\(xml.XMLString)")
@@ -141,10 +143,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             Swift.print("is not equal")
         }
         Swift.print("newInstance!.value: " + "\(newInstance!.value)")
-        let colorValue:NSColor? = newInstance!.value as? NSColor
-        Swift.print("colorValue: " + "\(colorValue)")
-        
-        Swift.print("newInstance is NSColor: " + "\(newInstance!.value is NSColor)")
         
         /*
         let c:Any?  = NSColor.redColor()
