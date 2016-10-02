@@ -23,7 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
-        wrappingtests()
+        //wrappingtests()
         /*
         let startTime2 = NSDate()
         //writeXMLToDisk()
@@ -76,9 +76,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //typeAssertion()
         //dropShadowTest()
         //gradientTest()
-        stylePropertyTest()
+        //stylePropertyTest()
         //selectorTest()
-        //styleTesting()
+        styleTesting()
     }
     /**
      *
