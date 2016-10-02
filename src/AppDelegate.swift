@@ -13,17 +13,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         /**/
         //let startTime = NSDate()
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
+        //StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         //Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         
         //readXMLFromDisk()
-        win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
+        //win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
         /**/
         
 
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
-        //wrappingtests()
+        wrappingtests()
         /*
         let startTime2 = NSDate()
         //writeXMLToDisk()
@@ -72,7 +72,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //typeAssertion()
         //dropShadowTest()
         //gradientTest()
-        //stylePropertyTest()
+        stylePropertyTest()
         //selectorTest()
         //styleTesting()
     }
@@ -127,6 +127,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      *
      */
     func stylePropertyTest(){
+        
+        //Continue here: try to add paddingLeft: 2.0 as a cgfloat see if the value is optional, if it is try to fix it.
+        
+        
         //1. Create an instance
         //let color = NSColorParser.nsColor(0xFF0000)
         let padding:[Any] = [CGFloat(2.0),CGFloat(4.0),CGFloat(1.0),CGFloat(3.0)]
