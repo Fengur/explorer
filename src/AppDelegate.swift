@@ -20,6 +20,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
         /**/
         
+        //Continue here: There is a bug with Button shadow, and same with the LeverSteppers.
+        //also 1.44sec to create all the GUI, is that correct? 
+        
 
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
