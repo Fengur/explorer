@@ -24,6 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //also 1.44sec to create all the GUI, is that correct? is it finding the styles that takes time or?
         // have you deactivated the tail-trick maybe?
         //try querrying with the selectors again to see how long that takes etc
+        //The problem is NSColor, it doesnt store the alpha. use 8digit hex value (research needed) or use subnodes, for Alpha and hex
         
 
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
