@@ -55,7 +55,7 @@ class BasicView:CustomView {
         createCheckBox()
         createRadioButton()
         createCheckBoxButton()
-        /*
+        
         createLeverStepper()
         
         createLeverSpinner()
@@ -75,7 +75,7 @@ class BasicView:CustomView {
         createSearchBox()
         createTextInput()
         createColorTag()
-        */
+        /**/
         //createVNodeSlider()
         //createHNodeSlider()
 
