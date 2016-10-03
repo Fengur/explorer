@@ -25,7 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // have you deactivated the tail-trick maybe?
         //try querrying with the selectors again to see how long that takes etc
         //The problem is NSColor, it doesnt store the alpha. use 8digit hex value (research needed) or use subnodes, for Alpha and hex
-        
+        //do the selector querry test again and check its time 
 
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
