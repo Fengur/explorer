@@ -13,10 +13,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         /**/
         //let startTime = NSDate()
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
+        //StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         //Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         
-        //readXMLFromDisk()
+        readXMLFromDisk()
         win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
         /**/
         
@@ -26,7 +26,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //wrappingtests()
         
         //let startTime2 = NSDate()
-        writeXMLToDisk()
+        //writeXMLToDisk()
         //Swift.print("Storing styles time: " + "\(abs(startTime2.timeIntervalSinceNow))")//0.29sec for basic styles, pretty good!
         /**/
     }
