@@ -12,9 +12,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/button/button.css")
 
         /**/
-        //let startTime = NSDate()
+        let startTime = NSDate()
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
-        //Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
+        Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         
         //readXMLFromDisk()
         //win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
