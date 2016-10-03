@@ -23,6 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //Continue here: There is a bug with Button shadow, and same with the LeverSteppers. (Adding styles is now really fast: 0.13 sec, when loading from xml, it can be futher optimized by removing xml nodes of value that are nil)
         //also 1.44sec to create all the GUI, is that correct? is it finding the styles that takes time or?
         // have you deactivated the tail-trick maybe?
+        //try querrying with the selectors again to see how long that takes etc
         
 
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
