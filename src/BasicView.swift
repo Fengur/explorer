@@ -50,12 +50,12 @@ class BasicView:CustomView {
      */
     func createComponents(){
         createButton()
-        /*createTextButton()
+        createTextButton()
         createRadioBullet()
         createCheckBox()
         createRadioButton()
         createCheckBoxButton()
-        
+        /*
         createLeverStepper()
         
         createLeverSpinner()

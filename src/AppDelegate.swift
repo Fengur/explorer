@@ -67,7 +67,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       
         //IMPORTANT: So its not the retrival of the styles that is slow. Although making it 30x faster with the tail trick is nice!
        
-        //Continue here: StyleProperty, Selector and then Style, then try to store many styles and respawn many styles
+        
         //styleReflection()
         //typeAssertion()
         //dropShadowTest()
