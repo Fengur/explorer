@@ -148,6 +148,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             Swift.print("is not equal")
         }
         Swift.print("newInstance!.value: " + "\(newInstance!.value)")
+        Swift.print("newInstance!.value.dynamicType: " + "\(newInstance!.value.dynamicType)")
         
         /*
         let c:Any?  = NSColor.redColor()
