@@ -26,6 +26,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //try querrying with the selectors again to see how long that takes etc (done, the problem was that tail trick isnt activated because of bug)
         //The problem is NSColor, it doesn't store the alpha. use 8-digit hex value (research needed) or use subnodes, for Alpha and hex
         //Try to fix the bug that happens when using the tail trick, basically, you need the tail trick!
+        //also: store the modified date of all .css files when loading the css files, then assert that each modified date ias equal to the date stored. if not then reload all css files and cache the styles in styles.xml. 
 
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
