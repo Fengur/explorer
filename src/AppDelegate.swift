@@ -17,7 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         
         //readXMLFromDisk()
-        win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
+        //win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
         /**/
         
         //Continue here: There is a bug with Button shadow, and same with the LeverSteppers. (Adding styles is now really fast: 0.13 sec, when loading from xml, it can be futher optimized by removing xml nodes of value that are nil)
@@ -35,6 +35,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //writeXMLToDisk()
         //Swift.print("Storing styles time: " + "\(abs(startTime2.timeIntervalSinceNow))")//0.29sec for basic styles, pretty good!
         /**/
+        reflectionTest()
     }
     func writeXMLToDisk(){
         var contentToWriteToDisk = "<data>"
@@ -312,12 +313,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
          * NOTE: stores the xml string to disk.
          * NOTE: collect all selectors in one string, and then after the app has initialized, you need to save this string to disk
          */
-        func writeToDisk(){
+        func writeSelectorsToDisk(){
             let contentToWriteToDisk = "<data>" + AppDelegate.selectorsString + "</data>"//wrap the selector in an selectors root xml
             FileModifier.write("~/Desktop/selectors.xml".tildePath, contentToWriteToDisk)
         }
         
-        func readFromDisk()->[[ISelector]]{
+        func readSelectorsFromDisk()->[[ISelector]]{
             let xml:XML = FileParser.xml("~/Desktop/selectors.xml".tildePath)//then try toload this selectors.xml and convert every selector into Selector instancces in an array
             var data:[[ISelector]] = []
             xml.children?.forEach{
@@ -333,7 +334,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             Swift.print("data.count: " + "\(data.count)")//then check the count
             return data
         }
-        let data = readFromDisk()
+        let startTime1 = NSDate()
+        let data = readSelectorsFromDisk()
+        Swift.print("read SelectorsFromDisk time: " + "\(abs(startTime1.timeIntervalSinceNow))")
         let startTime = NSDate()
         var styles:[IStyle] = []
         data.forEach{
