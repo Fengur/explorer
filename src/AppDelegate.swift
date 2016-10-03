@@ -130,7 +130,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         //Continue here: try to add paddingLeft: 2.0 as a cgfloat see if the value is optional, if it is try to fix it.
         
-        
         //1. Create an instance
         //let color = NSColorParser.nsColor(0xFF0000)
         let padding:[Any] = [CGFloat(2.0),CGFloat(4.0),CGFloat(1.0),CGFloat(3.0)]
