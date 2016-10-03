@@ -23,7 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //Continue here: There is a bug with Button shadow, and same with the LeverSteppers. (Adding styles is now really fast: 0.13 sec, when loading from xml, it can be futher optimized by removing xml nodes of value that are nil)
         //also 1.44sec to create all the GUI, is that correct? is it finding the styles that takes time or? (yes, finding styles takes: 0.8sec, but with the tail trick becomes: 0.017sec) which means loading All gui components will take 0.6 sec + 0.005 to load the xml and 0.017 querrying all styles (w/ tail trick), which means any fairly complex GUI can be loaded bellow 0.5sec.
         // have you deactivated the tail-trick maybe, yes?
-        //try querrying with the selectors again to see how long that takes etc (done)
+        //try querrying with the selectors again to see how long that takes etc (done, the problem was that tail trick isnt activated because of bug)
         //The problem is NSColor, it doesn't store the alpha. use 8-digit hex value (research needed) or use subnodes, for Alpha and hex
         //Try to fix the bug that happens when using the tail trick, basically, you need the tail trick!
 
