@@ -133,7 +133,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //1. Create an instance
         //let color = NSColorParser.nsColor(0xFF0000)
         //let padding:[Any] = [CGFloat(2.0),CGFloat(4.0),CGFloat(1.0),CGFloat(3.0)]
-        let instance = StyleProperty("padding-left",CGFloat(4.0),0)
+        let cgFloat:CGFloat = 4.0
+        Swift.print("cgFloat.dynamicType: " + "\(cgFloat.dynamicType)")
+        let instance = StyleProperty("padding-left",cgFloat,0)
         //2. reflect the instance to XML
         let xml = Reflection.toXML(instance)
         Swift.print("xml.XMLString: " + "\(xml.XMLString)")
