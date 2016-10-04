@@ -35,11 +35,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //wrappingtests()
         
         let color = NSColor.redColor()
-        let rgba = RGBAParser.rgba(color)
-        rgba
-        let hex:UInt = HexParser.hexValue(255,255,255,100)
+        //let rgba = RGBAParser.rgba(color)
+        //rgba
+        let hex:String = RGBAParser.hex(color)
+        //HexParser.hexValue(255,255,255,100)
         Swift.print("hex: " + "\(hex)")
-        Swift.print(HexParser.hexString(hex))
+        
         
         //let startTime2 = NSDate()
         //writeXMLToDisk()
