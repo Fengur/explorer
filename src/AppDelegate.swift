@@ -12,9 +12,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/button/button.css")
 
         /**/
-        let startTime = NSDate()
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
-        Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
+        //let startTime = NSDate()
+        //StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
+        //Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         
         //readXMLFromDisk()
         //win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
@@ -32,7 +32,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
-        wrappingtests()
+        //wrappingtests()
+        
+        let color = NSColor.redColor()
+        let rgba = RGBAParser.rgba(color)
+        let hex = RGBAParser.
+        
         
         //let startTime2 = NSDate()
         //writeXMLToDisk()
