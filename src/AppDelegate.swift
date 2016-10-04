@@ -32,13 +32,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
-        //wrappingtests()
+        wrappingtests()
         
         //let startTime2 = NSDate()
         //writeXMLToDisk()
         //Swift.print("Storing styles time: " + "\(abs(startTime2.timeIntervalSinceNow))")//0.29sec for basic styles, pretty good!
         /**/
-        reflectionTest()
+        
     }
     func writeXMLToDisk(){
         var contentToWriteToDisk = "<data>"
@@ -141,11 +141,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //Continue here: try to add paddingLeft: 2.0 as a cgfloat see if the value is optional, if it is try to fix it.
         
         //1. Create an instance
-        //let color = NSColorParser.nsColor(0xFF0000)
+        let color = NSColorParser.nsColor(0xFF0000)
         //let padding:[Any] = [CGFloat(2.0),CGFloat(4.0),CGFloat(1.0),CGFloat(3.0)]
-        let cgFloat:CGFloat = 4.0
-        Swift.print("cgFloat.dynamicType: " + "\(cgFloat.dynamicType)")
-        let instance = StyleProperty("padding-left",cgFloat,0)
+        //let cgFloat:CGFloat = 4.0
+        let instance = StyleProperty("padding-left",color,0)
         //2. reflect the instance to XML
         let xml = Reflection.toXML(instance)
         Swift.print("xml.XMLString: " + "\(xml.XMLString)")
