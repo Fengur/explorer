@@ -36,8 +36,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let color = NSColor.redColor()
         let rgba = RGBAParser.rgba(color)
-        let hex = RGBAParser.
-        
+        rgba
+        let hex:UInt = HexParser.hexValue(255,255,255,255)
+        Swift.print("hex: " + "\(hex)")
         
         //let startTime2 = NSDate()
         //writeXMLToDisk()
