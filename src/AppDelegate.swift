@@ -42,6 +42,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
        // Swift.print("hex: " + "\(hex)")
         Swift.print(HexParser.hexString(1, 1, 0, 0))
         
+        //Continue here: Try to fix the rgba hex converter. Test tge rgb to hex converter and go from there
+        
         //let startTime2 = NSDate()
         //writeXMLToDisk()
         //Swift.print("Storing styles time: " + "\(abs(startTime2.timeIntervalSinceNow))")//0.29sec for basic styles, pretty good!
