@@ -34,7 +34,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         //wrappingtests()
         
-        let color = NSColor.redColor()
+        //let color = NSColor.redColor()
         //let rgba = RGBAParser.rgba(color)
         //rgba
         //let hex:String = RGBAParser.hex(color)
