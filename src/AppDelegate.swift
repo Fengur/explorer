@@ -40,9 +40,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //let hex:String = RGBAParser.hex(color)
         //HexParser.hexValue(255,255,255,100)
        // Swift.print("hex: " + "\(hex)")
-        Swift.print(HexParser.hexString(1, 1, 0, 0))
+        Swift.print(HexParser.hexString(255, 255, 0, 0))//FFFF0000
         
         //Continue here: Try to fix the rgba hex converter. Test tge rgb to hex converter and go from there
+        //should work actually
         
         //let startTime2 = NSDate()
         //writeXMLToDisk()
