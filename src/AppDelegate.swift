@@ -43,10 +43,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let a:UInt = 0xFF0000FF
         Swift.print("a: " + "\(a)")
-        let b:UInt = UInt(Float("0xFF0000FF")!)
+        let b:UInt = UInt(Double("0xFF0000FF")!)
         Swift.print("b: " + "\(b)")
-        
-        let newRGBA:RGBA = RGBAParser.rgba32(b)
+        let newRGBA:RGBA = RGBAParser.rgba32(UInt(Double("0x" + hex)!))
         Swift.print("newRGBA.b: " + "\(newRGBA.b)")
         let newColor:NSColor = newRGBA.nsColor
         Swift.print("newColor.hexString: " + "\(newColor.hexString)")
