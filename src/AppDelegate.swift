@@ -41,12 +41,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Swift.print("hex: " + "\(hex)")
         //HexParser.hexValue(255,255,255,100)
         
-        let a:UInt = 0x0000FF
+        let a:UInt = 0xFF0000FF
         Swift.print("a: " + "\(a)")
-        let b:UInt = "0x0000FF".uint
+        let b:UInt = "FF0000FF".uint
         Swift.print("b: " + "\(b)")
         
-        let newRGBA:RGBA = RGBAParser.rgba32(a)
+        let newRGBA:RGBA = RGBAParser.rgba32(b)
         Swift.print("newRGBA.b: " + "\(newRGBA.b)")
         let newColor:NSColor = newRGBA.nsColor
         Swift.print("newColor.hexString: " + "\(newColor.hexString)")
