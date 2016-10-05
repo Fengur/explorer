@@ -112,6 +112,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let selector = Selector("Window",[],"special",["focus"])
         let selector2 = Selector("Button",[],"custom",["over"])
         let dropShadow = DropShadow(NSColor.blackColor(),0,0,2,false)
+        
+        //continue here: dropshadow is showing up as a string when reflecting it.. figure it out
+        
         Swift.print("dropShadow.dynamicType: " + "\(dropShadow.dynamicType)")
         //let gradient = LinearGradient(Gradients.teal(0.5),[],π/2)//
         let gradient2 = RadialGradient(Gradients.teal(0.5),[],π/2)//
