@@ -28,7 +28,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
-        wrappingtests()
+        //wrappingtests()
         
         
         //let startTime2 = NSDate()
@@ -107,7 +107,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      *
      */
     func styleTesting(){
-        Swift.print("styleTesting()")
         //1. Create an instance
         let selector = Selector("Window",[],"special",["focus"])
         let selector2 = Selector("Button",[],"custom",["over"])
@@ -125,7 +124,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let instance:Style = Style("custom",[selector,selector2],[styleProperty,styleProperty2,styleProperty3])
         //2. reflect the instance to XML
-        Swift.print("Reflection.toXML()")
         let xml = Reflection.toXML(instance)
         Swift.print("xml.XMLString: " + "\(xml.XMLString)")
         //3. unWrap the XML to a new instance
@@ -137,7 +135,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }else{
             Swift.print("is not equal")
         }
-        Swift.print("styleTesting() ended")
     }
     /**
      *
