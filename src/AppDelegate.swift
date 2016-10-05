@@ -168,7 +168,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //let color = NSColorParser.nsColor(0xFF0000)
         //let padding:[Any] = [CGFloat(2.0),CGFloat(4.0),CGFloat(1.0),CGFloat(3.0)]
         //let cgFloat:CGFloat = 4.0
-        let dropShadow = DropShadow(NSColor.blackColor(),0,0,2,false)
+        let dropShadow = DropShadow(NSColor.greenColor(),0,0,2,false)
         let instance = StyleProperty("dropshadow",dropShadow,0)
         //2. reflect the instance to XML
         let xml = Reflection.toXML(instance)
