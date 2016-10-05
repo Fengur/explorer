@@ -41,8 +41,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Swift.print("hex: " + "\(hex)")
         //HexParser.hexValue(255,255,255,100)
         
-        Swift.print(HexParser.hexString(255, 255, 0, 0))//FFFF0000
-        
+        let newRGBA:RGBA = RGBAParser.rgba32(("0x" + hex).uint)
+        Swift.print("newRGBA.b: " + "\(newRGBA.b)")
+        let newColor:NSColor = newRGBA.nsColor
+        Swift.print("newColor.hexString: " + "\(newColor.hexString)")
         //Continue here: Try to fix the rgba hex converter. Test the rgb to hex converter and go from there
         //should work actually
         
