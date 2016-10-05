@@ -168,7 +168,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //let color = NSColorParser.nsColor(0xFF0000)
         //let padding:[Any] = [CGFloat(2.0),CGFloat(4.0),CGFloat(1.0),CGFloat(3.0)]
         Swift.print("NSColor.blackColor().hexString: " + "\(NSColor.blackColor().hexString)")
-        Swift.print("NSColor.blackColor().redComponent: " + "\(NSColor.blackColor().redComponent)")
+        Swift.print("NSColor.blackColor().redComponent: " + "\(NSColor.blackColor().red)")
         
         //let cgFloat:CGFloat = 4.0
         let dropShadow = DropShadow(NSColor.greenColor(),0,0,2,false)
