@@ -32,7 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //2. use the styles.xml as source for the styles
         //3. load the basicWin w/ buttons then with all components
         //4. try to get the tail trick working again
-        //5. figure out a workflow that automates the cahing of styles
+        //5. figure out a workflow that automates the caching of styles
         
         
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
