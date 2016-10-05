@@ -34,12 +34,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         //wrappingtests()
         
-        //let color = NSColor.redColor()
+        let color = NSColor.redColor()
         //let rgba = RGBAParser.rgba(color)
         //rgba
         let hex:String = RGBAParser.hex(color)
+        Swift.print("hex: " + "\(hex)")
         //HexParser.hexValue(255,255,255,100)
-       // Swift.print("hex: " + "\(hex)")
+        
         Swift.print(HexParser.hexString(255, 255, 0, 0))//FFFF0000
         
         //Continue here: Try to fix the rgba hex converter. Test tge rgb to hex converter and go from there
