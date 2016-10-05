@@ -25,7 +25,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //try querrying with the selectors again to see how long that takes etc (done, the problem was that tail trick isnt activated because of bug)
         //Try to fix the bug that happens when using the tail trick, basically, you need the tail trick!
         //also: store the modified date of all .css files when loading the css files, then assert that each modified date ias equal to the date stored. if not then reload all css files and cache the styles in styles.xml. <--auto cache system!
-
+        
+        
+        //Continue here: 
+        //1. render the styles to styles.xml 
+        //2. use the styles.xml as source for the styles
+        //3. load the basicWin w/ buttons then with all components
+        //4. try to get the tail trick working again
+        //5. figure out a workflow that automates the cahing of styles
+        
+        
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
         //wrappingtests()
