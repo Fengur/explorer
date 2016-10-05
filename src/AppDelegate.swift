@@ -37,7 +37,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //let color = NSColor.redColor()
         //let rgba = RGBAParser.rgba(color)
         //rgba
-        //let hex:String = RGBAParser.hex(color)
+        let hex:String = RGBAParser.hex(color)
         //HexParser.hexValue(255,255,255,100)
        // Swift.print("hex: " + "\(hex)")
         Swift.print(HexParser.hexString(255, 255, 0, 0))//FFFF0000
