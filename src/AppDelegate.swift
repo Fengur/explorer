@@ -119,8 +119,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let styleProperty2 = StyleProperty("line",NSColorParser.nsColor(0x0000FF),0)
         let styleProperty3 = StyleProperty("dropShadow",dropShadow,0)
         
-        let instance:Style = Style("custom",[selector,selector2],[styleProperty,styleProperty2,styleProperty3])
+        let instance:Style = Style("custom",[selector,selector2],[/*styleProperty,styleProperty2,*/styleProperty3])
         //2. reflect the instance to XML
+        Swift.print("Reflection.toXML()")
         let xml = Reflection.toXML(instance)
         Swift.print("xml.XMLString: " + "\(xml.XMLString)")
         //3. unWrap the XML to a new instance
