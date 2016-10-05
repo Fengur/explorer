@@ -49,8 +49,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Swift.print("newRGBA.b: " + "\(newRGBA.b)")
         let newColor:NSColor = newRGBA.nsColor
         Swift.print("newColor.hexString: " + "\(newColor.hexString)")
-        //Continue here: Try to fix the rgba hex converter. Test the rgb to hex converter and go from there
-        //should work actually
+        
+        //Continue here: Implement the above
         
         //let startTime2 = NSDate()
         //writeXMLToDisk()
