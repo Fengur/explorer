@@ -99,9 +99,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //typeAssertion()
         //dropShadowTest()
         //gradientTest()
-        stylePropertyTest()
+        //stylePropertyTest()
         //selectorTest()
-        //styleTesting()
+        styleTesting()
     }
     /**
      *
@@ -123,7 +123,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let styleProperty2 = StyleProperty("line",NSColorParser.nsColor(0x0000FF),0)
         let styleProperty3 = StyleProperty("dropShadow",dropShadow,0)
         
-        let instance:Style = Style("custom",[selector,selector2],[/*styleProperty,styleProperty2,*/styleProperty3])
+        let instance:Style = Style("custom",[selector,selector2],[styleProperty,styleProperty2,styleProperty3])
         //2. reflect the instance to XML
         Swift.print("Reflection.toXML()")
         let xml = Reflection.toXML(instance)
@@ -167,8 +167,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //1. Create an instance
         //let color = NSColorParser.nsColor(0xFF0000)
         //let padding:[Any] = [CGFloat(2.0),CGFloat(4.0),CGFloat(1.0),CGFloat(3.0)]
-        Swift.print("NSColor.blackColor().hexString: " + "\(NSColor.blackColor().hexString)")
-        NSColor.blackColor().rgba
         
         //let cgFloat:CGFloat = 4.0
         let dropShadow = DropShadow(NSColor.greenColor(),0,0,2,false)
