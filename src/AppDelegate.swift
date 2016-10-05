@@ -41,7 +41,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Swift.print("hex: " + "\(hex)")
         //HexParser.hexValue(255,255,255,100)
         
-        let newRGBA:RGBA = RGBAParser.rgba32(("0x" + hex).uint)
+        let newRGBA:RGBA = RGBAParser.rgba32(0xFF00FF00)
         Swift.print("newRGBA.b: " + "\(newRGBA.b)")
         let newColor:NSColor = newRGBA.nsColor
         Swift.print("newColor.hexString: " + "\(newColor.hexString)")
