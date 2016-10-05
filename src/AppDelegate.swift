@@ -43,7 +43,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let a:UInt = 0xFF0000FF
         Swift.print("a: " + "\(a)")
-        let b:UInt = "FF0000FF".uint
+        let b:UInt = UInt(Float("0xFF0000FF")!)
         Swift.print("b: " + "\(b)")
         
         let newRGBA:RGBA = RGBAParser.rgba32(b)
