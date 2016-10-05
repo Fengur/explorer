@@ -44,7 +44,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         Swift.print(HexParser.hexString(255, 255, 0, 0))//FFFF0000
         
-        //Continue here: Try to fix the rgba hex converter. Test tge rgb to hex converter and go from there
+        //Continue here: Try to fix the rgba hex converter. Test the rgb to hex converter and go from there
         //should work actually
         
         //let startTime2 = NSDate()
