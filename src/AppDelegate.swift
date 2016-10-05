@@ -107,6 +107,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      *
      */
     func styleTesting(){
+        Swift.print("styleTesting()")
         //1. Create an instance
         let selector = Selector("Window",[],"special",["focus"])
         let selector2 = Selector("Button",[],"custom",["over"])
@@ -131,6 +132,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }else{
             Swift.print("is not equal")
         }
+        Swift.print("styleTesting() ended")
     }
     /**
      *
