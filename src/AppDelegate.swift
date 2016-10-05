@@ -32,8 +32,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
-        //wrappingtests()
+        wrappingtests()
         
+        
+        //let startTime2 = NSDate()
+        //writeXMLToDisk()
+        //Swift.print("Storing styles time: " + "\(abs(startTime2.timeIntervalSinceNow))")//0.29sec for basic styles, pretty good!
+        /**/
+        
+    }
+    /**
+     *
+     */
+    func rgbaColorTests(){
         let color = NSColor.blueColor()
         //let rgba = RGBAParser.rgba(color)
         //rgba
@@ -49,14 +60,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Swift.print("newRGBA.b: " + "\(newRGBA.b)")
         let newColor:NSColor = newRGBA.nsColor
         Swift.print("newColor.hexString: " + "\(newColor.hexString)")
-        
-        //Continue here: Implement the above
-        
-        //let startTime2 = NSDate()
-        //writeXMLToDisk()
-        //Swift.print("Storing styles time: " + "\(abs(startTime2.timeIntervalSinceNow))")//0.29sec for basic styles, pretty good!
-        /**/
-        
     }
     func writeXMLToDisk(){
         var contentToWriteToDisk = "<data>"
