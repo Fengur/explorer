@@ -13,10 +13,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         /**/
         //let startTime = NSDate()
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
+        //StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         //Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         
-        //readXMLFromDisk()
+        readXMLFromDisk()
         win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
         /**/
         
@@ -28,9 +28,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         
         //Continue here: 
-        //1. render the styles to styles.xml 
-        //2. use the styles.xml as source for the styles
-        //3. load the basicWin w/ buttons then with all components
+        //1. render the styles to styles.xml  (done)
+        //2. use the styles.xml as source for the styles (done)
+        //3. load the basicWin w/ buttons then with all components (done)
         //4. try to get the tail trick working again
         //5. figure out a workflow that automates the caching of styles
         
@@ -41,7 +41,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         
         //let startTime2 = NSDate()
-        writeXMLToDisk()
+        //writeXMLToDisk()
         //Swift.print("Storing styles time: " + "\(abs(startTime2.timeIntervalSinceNow))")//0.29sec for basic styles, pretty good!
         /**/
         
