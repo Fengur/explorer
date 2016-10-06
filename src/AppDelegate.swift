@@ -34,7 +34,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //4. try to get the tail trick working again
         //5. figure out a workflow that automates the caching of styles
         
-        //Continue here: still problems with dropshadow and color transperancy. 
+        //Continue here: try to figure out the tail trick bug (Something with Text)
+        //then test the speed
         
         
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
