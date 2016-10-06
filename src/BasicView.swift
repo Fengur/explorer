@@ -50,7 +50,7 @@ class BasicView:CustomView {
      */
     func createComponents(){
         createButton()
-        createTextButton()
+        /*createTextButton()
         createRadioBullet()
         createCheckBox()
         createRadioButton()
@@ -75,7 +75,7 @@ class BasicView:CustomView {
         createSearchBox()
         createTextInput()
         createColorTag()
-        /**/
+        */
         //createVNodeSlider()
         //createHNodeSlider()
 
