@@ -46,7 +46,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //writeXMLToDisk()
         //Swift.print("Storing styles time: " + "\(abs(startTime2.timeIntervalSinceNow))")//0.29sec for basic styles, pretty good!
         /**/
-        
+        rgbaColorTests()
     }
     /**
      *
@@ -112,7 +112,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //gradientTest()
         //stylePropertyTest()
         //selectorTest()
-        styleTesting()
+        //styleTesting()
     }
     /**
      *
