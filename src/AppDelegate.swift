@@ -52,7 +52,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      *
      */
     func rgbaColorTests(){
-        let color = NSColor.purpleColor()
+        let color = NSColor.purpleColor().alpha(0.5)
         Swift.print("color.hexString: " + "\(color.hexString)")
         //let rgba = RGBAParser.rgba(color)
         //rgba
@@ -67,8 +67,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         */
         let newRGBA:RGBA = RGBAParser.rgba32(UInt(Double("0x" + hex)!))
         Swift.print("newRGBA.b: " + "\(newRGBA.b)")
+        Swift.print("newRGBA.a: " + "\(newRGBA.a)")
         let newColor:NSColor = newRGBA.nsColor
         Swift.print("newColor.hexString: " + "\(newColor.hexString)")
+        Swift.print("newColor.alphaComponent: " + "\(newColor.alphaComponent)")
     }
     func writeXMLToDisk(){
         var contentToWriteToDisk = "<data>"
