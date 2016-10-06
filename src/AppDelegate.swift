@@ -13,10 +13,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         /**/
         //let startTime = NSDate()
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
+        //StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         //Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         
-        //readXMLFromDisk()
+        readXMLFromDisk()
         win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
         /**/
         
