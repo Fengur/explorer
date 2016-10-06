@@ -52,7 +52,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      *
      */
     func rgbaColorTests(){
-        let color = NSColor.yellowColor()
+        let color = NSColor.purpleColor()
+        Swift.print("color.hexString: " + "\(color.hexString)")
         //let rgba = RGBAParser.rgba(color)
         //rgba
         let hex:String = RGBAParser.hex(color)
