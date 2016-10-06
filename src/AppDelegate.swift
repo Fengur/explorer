@@ -13,10 +13,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         /**/
         //let startTime = NSDate()
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
+        //StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         //Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         
-        //readXMLFromDisk()
+        readXMLFromDisk()
         win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
         /**/
         
@@ -34,7 +34,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //4. try to get the tail trick working again
         //5. figure out a workflow that automates the caching of styles
         
-        //Continue here: there is a problem with unwrapping or reflecting colors. THey showup either red, blue or black, Do some isolated testing to find the bug
+        //Continue here: still problems with dropshadow and color transperancy. 
         
         
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
@@ -43,7 +43,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         
         //let startTime2 = NSDate()
-        writeXMLToDisk()
+        //writeXMLToDisk()
         //Swift.print("Storing styles time: " + "\(abs(startTime2.timeIntervalSinceNow))")//0.29sec for basic styles, pretty good!
         /**/
         //rgbaColorTests()
