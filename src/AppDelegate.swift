@@ -59,11 +59,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let hex:String = RGBAParser.hex(color)
         Swift.print("hex: " + "\(hex)")
         //HexParser.hexValue(255,255,255,100)
-        
+        /*
         let a:UInt = 0xFF0000FF
         Swift.print("a: " + "\(a)")
         let b:UInt = UInt(Double("0xFF0000FF")!)
         Swift.print("b: " + "\(b)")
+        */
         let newRGBA:RGBA = RGBAParser.rgba32(UInt(Double("0x" + hex)!))
         Swift.print("newRGBA.b: " + "\(newRGBA.b)")
         let newColor:NSColor = newRGBA.nsColor
