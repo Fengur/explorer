@@ -17,7 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         
         //readXMLFromDisk()
-        win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
+        //win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
         /**/
         
         //Continue here:  (Adding styles is now really fast: 0.13 sec, when loading from xml, it can be futher optimized by removing xml nodes of value that are nil)
@@ -52,11 +52,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         /**/
         //rgbaColorTests()
         
-        /*
-        let selectors:[ISelector] = [Selector("Button")]
+        /**/
+        let selectors:[ISelector] = [Selector("Window")]
         let style = StyleResolver.style(selectors, nil)
         style.describe()
-        */
+
         
         Swift.print("complete: styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
     }
