@@ -78,6 +78,7 @@ class BasicView:CustomView {
      * Button
      */
     func createButton(){
+        Swift.print("createButton()")
         let card:Card = container.addSubView(Card(NaN, NaN, "Buttons: ", container, "buttonCard"))
         let button = card.addSubView(Button(96,24,card))
         func onbuttonDown(event:Event){
