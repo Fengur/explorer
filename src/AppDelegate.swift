@@ -43,7 +43,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
-        //wrappingtests()
+        wrappingtests()
         
         
         //let startTime2 = NSDate()
@@ -52,9 +52,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         /**/
         //rgbaColorTests()
         
-        let selectors:[ISelector] = [Selector("Button")]
-        let style = StyleResolver.style(selectors, nil)
-        style.describe()
+        //let selectors:[ISelector] = [Selector("Button")]
+        //let style = StyleResolver.style(selectors, nil)
+        //style.describe()
         
         Swift.print("complete")
     }
