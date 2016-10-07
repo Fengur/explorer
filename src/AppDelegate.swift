@@ -40,6 +40,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //then test the speed
         
         
+        
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
         //wrappingtests()
@@ -50,6 +51,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //Swift.print("Storing styles time: " + "\(abs(startTime2.timeIntervalSinceNow))")//0.29sec for basic styles, pretty good!
         /**/
         //rgbaColorTests()
+        Swift.print("")
     }
     /**
      *
