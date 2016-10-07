@@ -58,7 +58,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         style.describe()
         */
         
-        Swift.print("complete")
+        Swift.print("complete: styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
     }
     /**
      *
