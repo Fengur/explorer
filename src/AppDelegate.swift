@@ -35,6 +35,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //5. figure out a workflow that automates the caching of styles
         
         //Continue here: try to figure out the tail trick bug (Something with Text)
+        //try to figure out where the app fails when using the tail trick
+        //Try and querry with manual selectors, like button etc, and see what you get
         //then test the speed
         
         
