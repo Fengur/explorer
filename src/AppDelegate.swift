@@ -52,9 +52,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         /**/
         //rgbaColorTests()
         
-        //let selectors:[ISelector] = [Selector("Button")]
-        //let style = StyleResolver.style(selectors, nil)
-        //style.describe()
+        /*
+        let selectors:[ISelector] = [Selector("Button")]
+        let style = StyleResolver.style(selectors, nil)
+        style.describe()
+        */
         
         Swift.print("complete")
     }
