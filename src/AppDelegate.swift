@@ -83,12 +83,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //As you need the import urls from the source of the query and not the cache
         let queryURL = "~/Desktop/ElCapitan/explorer.css"//you need to do is to check if this url is up to date, as this may change from the usres pov
         let cssFileDateList = StyleCache.cssFileDateList(dataXML)
-        var hasBeenCached:Bool = false
-        cssFileDateList.forEach{
-            if($0.0 == queryURL){
-                hasBeenCached = true
-            }
-        }
+        let hasBeenCached:Bool = StyleCache.hasFileBeenCached(cssFileDateList, queryURL)
         Swift.print("hasBeenCached: " + "\(hasBeenCached)")
         let isUpToDate = StyleCache.isUpToDate(cssFileDateList)
         Swift.print("isUpToDate: " + "\(isUpToDate)")
