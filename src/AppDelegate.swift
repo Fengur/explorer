@@ -58,9 +58,29 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         //Swift.print("complete: styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
         
-        cssFileDates()
+        
+        let dataXML = "<data></data>".xml
+        let cssFileDatesXML = cssFileDates()
+        dataXML.appendChild(cssFileDatesXML)
     }
-    
+    /**
+     *
+     */
+    func cssFileDates()->XML{
+        let cssFileDates = "<cssFileDates></cssFileDates>".xml
+        StyleManager.cssFileURLS.forEach{
+            Swift.print("$0: " + "\($0)")
+            let filePath:String = $0.tildePath
+            let modificationDate = FileParser.modificationDate(filePath)
+            //Swift.print("modificationDate: " + "\(modificationDate)")
+            //Swift.print("modificationDate.timeIntervalSince1970: " + "\(modificationDate.timeIntervalSince1970)")
+            let cssFile = "<file></file>".xml
+            cssFile["date"] = String(modificationDate.timeIntervalSince1970)
+            cssFile.stringValue = $0
+            cssFileDates.appendChild(cssFile)
+        }
+        return cssFileDates
+    }
     /**
      *
      */
