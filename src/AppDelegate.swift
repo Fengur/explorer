@@ -23,7 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         win = TranslucencyWin()
         */
         
-        //the tail trick could possibly be even faster if you sorted the hashed styles and used a halfed algo when querrying (but its a dictionary so maybe not, maybe if you stored it in an array etc)
+        
         
         //Continue here: 
         //1. render the styles to styles.xml  (done)
@@ -50,10 +50,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         
         //let startTime2 = NSDate()
-        //writeXMLToDisk()
+        writeXMLToDisk()
         //Swift.print("Storing styles time: " + "\(abs(startTime2.timeIntervalSinceNow))")//0.29sec for basic styles, pretty good!
-        /**/
-        //rgbaColorTests()
         
         
         //Swift.print("complete: styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
