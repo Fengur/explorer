@@ -65,6 +65,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let cssFileDatesXML = cssFileDates()
         dataXML.appendChild(cssFileDatesXML)
         
+        isUpToDate(dataXML)
+        
+        //Continue here: you need to figure out how to get the 
+        
+    }
+    /**
+     * Asserts if the cssFiles that are cached have the same modified date as the cssFile that are querried
+     */
+    func isUpToDate(dataXML:XML)->Bool{
         let cssFileDateList = dataXML.firstNode("cssFileDates")
         cssFileDateList!.children?.forEach{
             let cssFilePath:String = $0.stringValue!
@@ -72,13 +81,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let date:String = ($0 as! XML)["date"]!
             Swift.print("date: " + "\(date)")
         }
+        return true
         //let fileDates
-    }
-    /**
-     * Asserts if the cssFiles that are cached have the same modified date as the cssFile that are querried
-     */
-    func isUpToDate(){
-        
     }
     /**
      *
