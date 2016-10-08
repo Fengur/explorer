@@ -29,8 +29,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //4. try to get the tail trick working again (done)
         //5. figure out a workflow that automates the caching of styles
         //store the modified date of all .css files when loading the css files, then assert that each modified date ias equal to the date stored. if not then reload all css files and cache the styles in styles.xml. <--auto cache system!
+
+        //Continue here: Figure out how you can store data in the .app (temp and permanent)
         
-        //Continue here: try to figure out the tail trick bug (Something with Text)
         //then test the speed
         
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
