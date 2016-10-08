@@ -82,10 +82,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     /**
      * Asserts if the cssFiles that are cached have the same modified date as the cssFile that are querried
      */
-    class func isUpToDate(cssFileDateList:[String:String]){
+    static func isUpToDate(cssFileDateList:[String:String]) -> Bool{
         cssFileDateList.forEach{
-            $0.0
+            let filePath:String = $0.0
+            let modificationDate:String = String(FileParser.modificationDate(filePath).timeIntervalSince1970)
+            let cachedModificationDate:String = $0.1
+            if(cachedModificationDate != modificationDate){
+                return true
+            }
         }
+        return true
     }
     /**
      * Compiles a list of css files derived from an xml
