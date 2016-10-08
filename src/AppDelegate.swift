@@ -31,6 +31,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //store the modified date of all .css files when loading the css files, then assert that each modified date ias equal to the date stored. if not then reload all css files and cache the styles in styles.xml. <--auto cache system!
 
         //Continue here: Figure out how you can store data in the .app (temp and permanent)
+        //store .css and .xml
+        //Actually: add the date to as an xml tree in the styles.xml and assert that against the modified dates of the .css files
+        
+        //1. find
         
         //then test the speed
         
