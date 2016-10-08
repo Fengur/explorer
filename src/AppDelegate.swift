@@ -16,9 +16,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         //Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         
+        /*
         readXMLFromDisk()
         win = TranslucencyWin()
-        /**/
+        */
         
         //the tail trick could possibly be even faster if you sorted the hashed styles and used a halfed algo when querrying (but its a dictionary so maybe not, maybe if you stored it in an array etc)
         
