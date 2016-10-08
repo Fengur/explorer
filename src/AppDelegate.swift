@@ -77,9 +77,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let xml = "<data></data>".xml
         let cssFiles = "<cssFiles></cssFiles>".xml
-        var cssFile = "<file></file>".xml
-        cssFile["date"] = "1234456"
-        cssFile.con
+        let cssFile = "<file></file>".xml
+        cssFile["date"] = "123456"
+        cssFile.stringValue = "~/desktop/someFile.xml"
         cssFiles.appendChild(cssFile)
         xml.appendChild(cssFiles)
         Swift.print(xml.XMLString)
