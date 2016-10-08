@@ -59,18 +59,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //Swift.print("complete: styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
         
         
+    }
+    /**
+     *
+     */
+    func styleCacheTest(){
+        
         let dataXML = "<data></data>".xml
         let styles = "<styles></styles>".xml
         dataXML.appendChild(styles)
-        let cssFileDatesXML = cssFileDates()
+        let cssFileDatesXML = StyleCache.cssFileDates()
         dataXML.appendChild(cssFileDatesXML)
         
         
         
-        //Continue here: you need to figure out how to get the import urls from the querried css with out loading the styles. 
+        //Continue here: you need to figure out how to get the import urls from the querried css with out loading the styles.
         //As you need the import urls from the source of the query and not the cache
         let queryURL = "~/Desktop/ElCapitan/explorer.css"//you need to do is to check if this url is up to date, as this may change from the usres pov
-        let cssFileDateList = AppDelegate.cssFileDateList(dataXML)
+        let cssFileDateList = StyleCache.cssFileDateList(dataXML)
         var hasBeenCached:Bool = false
         cssFileDateList.forEach{
             if($0.0 == queryURL){
@@ -78,53 +84,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
         Swift.print("hasBeenCached: " + "\(hasBeenCached)")
-        let isUpToDate = AppDelegate.isUpToDate(cssFileDateList)
+        let isUpToDate = StyleCache.isUpToDate(cssFileDateList)
         Swift.print("isUpToDate: " + "\(isUpToDate)")
-    }
-    /**
-     * Asserts if the cssFiles that are cached have the same modified date as the cssFile that are querried
-     */
-    static func isUpToDate(cssFileDateList:[String:String]) -> Bool{
-        for (filePath,date) in cssFileDateList{
-            let filePath:String = filePath
-            let modificationDate:String = String(FileParser.modificationDate(filePath.tildePath).timeIntervalSince1970)
-            let cachedModificationDate:String = date
-            if(cachedModificationDate != modificationDate){return false}
-        }
-        return true
-    }
-    /**
-     * Compiles a list of css files derived from an xml
-     */
-    static func cssFileDateList(dataXML:XML)->[String:String]{
-        var cssFileDates = [String:String]()
-        let cssFileDatesXML = dataXML.firstNode("cssFileDates")
-        cssFileDatesXML!.children?.forEach{
-            let cssFilePath:String = $0.stringValue!
-            //Swift.print("cssFilePath: " + "\(cssFilePath)")
-            let date:String = ($0 as! XML)["date"]!
-            //Swift.print("date: " + "\(date)")
-            cssFileDates[cssFilePath] = date
-        }
-        return cssFileDates
-    }
-    /**
-     * Compiles an xml of css files and its modified date
-     */
-    func cssFileDates()->XML{
-        let cssFileDates = "<cssFileDates></cssFileDates>".xml
-        StyleManager.cssFileURLS.forEach{
-            //Swift.print("$0: " + "\($0)")
-            let filePath:String = $0.tildePath
-            let modificationDate = FileParser.modificationDate(filePath)
-            //Swift.print("modificationDate: " + "\(modificationDate)")
-            //Swift.print("modificationDate.timeIntervalSince1970: " + "\(modificationDate.timeIntervalSince1970)")
-            let cssFile = "<file></file>".xml
-            cssFile["date"] = String(modificationDate.timeIntervalSince1970)
-            cssFile.stringValue = $0
-            cssFileDates.appendChild(cssFile)
-        }
-        return cssFileDates
     }
     /**
      *
@@ -159,7 +120,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Swift.print("newColor.alphaComponent: " + "\(newColor.alphaComponent)")
     }
     func writeXMLToDisk(){
-        var contentToWriteToDisk = "<data>"
+        var contentToWriteToDisk = "<data><styles></styles></data>"
         //Swift.print("StyleManager.styles.count: " + "\(StyleManager.styles.count)")
         StyleManager.styles.forEach{
             let xml = Reflection.toXML($0)
