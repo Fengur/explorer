@@ -23,12 +23,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //Continue here: Try to find the modified-date of this file: 
         //FileParser.//
             
-        let fileManager = NSFileManager.defaultManager()
+        //let fileManager = NSFileManager.defaultManager()
         let filePath:String = "~/Desktop/ElCapitan/explorer.css".tildePath
         let fileURL:NSURL = NSURL(fileURLWithPath:filePath)
         let attributes = try! fileURL.resourceValuesForKeys([NSURLContentModificationDateKey, NSURLNameKey])
         let filename = attributes[NSURLNameKey] as! String
+        Swift.print("filename: " + "\(filename)")
         let modificationDate = attributes[NSURLContentModificationDateKey] as! NSDate
+        Swift.print("modificationDate: " + "\(modificationDate)")
         
         
         //Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
@@ -71,12 +73,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //rgbaColorTests()
         
         /*
-        let selectors:[ISelector] = [Selector("Window")]
-        let style = StyleResolver.style(selectors, nil)
-        style.describe()
+        
         */
         
         //Swift.print("complete: styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
+    }
+    /**
+     *
+     */
+    func selectorDebugTest(){
+        let selectors:[ISelector] = [Selector("Window")]
+        let style = StyleResolver.style(selectors, nil)
+        style.describe()
     }
     /**
      *
