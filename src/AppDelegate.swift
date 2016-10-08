@@ -20,16 +20,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }*/
         
         
-        //Continue here: Try to find the modified-date of this file: 
-        //FileParser.//
-            
-        //let fileManager = NSFileManager.defaultManager()
-        let filePath:String = "~/Desktop/ElCapitan/explorer.css".tildePath
-        let modificationDate = FileParser.modificationDate(filePath)
-        Swift.print("modificationDate: " + "\(modificationDate)")
-        Swift.print("modificationDate.timeIntervalSince1970: " + "\(modificationDate.timeIntervalSince1970)")
-        
-        
         //Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         
         /*
