@@ -14,11 +14,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         /**/
         //let startTime = NSDate()
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
-        StyleManager.cssFileURLS
-        StyleManager.cssFiles.forEach{
-            let key:String = $0.0
-            Swift.print("key: " + "\(key)")
-        }
+        //Swift.print("StyleManager.cssFileURLS.count: " + "\(StyleManager.cssFileURLS.count)")
+        /*StyleManager.cssFileURLS.forEach{
+           Swift.print("$0: " + "\($0)")
+        }*/
+        
+        
+        //Continue here: Try to find the modified-date of this file: ~/Desktop/ElCapitan/explorer.css
+        
         //Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         
         /*
