@@ -77,6 +77,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let xml = "<data></data>".xml
         let cssFilesXML = "<cssFiles></cssFiles>".xml
+        let cssFile = "<file></file>".xml
+        
         xml.appendChild(cssFilesXML)
         Swift.print(xml.XMLString)
     }
