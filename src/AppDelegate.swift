@@ -85,14 +85,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      * Asserts if the cssFiles that are cached have the same modified date as the cssFile that are querried
      */
     static func isUpToDate(cssFileDateList:[String:String]) -> Bool{
-        var isUpToDate:Bool = true
-        cssFileDateList.forEach{
-            let filePath:String = $0.0
+        for (filePath,date) in cssFileDateList{
+            let filePath:String = filePath
             let modificationDate:String = String(FileParser.modificationDate(filePath.tildePath).timeIntervalSince1970)
-            let cachedModificationDate:String = $0.1
-            if(cachedModificationDate != modificationDate){isUpToDate = false}
+            let cachedModificationDate:String = date
+            if(cachedModificationDate != modificationDate){return false}
         }
-        return isUpToDate
+        return true
     }
     /**
      * Compiles a list of css files derived from an xml
@@ -115,7 +114,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func cssFileDates()->XML{
         let cssFileDates = "<cssFileDates></cssFileDates>".xml
         StyleManager.cssFileURLS.forEach{
-            Swift.print("$0: " + "\($0)")
+            //Swift.print("$0: " + "\($0)")
             let filePath:String = $0.tildePath
             let modificationDate = FileParser.modificationDate(filePath)
             //Swift.print("modificationDate: " + "\(modificationDate)")
