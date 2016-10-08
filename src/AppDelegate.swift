@@ -14,7 +14,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         win = TranslucencyWin()
         /**/
         
-        
+        //write about the optimizations in a blog post. 
+        //figure out how much the style retrival takes with the selector.xml (include this in the blog post)
+        //Write about the Reflection and UnWrapping stuff
         
         //Continue here: 
         //1. render the styles to styles.xml  (done)
