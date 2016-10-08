@@ -9,10 +9,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var win:NSWindow?/*<--The window must be a class variable, local variables doesnt work*/
     static var selectorsString:String = ""
     func applicationDidFinishLaunching(aNotification:NSNotification) {
+        /*
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
-        
         win = TranslucencyWin()
-        
+        */
 
         //figure out how much the style retrival takes with the selector.xml (include this in the blog post)
         //Write about the Reflection and UnWrapping stuff
@@ -27,8 +27,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let color = NSColor.redColor()
         let xml = Reflection.toXML(color)
-        let newColor = NSColor.unWrap(xml)
-        Swift.print("newColor.hex: " + "\(newColor.hex)")
+        Swift.print("xml.XMLString: " + "\(xml.XMLString)")
+        let newColor:NSColor = NSColor.unWrap(xml,"NSColor")!
+        Swift.print("newColor.hexString: " + "\(newColor.hexString)")
     }
     /**
      * remove this when it works
