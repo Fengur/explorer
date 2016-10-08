@@ -74,7 +74,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         //let fileDates
     }
-    
+    /**
+     * Asserts if the cssFiles that are cached have the same modified date as the cssFile that are querried
+     */
+    func isUpToDate(){
+        
+    }
     /**
      *
      */
