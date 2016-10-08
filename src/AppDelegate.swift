@@ -44,6 +44,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         //then test the speed
         
+        //Continue here: Write 1,2,3,4 steps to implement the new addStylesByURL method
+        
+        
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
         //wrappingtests()
