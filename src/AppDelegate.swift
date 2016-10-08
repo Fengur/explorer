@@ -12,14 +12,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/button/button.css")
 
         /**/
-        //let startTime = NSDate()
+
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         
         
-        //Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
+      
         
         /*
-        StyleCache.readStylesFromDisk()
+
         win = TranslucencyWin()
         */
         
@@ -30,7 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //2. use the styles.xml as source for the styles (done)
         //3. load the basicWin w/ buttons then with all components (done)
         //4. try to get the tail trick working again (done)
-        //5. figure out a workflow that automates the caching of styles
+        //5. figure out a workflow that automates the caching of styles (done)
         //store the modified date of all .css files when loading the css files, then assert that each modified date ias equal to the date stored. if not then reload all css files and cache the styles in styles.xml. <--auto cache system!
 
         //Continue here: Figure out how you can store data in the .app (temp and permanent)
