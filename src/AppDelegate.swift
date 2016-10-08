@@ -140,7 +140,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let xml:XML = FileParser.xml("~/Desktop/styles.xml".tildePath)//then try to load this selectors.xml and convert every selector into Selector instancces in an array
         var styles:[IStyle] = []
         Swift.print("xml.children?.count: " + "\(xml.children?.count)")
-        xml.children?.forEach{
+        let stylesXML:XML = xml.firstNode("styles")!
+        stylesXML.children?.forEach{
             let style:Style? = Style.unWrap($0 as! XML)
             if(style != nil) {styles.append(style!)}
         }
