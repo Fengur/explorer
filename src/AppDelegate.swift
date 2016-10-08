@@ -67,10 +67,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let cssFileDateList = dataXML.firstNode("cssFileDates")
         cssFileDateList!.children?.forEach{
-            let
+            let cssFilePath:String = $0.stringValue!
+            Swift.print("cssFilePath: " + "\(cssFilePath)")
+            let date:String = ($0 as! XML)["date"]!
+            Swift.print("date: " + "\(date)")
         }
         //let fileDates
     }
+    
     /**
      *
      */
