@@ -14,7 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         /**/
         //let startTime = NSDate()
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
-        Swift.print("StyleManager.cssFiles.count: " + "\(StyleManager.cssFiles.count)")
+        StyleManager.cssFileURLS
         StyleManager.cssFiles.forEach{
             let key:String = $0.0
             Swift.print("key: " + "\(key)")
