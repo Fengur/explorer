@@ -21,7 +21,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         
         //Continue here: Try to find the modified-date of this file: 
-        FileParser.//~/Desktop/ElCapitan/explorer.css
+        //FileParser.//~/Desktop/ElCapitan/explorer.css
+            
+        let fileManager = NSFileManager.defaultManager()
+        fileManager.
         
         //Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         
