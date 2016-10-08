@@ -28,7 +28,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let temp:Temp = Temp(NSColor.redColor())
         let xml = Reflection.toXML(temp)
         Swift.print(xml.XMLString)//Output: <Temp><color type="NSColor">FFFF0000</color></Temp>
-        let newInstance:Temp = Temp.unWrap(xml,"NSColor")!
+        let newInstance:Temp = Temp.unWrap(xml)!
         Swift.print(newInstance.color.hexString)
     }
     
@@ -405,7 +405,7 @@ class Temp{
 
 extension Temp:UnWrappable{
     static func unWrap<T>(xml:XML) -> T? {
-        let color:NSColor = NSColor.unWrap(xml)!
+        let color:NSColor = NSColor.unWrap(xml,"color")!
         return Temp(color) as? T
     }
 }
