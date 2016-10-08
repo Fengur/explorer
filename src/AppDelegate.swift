@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         //Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         
-        //readXMLFromDisk()
+        readXMLFromDisk()
         win = TranslucencyWin()
         /**/
         
