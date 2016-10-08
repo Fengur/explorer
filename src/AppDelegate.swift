@@ -66,21 +66,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func modifiedDatesTest(){
         //Swift.print("StyleManager.cssFileURLS.count: " + "\(StyleManager.cssFileURLS.count)")
         /*
-        StyleManager.cssFileURLS.forEach{
-            Swift.print("$0: " + "\($0)")
-        }
-        let filePath:String = "~/Desktop/ElCapitan/explorer.css".tildePath
-        let modificationDate = FileParser.modificationDate(filePath)
-        Swift.print("modificationDate: " + "\(modificationDate)")
-        Swift.print("modificationDate.timeIntervalSince1970: " + "\(modificationDate.timeIntervalSince1970)")
+        
         */
         
         let xml = "<data></data>".xml
         let cssFiles = "<cssFiles></cssFiles>".xml
-        let cssFile = "<file></file>".xml
-        cssFile["date"] = "123456"
-        cssFile.stringValue = "~/desktop/someFile.xml"
-        cssFiles.appendChild(cssFile)
+        StyleManager.cssFileURLS.forEach{
+            Swift.print("$0: " + "\($0)")
+            let filePath:String = $0.tildePath
+            let modificationDate = FileParser.modificationDate(filePath)
+            //Swift.print("modificationDate: " + "\(modificationDate)")
+            //Swift.print("modificationDate.timeIntervalSince1970: " + "\(modificationDate.timeIntervalSince1970)")
+            let cssFile = "<file></file>".xml
+            cssFile["date"] = String(modificationDate.timeIntervalSince1970)
+            cssFile.stringValue = $0
+            cssFiles.appendChild(cssFile)
+        }
         xml.appendChild(cssFiles)
         Swift.print(xml.XMLString)
     }
