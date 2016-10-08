@@ -9,19 +9,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var win:NSWindow?/*<--The window must be a class variable, local variables doesnt work*/
     static var selectorsString:String = ""
     func applicationDidFinishLaunching(aNotification:NSNotification) {
-        //StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/button/button.css")
-
-        /**/
-
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         
-        
-      
-        
-        /*
-
         win = TranslucencyWin()
-        */
+        /**/
         
         
         
