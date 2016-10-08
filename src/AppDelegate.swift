@@ -25,11 +25,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //wrappingtests()
         
         
-        let color = NSColor.redColor()
+        let color:NSColor = NSColor.redColor()
         let xml = Reflection.toXML(color)
         Swift.print("xml.XMLString: " + "\(xml.XMLString)")
-        let newColor:NSColor = NSColor.unWrap(xml,"NSColor")!
-        Swift.print("newColor.hexString: " + "\(newColor.hexString)")
+        //let newColor:NSColor = NSColor.unWrap(xml,"NSColor")!
+        //Swift.print("newColor.hexString: " + "\(newColor.hexString)")
     }
     /**
      * remove this when it works
