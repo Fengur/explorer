@@ -45,6 +45,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //then test the speed
         
         //Continue here: Write 1,2,3,4 steps to implement the new addStylesByURL method
+        //1. assert if the styles.xml exists and if it has content
+        //2. assert if the query url has been cached
+            //if true then: read the styles from the xml
+            //else read and parse styles from the .css files
+        //3. 
         
         
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
