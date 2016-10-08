@@ -60,8 +60,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         
         let dataXML = "<data></data>".xml
+        let styles = "<styles></styles>".xml
+        dataXML.appendChild(styles)
         let cssFileDatesXML = cssFileDates()
         dataXML.appendChild(cssFileDatesXML)
+        
+        
     }
     /**
      *
