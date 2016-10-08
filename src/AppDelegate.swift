@@ -34,7 +34,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //store .css and .xml
         //Actually: add the date to as an xml tree in the styles.xml and assert that against the modified dates of the .css files
         
-        //1. find
+        //1. find all the css files and make a list of them
+        //2. extract the modified dates of theses files
+        //3. 
         
         //then test the speed
         
