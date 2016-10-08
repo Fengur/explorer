@@ -14,10 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         /**/
         //let startTime = NSDate()
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
-        //Swift.print("StyleManager.cssFileURLS.count: " + "\(StyleManager.cssFileURLS.count)")
-        /*StyleManager.cssFileURLS.forEach{
-           Swift.print("$0: " + "\($0)")
-        }*/
+        
         
         //Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         
@@ -58,11 +55,30 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         /**/
         //rgbaColorTests()
         
-        /*
-        
-        */
         
         //Swift.print("complete: styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
+        
+        modifiedDatesTest()
+    }
+    /**
+     *
+     */
+    func modifiedDatesTest(){
+        //Swift.print("StyleManager.cssFileURLS.count: " + "\(StyleManager.cssFileURLS.count)")
+        /*
+        StyleManager.cssFileURLS.forEach{
+            Swift.print("$0: " + "\($0)")
+        }
+        let filePath:String = "~/Desktop/ElCapitan/explorer.css".tildePath
+        let modificationDate = FileParser.modificationDate(filePath)
+        Swift.print("modificationDate: " + "\(modificationDate)")
+        Swift.print("modificationDate.timeIntervalSince1970: " + "\(modificationDate.timeIntervalSince1970)")
+        */
+        
+        let xml = "<data></data>".xml
+        let cssFilesXML = "<cssFiles></cssFiles>".xml
+        xml.appendChild(cssFilesXML)
+        Swift.print(xml.XMLString)
     }
     /**
      *
