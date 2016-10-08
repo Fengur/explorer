@@ -60,24 +60,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         cssFileDates()
     }
-    /**
-     *
-     */
-    func cssFileDates()->XML{
-        let cssFileDates = "<cssFileDates></cssFileDates>".xml
-        StyleManager.cssFileURLS.forEach{
-            Swift.print("$0: " + "\($0)")
-            let filePath:String = $0.tildePath
-            let modificationDate = FileParser.modificationDate(filePath)
-            //Swift.print("modificationDate: " + "\(modificationDate)")
-            //Swift.print("modificationDate.timeIntervalSince1970: " + "\(modificationDate.timeIntervalSince1970)")
-            let cssFile = "<file></file>".xml
-            cssFile["date"] = String(modificationDate.timeIntervalSince1970)
-            cssFile.stringValue = $0
-            cssFileDates.appendChild(cssFile)
-        }
-        return cssFileDates
-    }
+    
     /**
      *
      */
@@ -121,9 +104,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         contentToWriteToDisk += "</data>"//wrap the selector in an selectors root xml
         FileModifier.write("~/Desktop/styles.xml".tildePath, contentToWriteToDisk)//<--wrong name should be styles.xml
     }
+    /**
+     * Read pre-parsed styles
+     */
     func readXMLFromDisk(){
         let startTime = NSDate()
-        let xml:XML = FileParser.xml("~/Desktop/styles.xml".tildePath)//then try toload this selectors.xml and convert every selector into Selector instancces in an array
+        let xml:XML = FileParser.xml("~/Desktop/styles.xml".tildePath)//then try to load this selectors.xml and convert every selector into Selector instancces in an array
         var styles:[IStyle] = []
         Swift.print("xml.children?.count: " + "\(xml.children?.count)")
         xml.children?.forEach{
