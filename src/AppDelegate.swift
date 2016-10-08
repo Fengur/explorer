@@ -17,7 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         
         //readXMLFromDisk()
-        //win = TranslucencyWin()//Win(400,300/**//*1000,800*/)//()//
+        win = TranslucencyWin()
         /**/
         
         //Continue here:  (Adding styles is now really fast: 0.13 sec, when loading from xml, it can be futher optimized by removing xml nodes of value that are nil)
@@ -35,8 +35,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //5. figure out a workflow that automates the caching of styles
         
         //Continue here: try to figure out the tail trick bug (Something with Text)
-        //The tail trick is more involved, you have to use the hash helper method first, see if you can avoid the hashing after you got it working
-        //
         //then test the speed
         
         
@@ -52,11 +50,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         /**/
         //rgbaColorTests()
         
-        /**/
+        /*
         let selectors:[ISelector] = [Selector("Window")]
         let style = StyleResolver.style(selectors, nil)
         style.describe()
-
+        */
         
         Swift.print("complete: styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
     }
