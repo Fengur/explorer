@@ -20,7 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         win = TranslucencyWin()
         /**/
         
-        //the tail trick could be even faster if you sorted the hashed styles and used a halfed algo when querrying
+        //the tail trick could possibly be even faster if you sorted the hashed styles and used a halfed algo when querrying (but its a dictionary so maybe not, maybe if you stored it in an array etc)
         
         //Continue here: 
         //1. render the styles to styles.xml  (done)
