@@ -24,7 +24,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //FileParser.//~/Desktop/ElCapitan/explorer.css
             
         let fileManager = NSFileManager.defaultManager()
-        fileManager.
+        let fileURL:NSURL
+        let attributes = try! fileURL.resourceValuesForKeys([NSURLContentModificationDateKey, NSURLNameKey])
+        let filename = attributes[NSURLNameKey] as! String
+        let modificationDate = attributes[NSURLContentModificationDateKey] as! NSDate
+        
         
         //Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         
