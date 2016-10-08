@@ -88,7 +88,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         var isUpToDate:Bool = true
         cssFileDateList.forEach{
             let filePath:String = $0.0
-            let modificationDate:String = String(FileParser.modificationDate(filePath).timeIntervalSince1970)
+            let modificationDate:String = String(FileParser.modificationDate(filePath.tildePath).timeIntervalSince1970)
             let cachedModificationDate:String = $0.1
             if(cachedModificationDate != modificationDate){isUpToDate = false}
         }
@@ -102,9 +102,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let cssFileDatesXML = dataXML.firstNode("cssFileDates")
         cssFileDatesXML!.children?.forEach{
             let cssFilePath:String = $0.stringValue!
-            Swift.print("cssFilePath: " + "\(cssFilePath)")
+            //Swift.print("cssFilePath: " + "\(cssFilePath)")
             let date:String = ($0 as! XML)["date"]!
-            Swift.print("date: " + "\(date)")
+            //Swift.print("date: " + "\(date)")
             cssFileDates[cssFilePath] = date
         }
         return cssFileDates
