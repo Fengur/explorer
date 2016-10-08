@@ -21,10 +21,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         
         //Continue here: Try to find the modified-date of this file: 
-        //FileParser.//~/Desktop/ElCapitan/explorer.css
+        //FileParser.//
             
         let fileManager = NSFileManager.defaultManager()
-        let fileURL:NSURL
+        let filePath:String = "~/Desktop/ElCapitan/explorer.css".tildePath
+        let fileURL:NSURL = NSURL()
         let attributes = try! fileURL.resourceValuesForKeys([NSURLContentModificationDateKey, NSURLNameKey])
         let filename = attributes[NSURLNameKey] as! String
         let modificationDate = attributes[NSURLContentModificationDateKey] as! NSDate
