@@ -25,11 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //wrappingtests()
         
         
-        let temp:Temp = Temp(NSColor.redColor())
-        let xml = Reflection.toXML(temp)
-        Swift.print(xml.XMLString)//Output: <Temp><color type="NSColor">FFFF0000</color></Temp>
-        let newInstance:Temp = Temp.unWrap(xml)!
-        Swift.print(newInstance.color.hexString)
+        
     }
     
     /**
@@ -395,11 +391,3 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //print("Good-bye")
     }
 }
-
-class Temp{
-    var color:NSColor
-    init(_ color:NSColor){
-        self.color = color
-    }
-}
-
