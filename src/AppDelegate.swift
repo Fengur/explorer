@@ -403,9 +403,3 @@ class Temp{
     }
 }
 
-extension Temp:UnWrappable{
-    static func unWrap<T>(xml:XML) -> T? {
-        let color:NSColor = Temp.unWrap(xml)!
-        return Temp(color) as? T
-    }
-}
