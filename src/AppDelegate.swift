@@ -18,7 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //figure out how much the style retrival takes with the selector.xml (include this in the blog post)
         //Write about the Reflection and UnWrapping stuff
         //Make code better with the RegExp.value, and start writing auto equals code (Figure out how to do this first)
-        //
+        //Start making the 1-column GitSync Interface (with text buttons on the bottom first)
         
         //Continue here: 
         //1. render the styles to styles.xml  (done)
