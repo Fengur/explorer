@@ -19,7 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         
         /*
-        readXMLFromDisk()
+        StyleCache.readStylesFromDisk()
         win = TranslucencyWin()
         */
         
@@ -58,7 +58,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         
         //let startTime2 = NSDate()
-        writeXMLToDisk()
+        StyleCache.writeStylesToDisk()
         //Swift.print("Storing styles time: " + "\(abs(startTime2.timeIntervalSinceNow))")//0.29sec for basic styles, pretty good!
         
         
