@@ -69,14 +69,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         //Continue here: you need to figure out how to get the import urls from the querried css with out loading the styles. 
         //As you need the import urls from the source of the querry and not the cache
+        let queryURL = "~/Desktop/ElCapitan/explorer.css"//you need to do is to check if this url is up to date, as this may change from the usres pov
         
     }
     /**
      * Asserts if the cssFiles that are cached have the same modified date as the cssFile that are querried
      */
     func isUpToDate(dataXML:XML)->Bool{
-        let cssFileDateList = dataXML.firstNode("cssFileDates")
-        cssFileDateList!.children?.forEach{
+        let cssFileDates = [String:String]()
+
+        let cssFileDatesXML = dataXML.firstNode("cssFileDates")
+        cssFileDatesXML!.children?.forEach{
             let cssFilePath:String = $0.stringValue!
             Swift.print("cssFilePath: " + "\(cssFilePath)")
             let date:String = ($0 as! XML)["date"]!
