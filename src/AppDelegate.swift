@@ -58,19 +58,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         //Swift.print("complete: styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
         
-        modifiedDatesTest()
+        cssFileDates()
     }
     /**
      *
      */
-    func modifiedDatesTest(){
-        //Swift.print("StyleManager.cssFileURLS.count: " + "\(StyleManager.cssFileURLS.count)")
-        /*
-        
-        */
-        
-        let xml = "<data></data>".xml
-        let cssFiles = "<cssFiles></cssFiles>".xml
+    func cssFileDates()->XML{
+        let cssFileDates = "<cssFileDates></cssFileDates>".xml
         StyleManager.cssFileURLS.forEach{
             Swift.print("$0: " + "\($0)")
             let filePath:String = $0.tildePath
@@ -80,10 +74,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let cssFile = "<file></file>".xml
             cssFile["date"] = String(modificationDate.timeIntervalSince1970)
             cssFile.stringValue = $0
-            cssFiles.appendChild(cssFile)
+            cssFileDates.appendChild(cssFile)
         }
-        xml.appendChild(cssFiles)
-        Swift.print(xml.XMLString)
+        return cssFileDates
     }
     /**
      *
