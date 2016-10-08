@@ -65,7 +65,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let cssFileDatesXML = cssFileDates()
         dataXML.appendChild(cssFileDatesXML)
         
-        
+        let cssFileDateList = dataXML.firstNode("cssFileDates")
+        cssFileDateList!.children?.forEach{
+            
+        }
+        //let fileDates
     }
     /**
      *
