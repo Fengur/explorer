@@ -82,6 +82,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     /**
      * Asserts if the cssFiles that are cached have the same modified date as the cssFile that are querried
      */
+    class func isUpToDate(cssFileDateList:[String:String]){
+        cssFileDateList.forEach{
+            
+        }
+    }
+    /**
+     * Compiles a list of css files derived from an xml
+     */
     static func cssFileDateList(dataXML:XML)->[String:String]{
         var cssFileDates = [String:String]()
         let cssFileDatesXML = dataXML.firstNode("cssFileDates")
@@ -95,7 +103,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return cssFileDates
     }
     /**
-     *
+     * Compiles an xml of css files and its modified date
      */
     func cssFileDates()->XML{
         let cssFileDates = "<cssFileDates></cssFileDates>".xml
