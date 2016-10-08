@@ -67,7 +67,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         isUpToDate(dataXML)
         
-        //Continue here: you need to figure out how to get the 
+        //Continue here: you need to figure out how to get the import urls from the querried css with out loading the styles. 
+        //As you need the import urls from the source of the querry and not the cache
         
     }
     /**
