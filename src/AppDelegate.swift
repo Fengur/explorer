@@ -120,15 +120,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Swift.print("newColor.alphaComponent: " + "\(newColor.alphaComponent)")
     }
     func writeXMLToDisk(){
-        var contentToWriteToDisk = "<data><styles></styles></data>"
+        var data:XML = "<data></data>".xml
+        var styles:XML = "<styles></styles>".xml
         //Swift.print("StyleManager.styles.count: " + "\(StyleManager.styles.count)")
         StyleManager.styles.forEach{
             let xml = Reflection.toXML($0)
-            contentToWriteToDisk += xml.XMLString
+            styles.appendChild(xml)
             //Swift.print("xml.XMLString: " + "\(xml.XMLString)")
         }
-        contentToWriteToDisk += "</data>"//wrap the selector in an selectors root xml
-        FileModifier.write("~/Desktop/styles.xml".tildePath, contentToWriteToDisk)//<--wrong name should be styles.xml
+        data.appendChild(styles)
+        var cssFileDates:XML = StyleCache.cssFileDates()
+        data.appendChild(cssFileDates)
+        var contentToWriteToDisk = data.XMLString
+        FileModifier.write("~/Desktop/styles.xml".tildePath, contentToWriteToDisk)
     }
     /**
      * Read pre-parsed styles
