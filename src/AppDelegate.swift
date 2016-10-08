@@ -84,7 +84,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      */
     class func isUpToDate(cssFileDateList:[String:String]){
         cssFileDateList.forEach{
-            
+            $0.0
         }
     }
     /**
