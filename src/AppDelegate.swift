@@ -12,52 +12,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         
         win = TranslucencyWin()
-        /**/
         
-        //write about the optimizations in a blog post. 
+
         //figure out how much the style retrival takes with the selector.xml (include this in the blog post)
         //Write about the Reflection and UnWrapping stuff
         //Make code better with the RegExp.value, and start writing auto equals code (Figure out how to do this first)
         //Start making the 1-column GitSync Interface (with text buttons on the bottom first)
         
-        //Continue here: 
-        //1. render the styles to styles.xml  (done)
-        //2. use the styles.xml as source for the styles (done)
-        //3. load the basicWin w/ buttons then with all components (done)
-        //4. try to get the tail trick working again (done)
-        //5. figure out a workflow that automates the caching of styles (done)
-        //store the modified date of all .css files when loading the css files, then assert that each modified date ias equal to the date stored. if not then reload all css files and cache the styles in styles.xml. <--auto cache system!
-
-        //Continue here: Figure out how you can store data in the .app (temp and permanent)
-        //store .css and .xml
-        //Actually: add the date to as an xml tree in the styles.xml and assert that against the modified dates of the .css files
-        
-        //1. find all the css files and make a list of them (make a method that can return this list)
-        //2. extract the modified dates of these files
-        //3. store as xml
-        //4. make an assert method that can assert the dates and files in the list against the list returned from .css files
-
-        //then test the speed
-        
-        //Continue here: Write 1,2,3,4 steps to implement the new addStylesByURL method
-        //1. assert if the styles.xml exists and if it has content
-        //2. assert if the query url has been cached and assert if the cached css files are all up to date
-            //if true then: read the styles from the xml
-            //else read and parse styles from the .css files and write a new cache to styles.xml
-        //3. continue
-        
         
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
         //wrappingtests()
-        
-        
-        //let startTime2 = NSDate()
-        //StyleCache.writeStylesToDisk()
-        //Swift.print("Storing styles time: " + "\(abs(startTime2.timeIntervalSinceNow))")//0.29sec for basic styles, pretty good!
-        
-        
-        //Swift.print("complete: styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
         
         
     }
