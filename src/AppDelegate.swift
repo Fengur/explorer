@@ -23,9 +23,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
         //wrappingtests()
-        
-        
-        
     }
     
     /**
@@ -82,8 +79,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Swift.print("newColor.hexString: " + "\(newColor.hexString)")
         Swift.print("newColor.alphaComponent: " + "\(newColor.alphaComponent)")
     }
-    
-    
     /**
      * TODO: see if you can recreate the Style from xml! (first do this with StyleProperty, and assert that this stil works with the Selector)
      * TODO: and add an Ems() type (EMS isn't used alot if at all so don't worry about that for the moment)
