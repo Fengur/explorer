@@ -20,12 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         win = TranslucencyWin()
         /**/
         
-        //Continue here:  (Adding styles is now really fast: 0.13 sec, when loading from xml, it can be futher optimized by removing xml nodes of value that are nil)
-        //also 1.44sec to create all the GUI, is that correct? is it finding the styles that takes time or? (yes, finding styles takes: 0.8sec, but with the tail trick becomes: 0.017sec) which means loading All gui components will take 0.6 sec + 0.005 to load the xml and 0.017 querrying all styles (w/ tail trick), which means any fairly complex GUI can be loaded bellow 0.5sec.
-        //try querrying with the selectors again to see how long that takes etc (done, the problem was that tail trick isnt activated because of bug)
-        //Try to fix the bug that happens when using the tail trick, basically, you need the tail trick!
-        //also: store the modified date of all .css files when loading the css files, then assert that each modified date ias equal to the date stored. if not then reload all css files and cache the styles in styles.xml. <--auto cache system!
-        
+        //the tail trick could be even faster if you sorted the hashed styles and used a halfed algo when querrying
         
         //Continue here: 
         //1. render the styles to styles.xml  (done)
@@ -33,6 +28,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //3. load the basicWin w/ buttons then with all components (done)
         //4. try to get the tail trick working again (done)
         //5. figure out a workflow that automates the caching of styles
+        //store the modified date of all .css files when loading the css files, then assert that each modified date ias equal to the date stored. if not then reload all css files and cache the styles in styles.xml. <--auto cache system!
         
         //Continue here: try to figure out the tail trick bug (Something with Text)
         //then test the speed
