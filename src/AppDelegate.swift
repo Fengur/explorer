@@ -58,7 +58,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         
         //let startTime2 = NSDate()
-        StyleCache.writeStylesToDisk()
+        //StyleCache.writeStylesToDisk()
         //Swift.print("Storing styles time: " + "\(abs(startTime2.timeIntervalSinceNow))")//0.29sec for basic styles, pretty good!
         
         
@@ -67,7 +67,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
     }
     /**
-     *
+     * remove this when it works
      */
     func styleCacheTest(){
         
