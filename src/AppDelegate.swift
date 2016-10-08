@@ -25,11 +25,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //wrappingtests()
         
         
-        let temp:Temp = Temp()
+        let temp:Temp = Temp(NSColor.redColor())
         let xml = Reflection.toXML(temp)
-        Swift.print("xml.XMLString: " + "\(xml.XMLString)")
-        //let newColor:NSColor = NSColor.unWrap(xml,"NSColor")!
-        //Swift.print("newColor.hexString: " + "\(newColor.hexString)")
+        Swift.print(xml.XMLString)//Output: <Temp><color type="NSColor">FFFF0000</color></Temp>
+        let newInstance:Temp = Temp.unWrap(xml,"NSColor")!
+        Swift.print(newInstance.color.hexString)
     }
     
     /**
@@ -397,5 +397,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 }
 
 class Temp{
-    var color:NSColor = NSColor.redColor()
+    var color:NSColor
+    init(_ color:NSColor){
+        self.color = color
+    }
+}
+
+extension Temp:UnWrappable{
+    static func unWrap<T>(xml:XML) -> T? {
+        let color:NSColor = NSColor.unWrap(xml)!
+        return Temp(color) as? T
+    }
 }
