@@ -31,13 +31,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //1. render the styles to styles.xml  (done)
         //2. use the styles.xml as source for the styles (done)
         //3. load the basicWin w/ buttons then with all components (done)
-        //4. try to get the tail trick working again
+        //4. try to get the tail trick working again (done)
         //5. figure out a workflow that automates the caching of styles
         
         //Continue here: try to figure out the tail trick bug (Something with Text)
         //then test the speed
-        
-        
         
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
@@ -56,7 +54,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         style.describe()
         */
         
-        Swift.print("complete: styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
+        //Swift.print("complete: styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
     }
     /**
      *
