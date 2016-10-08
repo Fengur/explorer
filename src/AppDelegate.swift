@@ -78,6 +78,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
         Swift.print("hasBeenCached: " + "\(hasBeenCached)")
+        let isUpToDate = AppDelegate.isUpToDate(cssFileDateList)
+        Swift.print("isUpToDate: " + "\(isUpToDate)")
     }
     /**
      * Asserts if the cssFiles that are cached have the same modified date as the cssFile that are querried
