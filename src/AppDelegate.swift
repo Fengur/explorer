@@ -19,7 +19,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
            Swift.print("$0: " + "\($0)")
         }*/
         
-        
         //Swift.print("Adding basic styles time: " + "\(abs(startTime.timeIntervalSinceNow))")
         
         /*
