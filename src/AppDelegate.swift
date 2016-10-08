@@ -120,41 +120,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Swift.print("newColor.hexString: " + "\(newColor.hexString)")
         Swift.print("newColor.alphaComponent: " + "\(newColor.alphaComponent)")
     }
-    func writeXMLToDisk(){
-        let data:XML = "<data></data>".xml
-        let cssFileDates:XML = StyleCache.cssFileDates()
-        data.appendChild(cssFileDates)
-        let styles:XML = "<styles></styles>".xml
-        //Swift.print("StyleManager.styles.count: " + "\(StyleManager.styles.count)")
-        StyleManager.styles.forEach{
-            let xml = Reflection.toXML($0)
-            styles.appendChild(xml)
-            //Swift.print("xml.XMLString: " + "\(xml.XMLString)")
-        }
-        data.appendChild(styles)
-        let contentToWriteToDisk = data.XMLString
-        FileModifier.write("~/Desktop/styles.xml".tildePath, contentToWriteToDisk)
-    }
-    /**
-     * Read pre-parsed styles
-     */
-    func readXMLFromDisk(){
-        let startTime = NSDate()
-        let xml:XML = FileParser.xml("~/Desktop/styles.xml".tildePath)//then try to load this selectors.xml and convert every selector into Selector instancces in an array
-        var styles:[IStyle] = []
-        Swift.print("xml.children?.count: " + "\(xml.children?.count)")
-        let stylesXML:XML = xml.firstNode("styles")!
-        stylesXML.children?.forEach{
-            let style:Style? = Style.unWrap($0 as! XML)
-            if(style != nil) {styles.append(style!)}
-        }
-        Swift.print("styles.count: " + "\(styles.count)")//then check the count
-        Swift.print("parse xml time: " + "\(abs(startTime.timeIntervalSinceNow))")//then try to measure the time of resolving all selectors
-        let startTime2 = NSDate()
-        StyleManager.addStyle(styles)
-        Swift.print("addStyle time: " + "\(abs(startTime2.timeIntervalSinceNow))")//then try to measure the time of resolving all selectors
-
-    }
+    
     
     /**
      * TODO: see if you can recreate the Style from xml! (first do this with StyleProperty, and assert that this stil works with the Selector)
