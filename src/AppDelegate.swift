@@ -10,22 +10,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     static var selectorsString:String = ""
     func applicationDidFinishLaunching(aNotification:NSNotification) {
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
-        /*
         
         win = TranslucencyWin()
-        */
 
-        //figure out how much the style retrival takes with the selector.xml (include this in the blog post)
+        
         //Make code better with the RegExp.value, and start writing auto equals code (Figure out how to do this first)
         //Start making the 1-column GitSync Interface (with text buttons on the bottom first)
         
-        
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
-        
-        //wrappingtests()
-        reflectionTest()
     }
-    
     /**
      * remove this when it works
      */
