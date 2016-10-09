@@ -14,7 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         win = TranslucencyWin()
 
         
-        //Make code better with the RegExp.value, and start writing auto equals code (Figure out how to do this first)
+        
         //Start making the 1-column GitSync Interface (with text buttons on the bottom first)
         
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
