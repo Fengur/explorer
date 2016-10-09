@@ -308,7 +308,7 @@ class OptimizationTests {
         * NOTE: collect all selectors in one string, and then after the app has initialized, you need to save this string to disk
         */
         func writeSelectorsToDisk(){
-            let contentToWriteToDisk = "<data>" + AppDelegate.selectorsString + "</data>"//wrap the selector in an selectors root xml
+            let contentToWriteToDisk = "<data>" + StyleResolver.selectorsString + "</data>"//wrap the selector in an selectors root xml
             FileModifier.write("~/Desktop/selectors.xml".tildePath, contentToWriteToDisk)
         }
         
