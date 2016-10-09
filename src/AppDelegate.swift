@@ -2,6 +2,7 @@ import Cocoa
 /**
  * This is the main class for the application
  * TODO: Start making the 1-column GitSync Interface (with text buttons on the bottom first)
+ * TODO: See if the Other and Advance win still works
  */
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -10,7 +11,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     static var selectorsString:String = ""
     func applicationDidFinishLaunching(aNotification:NSNotification) {
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
-        
         win = TranslucencyWin()
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
     }
