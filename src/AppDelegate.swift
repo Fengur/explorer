@@ -15,7 +15,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         */
 
         //figure out how much the style retrival takes with the selector.xml (include this in the blog post)
-        //Write about the Reflection and UnWrapping stuff
         //Make code better with the RegExp.value, and start writing auto equals code (Figure out how to do this first)
         //Start making the 1-column GitSync Interface (with text buttons on the bottom first)
         
@@ -230,14 +229,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }else{
             Swift.print("is not equal")
         }
-        
-        
     }
     /**
      *
      */
     func typeAssertion(){
-        
         /*
         let cgColor:CGColorRef = NSColor.redColor().cgColor
         let tempVar:Any = cgColor
