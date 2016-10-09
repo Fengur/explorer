@@ -361,7 +361,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             styles.append(style)//then use the StyleResolver to resolve every selector
         }
         Swift.print("styles.count: " + "\(styles.count)")
-        Swift.print("time: " + "\(abs(startTime.timeIntervalSinceNow))")//then try to measure the time of resolving all selectors
+        Swift.print("style retrival time: " + "\(abs(startTime.timeIntervalSinceNow))")//then try to measure the time of resolving all selectors
 
     }
     /**
