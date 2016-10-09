@@ -22,6 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
         //wrappingtests()
+        readSelectorsFromDisk()
     }
     
     /**
