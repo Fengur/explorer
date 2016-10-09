@@ -8,7 +8,7 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
     weak var window: NSWindow!/*<--This is here only so that the compiler wont throw an error*/
     var win:NSWindow?/*<--The window must be a class variable, local variables doesnt work*/
-    static var selectorsString:String = ""
+    
     func applicationDidFinishLaunching(aNotification:NSNotification) {
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         win = TranslucencyWin()
