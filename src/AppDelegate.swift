@@ -1,6 +1,7 @@
 import Cocoa
 /**
  * This is the main class for the application
+ * TODO: Start making the 1-column GitSync Interface (with text buttons on the bottom first)
  */
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -11,11 +12,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         
         win = TranslucencyWin()
-
-        
-        
-        //Start making the 1-column GitSync Interface (with text buttons on the bottom first)
-        
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
     }
     func applicationWillTerminate(aNotification: NSNotification) {
