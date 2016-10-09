@@ -311,7 +311,6 @@ class OptimizationTests {
             let contentToWriteToDisk = "<data>" + StyleResolver.selectorsString + "</data>"//wrap the selector in an selectors root xml
             FileModifier.write("~/Desktop/selectors.xml".tildePath, contentToWriteToDisk)
         }
-        
         func readSelectorsFromDisk()->[[ISelector]]{
             let xml:XML = FileParser.xml("~/Desktop/selectors.xml".tildePath)//then try toload this selectors.xml and convert every selector into Selector instancces in an array
             var data:[[ISelector]] = []
