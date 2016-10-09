@@ -170,7 +170,6 @@ class BasicView:CustomView {
         let selectGroup = SelectGroup([iconButton1,iconButton2,iconButton3,iconButton4],iconButton3);
         selectGroup
     }
-    
     func createTextInput(){
         let card:Card = container.addSubView(Card(NaN, NaN, "TextInput: ", container, "textInputCard"))
         let textInput:TextInput = card.addSubView(TextInput(NaN, NaN, "Description: ", "blue", card))
