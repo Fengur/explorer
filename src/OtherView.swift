@@ -9,28 +9,24 @@ class OtherView:CustomView {
         container = addSubView(Container(1000,800,self,"main"))
         createColorBox()
         createColorInput()
-        //createColorPanel()
+        createColorPanel()
         //createGradientPanel()
     }
     func createColorBox(){
-        Swift.print("createColorBox")
         let card:Card = container.addSubView(Card(NaN, NaN, "ColorBox: ", container, "colorBoxCard"))
         card
         let colorBox = card.addSubView(ColorBox(NaN,NaN,NSColor.cyanColor(),card))
         colorBox
     }
     func createColorInput(){// :TODO: inpliment TextInput TextAre in the css
-        /*let url:String = "~/Desktop/ElCapitan/other/colorinput/colorinput.css"
-        StyleManager.addStylesByURL(url,true)*/
-        Swift.print("createColorInput()")
         let colorInputCard:Card = container.addSubView(Card(NaN, NaN, "ColorInput: ", container, "colorInputCard"))
         colorInputCard
         let colorInput:ColorInput = colorInputCard.addSubView(ColorInput(NaN,NaN,"Color: ",NSColor.magentaColor(),colorInputCard))//NSColorParser.nsColor(Colors.MAGENTA)
         colorInput
     }
     func createColorPanel(){
-        let url:String = "~/Desktop/ElCapitan/other/colorpanel/colorpanel.css"
-        StyleManager.addStylesByURL(url,true)
+        /*let url:String = "~/Desktop/ElCapitan/other/colorpanel/colorpanel.css"
+        StyleManager.addStylesByURL(url,true)*/
         
         let colorPanelCard:Card = container.addSubView(Card(NaN, NaN, "ColorPanel: ", container, "colorPanelCard"))
         let colorPanel = colorPanelCard.addSubView(ColorPanel(NaN,NaN,24,NSColor.magentaColor(),"Color",colorPanelCard))
