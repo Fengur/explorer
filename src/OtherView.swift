@@ -8,17 +8,11 @@ class OtherView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         createColorBox()
-        //createColorInput()
+        createColorInput()
         //createColorPanel()
         //createGradientPanel()
     }
-    /**
-     *
-     */
     func createColorBox(){
-        /*let url:String = "~/Desktop/ElCapitan/other/colorbox/colorbox.css"
-        StyleManager.addStylesByURL(url,false)*/
-        
         Swift.print("createColorBox")
         let card:Card = container.addSubView(Card(NaN, NaN, "ColorBox: ", container, "colorBoxCard"))
         card
@@ -26,9 +20,8 @@ class OtherView:CustomView {
         colorBox
     }
     func createColorInput(){// :TODO: inpliment TextInput TextAre in the css
-        let url:String = "~/Desktop/ElCapitan/other/colorinput/colorinput.css"
-        StyleManager.addStylesByURL(url,true)
-        
+        /*let url:String = "~/Desktop/ElCapitan/other/colorinput/colorinput.css"
+        StyleManager.addStylesByURL(url,true)*/
         Swift.print("createColorInput()")
         let colorInputCard:Card = container.addSubView(Card(NaN, NaN, "ColorInput: ", container, "colorInputCard"))
         colorInputCard
