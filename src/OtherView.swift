@@ -10,7 +10,7 @@ class OtherView:CustomView {
         createColorBox()
         createColorInput()
         createColorPanel()
-        //createGradientPanel()
+        createGradientPanel()
     }
     func createColorBox(){
         let card:Card = container.addSubView(Card(NaN, NaN, "ColorBox: ", container, "colorBoxCard"))
@@ -25,9 +25,6 @@ class OtherView:CustomView {
         colorInput
     }
     func createColorPanel(){
-        /*let url:String = "~/Desktop/ElCapitan/other/colorpanel/colorpanel.css"
-        StyleManager.addStylesByURL(url,true)*/
-        
         let colorPanelCard:Card = container.addSubView(Card(NaN, NaN, "ColorPanel: ", container, "colorPanelCard"))
         let colorPanel = colorPanelCard.addSubView(ColorPanel(NaN,NaN,24,NSColor.magentaColor(),"Color",colorPanelCard))
         colorPanel
@@ -35,21 +32,6 @@ class OtherView:CustomView {
         //colorPanel.setSize(300, 300);
     }
     func createGradientPanel(){
-        let url:String = "~/Desktop/ElCapitan/other/gradientpanel/gradientpanel.css"
-        StyleManager.addStylesByURL(url,true)
-        
-        fileWatcher = FileWatcher([url.tildePath])
-        fileWatcher!.event = { event in
-            //Swift.print(self)
-            Swift.print(event.description)
-            if(event.fileChange && event.path == url.tildePath) {
-                StyleManager.addStylesByURL(url,true)
-                ElementModifier.refreshSkin(self)
-                ElementModifier.floatChildren(self)
-            }
-        }
-        fileWatcher!.start()
-        
         let gradientPanelCard:Card = container.addSubView(Card(NaN, NaN, "GradientPanel: ", container, "gradientPanelCard"))
         let gradientColors:Array<CGColor> = [NSColor.redColor().cgColor, NSColor.blueColor().cgColor]
         var gradient:IGradient = LinearGradient(gradientColors,[],0)
