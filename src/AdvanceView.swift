@@ -51,28 +51,6 @@ class AdvanceView:CustomView {
         //TODO: try the move up and move down methods
     }
     func createSliderTreeList(){
-        /*
-        StyleManager.addStylesByURL("~/Desktop/css/treelistdemo.css")
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/advance/treelist/treelist.css")
-        //StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/slider/vslider.css")
-        let url:String = "~/Desktop/ElCapitan/advance/treelist/slidertreelist.css"
-        StyleManager.addStylesByURL(url,true)
-
-        
-        fileWatcher = FileWatcher([url.tildePath])
-        fileWatcher!.event = { event in
-            //Swift.print(self)
-            Swift.print(event.description)
-            if(event.fileChange && event.path == url.tildePath) {
-                StyleManager.addStylesByURL(url,true)
-                ElementModifier.refreshSkin(self)
-                ElementModifier.floatChildren(self)
-            }
-        }
-        fileWatcher!.start()
-        */
-        
-        
         let card = container.addSubView(Card(NaN, NaN, "SliderTreeList: ", container, "sliderTreeListCard"))
         let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/treelist.xml".tildePath)
 
@@ -87,7 +65,7 @@ class AdvanceView:CustomView {
         let url:String = "~/Desktop/ElCapitan/advance/table/table.css"
         StyleManager.addStylesByURL(url,true)
         
-        let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/table.xml")
+        let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/table.xml".tildePath)
         //Swift.print("xml: " + "\(xml)")
         let node:Node = Node(xml)
         node
