@@ -15,7 +15,7 @@ class AdvanceView:CustomView {
     func createTreeList(){
         let card = container.addSubView(Card(NaN, NaN, "TreeList: ", container, "treeListCard"))
         
-        let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/treelist.xml".tildePath)
+        let xml:XML = FileParser.xml("~/Desktop/assets/xml/treelist.xml".tildePath)
         var treeList = card.addSubView(TreeList(140, 192, 24, Node(xml), card))
         
         Swift.print("selected: " + "\(TreeListParser.selected(treeList))")
@@ -28,10 +28,9 @@ class AdvanceView:CustomView {
         TreeListModifier.explodeAt(treeList,[])//opens the treeList
         
         treeList.node.removeAt([1])
-        treeList.node.addAt([1],  NSXMLElement("<item title=\"Fish\"/>"))/*new*/
+        treeList.node.addAt([1], "<item title=\"Fish\"/>".xml)/*new*/
         
         //Swift.print("\(treeList.node.xml)")
-        
         
         func onTreeListEvent(event: Event) {//add local event handler
             if(event.type == SelectEvent.select && event.immediate === treeList){
@@ -39,15 +38,14 @@ class AdvanceView:CustomView {
                 let selectedIndex:Array = TreeListParser.selectedIndex(treeList)
                 Swift.print("selectedIndex: " + "\(selectedIndex)")
                 //print("_scrollTreeList.database.xml.toXMLString(): " + _scrollTreeList.database.xml.toXMLString());
-                let selectedXML:NSXMLElement = XMLParser.childAt(treeList.node.xml, selectedIndex)!
+                let selectedXML:XML = XMLParser.childAt(treeList.node.xml, selectedIndex)!
                 //print("selectedXML: " + selectedXML);
                 Swift.print("selectedXML.toXMLString():")
                 Swift.print(selectedXML)//EXAMPLE output: <item title="Ginger"></item>
             }
         }
         treeList.event = onTreeListEvent//add local event listener
-        
-        
+    
         //TODO: try the move up and move down methods
     }
     func createSliderTreeList(){
