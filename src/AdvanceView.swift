@@ -51,11 +51,13 @@ class AdvanceView:CustomView {
         //TODO: try the move up and move down methods
     }
     func createSliderTreeList(){
+        /*
         StyleManager.addStylesByURL("~/Desktop/css/treelistdemo.css")
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/advance/treelist/treelist.css")
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/slider/vslider.css")
         let url:String = "~/Desktop/ElCapitan/advance/treelist/slidertreelist.css"
         StyleManager.addStylesByURL(url,true)
+
         
         fileWatcher = FileWatcher([url.tildePath])
         fileWatcher!.event = { event in
@@ -68,9 +70,11 @@ class AdvanceView:CustomView {
             }
         }
         fileWatcher!.start()
+        */
+        
         
         let card = container.addSubView(Card(NaN, NaN, "SliderTreeList: ", container, "sliderTreeListCard"))
-        let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/treelist.xml")
+        let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/treelist.xml".tildePath)
 
         let scrollTreeList = card.addSubView(SliderTreeList(140, 192, 24, Node(xml),card))
         scrollTreeList
