@@ -9,7 +9,7 @@ class AdvanceView:CustomView {
         
         createTreeList()
         createSliderTreeList()
-        //createTable()
+        createTable()
         /**/
     }
     func createTreeList(){

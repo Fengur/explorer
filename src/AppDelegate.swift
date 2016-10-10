@@ -19,3 +19,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 }
 
+//example of how to implement "Live-reload" of styles:
+
+/*
+StyleManager.addStylesByURL("~/Desktop/css/treelistdemo.css")
+StyleManager.addStylesByURL("~/Desktop/ElCapitan/advance/treelist/treelist.css")
+//StyleManager.addStylesByURL("~/Desktop/ElCapitan/basic/slider/vslider.css")
+let url:String = "~/Desktop/ElCapitan/advance/treelist/slidertreelist.css"
+StyleManager.addStylesByURL(url,true)
+
+
+fileWatcher = FileWatcher([url.tildePath])
+fileWatcher!.event = { event in
+//Swift.print(self)
+Swift.print(event.description)
+if(event.fileChange && event.path == url.tildePath) {
+StyleManager.addStylesByURL(url,true)
+ElementModifier.refreshSkin(self)
+ElementModifier.floatChildren(self)
+}
+}
+fileWatcher!.start()
+*/
