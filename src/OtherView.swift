@@ -7,17 +7,17 @@ class OtherView:CustomView {
     override func resolveSkin() {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
-        //createColorBox()
+        createColorBox()
         //createColorInput()
         //createColorPanel()
-        createGradientPanel()
+        //createGradientPanel()
     }
     /**
      *
      */
     func createColorBox(){
-        let url:String = "~/Desktop/ElCapitan/other/colorbox/colorbox.css"
-        StyleManager.addStylesByURL(url,false)
+        /*let url:String = "~/Desktop/ElCapitan/other/colorbox/colorbox.css"
+        StyleManager.addStylesByURL(url,false)*/
         
         Swift.print("createColorBox")
         let card:Card = container.addSubView(Card(NaN, NaN, "ColorBox: ", container, "colorBoxCard"))
