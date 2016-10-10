@@ -8,17 +8,12 @@ class AdvanceView:CustomView {
         container = addSubView(Container(1000,800,self,"main"))
         
         createTreeList()
-        /*
         createSliderTreeList()
-        createTable()
-        */
+        //createTable()
+        /**/
     }
     func createTreeList(){
         let card = container.addSubView(Card(NaN, NaN, "TreeList: ", container, "treeListCard"))
-        
-        /*StyleManager.addStylesByURL("~/Desktop/css/treelistdemo.css")
-        let url:String = "~/Desktop/ElCapitan/advance/treelist/treelist.css"
-        StyleManager.addStylesByURL(url,true)*/
         
         let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/treelist.xml".tildePath)
         var treeList = card.addSubView(TreeList(140, 192, 24, Node(xml), card))
