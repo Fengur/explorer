@@ -8,8 +8,10 @@ class AdvanceView:CustomView {
         container = addSubView(Container(1000,800,self,"main"))
         
         createTreeList()
+        /*
         createSliderTreeList()
         createTable()
+        */
     }
     func createTreeList(){
         let card = container.addSubView(Card(NaN, NaN, "TreeList: ", container, "treeListCard"))
