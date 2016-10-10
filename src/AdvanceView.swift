@@ -20,7 +20,7 @@ class AdvanceView:CustomView {
         let url:String = "~/Desktop/ElCapitan/advance/treelist/treelist.css"
         StyleManager.addStylesByURL(url,true)
         
-        let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/treelist.xml")
+        let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/treelist.xml".tildePath)
         var treeList = card.addSubView(TreeList(140, 192, 24, Node(xml), card))
         
         Swift.print("selected: " + "\(TreeListParser.selected(treeList))")
