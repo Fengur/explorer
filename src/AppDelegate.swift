@@ -3,7 +3,7 @@ import Cocoa
  * This is the main class for the application
  */
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate:NSObject, NSApplicationDelegate {
     weak var window: NSWindow!/*<--This is here only so that the compiler wont throw an error*/
     var win:NSWindow?/*<--The window must be a class variable, local variables doesnt work*/
     
