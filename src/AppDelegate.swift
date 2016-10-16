@@ -1,8 +1,6 @@
 import Cocoa
 /**
  * This is the main class for the application
- * TODO: Start making the 1-column GitSync Interface (with text buttons on the bottom first)
- * TODO: Implement the Other and Advance wins (Group the scattered css styles into a unified other.css and advance.css)
  */
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
