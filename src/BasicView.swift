@@ -188,16 +188,13 @@ class BasicView:CustomView {
         let text:Text = card.addSubView(Text(100,24,"This is text: ",card))
         text
     }
-    func createTextArea() {
+    func createTextArea(){
         let card:Card = container.addSubView(Card(NaN, NaN, "Text area: ", container, "textAreaCard"))
         let text:String = FileParser.content("~/Desktop/assets/txt/textarea.txt".tildePath)!
         let textArea:TextArea = card.addSubView(TextArea(180,74,text,card))
         textArea
     }
     func createSearchBox(){
-        let url:String = "~/Desktop/ElCapitan/basic/text/searchbox.css"
-        StyleManager.addStylesByURL(url,true)
-
         let searchBoxCard:Card = container.addSubView(Card(NaN, NaN, "Search box: ", container, "searchBoxCard"))
         let searchBox:TextArea = searchBoxCard.addSubView(TextArea(NaN, NaN, "Search", searchBoxCard))
         searchBox
