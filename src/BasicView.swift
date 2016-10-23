@@ -154,7 +154,7 @@ class BasicView:CustomView {
         leverSpinner
     }
     func createTabBar(){
-        let card:Card = container.addSubView(Card(NaN, NaN, "Tab bar: ", container, "tabBarCard"))
+        let card:Card = container.addSubView(Card(NaN, NaN, "Tab bar: ", container, "tabBar"))
         let btn1 = card.addSubView(SelectTextButton(NaN,NaN,"Tab 1",true,card,"first"))
         let btn2 = card.addSubView(SelectTextButton(NaN,NaN,"Tab 2",false,card,"second"))
         let btn3 = card.addSubView(SelectTextButton(NaN,NaN,"Tab 3",false,card,"third"))
