@@ -143,7 +143,13 @@ class BasicView:CustomView {
     func createLeverStepper(){
         let card:Card = container.addSubView(Card(NaN, NaN, "LeverStepper: ", container, "leverStepperCard"))
         let stepper:LeverStepper = card.addSubView(LeverStepper(NaN,NaN,0,1,Int.min.cgFloat,Int.max.cgFloat,0,100,200,card))
-        stepper
+        func onEvent(event:Event){
+            if(event.assert(StepperEvent.change, stepper)){
+                let val = (event as! StepperEvent).value
+                Swift.print("Stepper.value: " + "\(val)")
+            }
+        }
+        stepper.event = onEvent
     }
     /**
      * TODO: create the LeverSpinner component with text
