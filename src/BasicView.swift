@@ -107,6 +107,13 @@ class BasicView:CustomView {
         let card:Card = container.addSubView(Card(NaN, NaN, "VolumeSlider: ", container, "volumeSliderCard"))
         let volumeSlider = card.addSubView(VolumeSlider(120,20,20,0,card))
         volumeSlider.setProgressValue(0.5)
+        func onVolumeSliderChange(event: Event) {
+            if(event.assert(SliderEvent.change, volumeSlider)){
+                let volumSliderProgress = (event as! SliderEvent).progress
+                Swift.print("volumSliderProgress: " + "\(volumSliderProgress)")
+            }
+        }
+        volumeSlider!.event = onVolumeSliderChange
     }
     /**
      * TextButton
@@ -205,11 +212,17 @@ class BasicView:CustomView {
         let searchBox:TextArea = searchBoxCard.addSubView(TextArea(NaN, NaN, "Search", searchBoxCard))
         searchBox
     }
+    /**
+     * NOTE: see VolumSlider for eventListener
+     */
     func createVSlider(){
         let vSliderCard:Card = container.addSubView(Card(NaN, NaN, "Vertical slider: ", container, "vSliderCard"))
         let vSlider:VSlider = vSliderCard.addSubView(VSlider(6,60,30,0,vSliderCard))
         vSlider
     }
+    /**
+     * NOTE: see VolumSlider for eventListener
+     */
     func createHSlider(){
         let hSliderCard:Card = container.addSubView(Card(NaN, NaN, "Horizontal slider: ", container, "hSliderCard"))
         let hSlider:HSlider = hSliderCard.addSubView(HSlider(120,6,70,0,hSliderCard))
