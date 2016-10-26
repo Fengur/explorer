@@ -113,7 +113,7 @@ class BasicView:CustomView {
                 Swift.print("volumSliderProgress: " + "\(volumSliderProgress)")
             }
         }
-        volumeSlider!.event = onVolumeSliderChange
+        volumeSlider.event = onVolumeSliderChange
     }
     /**
      * TextButton
