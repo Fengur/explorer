@@ -1,6 +1,7 @@
 import Cocoa
 /**
- * NOTE: Try to add Element here: https://github.com/vsouza/awesome-ios#layout (Requires Carthage, .framework and instalation section in readme)
+ * TODO: Try to add Element here: https://github.com/vsouza/awesome-ios#layout (Requires Carthage, .framework and instalation section in readme)
+ * TODO: Add flexbox support for Element see this lib for insp: https://github.com/stylekit/FlexboxLayout
  */
 class BasicView:CustomView {
     var container:Container!
