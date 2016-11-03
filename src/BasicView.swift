@@ -1,4 +1,7 @@
 import Cocoa
+/**
+ * NOTE: Try to add Element here: https://github.com/vsouza/awesome-ios#layout (Requires Carthage, .framework and instalation section in readme)
+ */
 class BasicView:CustomView {
     var container:Container!
     override func resolveSkin() {
