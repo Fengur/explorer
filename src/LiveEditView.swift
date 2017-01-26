@@ -16,7 +16,7 @@ class LiveEditView:CustomView {
     /**
      *
      */
-    func fileWatchTest(){
+    func fileWatchTest() {
         fileWatcher = FileWatcher(["~/Desktop/test/".tildePath],FSEventStreamEventId(kFSEventStreamEventIdSinceNow))
         fileWatcher!.event = { [weak self] event in
             self?.temp
@@ -28,7 +28,7 @@ class LiveEditView:CustomView {
     /**
      *
      */
-    func liveEditTest1(){
+    func liveEditTest1() {
         StyleManager.addStyle("#redBox{fill:red;float:left;clear:left;}")
         let redBox = addSubView(Element(100,100,self,"redBox"))
         
