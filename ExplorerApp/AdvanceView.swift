@@ -1,4 +1,6 @@
 import Foundation
+@testable import Element
+@testable import Utils
 
 class AdvanceView:CustomView {
     var container:Container!
@@ -27,7 +29,7 @@ class AdvanceView:CustomView {
         TreeListModifier.collapseAt(treeList, [])//closes the treeList
         TreeListModifier.explodeAt(treeList,[])//opens the treeList
         
-        treeList.node.removeAt([1])
+        _ = treeList.node.removeAt([1])
         treeList.node.addAt([1], "<item title=\"Fish\"/>".xml)/*new*/
         
         //Swift.print("\(treeList.node.xml)")
@@ -50,10 +52,10 @@ class AdvanceView:CustomView {
     }
     func createSliderTreeList(){
         let card = container.addSubView(Card(NaN, NaN, "SliderTreeList: ", container, "sliderTreeListCard"))
-        let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/treelist.xml".tildePath)
+        let xml:XMLElement = FileParser.xml("~/Desktop/assets/xml/treelist.xml".tildePath)
 
         let scrollTreeList = card.addSubView(SliderTreeList(140, 192, 24, Node(xml),card))
-        scrollTreeList
+        _ = scrollTreeList
         //_scrollTreeList.database.addAt([0], <item title="Fish"/>);
         //print("_scrollTreeList.treeList.database.xml.toXMLString(): " + _scrollTreeList.database.xml.toXMLString());
     }
@@ -63,10 +65,10 @@ class AdvanceView:CustomView {
         let url:String = "~/Desktop/ElCapitan/advance/table/table.css"
         StyleManager.addStylesByURL(url,true)
         
-        let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/table.xml".tildePath)
+        let xml:XMLElement = FileParser.xml("~/Desktop/assets/xml/table.xml".tildePath)
         //Swift.print("xml: " + "\(xml)")
         let node:Node = Node(xml)
-        node
+        _ = node
         
         let table:Table = card.addSubView(Table(190,120,node,card))
         

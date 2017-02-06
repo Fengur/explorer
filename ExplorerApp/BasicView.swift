@@ -1,4 +1,6 @@
 import Cocoa
+@testable import Element
+@testable import Utils
 /**
  * TODO: Try to add Element here: https://github.com/vsouza/awesome-ios#layout (Requires Carthage, .framework and instalation section in readme)
  * TODO: Add flexbox support for Element see this lib for insp: https://github.com/stylekit/FlexboxLayout
@@ -40,9 +42,9 @@ class BasicView:CustomView {
     func buttonTest(){
         let buttonStyle:String = "Container#main Button{fill:linear-gradient(top,red,blue);float:left;}Button#clear{clear:left;}"
         StyleManager.addStyle(buttonStyle)
-        for var i = 0; i < 144; ++i{
+        for i in 0..<144{
             let id:String = i % 12 == 0 ? "clear" : ""//the 13th element drops down bellow
-            container.addSubView(Button(24,24,container,id))
+            _ = container.addSubView(Button(24,24,container,id))
         }
     }
     /**
@@ -73,9 +75,10 @@ class BasicView:CustomView {
         createSearchBox()
         createTextInput()
         createColorTag()
-        /**/
-        //createVNodeSlider()
-        //createHNodeSlider()
+        
+        
+        //createVNodeSlider()//not apart of basic anymore
+        //createHNodeSlider()//not apart of basic anymore
 
     }
     /**
@@ -100,7 +103,7 @@ class BasicView:CustomView {
     func createIconButton(){
         let card:Card = container.addSubView(Card(NaN, NaN, "Icon Button: ", container, "iconButtonCard"))
         let button = card.addSubView(Button(NaN,NaN,card,"question"))
-        button
+        _ = button
         
         //StyleParser.describe(StyleResolver.style(button))
     }
@@ -124,7 +127,7 @@ class BasicView:CustomView {
      */
     func createTextButton(){
         let card:Card = container.addSubView(Card(NaN, NaN, "TextButton: ", container, "textButtonCard"))
-        card.addSubView(TextButton(NaN,NaN,"Button",card))
+        _ = card.addSubView(TextButton(NaN,NaN,"Button",card))
     }
     /**
      * RadioBullet
@@ -135,7 +138,7 @@ class BasicView:CustomView {
         let radioBullet1 = section.addSubView(RadioBullet(NaN,NaN,true,section))
         let radioBullet2 = section.addSubView(RadioBullet(NaN,NaN,false,section))
         let selectGroup = (SelectGroup([radioBullet1,radioBullet2],radioBullet1))
-        selectGroup
+        _ = selectGroup
     }
     /**
      * CheckboxButtons
@@ -168,7 +171,7 @@ class BasicView:CustomView {
     func createLeverSpinner(){
         let card:Card = container.addSubView(Card(NaN, NaN, "LeverSpinner: ", container, "leverSpinnerCard"))
         let leverSpinner:LeverSpinner = card.addSubView(LeverSpinner(NaN, NaN,"Value: ", 0, 1, Int.min.cgFloat, Int.max.cgFloat, 0, 100, 200, card))
-        leverSpinner
+        _ = leverSpinner
     }
     func createTabBar(){
         let card:Card = container.addSubView(Card(NaN, NaN, "Tab bar: ", container, "tabBar"))
@@ -176,7 +179,7 @@ class BasicView:CustomView {
         let btn2 = card.addSubView(SelectTextButton(NaN,NaN,"Tab 2",false,card,"second"))
         let btn3 = card.addSubView(SelectTextButton(NaN,NaN,"Tab 3",false,card,"third"))
         let selectGroup = SelectGroup([btn1,btn2,btn3],btn1)//SelectParser.selectables(card)
-        selectGroup
+        _ = selectGroup
     }
     func createIconButtons(){
         let card:Card = container.addSubView(Card(NaN, NaN, "Icon button: ", container, "iconButtonsCard"))
@@ -185,17 +188,17 @@ class BasicView:CustomView {
         let iconButton3 = card.addSubView(SelectButton(NaN,NaN,true,card,"third"))
         let iconButton4 = card.addSubView(SelectButton(NaN,NaN,false,card,"fourth"))
         let selectGroup = SelectGroup([iconButton1,iconButton2,iconButton3,iconButton4],iconButton3);
-        selectGroup
+        _ = selectGroup
     }
     func createTextInput(){
         let card:Card = container.addSubView(Card(NaN, NaN, "TextInput: ", container, "textInputCard"))
         let textInput:TextInput = card.addSubView(TextInput(NaN, NaN, "Description: ", "blue", card))
-        textInput
+        _ = textInput
     }
     func createSingleLineTextArea(){
         let card:Card = container.addSubView(Card(NaN, NaN, "TextInput: ", container, "singleLineTextAreaCard"))
         let textArea:TextArea = card.addSubView(TextArea(NaN, NaN, "This is a single line text area", card))
-        textArea
+        _ = textArea
     }
     /**
      * This creates a textField
@@ -203,18 +206,18 @@ class BasicView:CustomView {
     func createText(){
         let card:Card = container.addSubView(Card(NaN, NaN, "Text: ", container, "textCard"))
         let text:Text = card.addSubView(Text(100,24,"This is text: ",card))
-        text
+        _ = text
     }
     func createTextArea(){
         let card:Card = container.addSubView(Card(NaN, NaN, "Text area: ", container, "textAreaCard"))
         let text:String = FileParser.content("~/Desktop/assets/txt/textarea.txt".tildePath)!
         let textArea:TextArea = card.addSubView(TextArea(180,74,text,card))
-        textArea
+        _ = textArea
     }
     func createSearchBox(){
         let searchBoxCard:Card = container.addSubView(Card(NaN, NaN, "Search box: ", container, "searchBoxCard"))
         let searchBox:TextArea = searchBoxCard.addSubView(TextArea(NaN, NaN, "Search", searchBoxCard))
-        searchBox
+        _ = searchBox
     }
     /**
      * NOTE: see VolumSlider for eventListener
@@ -222,7 +225,7 @@ class BasicView:CustomView {
     func createVSlider(){
         let vSliderCard:Card = container.addSubView(Card(NaN, NaN, "Vertical slider: ", container, "vSliderCard"))
         let vSlider:VSlider = vSliderCard.addSubView(VSlider(6,60,30,0,vSliderCard))
-        vSlider
+        _ = vSlider
     }
     /**
      * NOTE: see VolumSlider for eventListener
@@ -230,7 +233,7 @@ class BasicView:CustomView {
     func createHSlider(){
         let hSliderCard:Card = container.addSubView(Card(NaN, NaN, "Horizontal slider: ", container, "hSliderCard"))
         let hSlider:HSlider = hSliderCard.addSubView(HSlider(120,6,70,0,hSliderCard))
-        hSlider
+        _ = hSlider
     }
     /**
      * Checkbox
@@ -261,12 +264,12 @@ class BasicView:CustomView {
         let colorTagSection:Section = colorTagCard.addSubView(Section(NaN,NaN,colorTagCard,"colorTagSection"))
         let colors:Array<String> = ["red","orange","yellow","green","blue","purple","grey"]
         for color in colors{
-            colorTagSection.addSubView(RadioBullet(NaN,NaN,false,colorTagSection,color))
+            _ = colorTagSection.addSubView(RadioBullet(NaN,NaN,false,colorTagSection,color))
         }
         let selectables = SelectParser.selectables(colorTagSection)
         //selectables[0].setSelected(true)
         let selectGroup = SelectGroup(selectables,selectables[0])
-        selectGroup
+        _ = selectGroup
     }
     func createVNodeSlider(){
         let url:String = "~/Desktop/ElCapitan/basic/nodeslider/vnodeslider.css"
@@ -274,7 +277,7 @@ class BasicView:CustomView {
 
         let vNodeSliderCard:Card = container.addSubView(Card(NaN, NaN, "Vertical node slider: ", container, "vNodeSliderCard"))
         let vNodeSlider:VNodeSlider = vNodeSliderCard.addSubView(VNodeSlider(20, 70, 20, 0, 1, vNodeSliderCard))
-        vNodeSlider
+        _ = vNodeSlider
     }
     func createHNodeSlider(){
         let url:String = "~/Desktop/ElCapitan/basic/nodeslider/hnodeslider.css"
@@ -282,7 +285,7 @@ class BasicView:CustomView {
         
         let hNodeSliderCard:Card = container.addSubView(Card(NaN, NaN, "Horizontal node slider: ", container, "hNodeSliderCard"))
         let hNodeSlider:HNodeSlider = hNodeSliderCard.addSubView(HNodeSlider(120, 20, 20, 0, 1, hNodeSliderCard))
-        hNodeSlider
+        _ = hNodeSlider
     }
     func createList(){
         let listCard:Card = container.addSubView(Card(NaN, NaN, "List: ", container, "listCard"))
@@ -329,7 +332,7 @@ class BasicView:CustomView {
         let sliderTextAreaCard:Card = container.addSubView(Card(NaN, NaN, "Slider text area: ", container, "sliderTextAreaCard"))
         let text:String = FileParser.content("~/Desktop/assets/txt/scrolltextarea.txt".tildePath)!
         let scrollTextArea:SliderTextArea = sliderTextAreaCard.addSubView(SliderTextArea(180,72,text,24,sliderTextAreaCard))
-        scrollTextArea
+        _ = scrollTextArea
 //		scrollTextArea.setSize(400, 250);
 //		scrollTextAreaPanel.setPosition(new Point(LEFT_MARGIN+260,TOP_MARGIN));
     }

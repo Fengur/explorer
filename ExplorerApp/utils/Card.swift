@@ -1,4 +1,6 @@
 import Foundation
+@testable import Element
+@testable import Utils
 
 class Card:Element{
     var text:String;
@@ -8,8 +10,8 @@ class Card:Element{
     }
     override func resolveSkin() {
         super.resolveSkin()
-        addSubView(Element(NaN, NaN, self, "ruler"))
-        addSubView(Text(NaN, NaN, text, self, "cardText"))
+        _ = addSubView(Element(NaN, NaN, self, "ruler"))
+        _ = addSubView(Text(NaN, NaN, text, self, "cardText"))
     }
-    required init?(coder: NSCoder) {fatalError("init(coder:) has not been implemented")}
+    required init(coder: NSCoder) {fatalError("init(coder:) has not been implemented")}
 }

@@ -1,4 +1,6 @@
 import Cocoa
+@testable import Element
+ @testable import Utils
 
 class LiveEditView:CustomView {
     var container:Container!
@@ -16,10 +18,10 @@ class LiveEditView:CustomView {
     /**
      *
      */
-    func fileWatchTest() {
+    func fileWatchTest(){
         fileWatcher = FileWatcher(["~/Desktop/test/".tildePath],FSEventStreamEventId(kFSEventStreamEventIdSinceNow))
         fileWatcher!.event = { [weak self] event in
-            self?.temp
+            _ = self?.temp
             Swift.print(event.description)
         }
         fileWatcher!.start()
@@ -28,7 +30,7 @@ class LiveEditView:CustomView {
     /**
      *
      */
-    func liveEditTest1() {
+    func liveEditTest1(){
         StyleManager.addStyle("#redBox{fill:red;float:left;clear:left;}")
         let redBox = addSubView(Element(100,100,self,"redBox"))
         
@@ -38,11 +40,11 @@ class LiveEditView:CustomView {
         func onButtonClick(event:Event){
             if(event.type == ButtonEvent.upInside){
                 Swift.print("click")
-                redBox
+                _ = redBox
                 let style = StyleManager.getStyle("#redBox")
                 var styleProperty = style?.getStyleProperty("fill")
                 Swift.print("styleProperty?.value: " + "\(styleProperty?.value)")
-                styleProperty!.value = ("0x"+NSColor.magentaColor().hexString).uint
+                styleProperty!.value = ("0x"+NSColor.magenta.hexString).uint
                 Swift.print("styleProperty?.value: " + "\(StyleManager.getStyle("#redBox")?.getStyleProperty("fill")?.value)")
                 ElementModifier.refresh(self)
             }
@@ -68,7 +70,7 @@ class LiveEditView:CustomView {
             if(event.type == ButtonEvent.upInside){
                 //let style = StyleManager.getStyle("#testButton")
                 //var styleProperty = style?.getStyleProperty("fill")
-                StyleManager.removeStyle("#testButton")
+                _ = StyleManager.removeStyle("#testButton")
                 if(event.origin === lightThemeButton){
                     StyleManager.addStylesByURL("~/Desktop/light.css")
                     //styleProperty!.value = StyleManager.getStyle("#lightTheme")!.getStyleProperty("fill")!.value
@@ -113,14 +115,14 @@ class LiveEditView:CustomView {
         let radioBullet1 = section.addSubView(RadioBullet(NaN,NaN,true,section))
         let radioBullet2 = section.addSubView(RadioBullet(NaN,NaN,false,section))
         let selectGroup = (SelectGroup([radioBullet1,radioBullet2],radioBullet1))
-        selectGroup
+        _ = selectGroup
         
         //style the button with red color from an external css file named ~/Desktop/button.css
         
         fileWatcher = FileWatcher([url.tildePath])
         
         fileWatcher!.event = { [weak self] event in
-            Swift.print(self)
+            Swift.print("\(self)")
             Swift.print(event.description)
             if(event.fileChange && event.path == url.tildePath) {
                 StyleManager.addStylesByURL(url,true)

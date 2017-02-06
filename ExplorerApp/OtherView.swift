@@ -1,4 +1,6 @@
 import Cocoa
+@testable import Element
+@testable import Utils
 
 class OtherView:CustomView {
     var container:Container!
@@ -10,33 +12,33 @@ class OtherView:CustomView {
         createColorBox()
         createColorInput()
         createColorPanel()
-        createGradientPanel()
+        createGradientPanel()/**/
     }
     func createColorBox(){
         let card:Card = container.addSubView(Card(NaN, NaN, "ColorBox: ", container, "colorBoxCard"))
-        card
-        let colorBox = card.addSubView(ColorBox(NaN,NaN,NSColor.cyanColor(),card))
-        colorBox
+        _ = card
+        let colorBox = card.addSubView(ColorBox(NaN,NaN,NSColor.cyan,card))
+        _ = colorBox
     }
     func createColorInput(){// :TODO: inpliment TextInput TextAre in the css
         let colorInputCard:Card = container.addSubView(Card(NaN, NaN, "ColorInput: ", container, "colorInputCard"))
-        colorInputCard
-        let colorInput:ColorInput = colorInputCard.addSubView(ColorInput(NaN,NaN,"Color: ",NSColor.magentaColor(),colorInputCard))//NSColorParser.nsColor(Colors.MAGENTA)
-        colorInput
+        _ = colorInputCard
+        let colorInput:ColorInput = colorInputCard.addSubView(ColorInput(NaN,NaN,"Color: ",NSColor.magenta,colorInputCard))//NSColorParser.nsColor(Colors.MAGENTA)
+        _ = colorInput
     }
     func createColorPanel(){
         let colorPanelCard:Card = container.addSubView(Card(NaN, NaN, "ColorPanel: ", container, "colorPanelCard"))
-        let colorPanel = colorPanelCard.addSubView(ColorPanel(NaN,NaN,24,NSColor.magentaColor(),"Color",colorPanelCard))
-        colorPanel
+        let colorPanel = colorPanelCard.addSubView(ColorPanel(NaN,NaN,24,NSColor.magenta,"Color",colorPanelCard))
+        _ = colorPanel
         //colorPanel.setPosition(new Point(0,144));
         //colorPanel.setSize(300, 300);
     }
     func createGradientPanel(){
         let gradientPanelCard:Card = container.addSubView(Card(NaN, NaN, "GradientPanel: ", container, "gradientPanelCard"))
-        let gradientColors:Array<CGColor> = [NSColor.redColor().cgColor, NSColor.blueColor().cgColor]
+        let gradientColors:Array<CGColor> = [NSColor.red.cgColor, NSColor.blue.cgColor]
         var gradient:IGradient = LinearGradient(gradientColors,[],0)
         gradient.colors = Gradients.deepPurple()
         let gradientPanel:GradientPanel = gradientPanelCard.addSubView(GradientPanel(200,NaN,20,gradient,gradientPanelCard))
-        gradientPanel
+        _ = gradientPanel
     }
 }
