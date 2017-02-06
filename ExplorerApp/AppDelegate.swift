@@ -16,9 +16,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         win = TranslucencyWin()
         Swift.print("completed")
- 
-        
-
     }
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
