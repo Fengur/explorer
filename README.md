@@ -7,6 +7,8 @@
 # Explorer
 Showcase app for programatic UI components
 
+[here](https://github.com/stylekit/ElCapitan) are the css files you need for the macOS design styles
+
 <img width="1034" alt="img" src="https://dl.dropboxusercontent.com/u/2559476/Screen Shot 2016-04-14 at 15.57.55.png">
 
 <img width="1034" alt="img" src="https://dl.dropboxusercontent.com/u/2559476/Screen Shot 2016-04-15 at 06.41.37.png">
