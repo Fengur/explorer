@@ -33,7 +33,7 @@ class AdvanceView:CustomView {
         
         //Swift.print("\(treeList.node.xml)")
         
-        func onTreeListEvent(event: Event) {//add local event handler
+        func onTreeListEvent(event:Event) {//add local event handler
             if(event.type == SelectEvent.select && event.immediate === treeList){
                 //Swift.print("onTreeListSelect()")
                 let selectedIndex:Array = TreeListParser.selectedIndex(treeList)
