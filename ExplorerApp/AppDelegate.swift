@@ -17,9 +17,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //win = TranslucencyWin()
         
         
-        StyleManager.addStyle("Button{thickness:10px;}Button Buton{thickness:20px;}")
+        StyleManager.addStyle("Button Buton{thickness:20px;}Button Button Buton{thickness:30px;}Button{thickness:10px;}")
         let btn = Button(100,20)
-        let props = btn.skin?.style?.getStyleProperties("thickness")
+        let btn2 = btn.addSubView(Button(100,20,btn))
+        let props = btn2.skin?.style?.getStyleProperties("thickness")
         Swift.print("thickness: " + "\(props?.first?.value)")
     }
     func applicationWillTerminate(_ aNotification: Notification) {
