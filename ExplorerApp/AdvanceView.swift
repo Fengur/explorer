@@ -18,7 +18,7 @@ class AdvanceView:CustomView {
         
         let xml:XML = FileParser.xml("~/Desktop/assets/xml/treelist.xml".tildePath)
         var treeList = card.addSubView(TreeList(140, 192, 24, Node(xml), card))
-        
+        /*
         Swift.print("selected: " + "\(TreeListParser.selected(treeList))")
         Swift.print("selectedIndex: " + "\(TreeListParser.selectedIndex(treeList))")//Output:  [2,2,0]
         Swift.print("selected Title: " + "\(XMLParser.attributesAt(treeList.node.xml, TreeListParser.selectedIndex(treeList))!["title"])")//Output: Oregano
@@ -30,7 +30,7 @@ class AdvanceView:CustomView {
         
         _ = treeList.node.removeAt([1])
         treeList.node.addAt([1], "<item title=\"Fish\"/>".xml)/*new*/
-        
+        */
         //Swift.print("\(treeList.node.xml)")
         
         func onTreeListEvent(event:Event) {//adds local event handler
