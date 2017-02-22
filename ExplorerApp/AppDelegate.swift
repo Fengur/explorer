@@ -13,10 +13,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //print(ArrayParser.difference([1,2], [1]))
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
-        //StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
-        //win = TranslucencyWin()
+        StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
+        win = TranslucencyWin()
         
+        //cssTest()
         
+    }
+    /**
+     *
+     */
+    func cssTest(){
         StyleManager.addStyle("Container Button{thickness:30px;}Container Container Container Container Button{thickness:20px;}Container Container Button{thickness:10px;}")
         let a = Container(100,100)
         let b = a.addSubView(Container(100,100,a))
@@ -26,7 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let props = btn2.skin?.style?.getStyleProperties("thickness")
         Swift.print("thickness: " + "\(props?.first?.value)")
         
-        
+
     }
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
