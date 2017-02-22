@@ -17,10 +17,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //win = TranslucencyWin()
         
         
-        StyleManager.addStyle("Button{fill:orange;}Button Buton{fill:blue;}")
+        StyleManager.addStyle("Button{thickness:10px;}Button Buton{thickness:20px;}")
         let btn = Button(100,20)
-        let fill = btn.skin?.style?.getStyleProperties("fill")
-        Swift.print("fill: " + "\(fill)")
+        let props = btn.skin?.style?.getStyleProperties("thickness")
+        Swift.print("thickness: " + "\(props?.first?.value)")
     }
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
