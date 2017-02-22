@@ -12,10 +12,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to initialize your application
         //print(ArrayParser.difference([1,2], [1]))
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
-        Swift.print("hello world")
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
-        win = TranslucencyWin()
-        Swift.print("completed")
+        
+        //StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
+        //win = TranslucencyWin()
+        
+        let a:IStyle = Style()
+        StyleManager.addStyle("Button{fill:blue;}")
     }
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
