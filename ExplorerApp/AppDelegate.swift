@@ -16,8 +16,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
         //win = TranslucencyWin()
         
-        let a:IStyle = Style()
-        StyleManager.addStyle("Button{fill:blue;}")
+        
+        StyleManager.addStyle("Button{fill:orange;}Button Buton{fill:blue;}")
+        let btn = Button(100,20)
+        let fill = btn.skin?.style?.getStyleProperties("fill")
+        Swift.print("fill: " + "\(fill)")
     }
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
