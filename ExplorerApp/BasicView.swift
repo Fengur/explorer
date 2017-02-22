@@ -76,10 +76,8 @@ class BasicView:CustomView {
         createTextInput()
         createColorTag()
         
-        
         //createVNodeSlider()//not apart of basic anymore
         //createHNodeSlider()//not apart of basic anymore
-
     }
     /**
      * Button
