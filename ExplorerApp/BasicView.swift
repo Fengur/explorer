@@ -98,38 +98,6 @@ class BasicView:CustomView {
         }
         button.event = onbuttonDown
     }
-    override func mouseUpInside(_ event:MouseEvent) {
-        Swift.print("mouseUpInside: " + "\(event)")
-        super.mouseUpInside(event)
-    }
-    override func rightMouseUp(with event: NSEvent) {
-        Swift.print("rightMouseUp: " + "\(event)")
-        super.rightMouseUp(with:event)
-        popUpMenu(event)
-    }
-    
-    func action1(sender: AnyObject) {
-        Swift.print("Urk, action 1")
-    }
-    
-    func action2(sender: AnyObject) {
-        Swift.print("Urk, action 2")
-    }
-    
-    func popUpMenu(_ event:NSEvent) {
-        Swift.print("popUpMenu: " + "\(popUpMenu)" )
-        let theMenu = NSMenu(title: "Contextual menu")
-        theMenu.addItem(withTitle: "Action 1", action: Selector(("action1:")), keyEquivalent: "")
-        theMenu.addItem(withTitle: "Action 2", action: Selector(("action2:")), keyEquivalent: "")
-        
-        for item: AnyObject in theMenu.items {
-            if let menuItem = item as? NSMenuItem {
-                menuItem.target = self
-            }
-        }
-        
-        NSMenu.popUpContextMenu(theMenu, with: event, for: self)
-    }
     /**
      *
      */
