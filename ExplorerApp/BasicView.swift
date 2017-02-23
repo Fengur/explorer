@@ -90,7 +90,7 @@ class BasicView:CustomView {
             Swift.print("event: " + "\(event)")
             if(event.type == MouseEvent.up){
                 Swift.print("MouseEvent.up")
-                popUpMenu((event as! MouseEvent).event!)
+                popUpMenu(nil)
                 //var startTime:int = getTimer();
                 //StyleResolver.style(event.target as Button);
                 //print("selectRow-duration: " + (getTimer() - startTime));
