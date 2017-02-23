@@ -87,7 +87,9 @@ class BasicView:CustomView {
         let card:Card = container.addSubView(Card(NaN, NaN, "Buttons: ", container, "buttonCard"))
         let button = card.addSubView(Button(96,24,card))
         func onbuttonDown(event:Event){
+            Swift.print("event: " + "\(event)")
             if(event.type == MouseEvent.up){
+                Swift.print("MouseEvent.up")
                 popUpMenu((event as! MouseEvent).event!)
                 //var startTime:int = getTimer();
                 //StyleResolver.style(event.target as Button);
