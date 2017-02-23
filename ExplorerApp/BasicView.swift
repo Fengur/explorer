@@ -96,8 +96,16 @@ class BasicView:CustomView {
         }
         button.event = onbuttonDown
     }
+    func action1(sender: AnyObject) {
+        Swift.print("Urk, action 1")
+    }
+    
+    func action2(sender: AnyObject) {
+        Swift.print("Urk, action 2")
+    }
+    
     func popUpMenu(_ event: NSEvent) {
-        var theMenu = NSMenu(title: "Contextual menu")
+        let theMenu = NSMenu(title: "Contextual menu")
         theMenu.addItem(withTitle: "Action 1", action: Selector(("action1:")), keyEquivalent: "")
         theMenu.addItem(withTitle: "Action 2", action: Selector(("action2:")), keyEquivalent: "")
         
@@ -107,7 +115,7 @@ class BasicView:CustomView {
             }
         }
         
-        NSMenu.popUpContextMenu(theMenu, withEvent:event, forView:self)
+        NSMenu.popUpContextMenu(theMenu, with:event, for:self)
     }
     /**
      *
