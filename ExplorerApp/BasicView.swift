@@ -117,9 +117,10 @@ class BasicView:CustomView {
                 menuItem.target = self
             }
         }
-        let cgEvent = CGEvent.init(mouseEventSource: <#T##CGEventSource?#>, mouseType: <#T##CGEventType#>, mouseCursorPosition: <#T##CGPoint#>, mouseButton: <#T##CGMouseButton#>)
-        let event:NSEvent = NSEvent()
-        event.
+        let cgEvent = CGEvent.init(mouseEventSource: nil, mouseType: CGEventType.null, mouseCursorPosition: CGPoint(0,0), mouseButton: CGMouseButton.right)
+        Swift.print("cgEvent: " + "\(cgEvent)")
+        let event:NSEvent = NSEvent.init(cgEvent: cgEvent!)!
+        
         NSMenu.popUpContextMenu(theMenu, with: event, for: self)
     }
     /**
