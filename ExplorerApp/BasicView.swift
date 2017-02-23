@@ -107,6 +107,7 @@ class BasicView:CustomView {
     }
     
     func popUpMenu(_ event: NSEvent?) {
+        Swift.print("popUpMenu: " + "\(popUpMenu)")
         let theMenu = NSMenu(title: "Contextual menu")
         theMenu.addItem(withTitle: "Action 1", action: Selector(("action1:")), keyEquivalent: "")
         theMenu.addItem(withTitle: "Action 2", action: Selector(("action2:")), keyEquivalent: "")
@@ -117,7 +118,7 @@ class BasicView:CustomView {
             }
         }
         
-        let temp = NSMenu.popUp(theMenu)
+        NSMenu.popUpContextMenu(theMenu, with: NSEvent(), for: self)
     }
     /**
      *
