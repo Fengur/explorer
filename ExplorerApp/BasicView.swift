@@ -88,8 +88,8 @@ class BasicView:CustomView {
         let button = card.addSubView(Button(96,24,card))
         func onbuttonDown(event:Event){
             Swift.print("event: " + "\(event)")
-            if(event.type == MouseEvent.up){
-                Swift.print("MouseEvent.up")
+            if(event.type == ButtonEvent.upInside){
+                Swift.print("ButtonEvent.upInside")
                 popUpMenu(nil)
                 //var startTime:int = getTimer();
                 //StyleResolver.style(event.target as Button);
@@ -106,7 +106,7 @@ class BasicView:CustomView {
         Swift.print("Urk, action 2")
     }
     
-    func popUpMenu(_ event: NSEvent) {
+    func popUpMenu(_ event: NSEvent?) {
         let theMenu = NSMenu(title: "Contextual menu")
         theMenu.addItem(withTitle: "Action 1", action: Selector(("action1:")), keyEquivalent: "")
         theMenu.addItem(withTitle: "Action 2", action: Selector(("action2:")), keyEquivalent: "")
@@ -117,7 +117,7 @@ class BasicView:CustomView {
             }
         }
         
-        NSMenu.popUpContextMenu(theMenu, with:event, for:self)
+        let temp = NSMenu.popUp(theMenu)
     }
     /**
      *
