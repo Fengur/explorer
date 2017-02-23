@@ -117,6 +117,7 @@ class BasicView:CustomView {
                 menuItem.target = self
             }
         }
+        let cgEvent = CGEvent.init(mouseEventSource: <#T##CGEventSource?#>, mouseType: <#T##CGEventType#>, mouseCursorPosition: <#T##CGPoint#>, mouseButton: <#T##CGMouseButton#>)
         let event:NSEvent = NSEvent()
         event.
         NSMenu.popUpContextMenu(theMenu, with: event, for: self)
