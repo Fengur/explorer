@@ -90,7 +90,9 @@ class BasicView:CustomView {
             Swift.print("event: " + "\(event)")
             if(event.type == ButtonEvent.upInside){
                 Swift.print("ButtonEvent.upInside")
-                popUpMenu(nil)
+                let viewPos:CGPoint = CGPoint(self.mouseX,self.mouseY)
+                Swift.print("viewPos: " + "\(viewPos)")
+                popUpMenu(viewPos)
                 //var startTime:int = getTimer();
                 //StyleResolver.style(event.target as Button);
                 //print("selectRow-duration: " + (getTimer() - startTime));
@@ -106,8 +108,8 @@ class BasicView:CustomView {
         Swift.print("Urk, action 2")
     }
     
-    func popUpMenu(_ event: NSEvent?) {
-        Swift.print("popUpMenu: " + "\(popUpMenu)")
+    func popUpMenu(_ location:CGPoint) {
+        Swift.print("popUpMenu: " + "\(popUpMenu)" + " location: \(location)")
         let theMenu = NSMenu(title: "Contextual menu")
         theMenu.addItem(withTitle: "Action 1", action: Selector(("action1:")), keyEquivalent: "")
         theMenu.addItem(withTitle: "Action 2", action: Selector(("action2:")), keyEquivalent: "")
@@ -117,7 +119,7 @@ class BasicView:CustomView {
                 menuItem.target = self
             }
         }
-        let cgEvent = CGEvent.init(mouseEventSource: nil, mouseType: CGEventType.rightMouseUp, mouseCursorPosition: CGPoint(0,0), mouseButton: CGMouseButton.right)
+        let cgEvent = CGEvent.init(mouseEventSource: nil, mouseType: CGEventType.leftMouseUp, mouseCursorPosition: location, mouseButton: CGMouseButton.left)
         Swift.print("cgEvent: " + "\(cgEvent)")
         let event:NSEvent = NSEvent.init(cgEvent: cgEvent!)!
         
