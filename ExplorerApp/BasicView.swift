@@ -117,8 +117,9 @@ class BasicView:CustomView {
                 menuItem.target = self
             }
         }
-        
-        NSMenu.popUpContextMenu(theMenu, with: NSEvent(), for: self)
+        let event:NSEvent = NSEvent()
+        event.
+        NSMenu.popUpContextMenu(theMenu, with: event, for: self)
     }
     /**
      *
