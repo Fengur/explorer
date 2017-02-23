@@ -102,11 +102,12 @@ class BasicView:CustomView {
         Swift.print("mouseUpInside: " + "\(event)")
         super.mouseUpInside(event)
     }
-    override func mouseUp(with event:NSEvent) {
-        Swift.print("mouseUp: " + "\(event)")
-        super.mouseUp(with:event)
+    override func rightMouseUp(with event: NSEvent) {
+        Swift.print("rightMouseUp: " + "\(event)")
+        super.rightMouseUp(with:event)
         popUpMenu(event)
     }
+    
     func action1(sender: AnyObject) {
         Swift.print("Urk, action 1")
     }
