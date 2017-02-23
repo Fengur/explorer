@@ -1,7 +1,6 @@
 import Cocoa
 @testable import Element
 @testable import Utils
-//this is the current window for the Stash app
 
 class TranslucencyWin:NSWindow, NSApplicationDelegate, NSWindowDelegate{
     let w:CGFloat = 1000//500//350//
