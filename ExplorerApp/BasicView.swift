@@ -52,7 +52,7 @@ class BasicView:CustomView {
      */
     func createComponents(){
         createButton()
-        createTextButton()
+        /*createTextButton()
         createRadioBullet()
         createCheckBox()
         createRadioButton()
@@ -74,7 +74,7 @@ class BasicView:CustomView {
         createSingleLineTextArea()
         createSearchBox()
         createTextInput()
-        createColorTag()
+        createColorTag()*/
         
         //createVNodeSlider()//not apart of basic anymore
         //createHNodeSlider()//not apart of basic anymore
@@ -87,13 +87,27 @@ class BasicView:CustomView {
         let card:Card = container.addSubView(Card(NaN, NaN, "Buttons: ", container, "buttonCard"))
         let button = card.addSubView(Button(96,24,card))
         func onbuttonDown(event:Event){
-            if(event.type == ButtonEvent.upInside){
+            if(event.type == MouseEvent.up){
+                popUpMenu((event as! MouseEvent).event!)
                 //var startTime:int = getTimer();
                 //StyleResolver.style(event.target as Button);
                 //print("selectRow-duration: " + (getTimer() - startTime));
             }
         }
         button.event = onbuttonDown
+    }
+    func popUpMenu(_ event: NSEvent) {
+        var theMenu = NSMenu(title: "Contextual menu")
+        theMenu.addItem(withTitle: "Action 1", action: Selector(("action1:")), keyEquivalent: "")
+        theMenu.addItem(withTitle: "Action 2", action: Selector(("action2:")), keyEquivalent: "")
+        
+        for item: AnyObject in theMenu.items {
+            if let menuItem = item as? NSMenuItem {
+                menuItem.target = self
+            }
+        }
+        
+        NSMenu.popUpContextMenu(theMenu, withEvent:event, forView:self)
     }
     /**
      *
