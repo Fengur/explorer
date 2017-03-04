@@ -3,8 +3,8 @@ import Cocoa
 @testable import Utils
 
 class TranslucencyWin:NSWindow, NSApplicationDelegate, NSWindowDelegate{
-    let w:CGFloat = 500//1000//500//350//
-    let h:CGFloat = 400//800//400//300//
+    let w:CGFloat = 1000//500//350//
+    let h:CGFloat = 800//400//300//
     override var canBecomeMain:Bool{return true}
     override var canBecomeKey:Bool{return true}/*If you want a titleless window to be able to become a key window, you need to create a subclass of NSWindow and override -canBecomeKeyWindow*/
     override var acceptsFirstResponder:Bool{return true}
@@ -29,9 +29,9 @@ class TranslucencyWin:NSWindow, NSApplicationDelegate, NSWindowDelegate{
         
         self.contentView?.addSubview(visualEffectView!)
         
-        //let view = BasicView(w,h)/*Sets the mainview of the window*/
+        let view = BasicView(w,h)/*Sets the mainview of the window*/
         //let view = OtherView(w,h)
-        let view = AdvanceView(w,h)
+        //let view = AdvanceView(w,h)
         //let view = LiveEditView(w,h)
         //let view = StashView(frame.width,frame.height)
         self.contentView?.addSubview(view)
