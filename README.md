@@ -1,6 +1,6 @@
 ![mit](https://img.shields.io/badge/License-MIT-brightgreen.svg) 
 ![platform](https://img.shields.io/badge/Platform-macOS/iOS-blue.svg)
-![Lang](https://img.shields.io/badge/Language-Swift 3.0.1-orange.svg)
+![Lang](https://img.shields.io/badge/Language-Swift-3.0.1-orange.svg)
 [![SPM compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 [![codebeat badge](https://codebeat.co/badges/a1f06c71-b091-4719-a31a-db6853977c67)](https://codebeat.co/projects/github-com-stylekit-explorer)
 
