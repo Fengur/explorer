@@ -53,7 +53,7 @@ class AdvanceView:CustomView {
     }
     func createSliderTreeList(){
         let card = container.addSubView(Card(NaN, NaN, "SliderTreeList: ", container, "sliderTreeListCard"))
-        let xml:XMLElement = FileParser.xml("~/Desktop/assets/xml/treelist.xml".tildePath)
+        let xml:XML = FileParser.xml("~/Desktop/assets/xml/treelist.xml".tildePath)
 
         let scrollTreeList = card.addSubView(SliderTreeList(140, 192, 24, Node(xml),card))
         _ = scrollTreeList
@@ -66,7 +66,7 @@ class AdvanceView:CustomView {
         let url:String = "~/Desktop/ElCapitan/advance/table/table.css"
         StyleManager.addStylesByURL(url,true)
         
-        let xml:XMLElement = FileParser.xml("~/Desktop/assets/xml/table.xml".tildePath)
+        let xml:XML = FileParser.xml("~/Desktop/assets/xml/table.xml".tildePath)
         //Swift.print("xml: " + "\(xml)")
         let node:Node = Node(xml)
         _ = node
