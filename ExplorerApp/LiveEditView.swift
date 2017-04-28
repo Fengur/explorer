@@ -1,6 +1,6 @@
 import Cocoa
 @testable import Element
- @testable import Utils
+@testable import Utils
 
 class LiveEditView:CustomView {
     var container:Container!
@@ -46,7 +46,7 @@ class LiveEditView:CustomView {
                 Swift.print("styleProperty?.value: " + "\(styleProperty?.value)")
                 styleProperty!.value = ("0x"+NSColor.magenta.hexString).uint
                 Swift.print("styleProperty?.value: " + "\(StyleManager.getStyle("#redBox")?.getStyleProperty("fill")?.value)")
-                ElementModifier.refresh(self)
+                ElementModifier.refreshStyle(self)
             }
         }
         btn.event = onButtonClick

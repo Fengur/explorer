@@ -13,39 +13,6 @@ class BasicView:CustomView {
         let startTime = NSDate()
         createComponents()
         Swift.print("create content time: " + "\(abs(startTime.timeIntervalSinceNow))")
-        
-        //Continue here: It's the loading of the styles that is slow. either loading a file it self or adding to styleManger
-        //To speed things up: all you have to do is populate explorer.css with all the css for all components in basic, advance and other and toggle them like in legacy code
-        //to speed things up further: more enums/structs smarter loops etc. 
-        //you should be able to get to bellow 1 sec for basic components. Which is pretty good.Then by just making the code better this will go even further down
-        //the big time hog is the resolvment of the styles, this can be fixed with the new idea about not looking up all styles for every addition but skipping styles the has been absorbed by other more spesific styles, basicly a more efficient resolvment algo (1-days work probably)
-        
-        //Start drawing the speedier style retrival system out on postits. get a grip of the concept, test things in your mind first. 
-        //you could also try to save all style requests in a textFile, then load them via an xml doc. Then hi-jack stylemanager to use a dictionary with absolute styles for everything, just to see the speed and know what to aim for
-        //add this to the css classes: http://nshipster.com/swift-comparison-protocols/
-        
-        //Swift.print("StyleResolver.styleLookUpCount: " + "\(StyleResolver.styleLookUpCount)")
-        
-        //buttonTest()
-        
-        /*
-        let lineStyle = LineStyle(1,NSColor.blackColor(),CGLineCap.Butt,CGLineJoin.Miter,10,0,[2,2])
-        
-        /*Rect*/
-        let rect = RectGraphic(40,40,200,200,nil,lineStyle)
-        addSubview(rect.graphic)
-        rect.draw()*/
-    }
-    /**
-     * NOTE: it takes 0.44sec to make 144 buttons (the same with gradient applied)
-     */
-    func buttonTest(){
-        let buttonStyle:String = "Container#main Button{fill:linear-gradient(top,red,blue);float:left;}Button#clear{clear:left;}"
-        StyleManager.addStyle(buttonStyle)
-        for i in 0..<144{
-            let id:String = i % 12 == 0 ? "clear" : ""//the 13th element drops down bellow
-            _ = container.addSubView(Button(24,24,container,id))
-        }
     }
     /**
      * NOTE: loads in 1.17secs (could be improved with a better style retreval system, or cahching the styles, maybe to around 0.5secs)
@@ -53,28 +20,28 @@ class BasicView:CustomView {
     func createComponents(){
         createButton()
         createTextButton()
-        createRadioBullet()
-        createCheckBox()
-        createRadioButton()
-        createCheckBoxButton()
-        createLeverStepper()
-        createLeverSpinner()
-        createHSlider()
-        createVSlider()
-        createVolumeSlider()
-        createIconButton()
-        createTabBar()
-        createList()
-        createSliderList()
-        createIconButtons()
-        createComboBox()
-        createTextArea()
-        createSliderTextArea()
-        createText()
-        createSingleLineTextArea()
-        createSearchBox()
-        createTextInput()
-        createColorTag()/**/
+         createRadioBullet()
+         createCheckBox()
+         createRadioButton()
+         createCheckBoxButton()
+         createLeverStepper()
+         createLeverSpinner()
+         createHSlider()
+         createVSlider()
+         createVolumeSlider()
+         createIconButton()
+         createTabBar()
+         createList()
+         createSliderList()
+         createIconButtons()
+         createComboBox()
+         createTextArea()
+         createSliderTextArea()
+         createText()
+         createSingleLineTextArea()
+         createSearchBox()
+         createTextInput()
+         createColorTag()
         
         //createVNodeSlider()//not apart of basic anymore
         //createHNodeSlider()//not apart of basic anymore
@@ -299,7 +266,7 @@ class BasicView:CustomView {
         let sliderListCard:Card = container.addSubView(Card(NaN, NaN, "Slider list: ", container, "sliderListCard"))
         let xml = FileParser.xml("~/Desktop/assets/xml/scrollist.xml".tildePath)//TODO:  create a method tht takes url and makes dp
         let dp:DataProvider = DataProvider(xml)
-        let sliderList:SliderList = sliderListCard.addSubView(SliderList(140, 73, 24, dp, sliderListCard))
+        let sliderList:SlideScrollList = sliderListCard.addSubView(SlideScrollList(140, 73, 24, dp, sliderListCard))
         ListModifier.select(sliderList, "white")
         //scrollList.setMaxShowingItems(6);
         //print("scrollList.list.getSelected(): " + scrollList.list.getSelected());
