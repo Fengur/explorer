@@ -30,7 +30,7 @@ class AdvanceView:CustomView {
         
         _ = treeList.node.removeAt([1])
         treeList.node.addAt([1], "<item title=\"Fish\"/>".xml)/*new*/
-         /**/
+        
         //Swift.print("\(treeList.node.xml)")
         
         func onTreeListEvent(event:Event) {//adds local event handler
