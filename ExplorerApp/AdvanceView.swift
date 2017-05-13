@@ -9,12 +9,13 @@ class AdvanceView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         
-        //createTreeList()
-        treeList3()
-        //createSliderTreeList()
+        treeList()
         //createTable()
     }
-    func treeList3(){
+    /**
+     * Add SliderTreeList later
+     */
+    func treeList(){
         let url = "~/Desktop/assets/xml/treelist.xml"
         
         let dp: TreeDP = TreeDP(url.tildePath)
