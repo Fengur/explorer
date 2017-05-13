@@ -6,8 +6,11 @@ import Cocoa
     //move treeList1 to new repo ✅
     //move deperecated classes to deprecation repo ✅
     //move Color components into a new Repo ✅
-    //add these to Element explorer
-    //fix VolumeSlider
+    //add these to Element explorer (later)
+    //fix VolumeSlider 👈
+    //Search icon 👈
+    //IconButton spacing 👈
+    //
 
 @NSApplicationMain
 class AppDelegate:NSObject,NSApplicationDelegate {
