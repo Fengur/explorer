@@ -7,12 +7,10 @@ class RegularWin:Window{
         super.init(1000, 800)
     }
     override func resolveSkin() {
-        //super.resolveSkin()
-        self.contentView = ViewType.view(.other,frame.size)
+        self.contentView = ViewType.view(.basic,frame.size)
         WinModifier.align(self, Alignment.centerCenter, Alignment.centerCenter)
     }
     override func windowDidResize(_ notification:Notification) {
-        //Swift.print("CustomWin.windowDidResize")
         (self.contentView as! Element).setSize(self.frame.size.width,self.frame.size.height)
     }
     required init(_ width:CGFloat, _ height:CGFloat) {fatalError("init has not been implemented")}
