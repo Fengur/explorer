@@ -11,9 +11,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         //print(ArrayParser.difference([1,2], [1]))
-        NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
+        //NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css",false)
+        StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css",true)
         Swift.print("after css")
         win = TranslucencyWin()
         
