@@ -3,7 +3,7 @@ import Cocoa
 @testable import Utils
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate:NSObject,NSApplicationDelegate {
     
     weak var window: NSWindow!
     var win:NSWindow?/*<--The window must be a class variable, local variables doesn't work*/
@@ -18,10 +18,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         win = RegularWin()
         
         //cssTest()
-        
     }
-    
-    func applicationWillTerminate(_ aNotification: Notification) {
+    func applicationWillTerminate(_ aNotification:Notification) {
         // Insert code here to tear down your application
     }
 }
