@@ -2,10 +2,17 @@ import Cocoa
 @testable import Element
 @testable import Utils
 
-enum Views{
+enum ViewType{
     case basic,other,advance
 }
-
+extension Views{
+    /**
+     *
+     */
+    func view(_ type:ViewType){
+        
+    }
+}
 class RegularWin:Window{
     init() {
         super.init(1000, 800)
