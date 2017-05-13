@@ -80,7 +80,7 @@ class BasicView:CustomView {
      */
     func createVolumeSlider(){
         let card:Card = container.addSubView(Card(NaN, NaN, "VolumeSlider: ", container, "volumeSliderCard"))
-        let volumeSlider = card.addSubView(VolumeSlider(120,20,.hor,CGSize(20,20),0,card))
+        let volumeSlider = card.addSubView(VolumeSlider(120,20,.hor,CGSize(20,6),0,card))
         volumeSlider.setProgressValue(0.5)
         func onVolumeSliderChange(event: Event) {
             if(event.assert(SliderEvent.change, volumeSlider)){
@@ -266,7 +266,7 @@ class BasicView:CustomView {
         let sliderListCard:Card = container.addSubView(Card(NaN, NaN, "Slider list: ", container, "sliderListCard"))
         let xml = FileParser.xml("~/Desktop/assets/xml/scrollist.xml".tildePath)//TODO:  create a method tht takes url and makes dp
         let dp:DataProvider = DataProvider(xml)
-        let sliderList:SlideScrollList3 = sliderListCard.addSubView(SlideScrollList3(140, 73, CGSize(24,24), dp,.ver, sliderListCard))
+        let sliderList:SlideScrollList3 = sliderListCard.addSubView(SlideScrollList3(140, 73, CGSize(6,24), dp,.ver, sliderListCard))
         List3Modifier.select(sliderList, "white")
         //scrollList.setMaxShowingItems(6);
         //print("scrollList.list.getSelected(): " + scrollList.list.getSelected());
