@@ -20,28 +20,28 @@ class BasicView:CustomView {
     func createComponents(){
         createButton()
         createTextButton()
-         createRadioBullet()
-         createCheckBox()
-         createRadioButton()
-         createCheckBoxButton()
-         createLeverStepper()
-         createLeverSpinner()
-         createHSlider()
-         createVSlider()
-         createVolumeSlider()
-         createIconButton()
-         createTabBar()
-         createList()
-         createSliderList()
-         createIconButtons()
-         createComboBox()
-         createTextArea()
-         createSliderTextArea()
-         createText()
-         createSingleLineTextArea()
-         createSearchBox()
-         createTextInput()
-         createColorTag()/**/
+        createRadioBullet()
+        createCheckBox()
+        createRadioButton()
+        createCheckBoxButton()
+        createLeverStepper()
+        createLeverSpinner()
+        createHSlider()
+        createVSlider()
+        createVolumeSlider()
+        createIconButton()
+        createTabBar()
+        createList()
+        createSliderList()
+        createIconButtons()
+        createComboBox()
+        createTextArea()
+        createSliderTextArea()
+        createText()
+        createSingleLineTextArea()
+        createSearchBox()
+        createTextInput()
+        createColorTag()/**/
         
         //createVNodeSlider()//not apart of basic anymore
         //createHNodeSlider()//not apart of basic anymore
@@ -239,22 +239,7 @@ class BasicView:CustomView {
         let selectGroup = SelectGroup(selectables,selectables[0])
         _ = selectGroup
     }
-    /*func createVNodeSlider(){
-     let url:String = "~/Desktop/ElCapitan/basic/nodeslider/vnodeslider.css"
-     StyleManager.addStylesByURL(url,true)
-     
-     let vNodeSliderCard:Card = container.addSubView(Card(NaN, NaN, "Vertical node slider: ", container, "vNodeSliderCard"))
-     let vNodeSlider:VNodeSlider = vNodeSliderCard.addSubView(VNodeSlider(20, 70, 20, 0, 1, vNodeSliderCard))
-     _ = vNodeSlider
-     }*/
-    /*func createHNodeSlider(){
-     let url:String = "~/Desktop/ElCapitan/basic/nodeslider/hnodeslider.css"
-     StyleManager.addStylesByURL(url,true)
-     
-     let hNodeSliderCard:Card = container.addSubView(Card(NaN, NaN, "Horizontal node slider: ", container, "hNodeSliderCard"))
-     let hNodeSlider:HNodeSlider = hNodeSliderCard.addSubView(HNodeSlider(120, 20, 20, 0, 1, hNodeSliderCard))
-     _ = hNodeSlider
-     }*/
+   
     func createList(){
         let listCard:Card = container.addSubView(Card(NaN, NaN, "List: ", container, "listCard"))
         let xml = FileParser.xml("~/Desktop/assets/xml/list.xml".tildePath)
@@ -305,3 +290,21 @@ class BasicView:CustomView {
 //		scrollTextAreaPanel.setPosition(new Point(LEFT_MARGIN+260,TOP_MARGIN));
     }
 }
+
+
+/*func createVNodeSlider(){
+ let url:String = "~/Desktop/ElCapitan/basic/nodeslider/vnodeslider.css"
+ StyleManager.addStylesByURL(url,true)
+ 
+ let vNodeSliderCard:Card = container.addSubView(Card(NaN, NaN, "Vertical node slider: ", container, "vNodeSliderCard"))
+ let vNodeSlider:VNodeSlider = vNodeSliderCard.addSubView(VNodeSlider(20, 70, 20, 0, 1, vNodeSliderCard))
+ _ = vNodeSlider
+ }*/
+/*func createHNodeSlider(){
+ let url:String = "~/Desktop/ElCapitan/basic/nodeslider/hnodeslider.css"
+ StyleManager.addStylesByURL(url,true)
+ 
+ let hNodeSliderCard:Card = container.addSubView(Card(NaN, NaN, "Horizontal node slider: ", container, "hNodeSliderCard"))
+ let hNodeSlider:HNodeSlider = hNodeSliderCard.addSubView(HNodeSlider(120, 20, 20, 0, 1, hNodeSliderCard))
+ _ = hNodeSlider
+ }*/
