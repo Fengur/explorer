@@ -10,7 +10,9 @@ import Cocoa
     //fix VolumeSlider 👈
     //Search icon 👈
     //IconButton spacing 👈
-    //
+    //Better window-dropshadow
+    //More consts to enum
+    //More code refactoring
 
 @NSApplicationMain
 class AppDelegate:NSObject,NSApplicationDelegate {
