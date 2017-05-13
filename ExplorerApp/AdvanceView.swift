@@ -9,9 +9,9 @@ class AdvanceView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         
-        //createTreeList()
+        createTreeList()
         //createSliderTreeList()
-        createTable()
+        //createTable()
     }
     func createTreeList(){
         let card = container.addSubView(Card(NaN, NaN, "TreeList: ", container, "treeListCard"))
