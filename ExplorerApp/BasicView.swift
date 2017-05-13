@@ -200,7 +200,7 @@ class BasicView:CustomView {
      */
     func createHSlider(){
         let hSliderCard:Card = container.addSubView(Card(NaN, NaN, "Horizontal slider: ", container, "hSliderCard"))
-        let hSlider:HSlider = hSliderCard.addSubView(HSlider(120,6,70,0,hSliderCard))
+        let hSlider:Slider = hSliderCard.addSubView(HSlider(120,6,70,0,hSliderCard))
         _ = hSlider
     }
     /**
