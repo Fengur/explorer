@@ -28,7 +28,7 @@ class BasicView:CustomView {
          createLeverSpinner()
          createHSlider()
          createVSlider()
-         /*createVolumeSlider()
+         createVolumeSlider()
          createIconButton()
          createTabBar()
          createList()
@@ -41,7 +41,7 @@ class BasicView:CustomView {
          createSingleLineTextArea()
          createSearchBox()
          createTextInput()
-         createColorTag()*/
+         createColorTag()/**/
         
         //createVNodeSlider()//not apart of basic anymore
         //createHNodeSlider()//not apart of basic anymore
@@ -192,7 +192,7 @@ class BasicView:CustomView {
      */
     func createVSlider(){
         let vSliderCard:Card = container.addSubView(Card(NaN, NaN, "Vertical slider: ", container, "vSliderCard"))
-        let vSlider:Slider = vSliderCard.addSubView(Slider(6,60,.ver,CGSize(NaN,30),0,vSliderCard))
+        let vSlider:Slider = vSliderCard.addSubView(Slider(6,60,.ver,CGSize(6,30),0,vSliderCard))
         _ = vSlider
     }
     /**
