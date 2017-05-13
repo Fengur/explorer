@@ -7,10 +7,10 @@ enum ViewType{
 }
 extension ViewType{
     /**
-     * returns the mainview of the window
+     * Returns the mainview of the window
      */
-    func view(_ size:CGSize)->NSView{
-        switch self{
+    static func view(_ type:ViewType, _ size:CGSize)->NSView{
+        switch type{
             case .basic:
                 return BasicView(size.width,size.height)
             case .other:
@@ -26,7 +26,7 @@ class RegularWin:Window{
     }
     override func resolveSkin() {
         //super.resolveSkin()
-        self.contentView = ViewType.basic.view(frame.size)
+        self.contentView = ViewType.view(.basic,frame.size)
         WinModifier.align(self, Alignment.centerCenter, Alignment.centerCenter)
     }
     override func windowDidResize(_ notification:Notification) {
