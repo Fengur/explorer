@@ -4,7 +4,6 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate:NSObject,NSApplicationDelegate {
-    
     weak var window: NSWindow!
     var win:NSWindow?/*<--The window must be a class variable, local variables doesn't work*/
     
