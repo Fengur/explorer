@@ -7,7 +7,7 @@ import Cocoa
     //move deperecated classes to deprecation repo ✅
     //move Color components into a new Repo ✅
     //add these to Element explorer
-    //
+    //fix VolumeSlider
 
 @NSApplicationMain
 class AppDelegate:NSObject,NSApplicationDelegate {
