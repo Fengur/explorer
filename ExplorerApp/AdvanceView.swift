@@ -10,7 +10,7 @@ class AdvanceView:CustomView {
         container = addSubView(Container(1000,800,self,"main"))
         
         treeList()
-        //createTable()
+        createTable()
     }
     /**
      * Add SliderTreeList later
