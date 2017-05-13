@@ -8,7 +8,7 @@ class RegularWin:Window{
     }
     override func resolveSkin() {
         //super.resolveSkin()
-        self.contentView = ViewType.view(.other,frame.size)
+        self.contentView = ViewType.view(.advance,frame.size)
         WinModifier.align(self, Alignment.centerCenter, Alignment.centerCenter)
     }
     override func windowDidResize(_ notification:Notification) {
