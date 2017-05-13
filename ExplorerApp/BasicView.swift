@@ -260,7 +260,7 @@ class BasicView:CustomView {
         let xml = FileParser.xml("~/Desktop/assets/xml/list.xml".tildePath)
         let dp:DataProvider = DataProvider(xml)
         let list:List3 = listCard.addSubView(List3(140, 73, CGSize(NaN,NaN), dp,.ver, listCard))
-        list.select(1)
+        list.selectAt(1)
     }
     func createSliderList(){
         let sliderListCard:Card = container.addSubView(Card(NaN, NaN, "Slider list: ", container, "sliderListCard"))
