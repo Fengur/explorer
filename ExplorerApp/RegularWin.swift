@@ -5,11 +5,20 @@ import Cocoa
 enum ViewType{
     case basic,other,advance
 }
-extension Views{
+extension ViewType{
     /**
      *
      */
-    func view(_ type:ViewType){
+    func view(_ type:ViewType)->NSView{
+        let classType:AnyClass
+        switch type{
+            case .basic:
+                classType = BasicView.self
+            case .other:
+                classType = OtherView.self
+            case .advance:
+                classType = AdvanceView.self
+        }
         
     }
 }
