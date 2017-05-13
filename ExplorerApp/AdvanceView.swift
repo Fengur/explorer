@@ -16,9 +16,9 @@ class AdvanceView:CustomView {
     }
     func treeList3(){
         let url = "~/Desktop/assets/xml/treelist.xml"
-        //let url = "~/Desktop/assets/xml/treelist.xml"
+        
         let dp: TreeDP = TreeDP(url.tildePath)
-        let card = container.addSubView(Card(NaN, NaN, "TreeList: ", container, "treeListCard"))
+        let card = container.addSubView(Card(NaN, NaN, "SliderTreeList: ", container, "sliderTreeListCard"))
         let treeList = card.addSubView(TreeList3(140, 192, CGSize(24,24), dp, card))
         _ = treeList
         
@@ -55,53 +55,6 @@ class AdvanceView:CustomView {
             }
         }
     }
-    func createTreeList(){
-        let card = container.addSubView(Card(NaN, NaN, "TreeList: ", container, "treeListCard"))
-        
-        let xml:XML = FileParser.xml("~/Desktop/assets/xml/treelist.xml".tildePath)
-        var treeList = card.addSubView(TreeList(140, 192, 24, Node(xml), card))
-       
-        Swift.print("selected: " + "\(TreeListParser.selected(treeList))")
-        Swift.print("selectedIndex: " + "\(TreeListParser.selectedIndex(treeList))")//Output:  [2,2,0]
-        Swift.print("selected Title: " + "\(XMLParser.attributesAt(treeList.node.xml, TreeListParser.selectedIndex(treeList))!["title"])")//Output: Oregano
-        TreeListModifier.unSelectAll(treeList)
-        
-        TreeListModifier.selectAt(treeList, [2])
-        TreeListModifier.collapseAt(treeList, [])//closes the treeList
-        TreeListModifier.explodeAt(treeList,[])//opens the treeList
-        
-        _ = treeList.node.removeAt([1])
-        treeList.node.addAt([1], "<item title=\"Fish\"/>".xml)/*new*/
-        
-        //Swift.print("\(treeList.node.xml)")
-        
-        func onTreeListEvent(event:Event) {//adds local event handler
-            if(event.type == SelectEvent.select && event.immediate === treeList){
-                Swift.print("event.origin: " + "\(event.origin)")
-                Swift.print("stackString: " + "💚\(ElementParser.stackString(event.origin as! IElement))💚")
-                //Swift.print("onTreeListSelect()")
-                let selectedIndex:Array = TreeListParser.selectedIndex(treeList)
-                Swift.print("selectedIndex: " + "\(selectedIndex)")
-                //print("_scrollTreeList.database.xml.toXMLString(): " + _scrollTreeList.database.xml.toXMLString());
-                let selectedXML:XML = XMLParser.childAt(treeList.node.xml, selectedIndex)!
-                //print("selectedXML: " + selectedXML);
-                Swift.print("selectedXML.toXMLString():")
-                Swift.print(selectedXML)//EXAMPLE output: <item title="Ginger"></item>
-            }
-        }
-        treeList.event = onTreeListEvent//add local event listener
-    
-        //TODO: try the move up and move down methods
-    }
-    func createSliderTreeList(){
-        let card = container.addSubView(Card(NaN, NaN, "SliderTreeList: ", container, "sliderTreeListCard"))
-        let xml:XML = FileParser.xml("~/Desktop/assets/xml/treelist.xml".tildePath)
-
-        let scrollTreeList = card.addSubView(SliderTreeList(140, 192, 24, Node(xml),card))
-        _ = scrollTreeList
-        //_scrollTreeList.database.addAt([0], <item title="Fish"/>);
-        //print("_scrollTreeList.treeList.database.xml.toXMLString(): " + _scrollTreeList.database.xml.toXMLString());
-    }
     func createTable(){
         let card = container.addSubView(Card(NaN, NaN, "Table: ", container, "tableCard"))
         
@@ -120,3 +73,55 @@ class AdvanceView:CustomView {
         // :TODO: TableParser.rowAt(0) should return an array with each the text from each row item
     }
 }
+/*
+func createSliderTreeList(){
+    let card = container.addSubView(Card(NaN, NaN, "SliderTreeList: ", container, "sliderTreeListCard"))
+    let xml:XML = FileParser.xml("~/Desktop/assets/xml/treelist.xml".tildePath)
+    
+    let scrollTreeList = card.addSubView(SliderTreeList(140, 192, 24, Node(xml),card))
+    _ = scrollTreeList
+    //_scrollTreeList.database.addAt([0], <item title="Fish"/>);
+    //print("_scrollTreeList.treeList.database.xml.toXMLString(): " + _scrollTreeList.database.xml.toXMLString());
+}
+*/
+/*
+func createTreeList(){
+    let card = container.addSubView(Card(NaN, NaN, "TreeList: ", container, "treeListCard"))
+    
+    let xml:XML = FileParser.xml("~/Desktop/assets/xml/treelist.xml".tildePath)
+    var treeList = card.addSubView(TreeList(140, 192, 24, Node(xml), card))
+    
+    Swift.print("selected: " + "\(TreeListParser.selected(treeList))")
+    Swift.print("selectedIndex: " + "\(TreeListParser.selectedIndex(treeList))")//Output:  [2,2,0]
+    Swift.print("selected Title: " + "\(XMLParser.attributesAt(treeList.node.xml, TreeListParser.selectedIndex(treeList))!["title"])")//Output: Oregano
+    TreeListModifier.unSelectAll(treeList)
+    
+    TreeListModifier.selectAt(treeList, [2])
+    TreeListModifier.collapseAt(treeList, [])//closes the treeList
+    TreeListModifier.explodeAt(treeList,[])//opens the treeList
+    
+    _ = treeList.node.removeAt([1])
+    treeList.node.addAt([1], "<item title=\"Fish\"/>".xml)/*new*/
+    
+    //Swift.print("\(treeList.node.xml)")
+    
+    func onTreeListEvent(event:Event) {//adds local event handler
+        if(event.type == SelectEvent.select && event.immediate === treeList){
+            Swift.print("event.origin: " + "\(event.origin)")
+            Swift.print("stackString: " + "💚\(ElementParser.stackString(event.origin as! IElement))💚")
+            //Swift.print("onTreeListSelect()")
+            let selectedIndex:Array = TreeListParser.selectedIndex(treeList)
+            Swift.print("selectedIndex: " + "\(selectedIndex)")
+            //print("_scrollTreeList.database.xml.toXMLString(): " + _scrollTreeList.database.xml.toXMLString());
+            let selectedXML:XML = XMLParser.childAt(treeList.node.xml, selectedIndex)!
+            //print("selectedXML: " + selectedXML);
+            Swift.print("selectedXML.toXMLString():")
+            Swift.print(selectedXML)//EXAMPLE output: <item title="Ginger"></item>
+        }
+    }
+    treeList.event = onTreeListEvent//add local event listener
+    
+    //TODO: try the move up and move down methods
+}
+ 
+ */
