@@ -15,10 +15,11 @@ class AdvanceView:CustomView {
         //createTable()
     }
     func treeList3(){
-        let url = "~/Desktop/repo2.xml"
+        let url = "~/Desktop/assets/xml/treelist.xml"
         //let url = "~/Desktop/assets/xml/treelist.xml"
         let dp: TreeDP = TreeDP(url.tildePath)
-        let treeList = self.addSubView(TreeList3(width, height, CGSize(24,24), dp, self))
+        let card = container.addSubView(Card(NaN, NaN, "TreeList: ", container, "treeListCard"))
+        let treeList = card.addSubView(TreeList3(140, 192, CGSize(24,24), dp, card))
         _ = treeList
         
         //treeList.select([2])/*Selects third item in root*/
