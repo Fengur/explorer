@@ -19,7 +19,7 @@ extension ViewType{
             case .advance:
                 classType = AdvanceView.self
         }
-        
+        classType.init(frame.size.width,frame.size.height)
     }
 }
 class RegularWin:Window{
