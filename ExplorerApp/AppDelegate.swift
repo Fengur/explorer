@@ -13,7 +13,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //print(ArrayParser.difference([1,2], [1]))
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css")
+        StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css",false)
+        Swift.print("after css")
         win = TranslucencyWin()
         
         //cssTest()
