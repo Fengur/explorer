@@ -29,6 +29,7 @@ class TranslucencyWin:NSWindow, NSApplicationDelegate, NSWindowDelegate{
         
         self.contentView?.addSubview(visualEffectView!)
         
+        //⚠️️ TODO: Make enum that toggles between views?
         let view = BasicView(w,h)/*Sets the mainview of the window*/
         //let view = OtherView(w,h)
         //let view = AdvanceView(w,h)
