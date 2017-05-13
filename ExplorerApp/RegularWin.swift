@@ -25,7 +25,7 @@ extension ViewType{
      * Returns the mainview of the window
      */
     static func view(_ type:ViewType, _ size:CGSize)->NSView{
-        switch type{
+        switch type {
             case .basic:return BasicView(size.width,size.height)
             case .other:return OtherView(size.width,size.height)
             case .advance:return AdvanceView(size.width,size.height)

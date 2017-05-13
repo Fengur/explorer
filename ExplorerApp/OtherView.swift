@@ -12,17 +12,15 @@ class OtherView:CustomView {
         createColorBox()
         createColorInput()
         createColorPanel()
-        createGradientPanel()/**/
+        createGradientPanel()
     }
     func createColorBox(){
         let card:Card = container.addSubView(Card(NaN, NaN, "ColorBox: ", container, "colorBoxCard"))
-        _ = card
         let colorBox = card.addSubView(ColorBox(NaN,NaN,NSColor.cyan,card))
         _ = colorBox
     }
     func createColorInput(){// :TODO: inpliment TextInput TextAre in the css
         let colorInputCard:Card = container.addSubView(Card(NaN, NaN, "ColorInput: ", container, "colorInputCard"))
-        _ = colorInputCard
         let colorInput:ColorInput = colorInputCard.addSubView(ColorInput(NaN,NaN,"Color: ",NSColor.magenta,colorInputCard))//NSColorParser.nsColor(Colors.MAGENTA)
         _ = colorInput
     }
