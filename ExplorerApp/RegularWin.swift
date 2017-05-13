@@ -9,8 +9,8 @@ extension ViewType{
     /**
      *
      */
-    func view(_ type:ViewType)->NSView{
-        let classType:AnyClass
+    func view(_ type:ViewType, _ size:CGSize)->NSView{
+        let classType:class.type
         switch type{
             case .basic:
                 classType = BasicView.self
@@ -19,7 +19,7 @@ extension ViewType{
             case .advance:
                 classType = AdvanceView.self
         }
-        classType.init(frame.size.width,frame.size.height)
+        return classType.init(size.width,size.height)
     }
 }
 class RegularWin:Window{
