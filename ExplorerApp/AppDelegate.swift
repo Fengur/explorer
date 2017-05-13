@@ -15,7 +15,7 @@ class AppDelegate:NSObject,NSApplicationDelegate {
         
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css",false)
         Swift.print("after css")
-        win = TranslucencyWin()//RegularWin()
+        win = RegularWin()//TranslucencyWin()
         
         //cssTest()
     }
