@@ -9,9 +9,50 @@ class AdvanceView:CustomView {
         super.resolveSkin()
         container = addSubView(Container(1000,800,self,"main"))
         
-        createTreeList()
+        //createTreeList()
+        treeList3()
         //createSliderTreeList()
         //createTable()
+    }
+    func treeList3(){
+        let url = "~/Desktop/repo2.xml"
+        //let url = "~/Desktop/assets/xml/treelist.xml"
+        let dp: TreeDP = TreeDP(url.tildePath)
+        let treeList = self.addSubView(TreeList3(width, height, CGSize(24,24), dp, self))
+        _ = treeList
+        
+        //treeList.select([2])/*Selects third item in root*/
+        //treeList.open([2])/*Opens the first item in root*/
+        //treeList.unSelectAll()
+        //treeList.select([2,1])/*Selects nest item*/
+        
+        //Swift.print("Selected title: \(treeList.selected?.props?["title"])")
+        //Swift.print("treeList.selected idx3d: " + "\(treeList.selectedIdx3d)")
+        //treeList.unSelectAll()/*De-selects all selected items*/
+        //treeList.collapseAll([])/*Collapses the treeList*/
+        //treeList.explodeAll([])/*Explodes the treeList*/
+        
+        //treeList.remove([1])/*Removes an item at a idx3d*/
+        //treeList.insert([1],Tree("item",[],nil,["title":"Fish"]))/*Insert item at*/
+        
+        let xml:XML = treeList.treeDP.tree.xml/*Converts the tree to an xml structure*/
+        //Swift.print("xml.xmlString: " + "\(xml.xmlString)")/*Logs the tree as an xml structure*/
+        _ = xml
+        
+        treeList.event = { event in/*add local event listener*/
+            if(event.type == ListEvent.select && event.immediate === treeList){
+                Swift.print("onTreeListSelect() event.origin: \(event.origin)")
+                Swift.print("selectedIndex: " + "\(treeList.selectedIdx3d)")
+                if let selectedIdx:[Int] = treeList.selectedIdx3d {
+                    if let titleValue:String = treeList.treeDP.tree[selectedIdx]?.props?["title"] {
+                        Swift.print("titleValue: " + "\(titleValue)")
+                    }
+                    /*if let selectedXML:XML = treeList.treeDP.tree[selectedIdx]?.xml{
+                     Swift.print("selectedXML: \(selectedXML.xmlString)")//EXAMPLE output: <item title="Ginger"></item>
+                     }*/
+                }
+            }
+        }
     }
     func createTreeList(){
         let card = container.addSubView(Card(NaN, NaN, "TreeList: ", container, "treeListCard"))
