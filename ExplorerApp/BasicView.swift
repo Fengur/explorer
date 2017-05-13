@@ -259,14 +259,14 @@ class BasicView:CustomView {
         let listCard:Card = container.addSubView(Card(NaN, NaN, "List: ", container, "listCard"))
         let xml = FileParser.xml("~/Desktop/assets/xml/list.xml".tildePath)
         let dp:DataProvider = DataProvider(xml)
-        let list:List = listCard.addSubView(List(140, 73, NaN, dp,listCard))
-        list.selectAt(1)
+        let list:List3 = listCard.addSubView(List3(140, 73, CGSize(NaN,NaN), dp,.ver, listCard))
+        list.select(1)
     }
     func createSliderList(){
         let sliderListCard:Card = container.addSubView(Card(NaN, NaN, "Slider list: ", container, "sliderListCard"))
         let xml = FileParser.xml("~/Desktop/assets/xml/scrollist.xml".tildePath)//TODO:  create a method tht takes url and makes dp
         let dp:DataProvider = DataProvider(xml)
-        let sliderList:SlideScrollList = sliderListCard.addSubView(SlideScrollList(140, 73, 24, dp, sliderListCard))
+        let sliderList:SlideScrollList3 = sliderListCard.addSubView(SlideScrollList(140, 73, 24, dp, sliderListCard))
         ListModifier.select(sliderList, "white")
         //scrollList.setMaxShowingItems(6);
         //print("scrollList.list.getSelected(): " + scrollList.list.getSelected());
