@@ -3,10 +3,11 @@ import Cocoa
 @testable import Utils
 
 //Continue here: 🏀
-    //move treeList1 to new repo 
-    //move deperecated classes to deprecation repo
-    //move Color components into a new Repo
+    //move treeList1 to new repo ✅
+    //move deperecated classes to deprecation repo ✅
+    //move Color components into a new Repo ✅
     //add these to Element explorer
+    //
 
 @NSApplicationMain
 class AppDelegate:NSObject,NSApplicationDelegate {
