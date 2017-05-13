@@ -8,8 +8,6 @@ import Cocoa
     //move Color components into a new Repo
     //add these to Element explorer
 
-
-
 @NSApplicationMain
 class AppDelegate:NSObject,NSApplicationDelegate {
     weak var window: NSWindow!
