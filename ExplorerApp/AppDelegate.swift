@@ -13,6 +13,7 @@ import Cocoa
     //Better window-dropshadow
     //More consts to enum
     //More code refactoring
+    //Design GitSync v3 in illustrator
 
 @NSApplicationMain
 class AppDelegate:NSObject,NSApplicationDelegate {
