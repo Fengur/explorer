@@ -8,12 +8,12 @@ class TranslucencyWin:NSWindow, NSApplicationDelegate, NSWindowDelegate{
     override var canBecomeMain:Bool{return true}
     override var canBecomeKey:Bool{return true}/*If you want a titleless window to be able to become a key window, you need to create a subclass of NSWindow and override -canBecomeKeyWindow*/
     override var acceptsFirstResponder:Bool{return true}
-    var visualEffectView:TranslucencyView?//we set the to the background 
+    var visualEffectView:TranslucencyView?/*We set the to the background*/
     /**
      *
      */
-    override init(contentRect: NSRect, styleMask style: NSWindowStyleMask, backing bufferingType: NSBackingStoreType, defer flag: Bool) {
-        super.init(contentRect: NSRect(0,0,w,h), styleMask: [.borderless,.resizable], backing: NSBackingStoreType.buffered, defer: false)
+    override init(contentRect: NSRect, styleMask style:NSWindowStyleMask, backing bufferingType:NSBackingStoreType, defer flag: Bool) {
+        super.init(contentRect: NSRect(0,0,w,h), styleMask: [.borderless,.resizable], backing:NSBackingStoreType.buffered, defer: false)
         WinModifier.align(self, Alignment.centerCenter, Alignment.centerCenter)
         Swift.print("frame.origin: " + "\(frame.origin)")
         self.contentView!.wantsLayer = true/*this can and is set in the view*/
