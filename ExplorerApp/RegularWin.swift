@@ -10,16 +10,14 @@ extension ViewType{
      *
      */
     func view(_ type:ViewType, _ size:CGSize)->NSView{
-        let classType:class.type
         switch type{
             case .basic:
-                classType = BasicView.self
+                return BasicView(size.width,size.height)
             case .other:
-                classType = OtherView.self
+                return OtherView(size.width,size.height)
             case .advance:
-                classType = AdvanceView.self
+                return AdvanceView(size.width,size.height)
         }
-        return classType.init(size.width,size.height)
     }
 }
 class RegularWin:Window{
