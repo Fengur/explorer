@@ -57,7 +57,7 @@ class AdvanceView:CustomView {
         }
     }
     func createTable(){
-        let card = container.addSubView(Card(NaN, NaN, "Table: ", container, "tableCard"))
+        /*let card = container.addSubView(Card(NaN, NaN, "Table: ", container, "tableCard"))
         
         let url:String = "~/Desktop/ElCapitan/advance/table/table.css"
         StyleManager.addStylesByURL(url,true)
@@ -70,7 +70,7 @@ class AdvanceView:CustomView {
         let table:Table = card.addSubView(Table(190,120,node,card))
         
         TableModifier.selectRow(table,1);
-        
+        */
         // :TODO: TableParser.rowAt(0) should return an array with each the text from each row item
     }
 }
