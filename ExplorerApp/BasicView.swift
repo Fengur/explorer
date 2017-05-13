@@ -31,7 +31,7 @@ class BasicView:CustomView {
          createVolumeSlider()
          createIconButton()
          createTabBar()
-         /*createList()
+         createList()
          createSliderList()
          createIconButtons()
          createComboBox()
@@ -41,7 +41,7 @@ class BasicView:CustomView {
          createSingleLineTextArea()
          createSearchBox()
          createTextInput()
-         createColorTag()*/
+         createColorTag()/**/
         
         //createVNodeSlider()//not apart of basic anymore
         //createHNodeSlider()//not apart of basic anymore

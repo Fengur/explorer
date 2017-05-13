@@ -2,6 +2,10 @@ import Cocoa
 @testable import Element
 @testable import Utils
 
+enum Views{
+    case basic,other,advance
+}
+
 class RegularWin:Window{
     init() {
         super.init(1000, 800)
