@@ -2,12 +2,6 @@ import Cocoa
 @testable import Element
 @testable import Utils
 
-//Continue here: 🏀
-    //add the extracted componets as standalone packages to Element explorer (later)
-    //Design GitSync v3 in illustrator 👈
-    //More consts to enum
-    //More code refactoring
-
 
 @NSApplicationMain
 class AppDelegate:NSObject,NSApplicationDelegate {
@@ -17,7 +11,7 @@ class AppDelegate:NSObject,NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {/*Insert code here to initialize your application*/
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css",false)
-        win = RegularWin//TranslucencyWin()//()//
+        win = RegularWin()//TranslucencyWin()//()//
     }
     func applicationWillTerminate(_ aNotification:Notification) {
         // Insert code here to tear down your application
