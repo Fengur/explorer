@@ -3,17 +3,14 @@ import Cocoa
 @testable import Utils
 
 //Continue here: 🏀
-    //move treeList1 to new repo ✅
-    //move deperecated classes to deprecation repo ✅
-    //move Color components into a new Repo ✅
     //add these to Element explorer (later)
     //fix VolumeSlider 👈
-    //Search icon ✅
     //IconButton spacing 👈
+    //Design GitSync v3 in illustrator 👈
     //Better window-dropshadow
     //More consts to enum
     //More code refactoring
-    //Design GitSync v3 in illustrator 👈
+
 
 @NSApplicationMain
 class AppDelegate:NSObject,NSApplicationDelegate {
