@@ -4,7 +4,7 @@ import Cocoa
 
 //Continue here: 🏀
     //add these to Element explorer (later)
-    //fix VolumeSlider 👈
+    //fix VolumeSlider ✅
     //IconButton spacing 👈
     //Design GitSync v3 in illustrator 👈
     //Better window-dropshadow
