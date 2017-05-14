@@ -8,7 +8,7 @@ import Cocoa
     //move Color components into a new Repo ✅
     //add these to Element explorer (later)
     //fix VolumeSlider 👈
-    //Search icon 👈
+    //Search icon ✅
     //IconButton spacing 👈
     //Better window-dropshadow
     //More consts to enum
