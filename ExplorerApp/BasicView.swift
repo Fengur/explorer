@@ -152,11 +152,11 @@ class BasicView:CustomView {
     func createIconButtons(){
         let card:Card = container.addSubView(Card(NaN, NaN, "Icon button: ", container, "iconButtonsCard"))
         let iconButton1 = card.addSubView(SelectButton(NaN,NaN,false,card,"first"))
-        /*let iconButton2 = card.addSubView(SelectButton(NaN,NaN,false,card,"second"))
-         let iconButton3 = card.addSubView(SelectButton(NaN,NaN,true,card,"third"))
-         let iconButton4 = card.addSubView(SelectButton(NaN,NaN,false,card,"fourth"))
-         let selectGroup = SelectGroup([iconButton1,iconButton2,iconButton3,iconButton4],iconButton3);
-         _ = selectGroup*/
+        let iconButton2 = card.addSubView(SelectButton(NaN,NaN,false,card,"second"))
+        let iconButton3 = card.addSubView(SelectButton(NaN,NaN,true,card,"third"))
+        let iconButton4 = card.addSubView(SelectButton(NaN,NaN,false,card,"fourth"))
+        let selectGroup = SelectGroup([iconButton1,iconButton2,iconButton3,iconButton4],iconButton3);
+        _ = selectGroup
     }
     func createTextInput(){
         let card:Card = container.addSubView(Card(NaN, NaN, "TextInput: ", container, "textInputCard"))
