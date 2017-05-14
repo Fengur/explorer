@@ -20,32 +20,13 @@ class AppDelegate:NSObject,NSApplicationDelegate {
         //print(ArrayParser.difference([1,2], [1]))
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
-        //StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css",false)
+        StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css",false)
         //Swift.print("after css")
-       // win = RegularWin()//TranslucencyWin()
+        win = RegularWin()//TranslucencyWin()
         
         //cssTest()
         
         
-        win = 	NSWindow()
-        let	view1	=	NSView()
-        
-        
-            win?.setFrame(CGRect(x: 400, y: 0, width: 400, height: 500), display: true)
-            win?.contentView					=	view1
-            
-            win?.backgroundColor				=	.clear
-            win?.isOpaque						=	false
-            win?.styleMask					=	[.borderless , .resizable]
-            win?.isMovableByWindowBackground	=	true
-            win?.makeKeyAndOrderFront(self)
-            
-            view1.wantsLayer				=	true
-            view1.layer?.cornerRadius		=	10
-            view1.layer?.backgroundColor	=	NSColor.white.cgColor
-            
-            ///	:ref:	http://stackoverflow.com/questions/19940019/nswindow-with-round-corners-and-shadow/27613308#21247949
-            win?.invalidateShadow()	//	This manual invalidation is REQUIRED because shadow generation is an expensive operation.
         
     }
     func applicationWillTerminate(_ aNotification:Notification) {
