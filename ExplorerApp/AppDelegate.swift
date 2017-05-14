@@ -5,7 +5,6 @@ import Cocoa
 //Continue here: 🏀
     //add the extracted componets as standalone packages to Element explorer (later)
     //Design GitSync v3 in illustrator 👈
-    //Better window-dropshadow 👈
     //More consts to enum
     //More code refactoring
 
@@ -15,18 +14,16 @@ class AppDelegate:NSObject,NSApplicationDelegate {
     weak var window:NSWindow!
     var win:NSWindow?/*<--The window must be a class variable, local variables doesn't work*/
     
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        //Insert code here to initialize your application
+    func applicationDidFinishLaunching(_ aNotification: Notification) {c/*Insert code here to initialize your application*
+        //
         //print(ArrayParser.difference([1,2], [1]))
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css",false)
         //Swift.print("after css")
-        win = RegularWin()//TranslucencyWin()
+        win = TranslucencyWin()//RegularWin()//
         
         //cssTest()
-        
-        
         
     }
     func applicationWillTerminate(_ aNotification:Notification) {
