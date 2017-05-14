@@ -31,21 +31,21 @@ class AppDelegate:NSObject,NSApplicationDelegate {
         let	view1	=	NSView()
         
         
-            window1.setFrame(CGRect(x: 400, y: 0, width: 400, height: 500), display: true)
-            window1.contentView					=	view1
+            win?.setFrame(CGRect(x: 400, y: 0, width: 400, height: 500), display: true)
+            win?.contentView					=	view1
             
-            window1.backgroundColor				=	NSColor.clearColor()
-            window1.opaque						=	false
-            window1.styleMask					=	NSBorderlessWindowMask | NSResizableWindowMask
-            window1.movableByWindowBackground	=	true
-            window1.makeKeyAndOrderFront(self)
+            win?.backgroundColor				=	.clear
+            win?.isOpaque						=	false
+            win?.styleMask					=	[.borderless , .resizable]
+            win?.isMovableByWindowBackground	=	true
+            win?.makeKeyAndOrderFront(self)
             
             view1.wantsLayer				=	true
-            view1.layer!.cornerRadius		=	10
-            view1.layer!.backgroundColor	=	NSColor.whiteColor().CGColor
+            view1.layer?.cornerRadius		=	10
+            view1.layer?.backgroundColor	=	NSColor.white.cgColor
             
             ///	:ref:	http://stackoverflow.com/questions/19940019/nswindow-with-round-corners-and-shadow/27613308#21247949
-            window1.invalidateShadow()	//	This manual invalidation is REQUIRED because shadow generation is an expensive operation.
+            win?.invalidateShadow()	//	This manual invalidation is REQUIRED because shadow generation is an expensive operation.
         
     }
     func applicationWillTerminate(_ aNotification:Notification) {
