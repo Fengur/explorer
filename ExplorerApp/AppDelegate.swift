@@ -3,8 +3,7 @@ import Cocoa
 @testable import Utils
 
 //Continue here: 🏀
-    //add these to Element explorer (later)
-    //fix VolumeSlider ✅
+    //add the extracted componets as standalone packages to Element explorer (later)
     //IconButton spacing 👈
     //Design GitSync v3 in illustrator 👈
     //Better window-dropshadow
