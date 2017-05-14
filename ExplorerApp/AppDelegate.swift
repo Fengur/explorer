@@ -4,9 +4,8 @@ import Cocoa
 
 //Continue here: 🏀
     //add the extracted componets as standalone packages to Element explorer (later)
-    //IconButton spacing 👈
     //Design GitSync v3 in illustrator 👈
-    //Better window-dropshadow 👈   
+    //Better window-dropshadow 👈
     //More consts to enum
     //More code refactoring
 
