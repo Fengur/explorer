@@ -12,7 +12,7 @@ class AppDelegate:NSObject,NSApplicationDelegate {
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css",false)
         //win = RegularWin()//
-        win = VibrantWin()//()//
+        win = VibrantWin.init()//()//
     }
     func applicationWillTerminate(_ aNotification:Notification) {
         // Insert code here to tear down your application
