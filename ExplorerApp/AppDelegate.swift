@@ -22,7 +22,7 @@ class AppDelegate:NSObject,NSApplicationDelegate {
         //print(ArrayParser.difference([1,2], [1]))
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
         
-        StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css",false)
+        StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css",true)
         Swift.print("after css")
         win = RegularWin()//TranslucencyWin()
         
