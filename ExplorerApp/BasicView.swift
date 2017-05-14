@@ -80,7 +80,7 @@ class BasicView:CustomView {
      */
     func createVolumeSlider(){
         let card:Card = container.addSubView(Card(NaN, NaN, "VolumeSlider: ", container, "volumeSliderCard"))
-        let volumeSlider = card.addSubView(VolumeSlider(120,20,.hor,CGSize(20,6),0,card))
+        let volumeSlider = card.addSubView(VolumeSlider(120,20,.hor,CGSize(20,20),0,card))
         volumeSlider.setProgressValue(0.5)
         func onVolumeSliderChange(event: Event) {
             if(event.assert(SliderEvent.change, volumeSlider)){
