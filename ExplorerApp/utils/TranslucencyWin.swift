@@ -9,9 +9,6 @@ class TranslucencyWin:NSWindow, NSApplicationDelegate, NSWindowDelegate{
     override var canBecomeKey:Bool{return true}/*If you want a titleless window to be able to become a key window, you need to create a subclass of NSWindow and override -canBecomeKeyWindow*/
     override var acceptsFirstResponder:Bool{return true}
     var visualEffectView:TranslucencyView?/*We set the to the background*/
-    /**
-     *
-     */
     override init(contentRect:NSRect, styleMask style:NSWindowStyleMask, backing bufferingType:NSBackingStoreType, defer flag: Bool) {
         super.init(contentRect:NSRect(0,0,w,h), styleMask: [.borderless,.resizable], backing:NSBackingStoreType.buffered, defer: false)
         WinModifier.align(self, Alignment.centerCenter, Alignment.centerCenter)
@@ -26,15 +23,8 @@ class TranslucencyWin:NSWindow, NSApplicationDelegate, NSWindowDelegate{
         self.delegate = self/*So that we can use this class as the Window controller aswell*/
         self.contentView = FlippedView(frame:NSRect(0,0,w,h))
         visualEffectView = TranslucencyView(frame:NSRect(0,0,w,h))
-        
         self.contentView?.addSubview(visualEffectView!)
-        
-        //⚠️️ TODO: Make enum that toggles between views?
         let view = ViewType.view(.basic,CGSize(w,h))/*Sets the mainview of the window*/
-        //let view = OtherView(w,h)
-        //let view = AdvanceView(w,h)
-        //let view = LiveEditView(w,h)
-        //let view = StashView(frame.width,frame.height)
         self.contentView?.addSubview(view)
     }
     func windowDidResize(_ notification: Notification) {

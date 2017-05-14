@@ -16,13 +16,8 @@ class AppDelegate:NSObject,NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {/*Insert code here to initialize your application*/
         NSApp.windows[0].close()/*<--Close the initial non-optional default window*/
-        
         StyleManager.addStylesByURL("~/Desktop/ElCapitan/explorer.css",false)
-        //Swift.print("after css")
-        win = TranslucencyWin()//RegularWin()//
-        
-        //cssTest()
-        
+        win = RegularWin//TranslucencyWin()//()//
     }
     func applicationWillTerminate(_ aNotification:Notification) {
         // Insert code here to tear down your application

@@ -6,12 +6,11 @@ class TranslucencyView:NSVisualEffectView{
     let cornerRadius:CGFloat = 8
     override var isFlipped:Bool {return true}/*Organizes your view from top to bottom*/
     override init(frame frameRect: NSRect) {
-        super.init(frame: frameRect)
-        self.material = NSVisualEffectMaterial.mediumLight//AppearanceBased,Dark,MediumLight,PopOver,UltraDark,AppearanceBased,Titlebar,Menu
-        self.blendingMode = NSVisualEffectBlendingMode.behindWindow
-        self.state = NSVisualEffectState.active
+        super.init(frame:frameRect)
+        self.material = .light/*AppearanceBased,Dark,MediumLight,PopOver,UltraDark,AppearanceBased,Titlebar,Menu*/
+        self.blendingMode = .behindWindow
+        self.state = .active
         self.maskImage = maskImage(cornerRadius: cornerRadius)/*this line applies the mask to the view*/
-        
     }
     override func setFrameSize(_ newSize: NSSize) {
         super.setFrameSize(newSize)
