@@ -110,7 +110,7 @@ class BasicView:CustomView {
         _ = selectGroup
     }
     /**
-     * CheckboxButtons
+     * CheckboxButton
      */
     func createCheckBoxButton(){
         let card:Card = container.addSubView(Card(NaN, NaN, "CheckBoxButton: ", container, "checkBoxButtonCard"))
